@@ -5,7 +5,7 @@ const Contact = () => {
     name: '',
     email: '',
     company: '',
-    challenge: ''
+    message: ''
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,6 +54,10 @@ const Contact = () => {
       newErrors.email = 'Please enter a valid email address';
     }
 
+    if (!formData.message.trim()) {
+      newErrors.message = 'Please enter your message';
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -78,18 +82,18 @@ const Contact = () => {
         name: formData.name,
         email: formData.email,
         company: formData.company || 'Not specified',
-        challenge: formData.challenge || 'No specific goals mentioned'
+        message: formData.message
       });
 
       console.log('SUCCESS!', response.status, response.text);
-      showNotification('Thank you! Your message has been sent. We\'ll be in touch within 24 hours to schedule your free consultation.', 'success');
+      showNotification('Thank you! Your message has been sent. We\'ll be in touch within 24 hours.', 'success');
       
       // Reset form
       setFormData({
         name: '',
         email: '',
         company: '',
-        challenge: ''
+        message: ''
       });
     } catch (error) {
       console.log('FAILED...', error);
@@ -121,7 +125,7 @@ const Contact = () => {
             marginBottom: '1rem',
             color: '#f7931a'
           }}>
-            Schedule Your Free Consultation
+            Contact Us
           </h2>
           <p style={{
             fontSize: '1.2rem',
@@ -129,7 +133,7 @@ const Contact = () => {
             marginBottom: '3rem',
             lineHeight: '1.6'
           }}>
-            Ready to implement professional Bitcoin treasury? Schedule a free 30-minute consultation to discuss your requirements and next steps.
+            Have questions about MyBitcoinFuture? Need support with deployment? Want to discuss plugin development? We're here to help.
           </p>
           
           <form onSubmit={handleSubmit} style={{
@@ -233,18 +237,19 @@ const Contact = () => {
             </div>
 
             <div style={{ display: 'grid', gap: '0.5rem' }}>
-              <label htmlFor="challenge" style={{
+              <label htmlFor="message" style={{
                 color: '#f8fafc',
                 fontWeight: '500'
               }}>
-                What's your current Bitcoin setup and what risks or dependencies are you looking to address?
+                Message *
               </label>
               <textarea
-                id="challenge"
-                name="challenge"
-                value={formData.challenge}
+                id="message"
+                name="message"
+                value={formData.message}
                 onChange={handleInputChange}
-                placeholder="Describe your current treasury approach and what counterparty risks you're looking to eliminate..."
+                placeholder="Tell us about your inquiry, deployment questions, plugin development, or any other questions about MyBitcoinFuture..."
+                required
                 style={{
                   background: '#0f172a',
                   border: '1px solid #475569',
@@ -257,6 +262,15 @@ const Contact = () => {
                   minHeight: '120px'
                 }}
               />
+              {errors.message && (
+                <div style={{
+                  color: '#ef4444',
+                  fontSize: '0.875rem',
+                  marginTop: '0.25rem'
+                }}>
+                  {errors.message}
+                </div>
+              )}
             </div>
 
             <button
@@ -277,7 +291,7 @@ const Contact = () => {
                 opacity: isSubmitting ? 0.7 : 1
               }}
             >
-              {isSubmitting ? 'Sending...' : 'Schedule Consultation'}
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
