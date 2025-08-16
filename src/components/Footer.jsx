@@ -6,11 +6,11 @@ const Footer = () => {
           {/* Brand */}
           <div style={{ gridColumn: 'span 2' }}>
             <div className="flex items-center gap-4 mb-4">
-              <img 
-                src="https://mybitcoinfuture.com/mybitcoinfuture_logo.png" 
-                alt="MyBitcoinFuture Logo" 
-                style={{ height: '32px', width: 'auto' }}
-              />
+                          <img 
+              src="/mybitcoinfuture_logo.png" 
+              alt="MyBitcoinFuture Logo" 
+              style={{ height: '32px', width: 'auto' }}
+            />
               <span className="text-white" style={{ fontSize: '1.25rem', fontWeight: '700' }}>MyBitcoinFuture</span>
             </div>
             <p className="text-gray mb-4" style={{ maxWidth: '32rem' }}>

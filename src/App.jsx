@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import Deployment from './components/Deployment'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <Features />
         <Deployment />
+        <Contact />
       </main>
       <Footer />
       <BackToTop />

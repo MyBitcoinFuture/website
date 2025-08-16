@@ -16,6 +16,7 @@ const Header = () => {
   const navigation = [
     { name: 'Features', href: '#features' },
     { name: 'Deployment', href: '#deployment' },
+    { name: 'Contact', href: '#contact' },
   ]
 
   return (
@@ -25,7 +26,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="https://mybitcoinfuture.com/mybitcoinfuture_logo.png" 
+              src="/mybitcoinfuture_logo.png" 
               alt="MyBitcoinFuture Logo" 
               style={{ height: '32px', width: 'auto' }}
             />
