@@ -67,6 +67,12 @@ const Hero = () => {
           >
             Deploy Now
           </a>
+          <a
+            href="/getting-started"
+            className="btn-secondary"
+          >
+            Getting Started
+          </a>
         </div>
 
         {/* Demo Video */}

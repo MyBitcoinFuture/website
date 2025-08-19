@@ -16,6 +16,7 @@ const Header = () => {
   const navigation = [
     { name: 'Features', href: '#features' },
     { name: 'Deployment', href: '#deployment' },
+    { name: 'Docs', href: '/docs' },
     { name: 'Contact', href: '#contact' },
   ]
 
@@ -24,14 +25,14 @@ const Header = () => {
       <div className="container-max">
         <div className="flex items-center justify-between" style={{ height: '64px' }}>
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity no-underline">
             <img 
               src="/mybitcoinfuture_logo.png" 
               alt="MyBitcoinFuture Logo" 
               style={{ height: '32px', width: 'auto' }}
             />
             <span className="text-xl font-bold text-white">MyBitcoinFuture</span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -103,7 +104,7 @@ const Header = () => {
                 href="https://github.com/MyBitcoinFuture"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary text-center"
+                className="btn-primary"
                 onClick={() => setIsMenuOpen(false)}
               >
                 View on GitHub
