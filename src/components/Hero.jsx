@@ -61,9 +61,9 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background: '#1e40af',
+              background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
               color: '#ffffff',
-              border: '1px solid #3b82f6',
+              border: '1px solid #f97316',
               padding: '0.75rem 1.5rem',
               borderRadius: '0.375rem',
               fontWeight: '600',
@@ -74,7 +74,8 @@ const Hero = () => {
               transition: 'all 0.2s ease-in-out',
               fontSize: '1rem',
               minHeight: '48px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              boxShadow: '0 4px 6px -1px rgba(249, 115, 22, 0.2)'
             }}
           >
             View on GitHub
