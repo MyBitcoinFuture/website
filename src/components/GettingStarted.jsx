@@ -41,7 +41,7 @@ const GettingStarted = () => {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <FlagIcon className="w-5 h-5 mr-3 text-orange-400" />
+                  <FlagIcon className="w-4 h-4 mr-3 text-orange-400" />
                   System Overview
                 </span>
               </h2>
@@ -58,7 +58,7 @@ const GettingStarted = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                   <div>
                     <h4 className="text-lg font-medium text-white mb-4 flex items-center">
-                      <FlagIcon className="w-5 h-5 mr-2 text-orange-400" />
+                      <FlagIcon className="w-4 h-4 mr-2 text-orange-400" />
                       Core Capabilities
                     </h4>
                     <div className="space-y-4">
@@ -83,7 +83,7 @@ const GettingStarted = () => {
                   
                   <div>
                     <h4 className="text-lg font-medium text-white mb-4 flex items-center">
-                      <WrenchScrewdriverIcon className="w-5 h-5 mr-2 text-orange-400" />
+                      <WrenchScrewdriverIcon className="w-4 h-4 mr-2 text-orange-400" />
                       Technical Architecture
                     </h4>
                     <div className="space-y-4">
@@ -117,7 +117,7 @@ const GettingStarted = () => {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <RocketLaunchIcon className="w-5 h-5 mr-3 text-orange-400" />
+                  <RocketLaunchIcon className="w-4 h-4 mr-3 text-orange-400" />
                   Deployment Guide
                 </span>
               </h2>
@@ -508,7 +508,7 @@ mbf-treasury alerts --history`}
                       <div>
                         <div className="text-orange font-semibold mb-3">📚 Technical Documentation</div>
                         <ul className="text-gray space-y-2">
-                          <li>• <a href="/docs" className="text-blue-400 hover:underline">Complete API Reference</a></li>
+                          <li>• <a href="/docs" className="text-orange-400 hover:text-orange-300 hover:underline">Complete API Reference</a></li>
                           <li>• Architecture documentation</li>
                           <li>• Deployment guides</li>
                           <li>• Security best practices</li>
@@ -517,7 +517,7 @@ mbf-treasury alerts --history`}
                       <div>
                         <div className="text-orange font-semibold mb-3">🔗 External Resources</div>
                         <ul className="text-gray space-y-2">
-                          <li>• <a href="https://github.com/secsovereign/mbfbtc" className="text-blue-400 hover:underline">GitHub Repository</a></li>
+                          <li>• <a href="https://github.com/MyBitcoinFuture/dashboard" className="text-orange-400 hover:text-orange-300 hover:underline">GitHub Repository</a></li>
                           <li>• Issue tracking and discussions</li>
                           <li>• Community support</li>
                           <li>• Feature requests</li>
