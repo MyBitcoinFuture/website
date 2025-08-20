@@ -6,21 +6,26 @@
     <title>MyBitcoinFuture - Enterprise Bitcoin Treasury Management</title>
     <meta name="description" content="Enterprise-grade Bitcoin treasury management with complete data sovereignty. Multi-wallet tracking, portfolio analytics, and compliance reporting.">
     
-    <!-- Redirect to main app -->
+    <!-- SPA Routing Fix for GitHub Pages -->
     <script>
-        // Get the current path
-        const path = window.location.pathname;
-        const search = window.location.search;
-        
-        // For hash routing, we need to redirect to the main app
-        // and let React Router handle the routing
-        if (path !== '/') {
-            // Redirect to main app - React Router will handle the routing
-            window.location.replace('/');
-        }
+        // Single Page Apps for GitHub Pages
+        // MIT License - https://github.com/rafgraph/spa-github-pages
+        // This script takes the current url and converts the path and query
+        // string into just a query string, and then redirects the browser
+        // to the new url with only a query string and hash fragment.
+        var pathSegmentsToKeep = 0;
+
+        var l = window.location;
+        l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+            l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash
+        );
     </script>
     
-    <!-- Fallback content in case JavaScript is disabled -->
+    <!-- Fallback content -->
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
