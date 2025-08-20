@@ -24,10 +24,10 @@ const Docs = () => {
       description: "Quick start guides and basic setup",
       icon: RocketLaunchIcon,
       items: [
-        { title: "Installation", description: "Clone and install the monorepo", status: "available" },
-        { title: "Environment Setup", description: "Configure .env and dependencies", status: "available" },
-        { title: "Development Mode", description: "Start all services with npm run dev", status: "available" },
-        { title: "First Wallet", description: "Add your first Bitcoin wallet", status: "available" }
+        { title: "Installation", description: "Clone and install the monorepo" },
+        { title: "Environment Setup", description: "Configure .env and dependencies" },
+        { title: "Development Mode", description: "Start all services with npm run dev" },
+        { title: "First Wallet", description: "Add your first Bitcoin wallet" }
       ]
     },
     {
@@ -35,10 +35,10 @@ const Docs = () => {
       description: "Understanding the hybrid monorepo structure",
       icon: BuildingOfficeIcon,
       items: [
-        { title: "Workspace Overview", description: "API, Web, CLI, Desktop, Shared modules", status: "available" },
-        { title: "Module Dependencies", description: "How modules interact and share code", status: "available" },
-        { title: "Build System", description: "npm workspaces and build scripts", status: "available" },
-        { title: "Development Workflow", description: "Working across multiple modules", status: "available" }
+        { title: "Workspace Overview", description: "API, Web, CLI, Desktop, Shared modules" },
+        { title: "Module Dependencies", description: "How modules interact and share code" },
+        { title: "Build System", description: "npm workspaces and build scripts" },
+        { title: "Development Workflow", description: "Working across multiple modules" }
       ]
     },
     {
@@ -46,10 +46,10 @@ const Docs = () => {
       description: "Express.js API server with Bitcoin Core integration",
       icon: CpuChipIcon,
       items: [
-        { title: "API Server Setup", description: "Express.js server configuration", status: "available" },
-        { title: "Bitcoin Core RPC", description: "Integration with Bitcoin Core", status: "available" },
-        { title: "BRK Integration", description: "Bitcoin Research Kit analytics", status: "available" },
-        { title: "API Reference", description: "Complete REST API documentation", status: "coming-soon" }
+        { title: "API Server Setup", description: "Express.js server configuration" },
+        { title: "Bitcoin Core RPC", description: "Integration with Bitcoin Core" },
+        { title: "BRK Integration", description: "Bitcoin Research Kit analytics" },
+        { title: "API Reference", description: "Complete REST API documentation" }
       ]
     },
     {
@@ -57,10 +57,10 @@ const Docs = () => {
       description: "React-based web interface with Material-UI",
       icon: GlobeAltIcon,
       items: [
-        { title: "React Components", description: "Component architecture and structure", status: "available" },
-        { title: "Material-UI Integration", description: "UI framework and theming", status: "available" },
-        { title: "State Management", description: "Redux/Context API patterns", status: "available" },
-        { title: "API Client", description: "Frontend API integration", status: "available" }
+        { title: "React Components", description: "Component architecture and structure" },
+        { title: "Material-UI Integration", description: "UI framework and theming" },
+        { title: "State Management", description: "Redux/Context API patterns" },
+        { title: "API Client", description: "Frontend API integration" }
       ]
     },
     {
@@ -68,10 +68,10 @@ const Docs = () => {
       description: "Command-line interface for treasury operations",
       icon: CommandLineIcon,
       items: [
-        { title: "CLI Installation", description: "Installing the command-line tools", status: "available" },
-        { title: "Basic Commands", description: "Essential CLI operations", status: "available" },
-        { title: "Wallet Operations", description: "Wallet management via CLI", status: "available" },
-        { title: "Automation Scripts", description: "CLI automation and scripting", status: "coming-soon" }
+        { title: "CLI Installation", description: "Installing the command-line tools" },
+        { title: "Basic Commands", description: "Essential CLI operations" },
+        { title: "Wallet Operations", description: "Wallet management via CLI" },
+        { title: "Automation Scripts", description: "CLI automation and scripting" }
       ]
     },
     {
@@ -79,10 +79,10 @@ const Docs = () => {
       description: "Electron-based desktop application",
       icon: ComputerDesktopIcon,
       items: [
-        { title: "Electron Setup", description: "Desktop app configuration", status: "available" },
-        { title: "Main Process", description: "Electron main process logic", status: "available" },
-        { title: "Renderer Process", description: "UI rendering and IPC", status: "available" },
-        { title: "Desktop Features", description: "Native desktop capabilities", status: "coming-soon" }
+        { title: "Electron Setup", description: "Desktop app configuration" },
+        { title: "Main Process", description: "Electron main process logic" },
+        { title: "Renderer Process", description: "UI rendering and IPC" },
+        { title: "Desktop Features", description: "Native desktop capabilities" }
       ]
     },
     {
@@ -90,10 +90,10 @@ const Docs = () => {
       description: "Extensible plugin architecture",
       icon: PuzzlePieceIcon,
       items: [
-        { title: "Plugin Architecture", description: "Understanding the plugin system", status: "available" },
-        { title: "IFTTT Integration", description: "Automated workflow plugins", status: "available" },
-        { title: "Accounting Plugins", description: "Financial reporting plugins", status: "coming-soon" },
-        { title: "Plugin Development", description: "Creating custom plugins", status: "coming-soon" }
+        { title: "Plugin Architecture", description: "Understanding the plugin system" },
+        { title: "IFTTT Integration", description: "Automated workflow plugins" },
+        { title: "Accounting Plugins", description: "Financial reporting plugins" },
+        { title: "Plugin Development", description: "Creating custom plugins" }
       ]
     },
     {
@@ -101,10 +101,10 @@ const Docs = () => {
       description: "Production deployment and infrastructure",
       icon: CloudArrowUpIcon,
       items: [
-        { title: "Docker Deployment", description: "Containerized deployment with Docker Compose", status: "available" },
-        { title: "Start9/Umbrel", description: "Home server deployment packages", status: "available" },
-        { title: "Production Config", description: "Nginx, SSL, monitoring setup", status: "available" },
-        { title: "Kubernetes", description: "Enterprise K8s deployment", status: "coming-soon" }
+        { title: "Docker Deployment", description: "Containerized deployment with Docker Compose" },
+        { title: "Start9/Umbrel", description: "Home server deployment packages" },
+        { title: "Production Config", description: "Nginx, SSL, monitoring setup" },
+        { title: "Kubernetes", description: "Enterprise K8s deployment" }
       ]
     },
     {
@@ -112,10 +112,10 @@ const Docs = () => {
       description: "System monitoring and observability",
       icon: ChartBarIcon,
       items: [
-        { title: "Health Checks", description: "Service health monitoring", status: "available" },
-        { title: "Prometheus Metrics", description: "Performance metrics collection", status: "available" },
-        { title: "Grafana Dashboards", description: "Monitoring dashboards", status: "available" },
-        { title: "Logging", description: "Centralized logging with ELK", status: "coming-soon" }
+        { title: "Health Checks", description: "Service health monitoring" },
+        { title: "Prometheus Metrics", description: "Performance metrics collection" },
+        { title: "Grafana Dashboards", description: "Monitoring dashboards" },
+        { title: "Logging", description: "Centralized logging with ELK" }
       ]
     },
     {
@@ -123,35 +123,24 @@ const Docs = () => {
       description: "Security features and best practices",
       icon: ShieldCheckIcon,
       items: [
-        { title: "Authentication", description: "JWT-based auth with 2FA", status: "available" },
-        { title: "Authorization", description: "Role-based access control", status: "available" },
-        { title: "Bitcoin Security", description: "xpub-only, no private keys", status: "available" },
-        { title: "Audit Logging", description: "Complete operation audit trail", status: "coming-soon" }
+        { title: "Authentication", description: "JWT-based auth with 2FA" },
+        { title: "Authorization", description: "Role-based access control" },
+        { title: "Bitcoin Security", description: "xpub-only, no private keys" },
+        { title: "Audit Logging", description: "Complete operation audit trail" }
       ]
     },
     {
-      title: "Related Repositories",
-      description: "Additional repositories in the ecosystem",
+      title: "Repository Structure",
+      description: "Current project organization",
       icon: BookOpenIcon,
       items: [
-        { title: "MyBitcoinFuture/plugins", description: "Plugin ecosystem repository", status: "available" },
-        { title: "MyBitcoinFuture/core", description: "Infrastructure components", status: "available" },
-        { title: "MyBitcoinFuture/monitoring", description: "Monitoring and observability", status: "available" },
-        { title: "MyBitcoinFuture/platform-manifests", description: "Kubernetes/Helm manifests", status: "available" }
+        { title: "MyBitcoinFuture/dashboard", description: "Main dashboard monorepo" },
+        { title: "MyBitcoinFuture/plugins", description: "Plugin ecosystem repository" },
+        { title: "MyBitcoinFuture/core", description: "Infrastructure components" },
+        { title: "MyBitcoinFuture/platform-manifests", description: "Kubernetes/Helm manifests" }
       ]
     }
   ];
-
-  const getStatusBadge = (status) => {
-    switch (status) {
-      case 'available':
-        return <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Available</span>;
-      case 'coming-soon':
-        return <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">Coming Soon</span>;
-      default:
-        return <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Planned</span>;
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -236,9 +225,6 @@ const Docs = () => {
                             <div className="flex-1">
                               <h4 className="text-white font-medium mb-1">{item.title}</h4>
                               <p className="text-slate-400 text-sm">{item.description}</p>
-                            </div>
-                            <div className="ml-4">
-                              {getStatusBadge(item.status)}
                             </div>
                           </div>
                         </div>
