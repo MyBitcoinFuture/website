@@ -37,19 +37,6 @@
     
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    
-    <!-- SPA Routing Fix for GitHub Pages -->
-    <script>
-        // Handle redirects from 404.html
-        (function() {
-            var redirectPath = sessionStorage.getItem('redirectPath');
-            if (redirectPath) {
-                sessionStorage.removeItem('redirectPath');
-                // Navigate to the stored path
-                window.history.replaceState(null, null, redirectPath);
-            }
-        })();
-    </script>
 
   </head>
   <body>

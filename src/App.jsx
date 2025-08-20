@@ -12,34 +12,72 @@ import VersionIndicator from './components/VersionIndicator'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={
-        <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 text-white">
-          <Header />
-          <main>
-            <Hero />
-            <Features />
-            <Deployment />
-            <Contact />
-          </main>
-          <Footer />
-          <BackToTop />
-          <VersionIndicator />
-        </div>
-      } />
-      <Route path="/docs" element={
-        <>
-          <Docs />
-          <VersionIndicator />
-        </>
-      } />
-      <Route path="/getting-started" element={
-        <>
-          <GettingStarted />
-          <VersionIndicator />
-        </>
-      } />
-    </Routes>
+    <>
+      {/* Skip link for accessibility */}
+      <a 
+        href="#main-content" 
+        className="skip-link"
+        style={{
+          position: 'absolute',
+          top: '-40px',
+          left: '6px',
+          background: 'var(--color-orange)',
+          color: 'var(--color-white)',
+          padding: '8px 16px',
+          textDecoration: 'none',
+          borderRadius: '4px',
+          zIndex: 1000,
+          transition: 'top 0.3s'
+        }}
+        onFocus={(e) => {
+          e.target.style.top = '6px'
+        }}
+        onBlur={(e) => {
+          e.target.style.top = '-40px'
+        }}
+      >
+        Skip to main content
+      </a>
+      
+      <Routes>
+        <Route path="/" element={
+          <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 text-white">
+            <Header />
+            <main id="main-content">
+              <Hero />
+              <Features />
+              <Deployment />
+              <Contact />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </div>
+        } />
+        <Route path="/docs" element={
+          <>
+            <Header />
+            <main id="main-content">
+              <Docs />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </>
+        } />
+        <Route path="/getting-started" element={
+          <>
+            <Header />
+            <main id="main-content">
+              <GettingStarted />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </>
+        } />
+      </Routes>
+    </>
   )
 }
 

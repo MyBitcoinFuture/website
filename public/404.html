@@ -6,13 +6,12 @@
     <title>MyBitcoinFuture - Enterprise Bitcoin Treasury Management</title>
     <meta name="description" content="Enterprise-grade Bitcoin treasury management with complete data sovereignty. Multi-wallet tracking, portfolio analytics, and compliance reporting.">
     
-    <!-- Simple redirect for SPA routing -->
+    <!-- Simple SPA routing redirect -->
     <script>
-        // Simple redirect to main app
+        // Handle SPA routing for GitHub Pages
         var path = window.location.pathname;
-        if (path !== '/') {
-            // Store the path in sessionStorage for the main app to use
-            sessionStorage.setItem('redirectPath', path);
+        if (path !== '/' && path !== '/index.html') {
+            // For SPA routes, redirect to home and let React Router handle it
             window.location.replace('/');
         }
     </script>
@@ -54,7 +53,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Redirecting...</h1>
+        <h1>Loading MyBitcoinFuture...</h1>
         <p>If you're not automatically redirected, please <a href="/">click here</a> to go to the main page.</p>
         <p>MyBitcoinFuture - Enterprise Bitcoin Treasury Management</p>
     </div>
