@@ -2,6 +2,20 @@ import Header from './Header'
 import Footer from './Footer'
 import BackToTop from './BackToTop'
 import CodeBlock from './CodeBlock'
+import { 
+  RocketLaunchIcon, 
+  FlagIcon, 
+  WrenchScrewdriverIcon,
+  BuildingOfficeIcon,
+  GlobeAltIcon,
+  CommandLineIcon,
+  ComputerDesktopIcon,
+  CpuChipIcon,
+  ChartBarIcon,
+  ShieldCheckIcon,
+  DocumentTextIcon,
+  CloudArrowUpIcon
+} from '@heroicons/react/24/outline'
 
 const GettingStarted = () => {
   return (
@@ -15,7 +29,7 @@ const GettingStarted = () => {
               <h1 className="mb-6">
                 <span className="text-white">Getting Started with</span>
                 <br />
-                <span className="text-orange">MyBitcoinFuture</span>
+                <span className="text-orange">MyBitcoinFuture Treasury</span>
               </h1>
               <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem' }}>
                 Complete beginner's guide to deploying and using the enterprise Bitcoin treasury management software. 
@@ -26,23 +40,26 @@ const GettingStarted = () => {
             {/* System Overview */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              <span className="inline-flex items-center">
-                <span className="mr-4">🎯</span>
-                System Overview
-              </span>
-            </h2>
+                <span className="inline-flex items-center">
+                  <FlagIcon className="w-8 h-8 mr-4 text-orange-400" />
+                  System Overview
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <h3 className="text-xl font-semibold text-white mb-6">What is MyBitcoinFuture?</h3>
+                <h3 className="text-xl font-semibold text-white mb-6">What is MyBitcoinFuture Treasury?</h3>
                 <p className="text-gray mb-8 leading-relaxed text-lg">
-                  MyBitcoinFuture is a comprehensive Bitcoin treasury management software designed for enterprises, 
+                  MyBitcoinFuture Treasury is a comprehensive Bitcoin treasury management software designed for enterprises, 
                   institutions, and serious Bitcoin holders. It provides multi-wallet tracking, advanced analytics, 
                   risk management, and compliance features through an intuitive web dashboard and powerful CLI.
                 </p>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                   <div>
-                    <h4 className="text-lg font-medium text-white mb-4">🎯 Core Capabilities</h4>
+                    <h4 className="text-lg font-medium text-white mb-4 flex items-center">
+                      <FlagIcon className="w-6 h-6 mr-2 text-orange-400" />
+                      Core Capabilities
+                    </h4>
                     <div className="space-y-4">
                       <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
                         <div className="text-orange font-semibold mb-2">Multi-Wallet Management</div>
@@ -64,7 +81,10 @@ const GettingStarted = () => {
                   </div>
                   
                   <div>
-                    <h4 className="text-lg font-medium text-white mb-4">🔧 Technical Architecture</h4>
+                    <h4 className="text-lg font-medium text-white mb-4 flex items-center">
+                      <WrenchScrewdriverIcon className="w-6 h-6 mr-2 text-orange-400" />
+                      Technical Architecture
+                    </h4>
                     <div className="space-y-4">
                       <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
                         <div className="text-orange font-semibold mb-2">Web Dashboard</div>
@@ -91,11 +111,11 @@ const GettingStarted = () => {
             {/* Deployment Guide */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              <span className="inline-flex items-center">
-                <span className="mr-4">🚀</span>
-                Deployment Guide
-              </span>
-            </h2>
+                <span className="inline-flex items-center">
+                  <RocketLaunchIcon className="w-8 h-8 mr-4 text-orange-400" />
+                  Deployment Guide
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Step-by-Step Deployment</h3>
