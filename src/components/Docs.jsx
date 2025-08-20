@@ -8,54 +8,76 @@ const Docs = () => {
       description: "Quick start guides and basic setup",
       icon: "🚀",
       items: [
-        { title: "Installation Guide", description: "Step-by-step installation instructions", status: "available" },
-        { title: "Quick Start", description: "Get up and running in 5 minutes", status: "available" },
-        { title: "Configuration", description: "Basic configuration options", status: "available" },
-        { title: "First Wallet", description: "Adding your first Bitcoin wallet", status: "available" }
+        { title: "Installation", description: "Clone and install the monorepo", status: "available" },
+        { title: "Environment Setup", description: "Configure .env and dependencies", status: "available" },
+        { title: "Development Mode", description: "Start all services with npm run dev", status: "available" },
+        { title: "First Wallet", description: "Add your first Bitcoin wallet", status: "available" }
       ]
     },
     {
-      title: "Core Platform",
-      description: "Main system architecture and components",
+      title: "Monorepo Architecture",
+      description: "Understanding the hybrid monorepo structure",
       icon: "🏗️",
       items: [
-        { title: "System Architecture", description: "Overview of the platform design", status: "available" },
-        { title: "API Reference", description: "Complete REST API documentation", status: "coming-soon" },
-        { title: "Database Schema", description: "Data models and relationships", status: "coming-soon" },
-        { title: "Authentication", description: "Security and access control", status: "coming-soon" }
+        { title: "Workspace Overview", description: "API, Web, CLI, Desktop, Shared modules", status: "available" },
+        { title: "Module Dependencies", description: "How modules interact and share code", status: "available" },
+        { title: "Build System", description: "npm workspaces and build scripts", status: "available" },
+        { title: "Development Workflow", description: "Working across multiple modules", status: "available" }
       ]
     },
     {
-      title: "Treasury Management",
-      description: "Multi-wallet tracking and portfolio management",
-      icon: "💰",
+      title: "API Module",
+      description: "Express.js API server with Bitcoin Core integration",
+      icon: "🔌",
       items: [
-        { title: "Wallet Management", description: "Adding, removing, and monitoring wallets", status: "available" },
-        { title: "Portfolio Analytics", description: "Performance tracking and insights", status: "available" },
-        { title: "Transaction Monitoring", description: "Real-time transaction tracking", status: "available" },
-        { title: "Risk Assessment", description: "Portfolio risk analysis and reporting", status: "coming-soon" }
+        { title: "API Server Setup", description: "Express.js server configuration", status: "available" },
+        { title: "Bitcoin Core RPC", description: "Integration with Bitcoin Core", status: "available" },
+        { title: "BRK Integration", description: "Bitcoin Research Kit analytics", status: "available" },
+        { title: "API Reference", description: "Complete REST API documentation", status: "coming-soon" }
       ]
     },
     {
-      title: "Bitcoin Research Kit (BRK)",
-      description: "Advanced analytics and research capabilities",
-      icon: "📊",
+      title: "Web Module",
+      description: "React-based web interface with Material-UI",
+      icon: "🌐",
       items: [
-        { title: "BRK Integration", description: "Setting up and configuring BRK", status: "available" },
-        { title: "Analytics API", description: "Advanced analytics endpoints", status: "coming-soon" },
-        { title: "Research Tools", description: "Custom research and analysis tools", status: "coming-soon" },
-        { title: "Data Export", description: "Exporting analytics data", status: "coming-soon" }
+        { title: "React Components", description: "Component architecture and structure", status: "available" },
+        { title: "Material-UI Integration", description: "UI framework and theming", status: "available" },
+        { title: "State Management", description: "Redux/Context API patterns", status: "available" },
+        { title: "API Client", description: "Frontend API integration", status: "available" }
       ]
     },
     {
-      title: "CLI Interface",
-      description: "Command-line tools and automation",
+      title: "CLI Module",
+      description: "Command-line interface for treasury operations",
       icon: "💻",
       items: [
         { title: "CLI Installation", description: "Installing the command-line tools", status: "available" },
         { title: "Basic Commands", description: "Essential CLI operations", status: "available" },
-        { title: "Advanced Commands", description: "Power user CLI features", status: "coming-soon" },
-        { title: "Automation", description: "Scripting and automation examples", status: "coming-soon" }
+        { title: "Wallet Operations", description: "Wallet management via CLI", status: "available" },
+        { title: "Automation Scripts", description: "CLI automation and scripting", status: "coming-soon" }
+      ]
+    },
+    {
+      title: "Desktop Module",
+      description: "Electron-based desktop application",
+      icon: "🖥️",
+      items: [
+        { title: "Electron Setup", description: "Desktop app configuration", status: "available" },
+        { title: "Main Process", description: "Electron main process logic", status: "available" },
+        { title: "Renderer Process", description: "UI rendering and IPC", status: "available" },
+        { title: "Desktop Features", description: "Native desktop capabilities", status: "coming-soon" }
+      ]
+    },
+    {
+      title: "Plugin System",
+      description: "Extensible plugin architecture",
+      icon: "🔌",
+      items: [
+        { title: "Plugin Architecture", description: "Understanding the plugin system", status: "available" },
+        { title: "IFTTT Integration", description: "Automated workflow plugins", status: "available" },
+        { title: "Accounting Plugins", description: "Financial reporting plugins", status: "coming-soon" },
+        { title: "Plugin Development", description: "Creating custom plugins", status: "coming-soon" }
       ]
     },
     {
@@ -63,32 +85,43 @@ const Docs = () => {
       description: "Production deployment and infrastructure",
       icon: "🚀",
       items: [
-        { title: "Docker Deployment", description: "Containerized deployment guide", status: "available" },
-        { title: "Start9/Umbrel", description: "Home server deployment", status: "available" },
-        { title: "Cloud VPS", description: "Cloud deployment options", status: "coming-soon" },
-        { title: "Kubernetes", description: "Enterprise Kubernetes deployment", status: "coming-soon" }
-      ]
-    },
-    {
-      title: "Plugin Development",
-      description: "Building and distributing plugins",
-      icon: "🔌",
-      items: [
-        { title: "Plugin Architecture", description: "Understanding the plugin system", status: "coming-soon" },
-        { title: "Creating Plugins", description: "Step-by-step plugin development", status: "coming-soon" },
-        { title: "Plugin API", description: "Plugin development API reference", status: "coming-soon" },
-        { title: "Plugin Marketplace", description: "Distributing your plugins", status: "coming-soon" }
+        { title: "Docker Deployment", description: "Containerized deployment with Docker Compose", status: "available" },
+        { title: "Start9/Umbrel", description: "Home server deployment packages", status: "available" },
+        { title: "Production Config", description: "Nginx, SSL, monitoring setup", status: "available" },
+        { title: "Kubernetes", description: "Enterprise K8s deployment", status: "coming-soon" }
       ]
     },
     {
       title: "Monitoring & Observability",
-      description: "System monitoring and alerting",
+      description: "System monitoring and observability",
       icon: "📈",
       items: [
-        { title: "Health Checks", description: "System health monitoring", status: "available" },
-        { title: "Logging", description: "Log management and analysis", status: "available" },
-        { title: "Metrics", description: "Performance metrics and dashboards", status: "coming-soon" },
-        { title: "Alerting", description: "Setting up alerts and notifications", status: "coming-soon" }
+        { title: "Health Checks", description: "Service health monitoring", status: "available" },
+        { title: "Prometheus Metrics", description: "Performance metrics collection", status: "available" },
+        { title: "Grafana Dashboards", description: "Monitoring dashboards", status: "available" },
+        { title: "Logging", description: "Centralized logging with ELK", status: "coming-soon" }
+      ]
+    },
+    {
+      title: "Security",
+      description: "Security features and best practices",
+      icon: "🔒",
+      items: [
+        { title: "Authentication", description: "JWT-based auth with 2FA", status: "available" },
+        { title: "Authorization", description: "Role-based access control", status: "available" },
+        { title: "Bitcoin Security", description: "xpub-only, no private keys", status: "available" },
+        { title: "Audit Logging", description: "Complete operation audit trail", status: "coming-soon" }
+      ]
+    },
+    {
+      title: "Related Repositories",
+      description: "Additional repositories in the ecosystem",
+      icon: "📚",
+      items: [
+        { title: "MyBitcoinFuture/plugins", description: "Plugin ecosystem repository", status: "available" },
+        { title: "MyBitcoinFuture/core", description: "Infrastructure components", status: "available" },
+        { title: "MyBitcoinFuture/monitoring", description: "Monitoring and observability", status: "available" },
+        { title: "MyBitcoinFuture/platform-manifests", description: "Kubernetes/Helm manifests", status: "available" }
       ]
     }
   ];
@@ -113,8 +146,41 @@ const Docs = () => {
             Documentation
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Complete guide to MyBitcoinFuture - from quick start to advanced features
+            Complete guide to the MBFBTC hybrid monorepo - from quick start to advanced features
           </p>
+        </div>
+
+        {/* Repository Overview */}
+        <div className="card mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">MBFBTC Dashboard Monorepo</h2>
+            <p className="text-slate-300 text-lg">
+              A comprehensive Bitcoin treasury management system with modular architecture
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center p-4">
+              <div className="text-3xl mb-2">📦</div>
+              <h3 className="text-white font-semibold mb-2">5 Core Modules</h3>
+              <p className="text-slate-400 text-sm">API, Web, CLI, Desktop, Shared</p>
+            </div>
+            <div className="text-center p-4">
+              <div className="text-3xl mb-2">🔌</div>
+              <h3 className="text-white font-semibold mb-2">Plugin Ecosystem</h3>
+              <p className="text-slate-400 text-sm">Extensible plugin architecture</p>
+            </div>
+            <div className="text-center p-4">
+              <div className="text-3xl mb-2">📊</div>
+              <h3 className="text-white font-semibold mb-2">BRK Integration</h3>
+              <p className="text-slate-400 text-sm">Bitcoin Research Kit analytics</p>
+            </div>
+            <div className="text-center p-4">
+              <div className="text-3xl mb-2">🚀</div>
+              <h3 className="text-white font-semibold mb-2">Production Ready</h3>
+              <p className="text-slate-400 text-sm">Docker, monitoring, security</p>
+            </div>
+          </div>
         </div>
 
         {/* Documentation Tree */}
@@ -153,11 +219,21 @@ const Docs = () => {
           <div className="card max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
             <p className="text-slate-300 mb-6">
-              Begin with our quick start guide and have your first wallet connected in minutes.
+              Clone the repository and have the full system running in minutes.
             </p>
-            <Link to="/getting-started" className="btn-primary">
-              Get Started Now
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/getting-started" className="btn-primary">
+                Get Started
+              </Link>
+              <a 
+                href="https://github.com/MyBitcoinFuture/dashboard" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                View Repository
+              </a>
+            </div>
           </div>
         </div>
       </div>
