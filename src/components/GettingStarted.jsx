@@ -37,7 +37,7 @@ const GettingStarted = () => {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <RocketLaunchIcon className="icon-medium mr-4 text-orange-400" />
+                  <RocketLaunchIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
                   Quick Start
                 </span>
               </h2>
@@ -45,41 +45,48 @@ const GettingStarted = () => {
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <div className="space-y-8">
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">1. Deploy the System</h4>
-                    <CodeBlock 
-                      code={`git clone https://github.com/MyBitcoinFuture/dashboard.git
-cd dashboard
-npm run install:all
-npm run dev`}
-                      language="bash"
-                      title="Quick Deploy"
-                    />
-                    <p className="text-gray text-sm mt-3">
-                      • Web Dashboard: http://localhost:3003 • API: http://localhost:3100
-                    </p>
-                  </div>
-                  
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">2. Access the Web Dashboard</h4>
+                    <h4 className="text-lg font-medium text-white mb-4">1. Download & Install</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <div className="text-orange font-semibold mb-3">Dashboard Features</div>
+                        <div className="text-orange font-semibold mb-3">Desktop App (Recommended)</div>
                         <ul className="text-gray space-y-2 text-sm">
-                          <li>• Multi-wallet portfolio overview</li>
-                          <li>• Real-time balance tracking</li>
-                          <li>• Transaction history & analytics</li>
-                          <li>• Risk management tools</li>
-                          <li>• Compliance reporting</li>
+                          <li>• Download Electron app for your OS</li>
+                          <li>• Install and launch the application</li>
+                          <li>• Add your first wallet (xpub)</li>
+                          <li>• Start managing your Bitcoin treasury</li>
                         </ul>
                       </div>
                       <div>
-                        <div className="text-orange font-semibold mb-3">First Steps</div>
+                        <div className="text-orange font-semibold mb-3">Web Dashboard</div>
                         <ul className="text-gray space-y-2 text-sm">
-                          <li>• Open http://localhost:3003</li>
-                          <li>• Add your first wallet (xpub)</li>
-                          <li>• Configure notifications</li>
-                          <li>• Set up security preferences</li>
-                          <li>• Explore analytics dashboard</li>
+                          <li>• Deploy with Docker or npm</li>
+                          <li>• Access via web browser</li>
+                          <li>• Same features as desktop app</li>
+                          <li>• Cross-platform compatibility</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <h4 className="text-lg font-medium text-white mb-4">2. Desktop App Setup</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <div className="text-orange font-semibold mb-3">Installation</div>
+                        <ul className="text-gray space-y-2 text-sm">
+                          <li>• Download from releases page</li>
+                          <li>• Run installer (Windows/macOS)</li>
+                          <li>• Extract and run (Linux)</li>
+                          <li>• Launch from applications menu</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <div className="text-orange font-semibold mb-3">First Launch</div>
+                        <ul className="text-gray space-y-2 text-sm">
+                          <li>• Create admin account</li>
+                          <li>• Configure security settings</li>
+                          <li>• Add your first wallet</li>
+                          <li>• Set up notifications</li>
                         </ul>
                       </div>
                     </div>
@@ -89,7 +96,7 @@ npm run dev`}
                     <h4 className="text-lg font-medium text-white mb-4">3. Add Your First Wallet</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <div className="text-orange font-semibold mb-3">Via Web Dashboard</div>
+                        <div className="text-orange font-semibold mb-3">Via Desktop App</div>
                         <ul className="text-gray space-y-2 text-sm">
                           <li>• Navigate to Wallets section</li>
                           <li>• Click "Add New Wallet"</li>
@@ -98,13 +105,17 @@ npm run dev`}
                         </ul>
                       </div>
                       <div>
-                        <div className="text-orange font-semibold mb-3">Via API (Optional)</div>
+                        <div className="text-orange font-semibold mb-3">Via Web Dashboard</div>
                         <CodeBlock 
-                          code={`curl -X POST http://localhost:3100/api/wallets \\
-  -H "Content-Type: application/json" \\
-  -d '{"name": "Main Wallet", "xpub": "xpub..."}'`}
+                          code={`# Deploy web version
+git clone https://github.com/MyBitcoinFuture/dashboard.git
+cd dashboard
+npm run install:all
+npm run dev
+
+# Access at http://localhost:3003`}
                           language="bash"
-                          title="API Add Wallet"
+                          title="Web Deployment"
                         />
                       </div>
                     </div>
@@ -117,7 +128,7 @@ npm run dev`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <ComputerDesktopIcon className="icon-medium mr-4 text-orange-400" />
+                  <ComputerDesktopIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
                   Web Dashboard Guide
                 </span>
               </h2>
@@ -175,7 +186,7 @@ npm run dev`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <WrenchScrewdriverIcon className="icon-medium mr-4 text-orange-400" />
+                  <WrenchScrewdriverIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
                   Configuration
                 </span>
               </h2>
@@ -240,7 +251,7 @@ ADMIN_TOKEN=your_admin_token`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <CommandLineIcon className="icon-medium mr-4 text-orange-400" />
+                  <CommandLineIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
                   CLI & API (Optional)
                 </span>
               </h2>
@@ -286,7 +297,7 @@ curl http://localhost:3100/api/wallets/1/balance`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <CloudArrowUpIcon className="icon-medium mr-4 text-orange-400" />
+                  <CloudArrowUpIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
                   Production Deployment
                 </span>
               </h2>
@@ -367,7 +378,7 @@ server {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <ShieldCheckIcon className="icon-medium mr-4 text-orange-400" />
+                  <ShieldCheckIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
                   Troubleshooting
                 </span>
               </h2>
@@ -418,7 +429,7 @@ sqlite3 ./data/treasury.db ".tables"`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <DocumentTextIcon className="icon-medium mr-4 text-orange-400" />
+                  <DocumentTextIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
                   Next Steps
                 </span>
               </h2>

@@ -438,8 +438,8 @@ const Docs = () => {
                 return (
                   <div key={index} className="card stagger-item hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                     <div className="flex items-center mb-6">
-                      <div className="mr-4">
-                        <IconComponent className="icon-large text-orange-400" />
+                      <div className="mr-6">
+                        <IconComponent style={{ width: '40px', height: '40px' }} className="text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
