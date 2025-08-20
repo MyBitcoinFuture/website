@@ -41,7 +41,7 @@ const GettingStarted = () => {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <FlagIcon className="w-8 h-8 mr-4 text-orange-400" />
+                  <FlagIcon className="w-6 h-6 mr-3 text-orange-400" />
                   System Overview
                 </span>
               </h2>
@@ -50,8 +50,9 @@ const GettingStarted = () => {
                 <h3 className="text-xl font-semibold text-white mb-6">What is MyBitcoinFuture Treasury?</h3>
                 <p className="text-gray mb-8 leading-relaxed text-lg">
                   MyBitcoinFuture Treasury is a comprehensive Bitcoin treasury management software designed for enterprises, 
-                  institutions, and serious Bitcoin holders. It provides multi-wallet tracking, advanced analytics, 
-                  risk management, and compliance features through an intuitive web dashboard and powerful CLI.
+                  institutions, and serious Bitcoin holders. Built as a hybrid monorepo with npm workspaces, it provides 
+                  multi-wallet tracking, advanced analytics, risk management, and compliance features through an intuitive 
+                  web dashboard, powerful CLI, and desktop application.
                 </p>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -102,6 +103,10 @@ const GettingStarted = () => {
                         <div className="text-orange font-semibold mb-2">Desktop App</div>
                         <div className="text-gray text-sm">Cross-platform Electron application</div>
                       </div>
+                      <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
+                        <div className="text-orange font-semibold mb-2">Shared Modules</div>
+                        <div className="text-gray text-sm">Common utilities and components</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -112,7 +117,7 @@ const GettingStarted = () => {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <RocketLaunchIcon className="w-8 h-8 mr-4 text-orange-400" />
+                  <RocketLaunchIcon className="w-6 h-6 mr-3 text-orange-400" />
                   Deployment Guide
                 </span>
               </h2>
@@ -149,8 +154,8 @@ const GettingStarted = () => {
                     <h4 className="text-lg font-medium text-white mb-4">2. Quick Deployment (Docker)</h4>
                     <CodeBlock 
                       code={`# Clone the repository
-git clone https://github.com/secsovereign/mbfbtc.git
-cd mbfbtc
+git clone https://github.com/MyBitcoinFuture/dashboard.git
+cd dashboard
 
 # Start all services with Docker Compose
 docker-compose up -d
@@ -169,22 +174,22 @@ docker-compose ps
                     <h4 className="text-lg font-medium text-white mb-4">3. Manual Installation</h4>
                     <CodeBlock 
                       code={`# Clone and setup
-git clone https://github.com/secsovereign/mbfbtc.git
-cd mbfbtc
-npm install
+git clone https://github.com/MyBitcoinFuture/dashboard.git
+cd dashboard
 
-# Install frontend dependencies
-cd web-react && npm install && cd ..
+# Install all dependencies
+npm run install:all
 
 # Configure environment
-cp env.example .env
+cp config/env.example .env
 # Edit .env with your settings
 
-# Build frontend
-npm run frontend:build
+# Start development mode
+npm run dev
 
-# Start the application
-npm start`}
+# Or start individual services
+npm run dev:api    # API server on port 3100
+npm run dev:web    # Web interface on port 3003`}
                       language="bash"
                       title="Manual Installation"
                     />
@@ -221,7 +226,7 @@ npm start`}
                       <div>
                         <div className="text-orange font-semibold mb-3">CLI Access</div>
                         <ul className="text-gray space-y-2">
-                          <li>• Use mbf-treasury commands</li>
+                          <li>• Use npm run cli commands</li>
                           <li>• Check system status</li>
                           <li>• View configuration</li>
                           <li>• Access logs</li>
@@ -234,16 +239,16 @@ npm start`}
                     <h4 className="text-lg font-medium text-white mb-4">2. System Health Check</h4>
                     <CodeBlock 
                       code={`# Check system status
-mbf-treasury status
-
-# Comprehensive health check
-mbf-treasury health
+npm run cli status
 
 # View system logs
-mbf-treasury logs
+npm run cli logs
 
 # Check API connectivity
-curl http://localhost:3100/health`}
+curl http://localhost:3100/health
+
+# Or use the CLI directly
+node cli/cli.js status`}
                       language="bash"
                       title="Health Check Commands"
                     />
@@ -287,19 +292,19 @@ curl http://localhost:3100/health`}
                     <h4 className="text-lg font-medium text-white mb-4">Via CLI</h4>
                     <CodeBlock 
                       code={`# List current wallets
-mbf-treasury list-wallets
+npm run cli list-wallets
 
 # Add a new wallet
-mbf-treasury add-wallet \\
+npm run cli add-wallet \\
   --xpub "xpub..." \\
   --label "My Wallet" \\
   --type "bip44"
 
 # Verify wallet was added
-mbf-treasury list-wallets
+npm run cli list-wallets
 
 # Check wallet balance
-mbf-treasury portfolio`}
+npm run cli portfolio`}
                       language="bash"
                       title="CLI Wallet Management"
                     />
@@ -335,16 +340,16 @@ mbf-treasury portfolio`}
                     <h4 className="text-lg font-medium text-white mb-4">Portfolio Overview</h4>
                     <CodeBlock 
                       code={`# View portfolio summary
-mbf-treasury portfolio
+npm run cli portfolio
 
 # Detailed portfolio analysis
-mbf-treasury portfolio --detailed
+npm run cli portfolio --detailed
 
 # Risk analysis
-mbf-treasury portfolio --risk
+npm run cli portfolio --risk
 
 # Performance metrics
-mbf-treasury portfolio --performance`}
+npm run cli portfolio --performance`}
                       language="bash"
                       title="Portfolio Commands"
                     />
@@ -369,19 +374,17 @@ mbf-treasury portfolio --performance`}
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
                     <h4 className="text-lg font-medium text-white mb-4">BRK Integration</h4>
                     <CodeBlock 
-                      code={`# Enable BRK integration
-mbf-treasury setup --brk
+                      code={`# BRK integration is automatically configured
+# Check BRK status via API
+curl http://localhost:3100/api/integration/brk/status
 
-# Configure BRK indexes
-mbf-treasury brk --indexes date,address,transaction
+# View BRK portfolio data
+curl http://localhost:3100/api/integration/brk-portfolio
 
-# Start BRK services
-mbf-treasury brk --start
-
-# Check BRK status
-mbf-treasury brk --status`}
+# Check BRK health
+curl http://localhost:3100/api/bitcoin/bitcoin-core-health`}
                       language="bash"
-                      title="BRK Setup Commands"
+                      title="BRK Integration"
                     />
                   </div>
                   
