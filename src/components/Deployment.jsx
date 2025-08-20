@@ -142,19 +142,22 @@ const Deployment = () => {
                     href="https://github.com/MyBitcoinFuture/dashboard"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary"
                     style={{ 
                       width: '100%', 
                       textAlign: 'center',
-                      backgroundColor: '#1e40af',
-                      color: '#ffffff',
+                      backgroundColor: '#1e40af !important',
+                      color: '#ffffff !important',
                       border: '1px solid #3b82f6',
                       padding: '0.75rem 1.5rem',
                       borderRadius: '0.375rem',
                       fontWeight: '600',
                       textDecoration: 'none',
                       display: 'inline-block',
-                      transition: 'all 0.2s ease-in-out'
+                      transition: 'all 0.2s ease-in-out',
+                      background: '#1e40af',
+                      fontSize: '1rem',
+                      minHeight: '48px',
+                      cursor: 'pointer'
                     }}
                   >
                     Deploy with Docker
