@@ -397,36 +397,33 @@ const Docs = () => {
             <div className="card mb-16">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-white mb-4">Treasury Dashboard</h2>
-                <p className="text-slate-300 text-lg">
-                  Hybrid monorepo architecture with 5 core modules
-                </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <BuildingOfficeIcon style={{ width: '24px', height: '24px' }} className="text-orange-400" />
+                    <BuildingOfficeIcon style={{ width: '28px', height: '28px' }} className="text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Hybrid Monorepo</h3>
                   <p className="text-slate-400 text-sm">5 core modules + infrastructure</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <PuzzlePieceIcon style={{ width: '24px', height: '24px' }} className="text-orange-400" />
+                    <PuzzlePieceIcon style={{ width: '28px', height: '28px' }} className="text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Plugin Ecosystem</h3>
                   <p className="text-slate-400 text-sm">Extensible plugin architecture</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <ChartBarIcon style={{ width: '24px', height: '24px' }} className="text-orange-400" />
+                    <ChartBarIcon style={{ width: '28px', height: '28px' }} className="text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">BRK Integration</h3>
                   <p className="text-slate-400 text-sm">Bitcoin Research Kit analytics</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <CloudArrowUpIcon style={{ width: '24px', height: '24px' }} className="text-orange-400" />
+                    <CloudArrowUpIcon style={{ width: '28px', height: '28px' }} className="text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Production Ready</h3>
                   <p className="text-slate-400 text-sm">Docker, monitoring, security</p>
@@ -442,7 +439,7 @@ const Docs = () => {
                   <div key={index} className="card stagger-item hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                     <div className="flex items-center mb-6">
                       <div className="mr-4">
-                        <IconComponent style={{ width: '24px', height: '24px' }} className="text-orange-400" />
+                        <IconComponent style={{ width: '28px', height: '28px' }} className="text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
