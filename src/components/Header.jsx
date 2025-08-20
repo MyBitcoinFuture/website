@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,11 +16,32 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleAnchorClick = (anchor) => {
+    if (location.pathname !== '/') {
+      // If not on home page, navigate to home first, then scroll to anchor
+      navigate('/')
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        const element = document.querySelector(anchor)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    } else {
+      // If already on home page, just scroll to anchor
+      const element = document.querySelector(anchor)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+    setIsMenuOpen(false)
+  }
+
   const navigation = [
-    { name: 'Features', href: '#features', isExternal: false },
-    { name: 'Deployment', href: '#deployment', isExternal: false },
-    { name: 'Docs', href: '/docs', isExternal: false },
-    { name: 'Contact', href: '#contact', isExternal: false },
+    { name: 'Features', href: '#features', isAnchor: true },
+    { name: 'Deployment', href: '#deployment', isAnchor: true },
+    { name: 'Docs', href: '/docs', isAnchor: false },
+    { name: 'Contact', href: '#contact', isAnchor: true },
   ]
 
   return (
@@ -38,14 +61,14 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
-              item.isExternal ? (
-                <a
+              item.isAnchor ? (
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="nav-link"
+                  onClick={() => handleAnchorClick(item.href)}
+                  className="nav-link bg-transparent border-none cursor-pointer"
                 >
                   {item.name}
-                </a>
+                </button>
               ) : (
                 <Link
                   key={item.name}
@@ -57,7 +80,7 @@ const Header = () => {
               )
             ))}
             <a
-              href="https://github.com/MyBitcoinFuture"
+              href="https://github.com/MyBitcoinFuture/dashboard"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -102,15 +125,14 @@ const Header = () => {
           <div className="mobile-menu" style={{ padding: '16px 0', borderTop: '1px solid #1e40af' }}>
             <div className="flex flex-col gap-4">
               {navigation.map((item) => (
-                item.isExternal ? (
-                  <a
+                item.isAnchor ? (
+                  <button
                     key={item.name}
-                    href={item.href}
-                    className="nav-link"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => handleAnchorClick(item.href)}
+                    className="nav-link bg-transparent border-none cursor-pointer text-left"
                   >
                     {item.name}
-                  </a>
+                  </button>
                 ) : (
                   <Link
                     key={item.name}
@@ -123,7 +145,7 @@ const Header = () => {
                 )
               ))}
               <a
-                href="https://github.com/MyBitcoinFuture"
+                href="https://github.com/MyBitcoinFuture/dashboard"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
