@@ -29,8 +29,8 @@ const Docs = () => {
       items: [
         { 
           title: "Installation", 
-          description: "Clone and install the hybrid monorepo",
-          link: "https://github.com/MyBitcoinFuture/dashboard#quick-start"
+          description: "Clone and install the project",
+          link: "https://github.com/MyBitcoinFuture/dashboard#installation"
         },
         { 
           title: "Environment Setup", 
@@ -50,7 +50,7 @@ const Docs = () => {
       ]
     },
     {
-      title: "Hybrid Monorepo Architecture",
+      title: "Architecture",
       description: "Understanding the modular workspace structure",
       icon: BuildingOfficeIcon,
       items: [
@@ -66,13 +66,13 @@ const Docs = () => {
         },
         { 
           title: "Build System", 
-          description: "npm workspaces and build scripts",
+          description: "Project build and deployment scripts",
           link: "https://github.com/MyBitcoinFuture/dashboard#available-scripts"
         },
         { 
           title: "Development Workflow", 
           description: "Working across multiple modules",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/HYBRID_MONOREPO_GUIDE.md"
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/DEVELOPMENT_GUIDE.md"
         }
       ]
     },
@@ -298,8 +298,8 @@ const Docs = () => {
       icon: BookOpenIcon,
       items: [
         { 
-          title: "MyBitcoinFuture/dashboard", 
-          description: "Main dashboard monorepo",
+          title: "Dashboard Repository", 
+          description: "Main dashboard project",
           link: "https://github.com/MyBitcoinFuture/dashboard"
         },
         { 
@@ -404,7 +404,7 @@ const Docs = () => {
                   <div className="flex justify-center mb-3">
                     <BuildingOfficeIcon className="icon-large text-orange-400" />
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Hybrid Monorepo</h3>
+                  <h3 className="text-white font-semibold mb-2">Project Structure</h3>
                   <p className="text-slate-400 text-sm">5 core modules + infrastructure</p>
                 </div>
                 <div className="text-center p-4">
@@ -438,7 +438,7 @@ const Docs = () => {
                 return (
                   <div key={index} className="card stagger-item hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                     <div className="flex items-center mb-6">
-                      <div className="mr-6">
+                      <div className="mr-8">
                         <IconComponent style={{ width: '40px', height: '40px' }} className="text-orange-400" />
                       </div>
                       <div>

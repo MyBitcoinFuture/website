@@ -37,7 +37,7 @@ const GettingStarted = () => {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <RocketLaunchIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
+                  <RocketLaunchIcon style={{ width: '24px', height: '24px' }} className="mr-8 text-orange-400" />
                   Quick Start
                 </span>
               </h2>
@@ -128,7 +128,7 @@ npm run dev
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <ComputerDesktopIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
+                  <ComputerDesktopIcon style={{ width: '24px', height: '24px' }} className="mr-8 text-orange-400" />
                   Web Dashboard Guide
                 </span>
               </h2>
@@ -186,7 +186,7 @@ npm run dev
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <WrenchScrewdriverIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
+                  <WrenchScrewdriverIcon style={{ width: '24px', height: '24px' }} className="mr-8 text-orange-400" />
                   Configuration
                 </span>
               </h2>
@@ -251,7 +251,7 @@ ADMIN_TOKEN=your_admin_token`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <CommandLineIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
+                  <CommandLineIcon style={{ width: '24px', height: '24px' }} className="mr-8 text-orange-400" />
                   CLI & API (Optional)
                 </span>
               </h2>
@@ -297,7 +297,7 @@ curl http://localhost:3100/api/wallets/1/balance`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <CloudArrowUpIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
+                  <CloudArrowUpIcon style={{ width: '24px', height: '24px' }} className="mr-8 text-orange-400" />
                   Production Deployment
                 </span>
               </h2>
@@ -378,7 +378,7 @@ server {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <ShieldCheckIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
+                  <ShieldCheckIcon style={{ width: '24px', height: '24px' }} className="mr-8 text-orange-400" />
                   Troubleshooting
                 </span>
               </h2>
@@ -429,7 +429,7 @@ sqlite3 ./data/treasury.db ".tables"`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <DocumentTextIcon style={{ width: '24px', height: '24px' }} className="mr-6 text-orange-400" />
+                  <DocumentTextIcon style={{ width: '24px', height: '24px' }} className="mr-8 text-orange-400" />
                   Next Steps
                 </span>
               </h2>
