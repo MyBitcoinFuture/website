@@ -29,7 +29,7 @@ const GettingStarted = () => {
                 <span className="text-white">Getting Started</span>
               </h1>
               <p className="text-gray mb-8" style={{ fontSize: '1.1rem', maxWidth: '48rem', margin: '0 auto 2rem' }}>
-                Deploy and configure the Bitcoin treasury management system in under 10 minutes.
+                Deploy and access the Bitcoin treasury management system in under 10 minutes.
               </p>
             </div>
 
@@ -45,7 +45,7 @@ const GettingStarted = () => {
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <div className="space-y-8">
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">1. Clone & Deploy</h4>
+                    <h4 className="text-lg font-medium text-white mb-4">1. Deploy the System</h4>
                     <CodeBlock 
                       code={`git clone https://github.com/MyBitcoinFuture/dashboard.git
 cd dashboard
@@ -55,39 +55,117 @@ npm run dev`}
                       title="Quick Deploy"
                     />
                     <p className="text-gray text-sm mt-3">
-                      • API: http://localhost:3100 • Web: http://localhost:3003 • CLI: npm run cli
+                      • Web Dashboard: http://localhost:3003 • API: http://localhost:3100
                     </p>
                   </div>
                   
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">2. Add Your First Wallet</h4>
-                    <CodeBlock 
-                      code={`# Add wallet via CLI
-npm run cli wallet add --name "Main Wallet" --xpub "xpub..."
-
-# Or via API
-curl -X POST http://localhost:3100/api/wallets \\
-  -H "Content-Type: application/json" \\
-  -d '{"name": "Main Wallet", "xpub": "xpub..."}'`}
-                      language="bash"
-                      title="Add Wallet"
-                    />
+                    <h4 className="text-lg font-medium text-white mb-4">2. Access the Web Dashboard</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <div className="text-orange font-semibold mb-3">Dashboard Features</div>
+                        <ul className="text-gray space-y-2 text-sm">
+                          <li>• Multi-wallet portfolio overview</li>
+                          <li>• Real-time balance tracking</li>
+                          <li>• Transaction history & analytics</li>
+                          <li>• Risk management tools</li>
+                          <li>• Compliance reporting</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <div className="text-orange font-semibold mb-3">First Steps</div>
+                        <ul className="text-gray space-y-2 text-sm">
+                          <li>• Open http://localhost:3003</li>
+                          <li>• Add your first wallet (xpub)</li>
+                          <li>• Configure notifications</li>
+                          <li>• Set up security preferences</li>
+                          <li>• Explore analytics dashboard</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">3. Check Status</h4>
-                    <CodeBlock 
-                      code={`# Check system status
-npm run cli status
+                    <h4 className="text-lg font-medium text-white mb-4">3. Add Your First Wallet</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <div className="text-orange font-semibold mb-3">Via Web Dashboard</div>
+                        <ul className="text-gray space-y-2 text-sm">
+                          <li>• Navigate to Wallets section</li>
+                          <li>• Click "Add New Wallet"</li>
+                          <li>• Enter wallet name and xpub</li>
+                          <li>• Save and verify balance</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <div className="text-orange font-semibold mb-3">Via API (Optional)</div>
+                        <CodeBlock 
+                          code={`curl -X POST http://localhost:3100/api/wallets \\
+  -H "Content-Type: application/json" \\
+  -d '{"name": "Main Wallet", "xpub": "xpub..."}'`}
+                          language="bash"
+                          title="API Add Wallet"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-# List wallets
-npm run cli wallet list
-
-# Get wallet balance
-npm run cli wallet balance --id 1`}
-                      language="bash"
-                      title="System Status"
-                    />
+            {/* Web Interface Guide */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <ComputerDesktopIcon className="icon-medium mr-4 text-orange-400" />
+                  Web Dashboard Guide
+                </span>
+              </h2>
+              
+              <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4">Dashboard Sections</h4>
+                    <div className="space-y-4">
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Portfolio Overview</div>
+                        <div className="text-gray text-sm">Total balance, performance metrics, and asset allocation</div>
+                      </div>
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Wallet Management</div>
+                        <div className="text-gray text-sm">Add, remove, and configure individual wallets</div>
+                      </div>
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Transaction History</div>
+                        <div className="text-gray text-sm">Detailed transaction logs with filtering and search</div>
+                      </div>
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Analytics & Reports</div>
+                        <div className="text-gray text-sm">Performance analysis, risk metrics, and compliance reports</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4">Key Features</h4>
+                    <div className="space-y-4">
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Real-time Updates</div>
+                        <div className="text-gray text-sm">Live balance updates and transaction notifications</div>
+                      </div>
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Multi-wallet Support</div>
+                        <div className="text-gray text-sm">Track unlimited wallets in a unified interface</div>
+                      </div>
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Advanced Filtering</div>
+                        <div className="text-gray text-sm">Filter transactions by date, amount, and wallet</div>
+                      </div>
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Export Capabilities</div>
+                        <div className="text-gray text-sm">Export data for accounting and compliance</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -158,41 +236,45 @@ ADMIN_TOKEN=your_admin_token`}
               </div>
             </section>
 
-            {/* CLI Commands */}
+            {/* CLI & API (Optional) */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
                   <CommandLineIcon className="icon-medium mr-4 text-orange-400" />
-                  CLI Commands
+                  CLI & API (Optional)
                 </span>
               </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-lg font-medium text-white mb-4">Wallet Management</h4>
+                    <h4 className="text-lg font-medium text-white mb-4">CLI Commands</h4>
                     <div className="space-y-3 text-sm">
                       <CodeBlock 
                         code={`npm run cli wallet add --name "Wallet1" --xpub "xpub..."
 npm run cli wallet list
 npm run cli wallet balance --id 1
-npm run cli wallet remove --id 1`}
+npm run cli status`}
                         language="bash"
-                        title="Wallet Commands"
+                        title="CLI Commands"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <h4 className="text-lg font-medium text-white mb-4">System Commands</h4>
+                    <h4 className="text-lg font-medium text-white mb-4">API Integration</h4>
                     <div className="space-y-3 text-sm">
                       <CodeBlock 
-                        code={`npm run cli status
-npm run cli config show
-npm run cli config set --key port --value 3100
-npm run cli logs --level debug`}
+                        code={`# Check system status
+curl http://localhost:3100/api/status
+
+# List wallets
+curl http://localhost:3100/api/wallets
+
+# Get wallet balance
+curl http://localhost:3100/api/wallets/1/balance`}
                         language="bash"
-                        title="System Commands"
+                        title="API Examples"
                       />
                     </div>
                   </div>
