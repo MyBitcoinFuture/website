@@ -1605,3 +1605,25 @@ select:focus {
 .text-responsive-xl {
   font-size: clamp(var(--text-xl), 6vw, var(--text-5xl));
 }
+
+/* Icon sizing utilities */
+.icon-large {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.icon-medium {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.icon-small {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Override Heroicons default sizing */
+svg[class*="heroicons"] {
+  width: inherit !important;
+  height: inherit !important;
+}
