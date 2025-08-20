@@ -139,11 +139,17 @@ const Deployment = () => {
               {option.title === "Docker" && (
                 <div style={{ marginTop: 'auto' }}>
                   <a
-                    href="https://github.com/MyBitcoinFuture"
+                    href="https://github.com/MyBitcoinFuture/dashboard"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary"
-                    style={{ width: '100%', textAlign: 'center' }}
+                    style={{ 
+                      width: '100%', 
+                      textAlign: 'center',
+                      backgroundColor: '#1e40af',
+                      color: '#ffffff',
+                      border: '1px solid #3b82f6'
+                    }}
                   >
                     Deploy with Docker
                   </a>

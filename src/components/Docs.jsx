@@ -406,28 +406,28 @@ const Docs = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <BuildingOfficeIcon className="w-6 h-6 text-orange-400" />
+                    <BuildingOfficeIcon className="w-5 h-5 text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Hybrid Monorepo</h3>
                   <p className="text-slate-400 text-sm">5 core modules + infrastructure</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <PuzzlePieceIcon className="w-6 h-6 text-orange-400" />
+                    <PuzzlePieceIcon className="w-5 h-5 text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Plugin Ecosystem</h3>
                   <p className="text-slate-400 text-sm">Extensible plugin architecture</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <ChartBarIcon className="w-6 h-6 text-orange-400" />
+                    <ChartBarIcon className="w-5 h-5 text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">BRK Integration</h3>
                   <p className="text-slate-400 text-sm">Bitcoin Research Kit analytics</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <CloudArrowUpIcon className="w-6 h-6 text-orange-400" />
+                    <CloudArrowUpIcon className="w-5 h-5 text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Production Ready</h3>
                   <p className="text-slate-400 text-sm">Docker, monitoring, security</p>
@@ -436,14 +436,14 @@ const Docs = () => {
             </div>
 
             {/* Documentation Tree */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {docCategories.map((category, index) => {
                 const IconComponent = category.icon;
                 return (
-                  <div key={index} className="card stagger-item">
+                  <div key={index} className="card stagger-item hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                     <div className="flex items-center mb-6">
-                      <div className="mr-4">
-                        <IconComponent className="w-6 h-6 text-orange-400" />
+                      <div className="mr-3">
+                        <IconComponent className="w-5 h-5 text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
@@ -451,22 +451,22 @@ const Docs = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                       {category.items.map((item, itemIndex) => (
-                        <div key={itemIndex} className="border-l-2 border-slate-700 pl-4 py-2">
+                        <div key={itemIndex} className="border-l-2 border-slate-700 pl-3 py-2 hover:border-orange-400 transition-colors">
                           <div className="flex items-start justify-between">
                             <div className="flex-1">
-                              <h4 className="text-white font-medium mb-1">{item.title}</h4>
-                              <p className="text-slate-400 text-sm mb-2">{item.description}</p>
+                              <h4 className="text-white font-medium mb-1 text-sm">{item.title}</h4>
+                              <p className="text-slate-400 text-xs mb-2 leading-relaxed">{item.description}</p>
                               {item.link && (
                                 <a 
                                   href={item.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-orange-400 hover:text-orange-300 text-sm font-medium inline-flex items-center"
+                                  className="text-orange-400 hover:text-orange-300 text-xs font-medium inline-flex items-center transition-colors"
                                 >
                                   View Documentation
-                                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                   </svg>
                                 </a>
