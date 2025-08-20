@@ -37,7 +37,7 @@ const GettingStarted = () => {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <RocketLaunchIcon className="icon-medium mr-3 text-orange-400" />
+                  <RocketLaunchIcon className="icon-medium mr-4 text-orange-400" />
                   Quick Start
                 </span>
               </h2>
@@ -97,7 +97,7 @@ npm run cli wallet balance --id 1`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <WrenchScrewdriverIcon className="icon-medium mr-3 text-orange-400" />
+                  <WrenchScrewdriverIcon className="icon-medium mr-4 text-orange-400" />
                   Configuration
                 </span>
               </h2>
@@ -162,7 +162,7 @@ ADMIN_TOKEN=your_admin_token`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <CommandLineIcon className="icon-medium mr-3 text-orange-400" />
+                  <CommandLineIcon className="icon-medium mr-4 text-orange-400" />
                   CLI Commands
                 </span>
               </h2>
@@ -204,7 +204,7 @@ npm run cli logs --level debug`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <CloudArrowUpIcon className="icon-medium mr-3 text-orange-400" />
+                  <CloudArrowUpIcon className="icon-medium mr-4 text-orange-400" />
                   Production Deployment
                 </span>
               </h2>
@@ -285,7 +285,7 @@ server {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <ShieldCheckIcon className="icon-medium mr-3 text-orange-400" />
+                  <ShieldCheckIcon className="icon-medium mr-4 text-orange-400" />
                   Troubleshooting
                 </span>
               </h2>
@@ -336,7 +336,7 @@ sqlite3 ./data/treasury.db ".tables"`}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <DocumentTextIcon className="icon-medium mr-3 text-orange-400" />
+                  <DocumentTextIcon className="icon-medium mr-4 text-orange-400" />
                   Next Steps
                 </span>
               </h2>
