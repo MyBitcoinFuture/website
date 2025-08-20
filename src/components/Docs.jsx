@@ -28,43 +28,59 @@ const Docs = () => {
               <h3 className="text-xl font-semibold text-white mb-6 text-center">📚 Documentation Index</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <a href="#overview" className="block p-6 bg-gray-800 rounded-xl border border-gray-700">
-                  <div className="text-3xl mb-3">🏗️</div>
-                  <h4 className="text-orange font-semibold mb-2">Architecture</h4>
+                  <div className="flex items-center mb-3">
+                    <span className="text-2xl" style={{ marginRight: '1rem' }}>🏗️</span>
+                    <h4 className="text-orange font-semibold">Architecture</h4>
+                  </div>
                   <p className="text-gray text-sm">System design and components</p>
                 </a>
                 <a href="#deployment" className="block p-6 bg-gray-800 rounded-xl border border-gray-700">
-                  <div className="text-3xl mb-3">🚀</div>
-                  <h4 className="text-orange font-semibold mb-2">Deployment</h4>
+                  <div className="flex items-center mb-3">
+                    <span className="text-2xl" style={{ marginRight: '1rem' }}>🚀</span>
+                    <h4 className="text-orange font-semibold">Deployment</h4>
+                  </div>
                   <p className="text-gray text-sm">Production deployment guides</p>
                 </a>
                 <a href="#api" className="block p-6 bg-gray-800 rounded-xl border border-gray-700">
-                  <div className="text-3xl mb-3">🔌</div>
-                  <h4 className="text-orange font-semibold mb-2">API Reference</h4>
+                  <div className="flex items-center mb-3">
+                    <span className="text-2xl" style={{ marginRight: '1rem' }}>🔌</span>
+                    <h4 className="text-orange font-semibold">API Reference</h4>
+                  </div>
                   <p className="text-gray text-sm">REST API documentation</p>
                 </a>
                 <a href="#cli" className="block p-6 bg-gray-800 rounded-xl border border-gray-700">
-                  <div className="text-3xl mb-3">💻</div>
-                  <h4 className="text-orange font-semibold mb-2">CLI Reference</h4>
+                  <div className="flex items-center mb-3">
+                    <span className="text-2xl" style={{ marginRight: '1rem' }}>💻</span>
+                    <h4 className="text-orange font-semibold">CLI Reference</h4>
+                  </div>
                   <p className="text-gray text-sm">Command line interface</p>
                 </a>
                 <a href="#advanced" className="block p-6 bg-gray-800 rounded-xl border border-gray-700">
-                  <div className="text-3xl mb-3">⚡</div>
-                  <h4 className="text-orange font-semibold mb-2">Advanced Features</h4>
+                  <div className="flex items-center mb-3">
+                    <span className="text-2xl" style={{ marginRight: '1rem' }}>⚡</span>
+                    <h4 className="text-orange font-semibold">Advanced Features</h4>
+                  </div>
                   <p className="text-gray text-sm">BRK integration & analytics</p>
                 </a>
                 <a href="#security" className="block p-6 bg-gray-800 rounded-xl border border-gray-700">
-                  <div className="text-3xl mb-3">🔒</div>
-                  <h4 className="text-orange font-semibold mb-2">Security</h4>
+                  <div className="flex items-center mb-3">
+                    <span className="text-2xl" style={{ marginRight: '1rem' }}>🔒</span>
+                    <h4 className="text-orange font-semibold">Security</h4>
+                  </div>
                   <p className="text-gray text-sm">Security & compliance</p>
                 </a>
                 <a href="#monitoring" className="block p-6 bg-gray-800 rounded-xl border border-gray-700">
-                  <div className="text-3xl mb-3">📊</div>
-                  <h4 className="text-orange font-semibold mb-2">Monitoring</h4>
+                  <div className="flex items-center mb-3">
+                    <span className="text-2xl" style={{ marginRight: '1rem' }}>📊</span>
+                    <h4 className="text-orange font-semibold">Monitoring</h4>
+                  </div>
                   <p className="text-gray text-sm">Health checks & observability</p>
                 </a>
                 <a href="#development" className="block p-6 bg-gray-800 rounded-xl border border-gray-700">
-                  <div className="text-3xl mb-3">🛠️</div>
-                  <h4 className="text-orange font-semibold mb-2">Development</h4>
+                  <div className="flex items-center mb-3">
+                    <span className="text-2xl" style={{ marginRight: '1rem' }}>🛠️</span>
+                    <h4 className="text-orange font-semibold">Development</h4>
+                  </div>
                   <p className="text-gray text-sm">Contributing & extending</p>
                 </a>
               </div>
@@ -72,7 +88,12 @@ const Docs = () => {
 
             {/* System Architecture */}
             <section id="overview" className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">🏗️ System Architecture</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <span style={{ marginRight: '1rem' }}>🏗️</span>
+                  System Architecture
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Enterprise Architecture Overview</h3>
@@ -165,7 +186,12 @@ const Docs = () => {
 
             {/* Deployment Guide */}
             <section id="deployment" className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">🚀 Deployment Guide</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <span className="mr-4">🚀</span>
+                  Deployment Guide
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Production Deployment</h3>
@@ -319,7 +345,12 @@ NODE_ENV=production npm start`}
 
             {/* API Reference */}
             <section id="api" className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">🔌 API Reference</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <span className="mr-4">🔌</span>
+                  API Reference
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">REST API Documentation</h3>
@@ -495,7 +526,12 @@ NODE_ENV=production npm start`}
 
             {/* CLI Reference */}
             <section id="cli" className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">💻 CLI Reference</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <span className="mr-4">💻</span>
+                  CLI Reference
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Command Line Interface</h3>
@@ -604,7 +640,12 @@ NODE_ENV=production npm start`}
 
             {/* Advanced Features */}
             <section id="advanced" className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">⚡ Advanced Features</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <span className="mr-4">⚡</span>
+                  Advanced Features
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Bitcoin Research Kit Integration</h3>
@@ -661,7 +702,12 @@ NODE_ENV=production npm start`}
 
             {/* Security */}
             <section id="security" className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">🔒 Security & Compliance</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <span className="mr-4">🔒</span>
+                  Security & Compliance
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Enterprise Security Features</h3>
@@ -714,7 +760,12 @@ NODE_ENV=production npm start`}
 
             {/* Monitoring */}
             <section id="monitoring" className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">📊 Monitoring & Observability</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <span className="mr-4">📊</span>
+                  Monitoring & Observability
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Health Monitoring</h3>
@@ -767,7 +818,12 @@ NODE_ENV=production npm start`}
 
             {/* Development */}
             <section id="development" className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">🛠️ Development Guide</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <span className="mr-4">🛠️</span>
+                  Development Guide
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Contributing to MyBitcoinFuture</h3>

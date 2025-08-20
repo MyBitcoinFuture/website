@@ -25,7 +25,12 @@ const GettingStarted = () => {
 
             {/* System Overview */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">🎯 System Overview</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              <span className="inline-flex items-center">
+                <span className="mr-4">🎯</span>
+                System Overview
+              </span>
+            </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">What is MyBitcoinFuture?</h3>
@@ -85,7 +90,12 @@ const GettingStarted = () => {
 
             {/* Deployment Guide */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">🚀 Deployment Guide</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              <span className="inline-flex items-center">
+                <span className="mr-4">🚀</span>
+                Deployment Guide
+              </span>
+            </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Step-by-Step Deployment</h3>
@@ -165,7 +175,12 @@ npm start`}
 
             {/* Initial Setup */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">⚙️ Initial Setup</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              <span className="inline-flex items-center">
+                <span className="mr-4">⚙️</span>
+                Initial Setup
+              </span>
+            </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">First-Time Configuration</h3>
@@ -237,7 +252,12 @@ curl http://localhost:3100/health`}
 
             {/* Wallet Integration */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">💼 Wallet Integration</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              <span className="inline-flex items-center">
+                <span className="mr-4">💼</span>
+                Wallet Integration
+              </span>
+            </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Adding Your First Wallet</h3>
@@ -315,7 +335,12 @@ mbf-treasury portfolio --performance`}
 
             {/* Advanced Features */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">⚡ Advanced Features</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              <span className="inline-flex items-center">
+                <span className="mr-4">⚡</span>
+                Advanced Features
+              </span>
+            </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Beyond Basic Setup</h3>
@@ -385,7 +410,12 @@ mbf-treasury alerts --history`}
 
             {/* Security Best Practices */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">🔒 Security Best Practices</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              <span className="inline-flex items-center">
+                <span className="mr-4">🔒</span>
+                Security Best Practices
+              </span>
+            </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Securing Your Deployment</h3>
@@ -438,7 +468,12 @@ mbf-treasury alerts --history`}
 
             {/* Next Steps */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">🎯 Next Steps</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              <span className="inline-flex items-center">
+                <span className="mr-4">🎯</span>
+                Next Steps
+              </span>
+            </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6">Continuing Your Journey</h3>
