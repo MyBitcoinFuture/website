@@ -4,7 +4,6 @@ import BackToTop from './BackToTop'
 import CodeBlock from './CodeBlock'
 import { 
   RocketLaunchIcon, 
-  FlagIcon, 
   WrenchScrewdriverIcon,
   BuildingOfficeIcon,
   GlobeAltIcon,
@@ -27,247 +26,131 @@ const GettingStarted = () => {
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="mb-6">
-                <span className="text-white">Getting Started with</span>
-                <br />
-                <span className="text-orange">MyBitcoinFuture Treasury</span>
+                <span className="text-white">Getting Started</span>
               </h1>
-              <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem' }}>
-                Complete beginner's guide to deploying and using the enterprise Bitcoin treasury management software. 
-                From initial setup to advanced features in simple, step-by-step instructions.
+              <p className="text-gray mb-8" style={{ fontSize: '1.1rem', maxWidth: '48rem', margin: '0 auto 2rem' }}>
+                Deploy and configure the Bitcoin treasury management system in under 10 minutes.
               </p>
             </div>
 
-            {/* What is MyBitcoinFuture */}
+            {/* Quick Start */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <RocketLaunchIcon style={{ width: '24px', height: '24px' }} className="mr-4 text-orange-400" />
-                  Getting Started
+                  <RocketLaunchIcon className="icon-medium mr-3 text-orange-400" />
+                  Quick Start
                 </span>
               </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <h3 className="text-xl font-semibold text-white mb-6">What is MyBitcoinFuture Treasury?</h3>
-                <p className="text-gray mb-8 leading-relaxed text-lg">
-                  MyBitcoinFuture Treasury is a comprehensive Bitcoin treasury management software designed for enterprises, 
-                  institutions, and serious Bitcoin holders. Built as a hybrid monorepo with npm workspaces, it provides 
-                  multi-wallet tracking, advanced analytics, risk management, and compliance features through an intuitive 
-                  web dashboard, powerful CLI, and desktop application.
-                </p>
-                
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                  <div>
-                    <h4 className="text-lg font-medium text-white mb-4 flex items-center">
-                      <ShieldCheckIcon style={{ width: '24px', height: '24px' }} className="mr-4 text-orange-400" />
-                      Core Capabilities
-                    </h4>
-                    <div className="space-y-4">
-                      <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Multi-Wallet Management</div>
-                        <div className="text-gray text-sm">Track unlimited wallets with real-time balance updates</div>
-                      </div>
-                      <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Portfolio Analytics</div>
-                        <div className="text-gray text-sm">Advanced performance metrics and risk analysis</div>
-                      </div>
-                      <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Transaction Monitoring</div>
-                        <div className="text-gray text-sm">Global transaction tracking and filtering</div>
-                      </div>
-                      <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Compliance & Reporting</div>
-                        <div className="text-gray text-sm">Automated reporting and audit trails</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-medium text-white mb-4 flex items-center">
-                      <WrenchScrewdriverIcon style={{ width: '24px', height: '24px' }} className="mr-4 text-orange-400" />
-                      Technical Architecture
-                    </h4>
-                    <div className="space-y-4">
-                      <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Web Dashboard</div>
-                        <div className="text-gray text-sm">Modern React application with real-time updates</div>
-                      </div>
-                      <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">API Server</div>
-                        <div className="text-gray text-sm">RESTful API with JWT authentication</div>
-                      </div>
-                      <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">CLI Interface</div>
-                        <div className="text-gray text-sm">Command-line tools for automation</div>
-                      </div>
-                      <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Desktop App</div>
-                        <div className="text-gray text-sm">Cross-platform Electron application</div>
-                      </div>
-                      <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Shared Modules</div>
-                        <div className="text-gray text-sm">Common utilities and components</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Deployment Guide */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">
-                <span className="inline-flex items-center">
-                  <RocketLaunchIcon style={{ width: '20px', height: '20px' }} className="mr-3 text-orange-400" />
-                  Deployment Guide
-                </span>
-              </h2>
-              
-              <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Step-by-Step Deployment</h3>
-                
                 <div className="space-y-8">
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">1. Prerequisites</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <div className="text-orange font-semibold mb-3">Required Software</div>
-                        <ul className="text-gray space-y-2">
-                          <li>• Node.js 18+ with npm</li>
-                          <li>• Git for version control</li>
-                          <li>• Docker & Docker Compose (optional)</li>
-                          <li>• 4GB+ RAM available</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <div className="text-orange font-semibold mb-3">System Requirements</div>
-                        <ul className="text-gray space-y-2">
-                          <li>• Linux, macOS, or Windows</li>
-                          <li>• 50GB+ storage space</li>
-                          <li>• Stable internet connection</li>
-                          <li>• Port 3100 and 3003 available</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">2. Quick Deployment (Docker)</h4>
+                    <h4 className="text-lg font-medium text-white mb-4">1. Clone & Deploy</h4>
                     <CodeBlock 
-                      code={`# Clone the repository
-git clone https://github.com/MyBitcoinFuture/dashboard.git
+                      code={`git clone https://github.com/MyBitcoinFuture/dashboard.git
 cd dashboard
-
-# Start all services with Docker Compose
-docker-compose up -d
-
-# Verify services are running
-docker-compose ps
-
-# Access the dashboard
-# Open http://localhost:3003 in your browser`}
-                      language="bash"
-                      title="Docker Quick Start"
-                    />
-                  </div>
-                  
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">3. Manual Installation</h4>
-                    <CodeBlock 
-                      code={`# Clone and setup
-git clone https://github.com/MyBitcoinFuture/dashboard.git
-cd dashboard
-
-# Install all dependencies
 npm run install:all
-
-# Configure environment
-cp config/env.example .env
-# Edit .env with your settings
-
-# Start development mode
-npm run dev
-
-# Or start individual services
-npm run dev:api    # API server on port 3100
-npm run dev:web    # Web interface on port 3003`}
+npm run dev`}
                       language="bash"
-                      title="Manual Installation"
+                      title="Quick Deploy"
                     />
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Initial Setup */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              <span className="inline-flex items-center">
-                <span className="mr-4">⚙️</span>
-                Initial Setup
-              </span>
-            </h2>
-              
-              <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <h3 className="text-xl font-semibold text-white mb-6">First-Time Configuration</h3>
-                
-                <div className="space-y-8">
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">1. Access the Dashboard</h4>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                      <div>
-                        <div className="text-orange font-semibold mb-3">Web Dashboard</div>
-                        <ul className="text-gray space-y-2">
-                          <li>• Open http://localhost:3003</li>
-                          <li>• Create admin account</li>
-                          <li>• Configure initial settings</li>
-                          <li>• Set up security preferences</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <div className="text-orange font-semibold mb-3">CLI Access</div>
-                        <ul className="text-gray space-y-2">
-                          <li>• Use npm run cli commands</li>
-                          <li>• Check system status</li>
-                          <li>• View configuration</li>
-                          <li>• Access logs</li>
-                        </ul>
-                      </div>
-                    </div>
+                    <p className="text-gray text-sm mt-3">
+                      • API: http://localhost:3100 • Web: http://localhost:3003 • CLI: npm run cli
+                    </p>
                   </div>
                   
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">2. System Health Check</h4>
+                    <h4 className="text-lg font-medium text-white mb-4">2. Add Your First Wallet</h4>
+                    <CodeBlock 
+                      code={`# Add wallet via CLI
+npm run cli wallet add --name "Main Wallet" --xpub "xpub..."
+
+# Or via API
+curl -X POST http://localhost:3100/api/wallets \\
+  -H "Content-Type: application/json" \\
+  -d '{"name": "Main Wallet", "xpub": "xpub..."}'`}
+                      language="bash"
+                      title="Add Wallet"
+                    />
+                  </div>
+                  
+                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <h4 className="text-lg font-medium text-white mb-4">3. Check Status</h4>
                     <CodeBlock 
                       code={`# Check system status
 npm run cli status
 
-# View system logs
-npm run cli logs
+# List wallets
+npm run cli wallet list
 
-# Check API connectivity
-curl http://localhost:3100/health
-
-# Or use the CLI directly
-node cli/cli.js status`}
+# Get wallet balance
+npm run cli wallet balance --id 1`}
                       language="bash"
-                      title="Health Check Commands"
+                      title="System Status"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Configuration */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <WrenchScrewdriverIcon className="icon-medium mr-3 text-orange-400" />
+                  Configuration
+                </span>
+              </h2>
+              
+              <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4">Environment Variables</h4>
+                    <CodeBlock 
+                      code={`# .env file
+NODE_ENV=development
+PORT=3100
+WEB_PORT=3003
+
+# Bitcoin Core RPC (optional)
+BITCOIN_RPC_HOST=localhost
+BITCOIN_RPC_PORT=8332
+BITCOIN_RPC_USER=your_rpc_user
+BITCOIN_RPC_PASS=your_rpc_pass
+
+# Database
+DB_PATH=./data/treasury.db
+
+# Security
+JWT_SECRET=your_jwt_secret
+ADMIN_TOKEN=your_admin_token`}
+                      language="bash"
+                      title="Environment Config"
                     />
                   </div>
                   
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">3. Initial Configuration</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Security Settings</div>
-                        <div className="text-gray text-sm">Configure JWT secrets, rate limits, and access controls</div>
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4">API Endpoints</h4>
+                    <div className="space-y-3 text-sm">
+                      <div className="bg-gray-800 p-3 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">GET /api/status</div>
+                        <div className="text-gray">System health check</div>
                       </div>
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Database Setup</div>
-                        <div className="text-gray text-sm">Initialize SQLite database and run migrations</div>
+                      <div className="bg-gray-800 p-3 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">GET /api/wallets</div>
+                        <div className="text-gray">List all wallets</div>
                       </div>
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Cache Configuration</div>
-                        <div className="text-gray text-sm">Set up Redis cache for performance optimization</div>
+                      <div className="bg-gray-800 p-3 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">POST /api/wallets</div>
+                        <div className="text-gray">Add new wallet</div>
+                      </div>
+                      <div className="bg-gray-800 p-3 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">GET /api/wallets/:id/balance</div>
+                        <div className="text-gray">Get wallet balance</div>
+                      </div>
+                      <div className="bg-gray-800 p-3 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">GET /api/transactions</div>
+                        <div className="text-gray">List transactions</div>
                       </div>
                     </div>
                   </div>
@@ -275,215 +158,175 @@ node cli/cli.js status`}
               </div>
             </section>
 
-            {/* Wallet Integration */}
+            {/* CLI Commands */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              <span className="inline-flex items-center">
-                <span className="mr-4">💼</span>
-                Wallet Integration
-              </span>
-            </h2>
+                <span className="inline-flex items-center">
+                  <CommandLineIcon className="icon-medium mr-3 text-orange-400" />
+                  CLI Commands
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Adding Your First Wallet</h3>
-                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4">Wallet Management</h4>
+                    <div className="space-y-3 text-sm">
+                      <CodeBlock 
+                        code={`npm run cli wallet add --name "Wallet1" --xpub "xpub..."
+npm run cli wallet list
+npm run cli wallet balance --id 1
+npm run cli wallet remove --id 1`}
+                        language="bash"
+                        title="Wallet Commands"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4">System Commands</h4>
+                    <div className="space-y-3 text-sm">
+                      <CodeBlock 
+                        code={`npm run cli status
+npm run cli config show
+npm run cli config set --key port --value 3100
+npm run cli logs --level debug`}
+                        language="bash"
+                        title="System Commands"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Production Deployment */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <span className="inline-flex items-center">
+                  <CloudArrowUpIcon className="icon-medium mr-3 text-orange-400" />
+                  Production Deployment
+                </span>
+              </h2>
+              
+              <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <div className="space-y-8">
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">Via CLI</h4>
+                    <h4 className="text-lg font-medium text-white mb-4">Docker Deployment</h4>
                     <CodeBlock 
-                      code={`# List current wallets
-npm run cli list-wallets
+                      code={`# Build and run with Docker
+docker-compose up -d
 
-# Add a new wallet
-npm run cli add-wallet \\
-  --xpub "xpub..." \\
-  --label "My Wallet" \\
-  --type "bip44"
-
-# Verify wallet was added
-npm run cli list-wallets
-
-# Check wallet balance
-npm run cli portfolio`}
+# Or build custom image
+docker build -t mbf-treasury .
+docker run -p 3100:3100 -p 3003:3003 mbf-treasury`}
                       language="bash"
-                      title="CLI Wallet Management"
+                      title="Docker Deploy"
                     />
                   </div>
                   
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">Via Dashboard</h4>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                      <div>
-                        <div className="text-orange font-semibold mb-3">Dashboard Steps</div>
-                        <ul className="text-gray space-y-2">
-                          <li>• Navigate to Wallets section</li>
-                          <li>• Click "Add New Wallet"</li>
-                          <li>• Enter xpub or address</li>
-                          <li>• Set wallet label and type</li>
-                          <li>• Save and verify</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <div className="text-orange font-semibold mb-3">Supported Formats</div>
-                        <ul className="text-gray space-y-2">
-                          <li>• BIP44 xpub keys</li>
-                          <li>• BIP49 ypub keys</li>
-                          <li>• BIP84 zpub keys</li>
-                          <li>• Individual addresses</li>
-                          <li>• Wallet descriptors</li>
-                        </ul>
-                      </div>
-                    </div>
+                    <h4 className="text-lg font-medium text-white mb-4">Systemd Service</h4>
+                    <CodeBlock 
+                      code={`# Create service file
+sudo nano /etc/systemd/system/mbf-treasury.service
+
+[Unit]
+Description=MyBitcoinFuture Treasury
+After=network.target
+
+[Service]
+Type=simple
+User=mbf
+WorkingDirectory=/opt/mbf-treasury
+ExecStart=/usr/bin/npm start
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+# Enable and start
+sudo systemctl enable mbf-treasury
+sudo systemctl start mbf-treasury`}
+                      language="bash"
+                      title="Systemd Service"
+                    />
                   </div>
                   
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">Portfolio Overview</h4>
+                    <h4 className="text-lg font-medium text-white mb-4">Nginx Reverse Proxy</h4>
                     <CodeBlock 
-                      code={`# View portfolio summary
-npm run cli portfolio
-
-# Detailed portfolio analysis
-npm run cli portfolio --detailed
-
-# Risk analysis
-npm run cli portfolio --risk
-
-# Performance metrics
-npm run cli portfolio --performance`}
-                      language="bash"
-                      title="Portfolio Commands"
+                      code={`# /etc/nginx/sites-available/mbf-treasury
+server {
+    listen 80;
+    server_name your-domain.com;
+    
+    location / {
+        proxy_pass http://localhost:3003;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+    
+    location /api {
+        proxy_pass http://localhost:3100;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}`}
+                      language="nginx"
+                      title="Nginx Config"
                     />
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* Advanced Features */}
+            {/* Troubleshooting */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              <span className="inline-flex items-center">
-                <span className="mr-4">⚡</span>
-                Advanced Features
-              </span>
-            </h2>
+                <span className="inline-flex items-center">
+                  <ShieldCheckIcon className="icon-medium mr-3 text-orange-400" />
+                  Troubleshooting
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Beyond Basic Setup</h3>
-                
-                <div className="space-y-8">
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">BRK Integration</h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4">Common Issues</h4>
+                    <div className="space-y-4">
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Port Already in Use</div>
+                        <div className="text-gray text-sm">Change ports in .env or kill existing processes</div>
+                      </div>
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Invalid xpub Format</div>
+                        <div className="text-gray text-sm">Ensure xpub starts with 'xpub' and is 111 characters</div>
+                      </div>
+                      <div className="bg-gray-800 p-4 rounded border border-gray-700">
+                        <div className="text-orange font-semibold">Database Locked</div>
+                        <div className="text-gray text-sm">Check file permissions on ./data/treasury.db</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4">Debug Commands</h4>
                     <CodeBlock 
-                      code={`# BRK integration is automatically configured
-# Check BRK status via API
-curl http://localhost:3100/api/integration/brk/status
+                      code={`# Check system status
+npm run cli status
 
-# View BRK portfolio data
-curl http://localhost:3100/api/integration/brk-portfolio
+# View logs
+npm run cli logs --level debug
 
-# Check BRK health
-curl http://localhost:3100/api/bitcoin/bitcoin-core-health`}
+# Test API connectivity
+curl http://localhost:3100/api/status
+
+# Check database
+sqlite3 ./data/treasury.db ".tables"`}
                       language="bash"
-                      title="BRK Integration"
+                      title="Debug Commands"
                     />
-                  </div>
-                  
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">Advanced Analytics</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Performance Analytics</div>
-                        <div className="text-gray text-sm">Sharpe ratio, alpha, beta, and attribution analysis</div>
-                      </div>
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Risk Modeling</div>
-                        <div className="text-gray text-sm">VaR, CVaR, stress testing, and scenario analysis</div>
-                      </div>
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Predictive Analytics</div>
-                        <div className="text-gray text-sm">Trend analysis and forecasting models</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">Monitoring & Alerts</h4>
-                    <CodeBlock 
-                      code={`# Set up monitoring
-mbf-treasury monitor --enable
-
-# Configure alerts
-mbf-treasury alerts --add \\
-  --type "balance_change" \\
-  --threshold "0.1" \\
-  --email "admin@example.com"
-
-# View monitoring dashboard
-mbf-treasury monitor --dashboard
-
-# Check alert history
-mbf-treasury alerts --history`}
-                      language="bash"
-                      title="Monitoring Setup"
-                    />
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Security Best Practices */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              <span className="inline-flex items-center">
-                <span className="mr-4">🔒</span>
-                Security Best Practices
-              </span>
-            </h2>
-              
-              <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Securing Your Deployment</h3>
-                
-                <div className="space-y-8">
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">Security Measures</h4>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                      <div>
-                        <div className="text-orange font-semibold mb-3">Access Control</div>
-                        <ul className="text-gray space-y-2">
-                          <li>• Use strong JWT secrets</li>
-                          <li>• Enable rate limiting</li>
-                          <li>• Implement role-based access</li>
-                          <li>• Regular access reviews</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <div className="text-orange font-semibold mb-3">Network Security</div>
-                        <ul className="text-gray space-y-2">
-                          <li>• Use HTTPS in production</li>
-                          <li>• Configure firewall rules</li>
-                          <li>• VPN access for remote users</li>
-                          <li>• Regular security updates</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">Security Risks</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">⚠️ Key Management</div>
-                        <div className="text-gray text-sm">Never store private keys in the system</div>
-                      </div>
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">⚠️ Network Exposure</div>
-                        <div className="text-gray text-sm">Limit API access to trusted networks</div>
-                      </div>
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">⚠️ Data Privacy</div>
-                        <div className="text-gray text-sm">Ensure compliance with data regulations</div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -492,55 +335,56 @@ mbf-treasury alerts --history`}
             {/* Next Steps */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              <span className="inline-flex items-center">
-                <span className="mr-4">🎯</span>
-                Next Steps
-              </span>
-            </h2>
+                <span className="inline-flex items-center">
+                  <DocumentTextIcon className="icon-medium mr-3 text-orange-400" />
+                  Next Steps
+                </span>
+              </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Continuing Your Journey</h3>
-                
-                <div className="space-y-8">
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">Documentation & Resources</h4>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                      <div>
-                        <div className="text-orange font-semibold mb-3">📚 Technical Documentation</div>
-                        <ul className="text-gray space-y-2">
-                          <li>• <a href="/docs" className="text-orange-400 hover:text-orange-300 hover:underline">Complete API Reference</a></li>
-                          <li>• Architecture documentation</li>
-                          <li>• Deployment guides</li>
-                          <li>• Security best practices</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <div className="text-orange font-semibold mb-3">🔗 External Resources</div>
-                        <ul className="text-gray space-y-2">
-                          <li>• <a href="https://github.com/MyBitcoinFuture/dashboard" className="text-orange-400 hover:text-orange-300 hover:underline">GitHub Repository</a></li>
-                          <li>• Issue tracking and discussions</li>
-                          <li>• Community support</li>
-                          <li>• Feature requests</li>
-                        </ul>
-                      </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                      <h4 className="text-lg font-medium text-white mb-3">API Integration</h4>
+                      <p className="text-gray text-sm mb-4">Integrate with your existing systems using the REST API</p>
+                      <a 
+                        href="https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-orange-400 hover:text-orange-300 text-sm font-medium"
+                      >
+                        API Documentation →
+                      </a>
                     </div>
                   </div>
                   
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="text-lg font-medium text-white mb-4">Advanced Configuration</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Custom Integrations</div>
-                        <div className="text-gray text-sm">Connect with external systems and APIs</div>
-                      </div>
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Automation</div>
-                        <div className="text-gray text-sm">Set up automated workflows and alerts</div>
-                      </div>
-                      <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                        <div className="text-orange font-semibold mb-2">Scaling</div>
-                        <div className="text-gray text-sm">Scale your deployment for enterprise use</div>
-                      </div>
+                  <div className="text-center">
+                    <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                      <h4 className="text-lg font-medium text-white mb-3">Plugin Development</h4>
+                      <p className="text-gray text-sm mb-4">Extend functionality with custom plugins</p>
+                      <a 
+                        href="https://github.com/MyBitcoinFuture/plugins" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-orange-400 hover:text-orange-300 text-sm font-medium"
+                      >
+                        Plugin Guide →
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                      <h4 className="text-lg font-medium text-white mb-3">Security Hardening</h4>
+                      <p className="text-gray text-sm mb-4">Configure authentication, SSL, and access controls</p>
+                      <a 
+                        href="https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/SECURITY.md" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-orange-400 hover:text-orange-300 text-sm font-medium"
+                      >
+                        Security Guide →
+                      </a>
                     </div>
                   </div>
                 </div>
