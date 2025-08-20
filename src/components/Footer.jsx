@@ -75,7 +75,7 @@ const Footer = () => {
             © 2025 MyBitcoinFuture. All rights reserved.
           </div>
           <div className="text-gray" style={{ fontSize: '0.75rem', opacity: 0.7 }}>
-            v{VERSION.version} • {VERSION.buildDate} • {VERSION.commitHash.substring(0, 8)}
+            v{VERSION.version} • {VERSION.buildDate} • {VERSION.commitHash.substring(0, 8)} • {VERSION.environment}
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import Docs from './components/Docs'
 import GettingStarted from './components/GettingStarted'
+import VersionIndicator from './components/VersionIndicator'
 
 function App() {
   return (
@@ -23,10 +24,21 @@ function App() {
           </main>
           <Footer />
           <BackToTop />
+          <VersionIndicator />
         </div>
       } />
-      <Route path="/docs" element={<Docs />} />
-      <Route path="/getting-started" element={<GettingStarted />} />
+      <Route path="/docs" element={
+        <>
+          <Docs />
+          <VersionIndicator />
+        </>
+      } />
+      <Route path="/getting-started" element={
+        <>
+          <GettingStarted />
+          <VersionIndicator />
+        </>
+      } />
     </Routes>
   )
 }
