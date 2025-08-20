@@ -16,7 +16,8 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleAnchorClick = (anchor) => {
+  const handleAnchorClick = (anchor, e) => {
+    e.preventDefault()
     if (location.pathname !== '/') {
       // If not on home page, navigate to home first, then scroll to anchor
       navigate('/')
@@ -62,13 +63,14 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
               item.isAnchor ? (
-                <button
+                <a
                   key={item.name}
-                  onClick={() => handleAnchorClick(item.href)}
-                  className="nav-link bg-transparent border-none cursor-pointer"
+                  href={item.href}
+                  onClick={(e) => handleAnchorClick(item.href, e)}
+                  className="nav-link"
                 >
                   {item.name}
-                </button>
+                </a>
               ) : (
                 <Link
                   key={item.name}
@@ -126,13 +128,14 @@ const Header = () => {
             <div className="flex flex-col gap-4">
               {navigation.map((item) => (
                 item.isAnchor ? (
-                  <button
+                  <a
                     key={item.name}
-                    onClick={() => handleAnchorClick(item.href)}
-                    className="nav-link bg-transparent border-none cursor-pointer text-left"
+                    href={item.href}
+                    onClick={(e) => handleAnchorClick(item.href, e)}
+                    className="nav-link"
                   >
                     {item.name}
-                  </button>
+                  </a>
                 ) : (
                   <Link
                     key={item.name}

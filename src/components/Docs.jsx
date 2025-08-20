@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
+import BackToTop from './BackToTop';
 
 const Docs = () => {
   const docCategories = [
@@ -138,105 +141,115 @@ const Docs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header */}
-      <div className="container mx-auto px-6 py-12">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Documentation
-          </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Complete guide to the MBFBTC hybrid monorepo - from quick start to advanced features
-          </p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <Header />
+      <main>
+        <section className="section-padding" style={{ paddingTop: 'var(--space-24)', paddingBottom: 'var(--space-16)' }}>
+          <div className="container-max">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <h1 className="mb-6">
+                <span className="text-white">MBFBTC</span>
+                <br />
+                <span className="text-orange">Technical Documentation</span>
+              </h1>
+              <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem' }}>
+                Complete technical reference for the enterprise Bitcoin treasury management software. 
+                Comprehensive guides for deployment, API integration, and advanced features.
+              </p>
+            </div>
 
-        {/* Repository Overview */}
-        <div className="card mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">MBFBTC Dashboard Monorepo</h2>
-            <p className="text-slate-300 text-lg">
-              A comprehensive Bitcoin treasury management system with modular architecture
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-4">
-              <div className="text-3xl mb-2">📦</div>
-              <h3 className="text-white font-semibold mb-2">5 Core Modules</h3>
-              <p className="text-slate-400 text-sm">API, Web, CLI, Desktop, Shared</p>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-3xl mb-2">🔌</div>
-              <h3 className="text-white font-semibold mb-2">Plugin Ecosystem</h3>
-              <p className="text-slate-400 text-sm">Extensible plugin architecture</p>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-3xl mb-2">📊</div>
-              <h3 className="text-white font-semibold mb-2">BRK Integration</h3>
-              <p className="text-slate-400 text-sm">Bitcoin Research Kit analytics</p>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-3xl mb-2">🚀</div>
-              <h3 className="text-white font-semibold mb-2">Production Ready</h3>
-              <p className="text-slate-400 text-sm">Docker, monitoring, security</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Documentation Tree */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {docCategories.map((category, index) => (
-            <div key={index} className="card stagger-item">
-              <div className="flex items-center mb-6">
-                <div className="text-3xl mr-4">{category.icon}</div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
-                  <p className="text-slate-400 text-sm">{category.description}</p>
-                </div>
+            {/* Repository Overview */}
+            <div className="card mb-16">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-white mb-4">MBFBTC Dashboard Monorepo</h2>
+                <p className="text-slate-300 text-lg">
+                  A comprehensive Bitcoin treasury management system with modular architecture
+                </p>
               </div>
               
-              <div className="space-y-4">
-                {category.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="border-l-2 border-slate-700 pl-4 py-2">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <h4 className="text-white font-medium mb-1">{item.title}</h4>
-                        <p className="text-slate-400 text-sm">{item.description}</p>
-                      </div>
-                      <div className="ml-4">
-                        {getStatusBadge(item.status)}
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="text-center p-4">
+                  <div className="text-3xl mb-2">📦</div>
+                  <h3 className="text-white font-semibold mb-2">5 Core Modules</h3>
+                  <p className="text-slate-400 text-sm">API, Web, CLI, Desktop, Shared</p>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl mb-2">🔌</div>
+                  <h3 className="text-white font-semibold mb-2">Plugin Ecosystem</h3>
+                  <p className="text-slate-400 text-sm">Extensible plugin architecture</p>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl mb-2">📊</div>
+                  <h3 className="text-white font-semibold mb-2">BRK Integration</h3>
+                  <p className="text-slate-400 text-sm">Bitcoin Research Kit analytics</p>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl mb-2">🚀</div>
+                  <h3 className="text-white font-semibold mb-2">Production Ready</h3>
+                  <p className="text-slate-400 text-sm">Docker, monitoring, security</p>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="card max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-            <p className="text-slate-300 mb-6">
-              Clone the repository and have the full system running in minutes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/getting-started" className="btn-primary">
-                Get Started
-              </Link>
-              <a 
-                href="https://github.com/MyBitcoinFuture/dashboard" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-secondary"
-              >
-                View Repository
-              </a>
+            {/* Documentation Tree */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {docCategories.map((category, index) => (
+                <div key={index} className="card stagger-item">
+                  <div className="flex items-center mb-6">
+                    <div className="text-3xl mr-4">{category.icon}</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
+                      <p className="text-slate-400 text-sm">{category.description}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {category.items.map((item, itemIndex) => (
+                      <div key={itemIndex} className="border-l-2 border-slate-700 pl-4 py-2">
+                        <div className="flex items-start justify-between">
+                          <div className="flex-1">
+                            <h4 className="text-white font-medium mb-1">{item.title}</h4>
+                            <p className="text-slate-400 text-sm">{item.description}</p>
+                          </div>
+                          <div className="ml-4">
+                            {getStatusBadge(item.status)}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-16">
+              <div className="card max-w-2xl mx-auto">
+                <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+                <p className="text-slate-300 mb-6">
+                  Clone the repository and have the full system running in minutes.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link to="/getting-started" className="btn-primary">
+                    Get Started
+                  </Link>
+                  <a 
+                    href="https://github.com/MyBitcoinFuture/dashboard" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn-secondary"
+                  >
+                    View Repository
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
+      <Footer />
+      <BackToTop />
     </div>
   );
 };
