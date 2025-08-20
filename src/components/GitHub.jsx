@@ -116,7 +116,22 @@ const GitHub = () => {
                 href="https://github.com/MyBitcoinFuture"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                style={{
+                  background: '#1e40af',
+                  color: '#ffffff',
+                  border: '1px solid #3b82f6',
+                  padding: '0.75rem 1.5rem',
+                  borderRadius: '0.375rem',
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'all 0.2s ease-in-out',
+                  fontSize: '1rem',
+                  minHeight: '48px',
+                  cursor: 'pointer'
+                }}
               >
                 View on GitHub
               </a>

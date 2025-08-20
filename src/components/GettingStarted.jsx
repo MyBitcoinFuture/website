@@ -41,7 +41,7 @@ const GettingStarted = () => {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <FlagIcon style={{ width: '12px', height: '12px' }} className="mr-3 text-orange-400" />
+                  <FlagIcon style={{ width: '16px', height: '16px' }} className="mr-3 text-orange-400" />
                   System Overview
                 </span>
               </h2>
@@ -58,7 +58,7 @@ const GettingStarted = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                   <div>
                     <h4 className="text-lg font-medium text-white mb-4 flex items-center">
-                      <FlagIcon style={{ width: '12px', height: '12px' }} className="mr-2 text-orange-400" />
+                      <FlagIcon style={{ width: '16px', height: '16px' }} className="mr-2 text-orange-400" />
                       Core Capabilities
                     </h4>
                     <div className="space-y-4">
@@ -83,7 +83,7 @@ const GettingStarted = () => {
                   
                   <div>
                     <h4 className="text-lg font-medium text-white mb-4 flex items-center">
-                      <WrenchScrewdriverIcon style={{ width: '12px', height: '12px' }} className="mr-2 text-orange-400" />
+                      <WrenchScrewdriverIcon style={{ width: '16px', height: '16px' }} className="mr-2 text-orange-400" />
                       Technical Architecture
                     </h4>
                     <div className="space-y-4">
@@ -117,7 +117,7 @@ const GettingStarted = () => {
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <RocketLaunchIcon style={{ width: '12px', height: '12px' }} className="mr-3 text-orange-400" />
+                  <RocketLaunchIcon style={{ width: '16px', height: '16px' }} className="mr-3 text-orange-400" />
                   Deployment Guide
                 </span>
               </h2>
