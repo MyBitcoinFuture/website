@@ -37,12 +37,12 @@ const GettingStarted = () => {
               </p>
             </div>
 
-            {/* System Overview */}
+            {/* What is MyBitcoinFuture */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 <span className="inline-flex items-center">
-                  <FlagIcon style={{ width: '20px', height: '20px' }} className="mr-3 text-orange-400" />
-                  System Overview
+                  <RocketLaunchIcon style={{ width: '24px', height: '24px' }} className="mr-4 text-orange-400" />
+                  Getting Started
                 </span>
               </h2>
               
@@ -58,7 +58,7 @@ const GettingStarted = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                   <div>
                     <h4 className="text-lg font-medium text-white mb-4 flex items-center">
-                      <FlagIcon style={{ width: '20px', height: '20px' }} className="mr-3 text-orange-400" />
+                      <ShieldCheckIcon style={{ width: '24px', height: '24px' }} className="mr-4 text-orange-400" />
                       Core Capabilities
                     </h4>
                     <div className="space-y-4">
@@ -83,7 +83,7 @@ const GettingStarted = () => {
                   
                   <div>
                     <h4 className="text-lg font-medium text-white mb-4 flex items-center">
-                      <WrenchScrewdriverIcon style={{ width: '20px', height: '20px' }} className="mr-3 text-orange-400" />
+                      <WrenchScrewdriverIcon style={{ width: '24px', height: '24px' }} className="mr-4 text-orange-400" />
                       Technical Architecture
                     </h4>
                     <div className="space-y-4">

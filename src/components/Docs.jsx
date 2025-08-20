@@ -386,48 +386,47 @@ const Docs = () => {
               <h1 className="mb-6">
                 <span className="text-white">MyBitcoinFuture</span>
                 <br />
-                <span className="text-orange">Treasury Management Software</span>
+                <span className="text-orange">Documentation</span>
               </h1>
               <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem' }}>
-                Complete technical reference for the enterprise Bitcoin treasury management software. 
-                Comprehensive guides for deployment, API integration, and advanced features.
+                Complete technical reference for deployment, API integration, and advanced features.
               </p>
             </div>
 
             {/* Repository Overview */}
             <div className="card mb-16">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-white mb-4">MyBitcoinFuture Treasury Dashboard</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">Treasury Dashboard</h2>
                 <p className="text-slate-300 text-lg">
-                  A comprehensive Bitcoin treasury management system with hybrid monorepo architecture
+                  Hybrid monorepo architecture with 5 core modules
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <BuildingOfficeIcon style={{ width: '20px', height: '20px' }} className="text-orange-400" />
+                    <BuildingOfficeIcon style={{ width: '24px', height: '24px' }} className="text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Hybrid Monorepo</h3>
                   <p className="text-slate-400 text-sm">5 core modules + infrastructure</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <PuzzlePieceIcon style={{ width: '20px', height: '20px' }} className="text-orange-400" />
+                    <PuzzlePieceIcon style={{ width: '24px', height: '24px' }} className="text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Plugin Ecosystem</h3>
                   <p className="text-slate-400 text-sm">Extensible plugin architecture</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <ChartBarIcon style={{ width: '20px', height: '20px' }} className="text-orange-400" />
+                    <ChartBarIcon style={{ width: '24px', height: '24px' }} className="text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">BRK Integration</h3>
                   <p className="text-slate-400 text-sm">Bitcoin Research Kit analytics</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <CloudArrowUpIcon style={{ width: '20px', height: '20px' }} className="text-orange-400" />
+                    <CloudArrowUpIcon style={{ width: '24px', height: '24px' }} className="text-orange-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Production Ready</h3>
                   <p className="text-slate-400 text-sm">Docker, monitoring, security</p>
@@ -442,8 +441,8 @@ const Docs = () => {
                 return (
                   <div key={index} className="card stagger-item hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                     <div className="flex items-center mb-6">
-                      <div className="mr-3">
-                        <IconComponent style={{ width: '20px', height: '20px' }} className="text-orange-400" />
+                      <div className="mr-4">
+                        <IconComponent style={{ width: '24px', height: '24px' }} className="text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
