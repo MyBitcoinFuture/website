@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,10 +15,10 @@ const Header = () => {
   }, [])
 
   const navigation = [
-    { name: 'Features', href: '#features' },
-    { name: 'Deployment', href: '#deployment' },
-    { name: 'Docs', href: '/docs' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Features', href: '#features', isExternal: false },
+    { name: 'Deployment', href: '#deployment', isExternal: false },
+    { name: 'Docs', href: '/docs', isExternal: false },
+    { name: 'Contact', href: '#contact', isExternal: false },
   ]
 
   return (
@@ -25,25 +26,35 @@ const Header = () => {
       <div className="container-max">
         <div className="flex items-center justify-between" style={{ height: '64px' }}>
           {/* Logo */}
-          <a href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity no-underline">
+          <Link to="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity no-underline">
             <img 
               src="/mybitcoinfuture_logo.png" 
               alt="MyBitcoinFuture Logo" 
               style={{ height: '32px', width: 'auto' }}
             />
             <span className="text-xl font-bold text-white">MyBitcoinFuture</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="nav-link"
-              >
-                {item.name}
-              </a>
+              item.isExternal ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="nav-link"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="nav-link"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
             <a
               href="https://github.com/MyBitcoinFuture"
@@ -91,14 +102,25 @@ const Header = () => {
           <div className="mobile-menu" style={{ padding: '16px 0', borderTop: '1px solid #1e40af' }}>
             <div className="flex flex-col gap-4">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="nav-link"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.isExternal ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="nav-link"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="nav-link"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
               <a
                 href="https://github.com/MyBitcoinFuture"

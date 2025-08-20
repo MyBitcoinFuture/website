@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Hero = () => {
   return (
     <section className="section-padding" style={{ paddingTop: '96px', paddingBottom: '64px' }}>
@@ -67,12 +69,12 @@ const Hero = () => {
           >
             Deploy Now
           </a>
-          <a
-            href="/getting-started"
+          <Link
+            to="/getting-started"
             className="btn-secondary"
           >
             Getting Started
-          </a>
+          </Link>
         </div>
 
         {/* Demo Video */}
