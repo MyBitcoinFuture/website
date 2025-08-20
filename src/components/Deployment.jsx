@@ -148,7 +148,13 @@ const Deployment = () => {
                       textAlign: 'center',
                       backgroundColor: '#1e40af',
                       color: '#ffffff',
-                      border: '1px solid #3b82f6'
+                      border: '1px solid #3b82f6',
+                      padding: '0.75rem 1.5rem',
+                      borderRadius: '0.375rem',
+                      fontWeight: '600',
+                      textDecoration: 'none',
+                      display: 'inline-block',
+                      transition: 'all 0.2s ease-in-out'
                     }}
                   >
                     Deploy with Docker
