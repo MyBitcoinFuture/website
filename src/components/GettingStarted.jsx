@@ -252,24 +252,27 @@ curl -X POST http://localhost:3100/api/wallets \\
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
                     <div className="text-orange font-semibold mb-3 text-lg">Desktop App</div>
                     <p className="text-gray text-sm mb-4">Download and install the Electron desktop application for the best experience.</p>
-                    <CodeBlock 
-                      code={`# Download from releases
+                    <div className="flex-1">
+                      <CodeBlock 
+                        code={`# Download from releases
 # Run installer (Windows/macOS)
 # Extract and run (Linux)
 # Launch from applications menu`}
-                      language="bash"
-                      title="Desktop Installation"
-                    />
+                        language="bash"
+                        title="Desktop Installation"
+                      />
+                    </div>
                   </div>
                   
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
                     <div className="text-orange font-semibold mb-3 text-lg">Docker Deployment</div>
                     <p className="text-gray text-sm mb-4">Deploy with Docker for quick setup and easy management.</p>
-                    <CodeBlock 
-                      code={`# Clone repository
+                    <div className="flex-1">
+                      <CodeBlock 
+                        code={`# Clone repository
 git clone https://github.com/MyBitcoinFuture/dashboard.git
 cd dashboard
 
@@ -277,25 +280,28 @@ cd dashboard
 docker-compose up -d
 
 # Access at http://localhost:3003`}
-                      language="bash"
-                      title="Docker Setup"
-                    />
+                        language="bash"
+                        title="Docker Setup"
+                      />
+                    </div>
                   </div>
                   
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
                     <div className="text-orange font-semibold mb-3 text-lg">Manual Installation</div>
                     <p className="text-gray text-sm mb-4">Install manually for full control and customization.</p>
-                    <CodeBlock 
-                      code={`# Clone and install
+                    <div className="flex-1">
+                      <CodeBlock 
+                        code={`# Clone and install
 git clone https://github.com/MyBitcoinFuture/dashboard.git
 cd dashboard
 npm run install:all
 npm run dev
 
 # Access at http://localhost:3003`}
-                      language="bash"
-                      title="Manual Setup"
-                    />
+                        language="bash"
+                        title="Manual Setup"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
