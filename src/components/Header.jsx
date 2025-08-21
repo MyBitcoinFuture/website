@@ -99,7 +99,24 @@ const Header = () => {
               href="https://github.com/MyBitcoinFuture/dashboard"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              style={{
+                background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
+                color: '#ffffff',
+                border: '1px solid #f97316',
+                padding: '12px 24px',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                fontWeight: '600',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = 'translateY(-1px)';
+                e.target.style.boxShadow = '0 4px 12px rgba(249, 115, 22, 0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = 'none';
+              }}
               aria-label="View MyBitcoinFuture on GitHub (opens in new tab)"
             >
               View on GitHub
@@ -208,14 +225,28 @@ const Header = () => {
                   href="https://github.com/MyBitcoinFuture/dashboard"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
                   onClick={() => setIsMenuOpen(false)}
                   style={{
+                    background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
+                    color: '#ffffff',
+                    border: '1px solid #f97316',
+                    padding: '12px 16px',
+                    borderRadius: '8px',
+                    textDecoration: 'none',
+                    fontWeight: '600',
+                    fontSize: '16px',
+                    minHeight: '44px',
                     marginTop: '8px',
                     textAlign: 'center',
-                    padding: '12px 16px',
-                    fontSize: '16px',
-                    minHeight: '44px'
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'translateY(-1px)';
+                    e.target.style.boxShadow = '0 4px 12px rgba(249, 115, 22, 0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'translateY(0)';
+                    e.target.style.boxShadow = 'none';
                   }}
                 >
                   View on GitHub
