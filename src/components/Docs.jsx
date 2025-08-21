@@ -13,8 +13,7 @@ import {
   ChartBarIcon, 
   ShieldCheckIcon, 
   BookOpenIcon,
-  ServerIcon,
-  ArrowTopRightOnSquareIcon
+  ServerIcon
 } from '@heroicons/react/24/outline';
 
 const Docs = () => {
@@ -264,7 +263,7 @@ const Docs = () => {
                                     className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors inline-flex items-center gap-1"
                                   >
                                     View Documentation
-                                    <ArrowTopRightOnSquareIcon style={{ width: '12px', height: '12px' }} />
+
                                   </a>
                                 )
                               )}
@@ -316,7 +315,7 @@ const Docs = () => {
                     className="btn-secondary inline-flex items-center gap-2"
                   >
                     View Repository
-                    <ArrowTopRightOnSquareIcon style={{ width: '14px', height: '14px' }} />
+
                   </a>
                 </div>
               </div>
