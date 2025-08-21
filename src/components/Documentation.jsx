@@ -11,7 +11,7 @@ const Documentation = () => {
     {
       title: "Getting Started",
       description: "Quick setup and deployment guides for different platforms.",
-      icon: <BoltIcon className="w-6 h-6" />,
+      icon: <BoltIcon className="w-5 h-5" />,
       links: [
         { name: "System Overview", href: "/docs/system-overview", status: "Available" },
         { name: "Quick Start Guide", href: "/docs/quick-start", status: "Available" },
@@ -22,7 +22,7 @@ const Documentation = () => {
     {
       title: "API Reference",
       description: "Complete API documentation for developers and integrations.",
-      icon: <CodeBracketIcon className="w-6 h-6" />,
+      icon: <CodeBracketIcon className="w-5 h-5" />,
       links: [
         { name: "REST API Reference", href: "/docs/api-reference", status: "Available" },
         { name: "Authentication", href: "/docs/api-reference#authentication", status: "Available" },
@@ -33,7 +33,7 @@ const Documentation = () => {
     {
       title: "User Guides",
       description: "Comprehensive guides for treasury management and analytics.",
-      icon: <BookOpenIcon className="w-6 h-6" />,
+      icon: <BookOpenIcon className="w-5 h-5" />,
       links: [
         { name: "Wallet Management", href: "/docs/user-guides/wallet-management", status: "Available" },
         { name: "Portfolio Analytics", href: "/docs/user-guides/portfolio-analytics", status: "Available" },
@@ -44,7 +44,7 @@ const Documentation = () => {
     {
       title: "Plugin Development",
       description: "Build custom plugins and extend the platform functionality.",
-      icon: <CogIcon className="w-6 h-6" />,
+      icon: <CogIcon className="w-5 h-5" />,
       links: [
         { name: "Plugin Architecture", href: "/docs/plugin-development/architecture", status: "Available" },
         { name: "Creating Your First Plugin", href: "/docs/plugin-development/getting-started", status: "Available" },
@@ -55,7 +55,7 @@ const Documentation = () => {
     {
       title: "Troubleshooting",
       description: "Common issues, solutions, and support resources.",
-      icon: <QuestionMarkCircleIcon className="w-6 h-6" />,
+      icon: <QuestionMarkCircleIcon className="w-5 h-5" />,
       links: [
         { name: "Common Issues", href: "/docs/troubleshooting/common-issues", status: "Available" },
         { name: "Bitcoin Core Setup", href: "/docs/troubleshooting/bitcoin-core", status: "Available" },
@@ -85,7 +85,7 @@ const Documentation = () => {
               className="bg-primary-800/30 rounded-lg p-6 border border-primary-700"
             >
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center mr-4">
                   {section.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white">
