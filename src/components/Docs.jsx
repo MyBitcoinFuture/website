@@ -264,7 +264,7 @@ const Docs = () => {
                                     className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors inline-flex items-center gap-1"
                                   >
                                     View Documentation
-                                    <ArrowTopRightOnSquareIcon className="w-3 h-3" />
+                                    <ArrowTopRightOnSquareIcon className="w-2.5 h-2.5" />
                                   </a>
                                 )
                               )}
@@ -316,7 +316,7 @@ const Docs = () => {
                     className="btn-secondary inline-flex items-center gap-2"
                   >
                     View Repository
-                    <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                    <ArrowTopRightOnSquareIcon className="w-3 h-3" />
                   </a>
                 </div>
               </div>
