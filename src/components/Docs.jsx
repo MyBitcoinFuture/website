@@ -25,240 +25,183 @@ const Docs = () => {
       icon: RocketLaunchIcon,
       items: [
         { 
-          title: "Installation", 
-          description: "Clone and install the monorepo",
-          link: "https://github.com/MyBitcoinFuture/dashboard#quick-start"
+          title: "Quick Start Guide", 
+          description: "Complete installation and setup walkthrough",
+          link: "/getting-started",
+          internal: true
         },
         { 
-          title: "Environment Setup", 
-          description: "Configure .env and dependencies",
-          link: "https://github.com/MyBitcoinFuture/dashboard#prerequisites"
+          title: "System Overview", 
+          description: "Architecture and component overview",
+          link: "/docs/system-overview",
+          internal: true
         },
         { 
-          title: "Development Mode", 
-          description: "Start all services with npm run dev",
-          link: "https://github.com/MyBitcoinFuture/dashboard#development"
+          title: "User Guides", 
+          description: "Step-by-step user documentation",
+          link: "/docs/user-guides",
+          internal: true
         },
         { 
-          title: "First Wallet", 
-          description: "Add your first Bitcoin wallet",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
+          title: "Contact & Support", 
+          description: "Get help and community resources",
+          link: "/#contact",
+          internal: true
         }
       ]
     },
     {
-      title: "API Module",
-      description: "Express.js API server with Bitcoin Core integration",
+      title: "API Documentation",
+      description: "Complete REST API reference and integration guides",
       icon: CpuChipIcon,
       items: [
         { 
-          title: "API Server Setup", 
-          description: "Express.js server configuration",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api"
-        },
-        { 
-          title: "Bitcoin Core RPC", 
-          description: "Integration with Bitcoin Core",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/bitcoin"
-        },
-        { 
-          title: "BRK Integration", 
-          description: "Bitcoin Research Kit analytics",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/integration"
-        },
-        { 
           title: "API Reference", 
-          description: "Complete REST API documentation",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
+          description: "Complete REST API endpoints and examples",
+          link: "/docs/api-reference",
+          internal: true
+        },
+        { 
+          title: "Authentication", 
+          description: "JWT authentication and security",
+          link: "/docs/api-reference#authentication",
+          internal: true
+        },
+        { 
+          title: "WebSocket API", 
+          description: "Real-time notifications and events",
+          link: "/docs/api-reference#websocket",
+          internal: true
+        },
+        { 
+          title: "SDK Examples", 
+          description: "JavaScript, Python, and cURL examples",
+          link: "/docs/api-reference#sdk-examples",
+          internal: true
         }
       ]
     },
     {
-      title: "Web Module",
-      description: "React-based web interface with Material-UI",
+      title: "Features & Capabilities",
+      description: "Core features and system capabilities",
       icon: GlobeAltIcon,
       items: [
         { 
-          title: "React Components", 
-          description: "Component architecture and structure",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/web/src"
+          title: "Feature Overview", 
+          description: "Complete feature list and capabilities",
+          link: "/#features",
+          internal: true
         },
         { 
-          title: "Material-UI Integration", 
-          description: "UI framework and theming",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/web/src/components"
+          title: "User Interface", 
+          description: "Web and desktop interface guides",
+          link: "/docs/user-guides",
+          internal: true
         },
         { 
-          title: "State Management", 
-          description: "Redux/Context API patterns",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/web/src/context"
+          title: "Portfolio Management", 
+          description: "Bitcoin treasury and wallet management",
+          link: "/user-guides#portfolio",
+          internal: true
         },
         { 
-          title: "API Client", 
-          description: "Frontend API integration",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/web/src/services"
-        }
-      ]
-    },
-    {
-      title: "CLI Module",
-      description: "Command-line interface for treasury operations",
-      icon: CommandLineIcon,
-      items: [
-        { 
-          title: "CLI Installation", 
-          description: "Installing the command-line tools",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/cli"
-        },
-        { 
-          title: "Basic Commands", 
-          description: "Essential CLI operations",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
-        },
-        { 
-          title: "Wallet Operations", 
-          description: "Wallet management via CLI",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
-        },
-        { 
-          title: "Automation Scripts", 
-          description: "CLI automation and scripting",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/scripts"
-        }
-      ]
-    },
-    {
-      title: "Desktop Module",
-      description: "Electron-based desktop application",
-      icon: ComputerDesktopIcon,
-      items: [
-        { 
-          title: "Electron Setup", 
-          description: "Desktop app configuration",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/desktop"
-        },
-        { 
-          title: "Main Process", 
-          description: "Electron main process logic",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/desktop/src"
-        },
-        { 
-          title: "Renderer Process", 
-          description: "UI rendering and IPC",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/desktop/src"
-        },
-        { 
-          title: "Desktop Features", 
-          description: "Native desktop capabilities",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
+          title: "Analytics & Reporting", 
+          description: "Advanced analytics and reporting features",
+          link: "/user-guides#analytics",
+          internal: true
         }
       ]
     },
     {
       title: "Plugin System",
-      description: "Extensible plugin architecture",
+      description: "Extensible plugin architecture and integrations",
       icon: PuzzlePieceIcon,
       items: [
         { 
-          title: "Plugin Architecture", 
-          description: "Understanding the plugin system",
-          link: "https://github.com/MyBitcoinFuture/plugins"
+          title: "Plugin Overview", 
+          description: "Introduction to the plugin ecosystem",
+          link: "/#features",
+          internal: true
         },
         { 
-          title: "IFTTT Integration", 
-          description: "Automated workflow plugins",
-          link: "https://github.com/MyBitcoinFuture/plugins"
-        },
-        { 
-          title: "Accounting Plugins", 
-          description: "Financial reporting plugins",
-          link: "https://github.com/MyBitcoinFuture/plugins"
+          title: "Available Plugins", 
+          description: "IFTTT, accounting, and compliance plugins",
+          link: "/#features",
+          internal: true
         },
         { 
           title: "Plugin Development", 
-          description: "Creating custom plugins",
-          link: "https://github.com/MyBitcoinFuture/plugins"
+          description: "Creating custom plugins (GitHub docs)",
+          link: "https://github.com/MyBitcoinFuture/plugins",
+          internal: false
+        },
+        { 
+          title: "Plugin API Reference", 
+          description: "Technical plugin development reference",
+          link: "https://github.com/MyBitcoinFuture/plugins/blob/main/README.md",
+          internal: false
         }
       ]
     },
     {
       title: "Deployment",
-      description: "Production deployment and infrastructure",
+      description: "Production deployment and infrastructure guides",
       icon: CloudArrowUpIcon,
       items: [
         { 
-          title: "Docker Deployment", 
-          description: "Containerized deployment with Docker Compose",
-          link: "https://github.com/MyBitcoinFuture/dashboard#docker-deployment"
+          title: "Deployment Guide", 
+          description: "Complete deployment walkthrough",
+          link: "/#deployment",
+          internal: true
         },
         { 
-          title: "Start9/Umbrel", 
-          description: "Home server deployment packages",
-          link: "https://github.com/MyBitcoinFuture/platform-manifests"
+          title: "Docker Setup", 
+          description: "Containerized deployment with Docker",
+          link: "/#deployment",
+          internal: true
         },
         { 
-          title: "Production Config", 
-          description: "Nginx, SSL, monitoring setup",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/DEPLOYMENT.md"
+          title: "Home Server Deployment", 
+          description: "Start9, Umbrel, and personal servers",
+          link: "/#deployment",
+          internal: true
         },
         { 
-          title: "Kubernetes", 
-          description: "Enterprise K8s deployment",
-          link: "https://github.com/MyBitcoinFuture/platform-manifests/tree/main/kubernetes"
+          title: "Enterprise Deployment", 
+          description: "Kubernetes and production infrastructure",
+          link: "https://github.com/MyBitcoinFuture/platform-manifests",
+          internal: false
         }
       ]
     },
     {
-      title: "Security",
-      description: "Security features and best practices",
+      title: "Advanced Topics",
+      description: "Security, development, and technical references",
       icon: ShieldCheckIcon,
       items: [
         { 
-          title: "Authentication", 
-          description: "JWT-based auth with 2FA",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/core/auth.js"
+          title: "Security Model", 
+          description: "Bitcoin security and authentication",
+          link: "/#features",
+          internal: true
         },
         { 
-          title: "Authorization", 
-          description: "Role-based access control",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/core/auth.js"
+          title: "Developer Resources", 
+          description: "Contributing and development setup",
+          link: "/getting-started",
+          internal: true
         },
         { 
-          title: "Bitcoin Security", 
-          description: "xpub-only, no private keys",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
+          title: "Technical Documentation", 
+          description: "Detailed technical references (GitHub)",
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs",
+          internal: false
         },
         { 
-          title: "Audit Logging", 
-          description: "Complete operation audit trail",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/security/audit.js"
-        }
-      ]
-    },
-    {
-      title: "Repository Structure",
-      description: "Current project organization",
-      icon: BookOpenIcon,
-      items: [
-        { 
-          title: "MyBitcoinFuture/dashboard", 
-          description: "Main dashboard monorepo",
-          link: "https://github.com/MyBitcoinFuture/dashboard"
-        },
-        { 
-          title: "MyBitcoinFuture/plugins", 
-          description: "Plugin ecosystem repository",
-          link: "https://github.com/MyBitcoinFuture/plugins"
-        },
-        { 
-          title: "MyBitcoinFuture/core", 
-          description: "Infrastructure components",
-          link: "https://github.com/MyBitcoinFuture/core"
-        },
-        { 
-          title: "MyBitcoinFuture/platform-manifests", 
-          description: "Kubernetes/Helm manifests",
-          link: "https://github.com/MyBitcoinFuture/platform-manifests"
+          title: "Source Code", 
+          description: "Browse all repositories and source",
+          link: "https://github.com/MyBitcoinFuture",
+          internal: false
         }
       ]
     }
@@ -306,14 +249,24 @@ const Docs = () => {
                               <h4 className="text-white font-medium mb-2 text-base">{item.title}</h4>
                               <p className="text-slate-400 text-sm mb-3 leading-relaxed">{item.description}</p>
                               {item.link && (
-                                <a 
-                                  href={item.link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors"
-                                >
-                                  View Documentation
-                                </a>
+                                item.internal ? (
+                                  <Link 
+                                    to={item.link}
+                                    className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors"
+                                  >
+                                    View Documentation
+                                  </Link>
+                                ) : (
+                                  <a 
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors inline-flex items-center gap-1"
+                                  >
+                                    View Documentation
+                                    <ArrowTopRightOnSquareIcon className="w-3 h-3" />
+                                  </a>
+                                )
                               )}
                             </div>
                           </div>
@@ -360,9 +313,10 @@ const Docs = () => {
                     href="https://github.com/MyBitcoinFuture/dashboard" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="btn-secondary"
+                    className="btn-secondary inline-flex items-center gap-2"
                   >
                     View Repository
+                    <ArrowTopRightOnSquareIcon className="w-4 h-4" />
                   </a>
                 </div>
               </div>
