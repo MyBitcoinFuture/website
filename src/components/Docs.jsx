@@ -282,68 +282,6 @@ const Docs = () => {
               </p>
             </div>
 
-            {/* Repository Overview - Now with clickable cards */}
-            <div className="card mb-20">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-white mb-6">Repository Overview</h2>
-                <p className="text-slate-300 text-lg mb-8">Explore the core components of the Bitcoin treasury management system</p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <a 
-                  href="https://github.com/MyBitcoinFuture/dashboard#architecture-overview" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
-                >
-                  <div className="flex justify-center mb-4">
-                    <BuildingOfficeIcon style={{ width: '24px', height: '24px' }} className="text-orange-400 group-hover:scale-110 transition-transform" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-3 text-lg">Project Structure</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">5 core modules + infrastructure</p>
-                </a>
-                
-                <a 
-                  href="https://github.com/MyBitcoinFuture/dashboard/tree/main/api/bitcoin" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
-                >
-                  <div className="flex justify-center mb-4">
-                    <ServerIcon style={{ width: '24px', height: '24px' }} className="text-orange-400 group-hover:scale-110 transition-transform" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-3 text-lg">Bitcoin Integration</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">Core RPC, Mempool, Blockstream APIs</p>
-                </a>
-                
-                <a 
-                  href="https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/analytics" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
-                >
-                  <div className="flex justify-center mb-4">
-                    <ChartBarIcon style={{ width: '24px', height: '24px' }} className="text-orange-400 group-hover:scale-110 transition-transform" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-3 text-lg">Advanced Analytics</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">Portfolio metrics and risk analysis</p>
-                </a>
-                
-                <a 
-                  href="https://github.com/MyBitcoinFuture/dashboard#production" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
-                >
-                  <div className="flex justify-center mb-4">
-                    <CloudArrowUpIcon style={{ width: '24px', height: '24px' }} className="text-orange-400 group-hover:scale-110 transition-transform" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-3 text-lg">Production Ready</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">Docker, monitoring, security</p>
-                </a>
-              </div>
-            </div>
-
             {/* Documentation Tree - Less dense layout */}
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-20">
               {docCategories.map((category, index) => {
@@ -372,10 +310,9 @@ const Docs = () => {
                                   href={item.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-orange-400 hover:text-orange-300 text-sm font-medium inline-flex items-center transition-colors group"
+                                  className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors"
                                 >
                                   View Documentation
-                                  <ArrowTopRightOnSquareIcon style={{ width: '12px', height: '12px', marginLeft: '6px' }} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </a>
                               )}
                             </div>
