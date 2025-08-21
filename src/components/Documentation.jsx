@@ -11,7 +11,7 @@ const Documentation = () => {
     {
       title: "Getting Started",
       description: "Quick setup and deployment guides for different platforms.",
-      icon: <BoltIcon className="icon-small" />,
+      icon: <BoltIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
         { name: "System Overview", href: "/docs/system-overview", status: "Available" },
         { name: "Quick Start Guide", href: "/docs/quick-start", status: "Available" },
@@ -22,7 +22,7 @@ const Documentation = () => {
     {
       title: "API Reference",
       description: "Complete API documentation for developers and integrations.",
-      icon: <CodeBracketIcon className="icon-small" />,
+      icon: <CodeBracketIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
         { name: "REST API Reference", href: "/docs/api-reference", status: "Available" },
         { name: "Authentication", href: "/docs/api-reference#authentication", status: "Available" },
@@ -33,7 +33,7 @@ const Documentation = () => {
     {
       title: "User Guides",
       description: "Comprehensive guides for treasury management and analytics.",
-      icon: <BookOpenIcon className="icon-small" />,
+      icon: <BookOpenIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
         { name: "Wallet Management", href: "/docs/user-guides/wallet-management", status: "Available" },
         { name: "Portfolio Analytics", href: "/docs/user-guides/portfolio-analytics", status: "Available" },
@@ -44,7 +44,7 @@ const Documentation = () => {
     {
       title: "Plugin Development",
       description: "Build custom plugins and extend the platform functionality.",
-      icon: <CogIcon className="icon-small" />,
+      icon: <CogIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
         { name: "Plugin Architecture", href: "/docs/plugin-development/architecture", status: "Available" },
         { name: "Creating Your First Plugin", href: "/docs/plugin-development/getting-started", status: "Available" },
@@ -55,7 +55,7 @@ const Documentation = () => {
     {
       title: "Troubleshooting",
       description: "Common issues, solutions, and support resources.",
-      icon: <QuestionMarkCircleIcon className="icon-small" />,
+      icon: <QuestionMarkCircleIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
         { name: "Common Issues", href: "/docs/troubleshooting/common-issues", status: "Available" },
         { name: "Bitcoin Core Setup", href: "/docs/troubleshooting/bitcoin-core", status: "Available" },

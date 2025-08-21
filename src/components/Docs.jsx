@@ -297,7 +297,7 @@ const Docs = () => {
                   className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
                 >
                   <div className="flex justify-center mb-4">
-                    <BuildingOfficeIcon className="icon-medium text-orange-400 group-hover:scale-110 transition-transform" />
+                    <BuildingOfficeIcon style={{ width: '24px', height: '24px' }} className="text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
                   <h3 className="text-white font-semibold mb-3 text-lg">Project Structure</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">5 core modules + infrastructure</p>
@@ -310,7 +310,7 @@ const Docs = () => {
                   className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
                 >
                   <div className="flex justify-center mb-4">
-                    <ServerIcon className="icon-medium text-orange-400 group-hover:scale-110 transition-transform" />
+                    <ServerIcon style={{ width: '24px', height: '24px' }} className="text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
                   <h3 className="text-white font-semibold mb-3 text-lg">Bitcoin Integration</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">Core RPC, Mempool, Blockstream APIs</p>
@@ -323,7 +323,7 @@ const Docs = () => {
                   className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
                 >
                   <div className="flex justify-center mb-4">
-                    <ChartBarIcon className="icon-medium text-orange-400 group-hover:scale-110 transition-transform" />
+                    <ChartBarIcon style={{ width: '24px', height: '24px' }} className="text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
                   <h3 className="text-white font-semibold mb-3 text-lg">Advanced Analytics</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">Portfolio metrics and risk analysis</p>
@@ -336,7 +336,7 @@ const Docs = () => {
                   className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
                 >
                   <div className="flex justify-center mb-4">
-                    <CloudArrowUpIcon className="icon-medium text-orange-400 group-hover:scale-110 transition-transform" />
+                    <CloudArrowUpIcon style={{ width: '24px', height: '24px' }} className="text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
                   <h3 className="text-white font-semibold mb-3 text-lg">Production Ready</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">Docker, monitoring, security</p>
@@ -352,7 +352,7 @@ const Docs = () => {
                   <div key={index} className="card hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                     <div className="flex items-center mb-8">
                       <div className="mr-4">
-                        <IconComponent className="icon-small text-orange-400" />
+                        <IconComponent style={{ width: '16px', height: '16px' }} className="text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
