@@ -375,7 +375,7 @@ const Docs = () => {
                                   className="text-orange-400 hover:text-orange-300 text-sm font-medium inline-flex items-center transition-colors group"
                                 >
                                   View Documentation
-                                  <ArrowTopRightOnSquareIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                  <ArrowTopRightOnSquareIcon style={{ width: '14px', height: '14px', marginLeft: '8px' }} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </a>
                               )}
                             </div>
