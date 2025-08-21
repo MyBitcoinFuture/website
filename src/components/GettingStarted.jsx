@@ -25,7 +25,7 @@ const GettingStarted = () => {
       <Header />
       <main>
         <section className="section-padding" style={{ paddingTop: '96px', paddingBottom: '64px' }}>
-          <div className="container-max">
+          <div className="container-max max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="mb-6">
@@ -46,7 +46,7 @@ const GettingStarted = () => {
               </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
                     <div className="text-orange font-semibold mb-3 text-lg">What is a Bitcoin Treasury?</div>
                     <p className="text-gray text-sm mb-4">
@@ -97,7 +97,7 @@ const GettingStarted = () => {
               </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
                     <div className="text-orange font-semibold mb-3 text-lg">Why Connect to Bitcoin?</div>
                     <p className="text-gray text-sm mb-4">
@@ -151,7 +151,7 @@ BITCOIN_RPC_PASS=your_rpc_pass`}
               </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
                     <div className="text-orange font-semibold mb-3 text-lg">Wallet Security</div>
                     <p className="text-gray text-sm mb-4">
@@ -203,7 +203,7 @@ curl -X POST http://localhost:3100/api/wallets \\
               </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
                     <div className="text-orange font-semibold mb-3 text-lg">Dashboard Overview</div>
                     <p className="text-gray text-sm mb-4">
@@ -251,11 +251,11 @@ curl -X POST http://localhost:3100/api/wallets \\
               </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
                     <div className="text-orange font-semibold mb-3 text-lg">Desktop App</div>
                     <p className="text-gray text-sm mb-4">Download and install the Electron desktop application for the best experience.</p>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <CodeBlock 
                         code={`# Download from releases
 # Run installer (Windows/macOS)
@@ -270,7 +270,7 @@ curl -X POST http://localhost:3100/api/wallets \\
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
                     <div className="text-orange font-semibold mb-3 text-lg">Docker Deployment</div>
                     <p className="text-gray text-sm mb-4">Deploy with Docker for quick setup and easy management.</p>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <CodeBlock 
                         code={`# Clone repository
 git clone https://github.com/MyBitcoinFuture/dashboard.git
@@ -289,7 +289,7 @@ docker-compose up -d
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
                     <div className="text-orange font-semibold mb-3 text-lg">Manual Installation</div>
                     <p className="text-gray text-sm mb-4">Install manually for full control and customization.</p>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <CodeBlock 
                         code={`# Clone and install
 git clone https://github.com/MyBitcoinFuture/dashboard.git

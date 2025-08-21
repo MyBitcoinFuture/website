@@ -1,13 +1,17 @@
+import { 
+  BoltIcon,
+  CodeBracketIcon,
+  BookOpenIcon,
+  CogIcon,
+  QuestionMarkCircleIcon
+} from '@heroicons/react/24/outline'
+
 const Documentation = () => {
   const docSections = [
     {
       title: "Getting Started",
       description: "Quick setup and deployment guides for different platforms.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
+      icon: <BoltIcon className="w-6 h-6" />,
       links: [
         { name: "System Overview", href: "/docs/system-overview", status: "Available" },
         { name: "Quick Start Guide", href: "/docs/quick-start", status: "Available" },
@@ -18,11 +22,7 @@ const Documentation = () => {
     {
       title: "API Reference",
       description: "Complete API documentation for developers and integrations.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-      ),
+      icon: <CodeBracketIcon className="w-6 h-6" />,
       links: [
         { name: "REST API Reference", href: "/docs/api-reference", status: "Available" },
         { name: "Authentication", href: "/docs/api-reference#authentication", status: "Available" },
@@ -33,11 +33,7 @@ const Documentation = () => {
     {
       title: "User Guides",
       description: "Comprehensive guides for treasury management and analytics.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-      ),
+      icon: <BookOpenIcon className="w-6 h-6" />,
       links: [
         { name: "Wallet Management", href: "/docs/user-guides/wallet-management", status: "Available" },
         { name: "Portfolio Analytics", href: "/docs/user-guides/portfolio-analytics", status: "Available" },
@@ -48,12 +44,7 @@ const Documentation = () => {
     {
       title: "Plugin Development",
       description: "Build custom plugins and extend the platform functionality.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
+      icon: <CogIcon className="w-6 h-6" />,
       links: [
         { name: "Plugin Architecture", href: "/docs/plugin-development/architecture", status: "Available" },
         { name: "Creating Your First Plugin", href: "/docs/plugin-development/getting-started", status: "Available" },
@@ -64,11 +55,7 @@ const Documentation = () => {
     {
       title: "Troubleshooting",
       description: "Common issues, solutions, and support resources.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
+      icon: <QuestionMarkCircleIcon className="w-6 h-6" />,
       links: [
         { name: "Common Issues", href: "/docs/troubleshooting/common-issues", status: "Available" },
         { name: "Bitcoin Core Setup", href: "/docs/troubleshooting/bitcoin-core", status: "Available" },
