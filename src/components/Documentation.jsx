@@ -9,10 +9,10 @@ const Documentation = () => {
         </svg>
       ),
       links: [
-        { name: "Quick Start Guide", href: "#", status: "Coming Soon" },
-        { name: "Docker Deployment", href: "#", status: "Coming Soon" },
-        { name: "Start9 Installation", href: "#", status: "Coming Soon" },
-        { name: "Umbrel Setup", href: "#", status: "Coming Soon" }
+        { name: "System Overview", href: "/docs/system-overview", status: "Available" },
+        { name: "Quick Start Guide", href: "/docs/quick-start", status: "Available" },
+        { name: "Docker Deployment", href: "/docs/deployment/docker", status: "Available" },
+        { name: "Start9 Installation", href: "/docs/deployment/start9", status: "Available" }
       ]
     },
     {
@@ -24,10 +24,25 @@ const Documentation = () => {
         </svg>
       ),
       links: [
-        { name: "REST API Reference", href: "#", status: "Coming Soon" },
-        { name: "Authentication", href: "#", status: "Coming Soon" },
-        { name: "WebSocket API", href: "#", status: "Coming Soon" },
-        { name: "Rate Limits", href: "#", status: "Coming Soon" }
+        { name: "REST API Reference", href: "/docs/api-reference", status: "Available" },
+        { name: "Authentication", href: "/docs/api-reference#authentication", status: "Available" },
+        { name: "WebSocket API", href: "/docs/api-reference#websocket", status: "Available" },
+        { name: "SDK Examples", href: "/docs/api-reference#sdk-examples", status: "Available" }
+      ]
+    },
+    {
+      title: "User Guides",
+      description: "Comprehensive guides for treasury management and analytics.",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      ),
+      links: [
+        { name: "Wallet Management", href: "/docs/user-guides/wallet-management", status: "Available" },
+        { name: "Portfolio Analytics", href: "/docs/user-guides/portfolio-analytics", status: "Available" },
+        { name: "Transaction Monitoring", href: "/docs/user-guides/transaction-monitoring", status: "Available" },
+        { name: "Compliance Reporting", href: "/docs/user-guides/compliance-reporting", status: "Available" }
       ]
     },
     {
@@ -40,25 +55,25 @@ const Documentation = () => {
         </svg>
       ),
       links: [
-        { name: "Plugin Architecture", href: "#", status: "Coming Soon" },
-        { name: "Creating Your First Plugin", href: "#", status: "Coming Soon" },
-        { name: "Plugin API Reference", href: "#", status: "Coming Soon" },
-        { name: "Plugin Marketplace", href: "#", status: "Coming Soon" }
+        { name: "Plugin Architecture", href: "/docs/plugin-development/architecture", status: "Available" },
+        { name: "Creating Your First Plugin", href: "/docs/plugin-development/getting-started", status: "Available" },
+        { name: "Plugin API Reference", href: "/docs/plugin-development/api", status: "Available" },
+        { name: "LNBits Integration", href: "/docs/plugin-development/lnbits-integration", status: "Available" }
       ]
     },
     {
-      title: "User Guides",
-      description: "Comprehensive guides for treasury management and analytics.",
+      title: "Troubleshooting",
+      description: "Common issues, solutions, and support resources.",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
       links: [
-        { name: "Wallet Management", href: "#", status: "Coming Soon" },
-        { name: "Analytics Dashboard", href: "#", status: "Coming Soon" },
-        { name: "Compliance Reporting", href: "#", status: "Coming Soon" },
-        { name: "Security Best Practices", href: "#", status: "Coming Soon" }
+        { name: "Common Issues", href: "/docs/troubleshooting/common-issues", status: "Available" },
+        { name: "Bitcoin Core Setup", href: "/docs/troubleshooting/bitcoin-core", status: "Available" },
+        { name: "Network Configuration", href: "/docs/troubleshooting/network", status: "Available" },
+        { name: "Support Resources", href: "/docs/troubleshooting/support", status: "Available" }
       ]
     }
   ]
@@ -98,8 +113,21 @@ const Documentation = () => {
               <div className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <div key={linkIndex} className="flex items-center justify-between">
-                    <span className="text-primary-300">{link.name}</span>
-                    <span className="text-yellow-400 text-sm font-medium">{link.status}</span>
+                    <a 
+                      href={link.href}
+                      className="text-orange-400 hover:text-orange-300 transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                    <span 
+                      className={`px-2 py-1 text-xs rounded-full ${
+                        link.status === 'Available' 
+                          ? 'bg-green-500/20 text-green-400' 
+                          : 'bg-yellow-500/20 text-yellow-400'
+                      }`}
+                    >
+                      {link.status}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -107,31 +135,13 @@ const Documentation = () => {
           ))}
         </div>
 
-        {/* Documentation Notice */}
-        <div className="mt-16 bg-primary-800/30 rounded-lg p-8 border border-primary-700">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Documentation Coming Soon
-            </h3>
-            <p className="text-primary-200 mb-6 max-w-2xl mx-auto">
-              We're working on comprehensive documentation that will cover everything from 
-              quick start guides to advanced plugin development. All documentation will be 
-              generated using AI assistance for maximum accuracy and completeness.
-            </p>
-            <a
-              href="https://github.com/MyBitcoinFuture"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
-              Follow Development on GitHub
-            </a>
-          </div>
+        <div className="text-center mt-12">
+          <a 
+            href="/docs"
+            className="btn-primary"
+          >
+            View All Documentation
+          </a>
         </div>
       </div>
     </section>

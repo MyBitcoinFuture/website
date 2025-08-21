@@ -4,7 +4,7 @@ import 'prismjs/components/prism-bash'
 import 'prismjs/components/prism-json'
 import 'prismjs/themes/prism-tomorrow.css'
 
-const CodeBlock = ({ code, language = 'bash', title }) => {
+const CodeBlock = ({ code, language = 'bash' }) => {
   const codeRef = useRef(null)
   const [copied, setCopied] = useState(false)
 

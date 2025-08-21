@@ -8,6 +8,10 @@ import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import Docs from './components/Docs'
 import GettingStarted from './components/GettingStarted'
+import SystemOverview from './components/SystemOverview'
+import ApiReference from './components/ApiReference'
+import QuickStart from './components/QuickStart'
+import UserGuides from './components/UserGuides'
 import VersionIndicator from './components/VersionIndicator'
 
 function App() {
@@ -70,6 +74,50 @@ function App() {
             <Header />
             <main id="main-content">
               <GettingStarted />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </>
+        } />
+        <Route path="/docs/system-overview" element={
+          <>
+            <Header />
+            <main id="main-content">
+              <SystemOverview />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </>
+        } />
+        <Route path="/docs/api-reference" element={
+          <>
+            <Header />
+            <main id="main-content">
+              <ApiReference />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </>
+        } />
+        <Route path="/docs/quick-start" element={
+          <>
+            <Header />
+            <main id="main-content">
+              <QuickStart />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </>
+        } />
+        <Route path="/docs/user-guides" element={
+          <>
+            <Header />
+            <main id="main-content">
+              <UserGuides />
             </main>
             <Footer />
             <BackToTop />

@@ -4,8 +4,8 @@
 export const VERSION = {
   version: '1.0.0',
   buildDate: '2025-08-20',
-  commitHash: process.env.REACT_APP_COMMIT_HASH || '8977cbe',
-  environment: process.env.NODE_ENV || 'development',
+  commitHash: import.meta.env.VITE_COMMIT_HASH || '8977cbe',
+  environment: import.meta.env.MODE || 'development',
   lastUpdated: new Date().toISOString(),
   deployedAt: new Date().toISOString()
 };
