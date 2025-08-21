@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import BackToTop from './BackToTop';
 import CodeBlock from './CodeBlock';
+import Breadcrumbs from './ui/Breadcrumbs';
 
 const SystemOverview = () => {
   return (
@@ -12,6 +13,9 @@ const SystemOverview = () => {
       <main>
         <section className="section-padding" style={{ paddingTop: 'var(--space-24)', paddingBottom: 'var(--space-16)' }}>
           <div className="container-max">
+            {/* Breadcrumbs */}
+            <Breadcrumbs items={[{ name: 'System Overview' }]} />
+            
             {/* Header */}
             <div className="text-center mb-16">
               <h1 className="mb-8">

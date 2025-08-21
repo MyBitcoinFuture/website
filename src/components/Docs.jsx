@@ -25,9 +25,15 @@ const Docs = () => {
       icon: RocketLaunchIcon,
       items: [
         { 
-          title: "Quick Start Guide", 
+          title: "Getting Started Guide", 
           description: "Complete installation and setup walkthrough",
           link: "/getting-started",
+          internal: true
+        },
+        { 
+          title: "Quick Start Guide", 
+          description: "Fast deployment and configuration",
+          link: "/docs/quick-start",
           internal: true
         },
         { 
@@ -35,17 +41,30 @@ const Docs = () => {
           description: "Architecture and component overview",
           link: "/docs/system-overview",
           internal: true
-        },
+        }
+      ]
+    },
+    {
+      title: "User Documentation",
+      description: "Step-by-step guides and user interface documentation",
+      icon: GlobeAltIcon,
+      items: [
         { 
           title: "User Guides", 
-          description: "Step-by-step user documentation",
+          description: "Complete user documentation and tutorials",
           link: "/docs/user-guides",
           internal: true
         },
         { 
-          title: "Contact & Support", 
-          description: "Get help and community resources",
-          link: "/#contact",
+          title: "Feature Overview", 
+          description: "Complete feature list and capabilities",
+          link: "/#features",
+          internal: true
+        },
+        { 
+          title: "Deployment Options", 
+          description: "Docker, manual, and home server deployment",
+          link: "/#deployment",
           internal: true
         }
       ]
@@ -72,43 +91,6 @@ const Docs = () => {
           description: "Real-time notifications and events",
           link: "/docs/api-reference#websocket",
           internal: true
-        },
-        { 
-          title: "SDK Examples", 
-          description: "JavaScript, Python, and cURL examples",
-          link: "/docs/api-reference#sdk-examples",
-          internal: true
-        }
-      ]
-    },
-    {
-      title: "Features & Capabilities",
-      description: "Core features and system capabilities",
-      icon: GlobeAltIcon,
-      items: [
-        { 
-          title: "Feature Overview", 
-          description: "Complete feature list and capabilities",
-          link: "/#features",
-          internal: true
-        },
-        { 
-          title: "User Interface", 
-          description: "Web and desktop interface guides",
-          link: "/docs/user-guides",
-          internal: true
-        },
-        { 
-          title: "Portfolio Management", 
-          description: "Bitcoin treasury and wallet management",
-          link: "/user-guides#portfolio",
-          internal: true
-        },
-        { 
-          title: "Analytics & Reporting", 
-          description: "Advanced analytics and reporting features",
-          link: "/user-guides#analytics",
-          internal: true
         }
       ]
     },
@@ -118,20 +100,8 @@ const Docs = () => {
       icon: PuzzlePieceIcon,
       items: [
         { 
-          title: "Plugin Overview", 
-          description: "Introduction to the plugin ecosystem",
-          link: "/#features",
-          internal: true
-        },
-        { 
-          title: "Available Plugins", 
-          description: "IFTTT, accounting, and compliance plugins",
-          link: "/#features",
-          internal: true
-        },
-        { 
           title: "Plugin Development", 
-          description: "Creating custom plugins (GitHub docs)",
+          description: "Creating custom plugins and extensions",
           link: "https://github.com/MyBitcoinFuture/plugins",
           internal: false
         },
@@ -140,60 +110,23 @@ const Docs = () => {
           description: "Technical plugin development reference",
           link: "https://github.com/MyBitcoinFuture/plugins/blob/main/README.md",
           internal: false
+        },
+        { 
+          title: "Available Plugins", 
+          description: "IFTTT, accounting, and compliance plugins",
+          link: "/#features",
+          internal: true
         }
       ]
     },
     {
-      title: "Deployment",
-      description: "Production deployment and infrastructure guides",
-      icon: CloudArrowUpIcon,
-      items: [
-        { 
-          title: "Deployment Guide", 
-          description: "Complete deployment walkthrough",
-          link: "/#deployment",
-          internal: true
-        },
-        { 
-          title: "Docker Setup", 
-          description: "Containerized deployment with Docker",
-          link: "/#deployment",
-          internal: true
-        },
-        { 
-          title: "Home Server Deployment", 
-          description: "Start9, Umbrel, and personal servers",
-          link: "/#deployment",
-          internal: true
-        },
-        { 
-          title: "Enterprise Deployment", 
-          description: "Kubernetes and production infrastructure",
-          link: "https://github.com/MyBitcoinFuture/platform-manifests",
-          internal: false
-        }
-      ]
-    },
-    {
-      title: "Advanced Topics",
-      description: "Security, development, and technical references",
+      title: "Development & Support",
+      description: "Developer resources and technical references",
       icon: ShieldCheckIcon,
       items: [
         { 
-          title: "Security Model", 
-          description: "Bitcoin security and authentication",
-          link: "/#features",
-          internal: true
-        },
-        { 
-          title: "Developer Resources", 
-          description: "Contributing and development setup",
-          link: "/getting-started",
-          internal: true
-        },
-        { 
           title: "Technical Documentation", 
-          description: "Detailed technical references (GitHub)",
+          description: "Detailed technical references and architecture",
           link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs",
           internal: false
         },
@@ -202,6 +135,12 @@ const Docs = () => {
           description: "Browse all repositories and source",
           link: "https://github.com/MyBitcoinFuture",
           internal: false
+        },
+        { 
+          title: "Contact & Support", 
+          description: "Get help and community resources",
+          link: "/#contact",
+          internal: true
         }
       ]
     }

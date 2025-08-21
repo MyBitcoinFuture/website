@@ -1,5 +1,6 @@
 import Header from './Header'
 import CodeBlock from './CodeBlock'
+import Breadcrumbs from './ui/Breadcrumbs'
 import { 
   RocketLaunchIcon, 
   WrenchScrewdriverIcon,
@@ -24,6 +25,9 @@ const GettingStarted = () => {
       <main>
         <section className="section-padding" style={{ paddingTop: '96px', paddingBottom: '64px' }}>
           <div className="container-max max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Breadcrumbs */}
+            <Breadcrumbs items={[{ name: 'Getting Started' }]} />
+            
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="mb-6">
@@ -249,7 +253,7 @@ curl -X POST http://localhost:3100/api/wallets \\
               </h2>
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
                   <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col overflow-hidden">
                     <div className="text-orange font-semibold mb-3 text-lg">Docker Deployment</div>
                     <p className="text-gray text-sm mb-4">Deploy with Docker for quick setup and easy management.</p>
