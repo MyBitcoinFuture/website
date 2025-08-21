@@ -354,7 +354,7 @@ const Docs = () => {
                   <div key={index} className="card hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                     <div className="flex items-center mb-8">
                       <div className="mr-4">
-                        <IconComponent className="w-10 h-10 text-orange-400" />
+                        <IconComponent className="w-6 h-6 text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
@@ -418,8 +418,6 @@ const Docs = () => {
           </div>
         </section>
       </main>
-      <Footer />
-      <BackToTop />
     </div>
   );
 };

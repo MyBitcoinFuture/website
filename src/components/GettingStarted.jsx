@@ -1,5 +1,4 @@
 import Header from './Header'
-import Footer from './Footer'
 import BackToTop from './BackToTop'
 import CodeBlock from './CodeBlock'
 import { 
@@ -357,8 +356,6 @@ npm run dev
           </div>
         </section>
       </main>
-      <Footer />
-      <BackToTop />
     </div>
   )
 }
