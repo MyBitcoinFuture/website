@@ -1,5 +1,4 @@
 import Header from './Header'
-import BackToTop from './BackToTop'
 import CodeBlock from './CodeBlock'
 import { 
   RocketLaunchIcon, 
