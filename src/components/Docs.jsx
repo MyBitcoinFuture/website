@@ -285,7 +285,7 @@ const Docs = () => {
             {/* Repository Overview - Now with clickable cards */}
             <div className="card mb-20">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-white mb-6">Treasury Dashboard</h2>
+                <h2 className="text-3xl font-bold text-white mb-6">Repository Overview</h2>
                 <p className="text-slate-300 text-lg mb-8">Explore the core components of the Bitcoin treasury management system</p>
               </div>
               
@@ -352,7 +352,7 @@ const Docs = () => {
                   <div key={index} className="card hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                     <div className="flex items-center mb-8">
                       <div className="mr-4">
-                        <IconComponent style={{ width: '16px', height: '16px' }} className="text-orange-400" />
+                        <IconComponent style={{ width: '40px', height: '40px' }} className="text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
@@ -375,7 +375,7 @@ const Docs = () => {
                                   className="text-orange-400 hover:text-orange-300 text-sm font-medium inline-flex items-center transition-colors group"
                                 >
                                   View Documentation
-                                  <ArrowTopRightOnSquareIcon style={{ width: '14px', height: '14px', marginLeft: '8px' }} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                  <ArrowTopRightOnSquareIcon style={{ width: '12px', height: '12px', marginLeft: '6px' }} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </a>
                               )}
                             </div>
