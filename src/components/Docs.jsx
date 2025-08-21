@@ -438,7 +438,7 @@ const Docs = () => {
                 return (
                   <div key={index} className="card stagger-item hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                     <div className="flex items-center mb-6">
-                      <div style={{ marginRight: '32px' }}>
+                      <div style={{ marginRight: '16px' }}>
                         <IconComponent style={{ width: '40px', height: '40px' }} className="text-orange-400" />
                       </div>
                       <div>
