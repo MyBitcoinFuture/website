@@ -15,9 +15,8 @@ import {
   ChartBarIcon, 
   ShieldCheckIcon, 
   BookOpenIcon,
-  WrenchScrewdriverIcon,
   ServerIcon,
-  BeakerIcon
+  ArrowTopRightOnSquareIcon
 } from '@heroicons/react/24/outline';
 
 const Docs = () => {
@@ -29,12 +28,12 @@ const Docs = () => {
       items: [
         { 
           title: "Installation", 
-          description: "Clone and install the project",
-          link: "https://github.com/MyBitcoinFuture/dashboard#installation"
+          description: "Clone and install the monorepo",
+          link: "https://github.com/MyBitcoinFuture/dashboard#quick-start"
         },
         { 
           title: "Environment Setup", 
-          description: "Configure environment variables and dependencies",
+          description: "Configure .env and dependencies",
           link: "https://github.com/MyBitcoinFuture/dashboard#prerequisites"
         },
         { 
@@ -43,36 +42,9 @@ const Docs = () => {
           link: "https://github.com/MyBitcoinFuture/dashboard#development"
         },
         { 
-          title: "Onboarding Guide", 
-          description: "4-step onboarding process",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/ONBOARDING_GUIDE.md"
-        }
-      ]
-    },
-    {
-      title: "Architecture",
-      description: "Understanding the modular workspace structure",
-      icon: BuildingOfficeIcon,
-      items: [
-        { 
-          title: "Workspace Overview", 
-          description: "API, Web, CLI, Desktop, Shared modules",
-          link: "https://github.com/MyBitcoinFuture/dashboard#core-modules"
-        },
-        { 
-          title: "Module Dependencies", 
-          description: "How modules interact and share code",
-          link: "https://github.com/MyBitcoinFuture/dashboard#module-structure"
-        },
-        { 
-          title: "Build System", 
-          description: "Project build and deployment scripts",
-          link: "https://github.com/MyBitcoinFuture/dashboard#available-scripts"
-        },
-        { 
-          title: "Development Guide", 
-          description: "Comprehensive development documentation",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/DEVELOPMENT_GUIDE.md"
+          title: "First Wallet", 
+          description: "Add your first Bitcoin wallet",
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
         }
       ]
     },
@@ -99,7 +71,7 @@ const Docs = () => {
         { 
           title: "API Reference", 
           description: "Complete REST API documentation",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md"
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
         }
       ]
     },
@@ -143,12 +115,12 @@ const Docs = () => {
         { 
           title: "Basic Commands", 
           description: "Essential CLI operations",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/QUICK_REFERENCE.md"
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
         },
         { 
           title: "Wallet Operations", 
           description: "Wallet management via CLI",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/QUICK_REFERENCE.md"
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
         },
         { 
           title: "Automation Scripts", 
@@ -180,7 +152,34 @@ const Docs = () => {
         { 
           title: "Desktop Features", 
           description: "Native desktop capabilities",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/SYSTEM_OVERVIEW.md"
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
+        }
+      ]
+    },
+    {
+      title: "Plugin System",
+      description: "Extensible plugin architecture",
+      icon: PuzzlePieceIcon,
+      items: [
+        { 
+          title: "Plugin Architecture", 
+          description: "Understanding the plugin system",
+          link: "https://github.com/MyBitcoinFuture/plugins"
+        },
+        { 
+          title: "IFTTT Integration", 
+          description: "Automated workflow plugins",
+          link: "https://github.com/MyBitcoinFuture/plugins"
+        },
+        { 
+          title: "Accounting Plugins", 
+          description: "Financial reporting plugins",
+          link: "https://github.com/MyBitcoinFuture/plugins"
+        },
+        { 
+          title: "Plugin Development", 
+          description: "Creating custom plugins",
+          link: "https://github.com/MyBitcoinFuture/plugins"
         }
       ]
     },
@@ -212,33 +211,6 @@ const Docs = () => {
       ]
     },
     {
-      title: "Monitoring & Observability",
-      description: "System monitoring and observability",
-      icon: ChartBarIcon,
-      items: [
-        { 
-          title: "Health Checks", 
-          description: "Service health monitoring",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/system"
-        },
-        { 
-          title: "Performance Metrics", 
-          description: "Performance monitoring and optimization",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/analytics/PerformanceOptimization.js"
-        },
-        { 
-          title: "System Logs", 
-          description: "Centralized logging and monitoring",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/system/logs.js"
-        },
-        { 
-          title: "Audit Logging", 
-          description: "Security audit trail",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/security/audit.js"
-        }
-      ]
-    },
-    {
       title: "Security",
       description: "Security features and best practices",
       icon: ShieldCheckIcon,
@@ -251,17 +223,17 @@ const Docs = () => {
         { 
           title: "Authorization", 
           description: "Role-based access control",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/security"
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/core/auth.js"
         },
         { 
           title: "Bitcoin Security", 
           description: "xpub-only, no private keys",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/bitcoin"
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs"
         },
         { 
-          title: "Security Guide", 
-          description: "Comprehensive security documentation",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/SECURITY.md"
+          title: "Audit Logging", 
+          description: "Complete operation audit trail",
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/security/audit.js"
         }
       ]
     },
@@ -271,78 +243,24 @@ const Docs = () => {
       icon: BookOpenIcon,
       items: [
         { 
-          title: "Dashboard Repository", 
-          description: "Main dashboard project",
+          title: "MyBitcoinFuture/dashboard", 
+          description: "Main dashboard monorepo",
           link: "https://github.com/MyBitcoinFuture/dashboard"
         },
         { 
-          title: "Platform Manifests", 
-          description: "Platform deployment configurations",
+          title: "MyBitcoinFuture/plugins", 
+          description: "Plugin ecosystem repository",
+          link: "https://github.com/MyBitcoinFuture/plugins"
+        },
+        { 
+          title: "MyBitcoinFuture/core", 
+          description: "Infrastructure components",
+          link: "https://github.com/MyBitcoinFuture/core"
+        },
+        { 
+          title: "MyBitcoinFuture/platform-manifests", 
+          description: "Kubernetes/Helm manifests",
           link: "https://github.com/MyBitcoinFuture/platform-manifests"
-        },
-        { 
-          title: "Website Repository", 
-          description: "Documentation website",
-          link: "https://github.com/MyBitcoinFuture/website"
-        },
-        { 
-          title: "GitHub Organization", 
-          description: "Complete project overview",
-          link: "https://github.com/MyBitcoinFuture"
-        }
-      ]
-    },
-    {
-      title: "Advanced Features",
-      description: "Advanced analytics and reporting",
-      icon: BeakerIcon,
-      items: [
-        { 
-          title: "Portfolio Analytics", 
-          description: "Advanced portfolio analysis",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/analytics"
-        },
-        { 
-          title: "Risk Analysis", 
-          description: "Risk assessment and management",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/analytics/RiskAnalysis.js"
-        },
-        { 
-          title: "Performance Attribution", 
-          description: "Performance tracking and attribution",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/analytics/PerformanceAttribution.js"
-        },
-        { 
-          title: "Compliance Reporting", 
-          description: "Regulatory compliance features",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/reporting/compliance.js"
-        }
-      ]
-    },
-    {
-      title: "Development Tools",
-      description: "Development and testing utilities",
-      icon: WrenchScrewdriverIcon,
-      items: [
-        { 
-          title: "Testing Framework", 
-          description: "Comprehensive test suite",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/test"
-        },
-        { 
-          title: "Mock Services", 
-          description: "Development mock data",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/integration/mock-data.js"
-        },
-        { 
-          title: "Configuration Management", 
-          description: "Environment and config management",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/config"
-        },
-        { 
-          title: "Build Scripts", 
-          description: "Automated build and deployment",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/scripts"
         }
       ]
     }
@@ -355,89 +273,111 @@ const Docs = () => {
         <section className="section-padding" style={{ paddingTop: 'var(--space-24)', paddingBottom: 'var(--space-16)' }}>
           <div className="container-max">
             {/* Header */}
-            <div className="text-center mb-12">
-              <h1 className="mb-6">
+            <div className="text-center mb-16">
+              <h1 className="mb-8">
                 <span className="text-white">MyBitcoinFuture</span>
                 <br />
                 <span className="text-orange">Documentation</span>
               </h1>
-              <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem' }}>
+              <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem', lineHeight: '1.6' }}>
                 Complete technical reference for deployment, API integration, and advanced features.
               </p>
             </div>
 
-            {/* Repository Overview */}
-            <div className="card mb-16">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-white mb-4">Treasury Dashboard</h2>
+            {/* Repository Overview - Now with clickable cards */}
+            <div className="card mb-20">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-white mb-6">Treasury Dashboard</h2>
+                <p className="text-slate-300 text-lg mb-8">Explore the core components of the Bitcoin treasury management system</p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="text-center p-4">
-                  <div className="flex justify-center mb-3">
-                    <BuildingOfficeIcon className="icon-large text-orange-400" />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a 
+                  href="https://github.com/MyBitcoinFuture/dashboard#architecture-overview" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
+                >
+                  <div className="flex justify-center mb-4">
+                    <BuildingOfficeIcon className="w-12 h-12 text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Project Structure</h3>
-                  <p className="text-slate-400 text-sm">5 core modules + infrastructure</p>
-                </div>
-                <div className="text-center p-4">
-                  <div className="flex justify-center mb-3">
-                    <ServerIcon className="icon-large text-orange-400" />
+                  <h3 className="text-white font-semibold mb-3 text-lg">Project Structure</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">5 core modules + infrastructure</p>
+                </a>
+                
+                <a 
+                  href="https://github.com/MyBitcoinFuture/dashboard/tree/main/api/bitcoin" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
+                >
+                  <div className="flex justify-center mb-4">
+                    <ServerIcon className="w-12 h-12 text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Bitcoin Integration</h3>
-                  <p className="text-slate-400 text-sm">Core RPC, Mempool, Blockstream APIs</p>
-                </div>
-                <div className="text-center p-4">
-                  <div className="flex justify-center mb-3">
-                    <ChartBarIcon className="icon-large text-orange-400" />
+                  <h3 className="text-white font-semibold mb-3 text-lg">Bitcoin Integration</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">Core RPC, Mempool, Blockstream APIs</p>
+                </a>
+                
+                <a 
+                  href="https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/analytics" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
+                >
+                  <div className="flex justify-center mb-4">
+                    <ChartBarIcon className="w-12 h-12 text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Advanced Analytics</h3>
-                  <p className="text-slate-400 text-sm">Portfolio metrics and risk analysis</p>
-                </div>
-                <div className="text-center p-4">
-                  <div className="flex justify-center mb-3">
-                    <CloudArrowUpIcon className="icon-large text-orange-400" />
+                  <h3 className="text-white font-semibold mb-3 text-lg">Advanced Analytics</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">Portfolio metrics and risk analysis</p>
+                </a>
+                
+                <a 
+                  href="https://github.com/MyBitcoinFuture/dashboard#production" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
+                >
+                  <div className="flex justify-center mb-4">
+                    <CloudArrowUpIcon className="w-12 h-12 text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Production Ready</h3>
-                  <p className="text-slate-400 text-sm">Docker, monitoring, security</p>
-                </div>
+                  <h3 className="text-white font-semibold mb-3 text-lg">Production Ready</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">Docker, monitoring, security</p>
+                </a>
               </div>
             </div>
 
-            {/* Documentation Tree */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {/* Documentation Tree - Less dense layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-20">
               {docCategories.map((category, index) => {
                 const IconComponent = category.icon;
                 return (
-                  <div key={index} className="card stagger-item hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
-                    <div className="flex items-center mb-6">
-                      <div style={{ marginRight: '16px' }}>
-                        <IconComponent style={{ width: '40px', height: '40px' }} className="text-orange-400" />
+                  <div key={index} className="card hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
+                    <div className="flex items-center mb-8">
+                      <div className="mr-4">
+                        <IconComponent className="w-10 h-10 text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
-                        <p className="text-slate-400 text-sm">{category.description}</p>
+                        <p className="text-slate-400 text-sm leading-relaxed">{category.description}</p>
                       </div>
                     </div>
                     
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       {category.items.map((item, itemIndex) => (
-                        <div key={itemIndex} className="border-l-2 border-slate-700 pl-3 py-2 hover:border-orange-400 transition-colors">
+                        <div key={itemIndex} className="border-l-2 border-slate-700 pl-4 py-3 hover:border-orange-400 transition-colors">
                           <div className="flex items-start justify-between">
                             <div className="flex-1">
-                              <h4 className="text-white font-medium mb-1 text-sm">{item.title}</h4>
-                              <p className="text-slate-400 text-xs mb-2 leading-relaxed">{item.description}</p>
+                              <h4 className="text-white font-medium mb-2 text-base">{item.title}</h4>
+                              <p className="text-slate-400 text-sm mb-3 leading-relaxed">{item.description}</p>
                               {item.link && (
                                 <a 
                                   href={item.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-orange-400 hover:text-orange-300 text-xs font-medium inline-flex items-center transition-colors"
+                                  className="text-orange-400 hover:text-orange-300 text-sm font-medium inline-flex items-center transition-colors group"
                                 >
                                   View Documentation
-                                  <svg style={{ width: '10px', height: '10px' }} className="ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                  </svg>
+                                  <ArrowTopRightOnSquareIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </a>
                               )}
                             </div>
@@ -451,33 +391,16 @@ const Docs = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="text-center mt-16">
+            <div className="text-center">
               <div className="card max-w-2xl mx-auto">
-                <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-                <p className="text-slate-300 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-6">Ready to Get Started?</h3>
+                <p className="text-slate-300 mb-8 text-lg leading-relaxed">
                   Clone the repository and have the full system running in minutes.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <Link 
                     to="/getting-started" 
-                    style={{
-                      background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
-                      color: '#ffffff',
-                      border: '1px solid #f97316',
-                      padding: '12px 24px',
-                      borderRadius: '8px',
-                      textDecoration: 'none',
-                      fontWeight: '600',
-                      transition: 'all 0.2s ease'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.transform = 'translateY(-1px)';
-                      e.target.style.boxShadow = '0 4px 12px rgba(249, 115, 22, 0.3)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.transform = 'translateY(0)';
-                      e.target.style.boxShadow = 'none';
-                    }}
+                    className="btn-primary"
                   >
                     Get Started
                   </Link>
