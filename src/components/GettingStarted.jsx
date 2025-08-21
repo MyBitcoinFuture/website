@@ -64,12 +64,12 @@ const GettingStarted = () => {
                     <div className="text-orange font-semibold mb-3 text-lg">Choose Your Setup</div>
                     <div className="space-y-4">
                       <div>
-                        <div className="text-white font-medium mb-2">Desktop App (Recommended)</div>
-                        <p className="text-gray text-sm">Download and install the Electron desktop application for the best experience.</p>
-                      </div>
-                      <div>
                         <div className="text-white font-medium mb-2">Web Dashboard</div>
                         <p className="text-gray text-sm">Deploy the web version for cross-platform access via browser.</p>
+                      </div>
+                      <div>
+                        <div className="text-white font-medium mb-2">Docker Deployment</div>
+                        <p className="text-gray text-sm">Deploy with Docker for quick setup and easy management.</p>
                       </div>
                     </div>
                   </div>

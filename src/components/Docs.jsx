@@ -299,7 +299,7 @@ const Docs = () => {
                   className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
                 >
                   <div className="flex justify-center mb-4">
-                    <BuildingOfficeIcon className="w-12 h-12 text-orange-400 group-hover:scale-110 transition-transform" />
+                    <BuildingOfficeIcon className="w-8 h-8 text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
                   <h3 className="text-white font-semibold mb-3 text-lg">Project Structure</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">5 core modules + infrastructure</p>
@@ -312,7 +312,7 @@ const Docs = () => {
                   className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
                 >
                   <div className="flex justify-center mb-4">
-                    <ServerIcon className="w-12 h-12 text-orange-400 group-hover:scale-110 transition-transform" />
+                    <ServerIcon className="w-8 h-8 text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
                   <h3 className="text-white font-semibold mb-3 text-lg">Bitcoin Integration</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">Core RPC, Mempool, Blockstream APIs</p>
@@ -325,7 +325,7 @@ const Docs = () => {
                   className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
                 >
                   <div className="flex justify-center mb-4">
-                    <ChartBarIcon className="w-12 h-12 text-orange-400 group-hover:scale-110 transition-transform" />
+                    <ChartBarIcon className="w-8 h-8 text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
                   <h3 className="text-white font-semibold mb-3 text-lg">Advanced Analytics</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">Portfolio metrics and risk analysis</p>
@@ -338,7 +338,7 @@ const Docs = () => {
                   className="text-center p-6 rounded-lg border border-gray-700 hover:border-orange-400 transition-all duration-200 hover:bg-gray-800/50 group"
                 >
                   <div className="flex justify-center mb-4">
-                    <CloudArrowUpIcon className="w-12 h-12 text-orange-400 group-hover:scale-110 transition-transform" />
+                    <CloudArrowUpIcon className="w-8 h-8 text-orange-400 group-hover:scale-110 transition-transform" />
                   </div>
                   <h3 className="text-white font-semibold mb-3 text-lg">Production Ready</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">Docker, monitoring, security</p>
