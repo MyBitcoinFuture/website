@@ -232,7 +232,7 @@ const Docs = () => {
                 return (
                   <div key={index} className="card hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
                     <div className="flex items-center mb-8">
-                      <div className="mr-6">
+                      <div style={{ marginRight: '24px' }}>
                         <IconComponent style={{ width: '24px', height: '24px' }} className="text-orange-400" />
                       </div>
                       <div>
