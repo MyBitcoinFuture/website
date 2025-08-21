@@ -43,9 +43,9 @@ const Docs = () => {
           link: "https://github.com/MyBitcoinFuture/dashboard#development"
         },
         { 
-          title: "First Wallet", 
-          description: "Add your first Bitcoin wallet",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/QUICK_REFERENCE.md"
+          title: "Onboarding Guide", 
+          description: "4-step onboarding process",
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/ONBOARDING_GUIDE.md"
         }
       ]
     },
@@ -70,8 +70,8 @@ const Docs = () => {
           link: "https://github.com/MyBitcoinFuture/dashboard#available-scripts"
         },
         { 
-          title: "Development Workflow", 
-          description: "Working across multiple modules",
+          title: "Development Guide", 
+          description: "Comprehensive development documentation",
           link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/DEVELOPMENT_GUIDE.md"
         }
       ]
@@ -143,7 +143,7 @@ const Docs = () => {
         { 
           title: "Basic Commands", 
           description: "Essential CLI operations",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/cli/commands"
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/QUICK_REFERENCE.md"
         },
         { 
           title: "Wallet Operations", 
@@ -185,33 +185,6 @@ const Docs = () => {
       ]
     },
     {
-      title: "Plugin System",
-      description: "Extensible plugin architecture",
-      icon: PuzzlePieceIcon,
-      items: [
-        { 
-          title: "Plugin Architecture", 
-          description: "Understanding the plugin system",
-          link: "https://github.com/MyBitcoinFuture/plugins"
-        },
-        { 
-          title: "IFTTT Integration", 
-          description: "Automated workflow plugins",
-          link: "https://github.com/MyBitcoinFuture/plugins/tree/main/ifttt"
-        },
-        { 
-          title: "Accounting Plugins", 
-          description: "Financial reporting plugins",
-          link: "https://github.com/MyBitcoinFuture/plugins/tree/main/accounting"
-        },
-        { 
-          title: "Plugin Development", 
-          description: "Creating custom plugins",
-          link: "https://github.com/MyBitcoinFuture/plugins/blob/main/README.md"
-        }
-      ]
-    },
-    {
       title: "Deployment",
       description: "Production deployment and infrastructure",
       icon: CloudArrowUpIcon,
@@ -249,19 +222,19 @@ const Docs = () => {
           link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/system"
         },
         { 
-          title: "Prometheus Metrics", 
-          description: "Performance metrics collection",
-          link: "https://github.com/MyBitcoinFuture/monitoring"
+          title: "Performance Metrics", 
+          description: "Performance monitoring and optimization",
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/analytics/PerformanceOptimization.js"
         },
         { 
-          title: "Grafana Dashboards", 
-          description: "Monitoring dashboards",
-          link: "https://github.com/MyBitcoinFuture/monitoring/tree/main/grafana"
-        },
-        { 
-          title: "Logging", 
-          description: "Centralized logging with ELK",
+          title: "System Logs", 
+          description: "Centralized logging and monitoring",
           link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/system/logs.js"
+        },
+        { 
+          title: "Audit Logging", 
+          description: "Security audit trail",
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/security/audit.js"
         }
       ]
     },
@@ -286,9 +259,9 @@ const Docs = () => {
           link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/services/bitcoin"
         },
         { 
-          title: "Audit Logging", 
-          description: "Complete operation audit trail",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/api/routes/security/audit.js"
+          title: "Security Guide", 
+          description: "Comprehensive security documentation",
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/SECURITY.md"
         }
       ]
     },
@@ -303,19 +276,19 @@ const Docs = () => {
           link: "https://github.com/MyBitcoinFuture/dashboard"
         },
         { 
-          title: "MyBitcoinFuture/plugins", 
-          description: "Plugin ecosystem repository",
-          link: "https://github.com/MyBitcoinFuture/plugins"
-        },
-        { 
-          title: "MyBitcoinFuture/core", 
-          description: "Infrastructure components",
-          link: "https://github.com/MyBitcoinFuture/core"
-        },
-        { 
-          title: "MyBitcoinFuture/platform-manifests", 
-          description: "Platform configurations",
+          title: "Platform Manifests", 
+          description: "Platform deployment configurations",
           link: "https://github.com/MyBitcoinFuture/platform-manifests"
+        },
+        { 
+          title: "Website Repository", 
+          description: "Documentation website",
+          link: "https://github.com/MyBitcoinFuture/website"
+        },
+        { 
+          title: "GitHub Organization", 
+          description: "Complete project overview",
+          link: "https://github.com/MyBitcoinFuture"
         }
       ]
     },
@@ -409,17 +382,17 @@ const Docs = () => {
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
-                    <PuzzlePieceIcon className="icon-large text-orange-400" />
+                    <ServerIcon className="icon-large text-orange-400" />
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Plugin Ecosystem</h3>
-                  <p className="text-slate-400 text-sm">Extensible plugin architecture</p>
+                  <h3 className="text-white font-semibold mb-2">Bitcoin Integration</h3>
+                  <p className="text-slate-400 text-sm">Core RPC, Mempool, Blockstream APIs</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
                     <ChartBarIcon className="icon-large text-orange-400" />
                   </div>
-                  <h3 className="text-white font-semibold mb-2">BRK Integration</h3>
-                  <p className="text-slate-400 text-sm">Bitcoin Research Kit analytics</p>
+                  <h3 className="text-white font-semibold mb-2">Advanced Analytics</h3>
+                  <p className="text-slate-400 text-sm">Portfolio metrics and risk analysis</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="flex justify-center mb-3">
