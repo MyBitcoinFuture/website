@@ -250,10 +250,10 @@ curl -X POST http://localhost:3100/api/wallets \\
               
               <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 mb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
+                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col overflow-hidden">
                     <div className="text-orange font-semibold mb-3 text-lg">Docker Deployment</div>
                     <p className="text-gray text-sm mb-4">Deploy with Docker for quick setup and easy management.</p>
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 overflow-hidden">
                       <CodeBlock 
                         code={`# Clone repository
 git clone https://github.com/MyBitcoinFuture/dashboard.git
@@ -269,10 +269,10 @@ docker-compose up -d
                     </div>
                   </div>
                   
-                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col">
+                  <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col overflow-hidden">
                     <div className="text-orange font-semibold mb-3 text-lg">Manual Installation</div>
                     <p className="text-gray text-sm mb-4">Install manually for full control and customization.</p>
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 overflow-hidden">
                       <CodeBlock 
                         code={`# Clone and install
 git clone https://github.com/MyBitcoinFuture/dashboard.git
