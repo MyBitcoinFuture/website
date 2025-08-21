@@ -70,7 +70,7 @@ Content-Type: application/json
 
 {
   "username": "admin",
-  "password": "Admin123!"
+  "password": "YOUR_PASSWORD"
 }`}
                 />
                 
@@ -78,9 +78,9 @@ Content-Type: application/json
                 <CodeBlock 
                   language="json"
                   code={`{
-  "token": "a1a6c11d35afd8bbc9aabd576492ffa812ed830266fb5dc1749179999ecc4516",
+  "token": "YOUR_JWT_TOKEN",
   "user": {
-    "id": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+    "id": "YOUR_USER_ID",
     "username": "admin",
     "roles": ["admin"]
   }
@@ -92,7 +92,7 @@ Content-Type: application/json
                     <strong>Usage:</strong> Include the token in the Authorization header for all protected endpoints:
                   </p>
                   <p className="text-orange-400 font-mono text-sm mt-2">
-                    Authorization: Bearer a1a6c11d35afd8bbc9aabd576492ffa812ed830266fb5dc1749179999ecc4516
+                    Authorization: Bearer YOUR_JWT_TOKEN
                   </p>
                 </div>
               </div>
