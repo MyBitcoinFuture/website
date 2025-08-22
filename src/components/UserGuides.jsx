@@ -355,7 +355,7 @@ Query Parameters:
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <Link 
-                    to="/docs/api-reference" 
+                    to="/docs/api-documentation" 
                     style={{
                       background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
                       color: '#ffffff',
@@ -378,7 +378,7 @@ Query Parameters:
                     API Reference
                   </Link>
                   <Link 
-                    to="/docs/quick-start" 
+                    to="/docs/quickstart" 
                     className="btn-secondary"
                   >
                     Quick Start

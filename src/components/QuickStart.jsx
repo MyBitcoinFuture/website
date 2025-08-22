@@ -361,7 +361,7 @@ npm run dev:cli -- bitcoin:status`}
                     System Overview
                   </Link>
                   <Link 
-                    to="/docs/api-reference" 
+                    to="/docs/api-documentation" 
                     className="btn-secondary"
                   >
                     API Reference

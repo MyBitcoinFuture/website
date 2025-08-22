@@ -14,9 +14,9 @@ const Documentation = () => {
       icon: <BoltIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
         { name: "System Overview", href: "/docs/system-overview", status: "Available" },
-        { name: "Quick Start Guide", href: "/docs/quick-start", status: "Available" },
-        { name: "Docker Deployment", href: "/docs/deployment/docker", status: "Available" },
-        { name: "Start9 Installation", href: "/docs/deployment/start9", status: "Available" }
+        { name: "Quick Start Guide", href: "/docs/quickstart", status: "Available" },
+        { name: "Onboarding Guide", href: "/docs/onboarding", status: "Available" },
+        { name: "CLI Standards", href: "/docs/cli-standards", status: "Available" }
       ]
     },
     {
@@ -24,43 +24,32 @@ const Documentation = () => {
       description: "Complete API documentation for developers and integrations.",
       icon: <CodeBracketIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
-        { name: "REST API Reference", href: "/docs/api-reference", status: "Available" },
-        { name: "Authentication", href: "/docs/api-reference#authentication", status: "Available" },
-        { name: "WebSocket API", href: "/docs/api-reference#websocket", status: "Available" },
-        { name: "SDK Examples", href: "/docs/api-reference#sdk-examples", status: "Available" }
+        { name: "API Documentation", href: "/docs/api-documentation", status: "Available" },
+        { name: "Quick Reference", href: "/docs/quick-reference", status: "Available" },
+        { name: "Authentication", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md#authentication", status: "Available", external: true },
+        { name: "REST Endpoints", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md#rest-api-endpoints", status: "Available", external: true }
       ]
     },
     {
-      title: "User Guides",
-      description: "Comprehensive guides for treasury management and analytics.",
-      icon: <BookOpenIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
-      links: [
-        { name: "Wallet Management", href: "/docs/user-guides/wallet-management", status: "Available" },
-        { name: "Portfolio Analytics", href: "/docs/user-guides/portfolio-analytics", status: "Available" },
-        { name: "Transaction Monitoring", href: "/docs/user-guides/transaction-monitoring", status: "Available" },
-        { name: "Compliance Reporting", href: "/docs/user-guides/compliance-reporting", status: "Available" }
-      ]
-    },
-    {
-      title: "Plugin Development",
-      description: "Build custom plugins and extend the platform functionality.",
+      title: "Development",
+      description: "Development guides and standards for contributors.",
       icon: <CogIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
-        { name: "Plugin Architecture", href: "/docs/plugin-development/architecture", status: "Available" },
-        { name: "Creating Your First Plugin", href: "/docs/plugin-development/getting-started", status: "Available" },
-        { name: "Plugin API Reference", href: "/docs/plugin-development/api", status: "Available" },
-        { name: "LNBits Integration", href: "/docs/plugin-development/lnbits-integration", status: "Available" }
+        { name: "CLI Consistency Standards", href: "/docs/cli-standards", status: "Available" },
+        { name: "Plugin Development", href: "https://github.com/MyBitcoinFuture/dashboard/tree/main/plugins", status: "Available", external: true },
+        { name: "Contributing Guidelines", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/CONTRIBUTING.md", status: "Available", external: true },
+        { name: "Development Setup", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/README.md#development", status: "Available", external: true }
       ]
     },
     {
-      title: "Troubleshooting",
-      description: "Common issues, solutions, and support resources.",
-      icon: <QuestionMarkCircleIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
+      title: "Deployment",
+      description: "Deployment guides for different platforms and environments.",
+      icon: <BoltIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
-        { name: "Common Issues", href: "/docs/troubleshooting/common-issues", status: "Available" },
-        { name: "Bitcoin Core Setup", href: "/docs/troubleshooting/bitcoin-core", status: "Available" },
-        { name: "Network Configuration", href: "/docs/troubleshooting/network", status: "Available" },
-        { name: "Support Resources", href: "/docs/troubleshooting/support", status: "Available" }
+        { name: "Docker Deployment", href: "https://github.com/MyBitcoinFuture/dashboard#docker-deployment", status: "Available", external: true },
+        { name: "Start9 Installation", href: "https://github.com/MyBitcoinFuture/platform-manifests/tree/main/start9", status: "Available", external: true },
+        { name: "Umbrel App", href: "https://github.com/MyBitcoinFuture/platform-manifests/tree/main/umbrel", status: "Available", external: true },
+        { name: "Manual Installation", href: "https://github.com/MyBitcoinFuture/dashboard#installation", status: "Available", external: true }
       ]
     }
   ]
@@ -74,7 +63,7 @@ const Documentation = () => {
           </h2>
           <p className="text-xl text-primary-200 max-w-3xl mx-auto">
             Everything you need to deploy, configure, and extend MyBitcoinFuture. 
-            Complete guides, API references, and plugin development resources.
+            Complete guides, API references, and development resources.
           </p>
         </div>
 
@@ -102,9 +91,16 @@ const Documentation = () => {
                   <div key={linkIndex} className="flex items-center justify-between">
                     <a 
                       href={link.href}
-                      className="text-orange-400 hover:text-orange-300 transition-colors"
+                      target={link.external ? "_blank" : undefined}
+                      rel={link.external ? "noopener noreferrer" : undefined}
+                      className="text-orange-400 hover:text-orange-300 transition-colors flex items-center"
                     >
                       {link.name}
+                      {link.external && (
+                        <svg style={{ width: '12px', height: '12px', marginLeft: '4px' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      )}
                     </a>
                     <span 
                       className={`px-2 py-1 text-xs rounded-full ${

@@ -284,7 +284,7 @@ const SystemOverview = () => {
                     Get Started
                   </Link>
                   <Link 
-                    to="/docs/api-reference" 
+                    to="/docs/api-documentation" 
                     className="btn-secondary"
                   >
                     View API Reference
