@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -7,6 +7,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import Docs from './components/Docs'
+import DocumentationViewer from './components/DocumentationViewer'
 import GettingStarted from './components/GettingStarted'
 import SystemOverview from './components/SystemOverview'
 import ApiReference from './components/ApiReference'
@@ -69,55 +70,12 @@ function App() {
             <VersionIndicator />
           </>
         } />
+        <Route path="/docs/:docSlug" element={<DocumentationViewer />} />
         <Route path="/getting-started" element={
           <>
             <Header />
             <main id="main-content">
               <GettingStarted />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </>
-        } />
-        <Route path="/docs/system-overview" element={
-          <>
-            <Header />
-            <main id="main-content">
-              <SystemOverview />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </>
-        } />
-        <Route path="/docs/api-reference" element={
-          <>
-            <Header />
-            <main id="main-content">
-              <ApiReference />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </>
-        } />
-        <Route path="/docs/quick-start" element={
-          <>
-            <Header />
-            <main id="main-content">
-              <QuickStart />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </>
-        } />
-        <Route path="/docs/user-guides" element={
-          <>
-            <Header />
-            <main id="main-content">
-              <UserGuides />
             </main>
             <Footer />
             <BackToTop />
