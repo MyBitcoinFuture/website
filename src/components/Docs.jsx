@@ -25,22 +25,22 @@ const Docs = () => {
       icon: RocketLaunchIcon,
       items: [
         { 
-          title: "Getting Started Guide", 
-          description: "Complete installation and setup walkthrough",
-          link: "/getting-started",
-          internal: true
-        },
-        { 
           title: "Quick Start Guide", 
           description: "Fast deployment and configuration",
-          link: "/docs/quick-start",
-          internal: true
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/QUICKSTART.md",
+          internal: false
         },
         { 
           title: "System Overview", 
           description: "Architecture and component overview",
-          link: "/docs/system-overview",
-          internal: true
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/SYSTEM_OVERVIEW.md",
+          internal: false
+        },
+        { 
+          title: "Onboarding Guide", 
+          description: "Enhanced setup and configuration",
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/ONBOARDING_GUIDE.md",
+          internal: false
         }
       ]
     },
@@ -50,21 +50,21 @@ const Docs = () => {
       icon: GlobeAltIcon,
       items: [
         { 
-          title: "User Guides", 
-          description: "Complete user documentation and tutorials",
-          link: "/docs/user-guides",
-          internal: true
+          title: "Quick Reference", 
+          description: "Essential CLI commands and API endpoints",
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/QUICK_REFERENCE.md",
+          internal: false
+        },
+        { 
+          title: "CLI Standards", 
+          description: "Command-line interface consistency standards",
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/CLI_CONSISTENCY_STANDARDS.md",
+          internal: false
         },
         { 
           title: "Feature Overview", 
           description: "Complete feature list and capabilities",
           link: "/#features",
-          internal: true
-        },
-        { 
-          title: "Deployment Options", 
-          description: "Docker, manual, and home server deployment",
-          link: "/#deployment",
           internal: true
         }
       ]
@@ -75,47 +75,16 @@ const Docs = () => {
       icon: CpuChipIcon,
       items: [
         { 
-          title: "API Reference", 
+          title: "API Documentation", 
           description: "Complete REST API endpoints and examples",
-          link: "/docs/api-reference",
-          internal: true
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md",
+          internal: false
         },
         { 
           title: "Authentication", 
           description: "JWT authentication and security",
-          link: "/docs/api-reference#authentication",
-          internal: true
-        },
-        { 
-          title: "WebSocket API", 
-          description: "Real-time notifications and events",
-          link: "/docs/api-reference#websocket",
-          internal: true
-        }
-      ]
-    },
-    {
-      title: "Plugin System",
-      description: "Extensible plugin architecture and integrations",
-      icon: PuzzlePieceIcon,
-      items: [
-        { 
-          title: "Plugin Development", 
-          description: "Creating custom plugins and extensions",
-          link: "https://github.com/MyBitcoinFuture/plugins",
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md#authentication",
           internal: false
-        },
-        { 
-          title: "Plugin API Reference", 
-          description: "Technical plugin development reference",
-          link: "https://github.com/MyBitcoinFuture/plugins/blob/main/README.md",
-          internal: false
-        },
-        { 
-          title: "Available Plugins", 
-          description: "IFTTT, accounting, and compliance plugins",
-          link: "/#features",
-          internal: true
         }
       ]
     },
@@ -125,9 +94,15 @@ const Docs = () => {
       icon: ShieldCheckIcon,
       items: [
         { 
-          title: "Technical Documentation", 
-          description: "Detailed technical references and architecture",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs",
+          title: "Development Guide", 
+          description: "Technical development and contribution guide",
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/development/guide.md",
+          internal: false
+        },
+        { 
+          title: "Deployment Guide", 
+          description: "Deployment and operations guide",
+          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/deployment/guide.md",
           internal: false
         },
         { 
@@ -135,12 +110,25 @@ const Docs = () => {
           description: "Browse all repositories and source",
           link: "https://github.com/MyBitcoinFuture",
           internal: false
-        },
+        }
+      ]
+    },
+    {
+      title: "Support & Community",
+      description: "Help and community resources",
+      icon: ShieldCheckIcon,
+      items: [
         { 
           title: "Contact & Support", 
           description: "Get help and community resources",
           link: "/#contact",
           internal: true
+        },
+        { 
+          title: "Technical Documentation", 
+          description: "Detailed technical references and architecture",
+          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs",
+          internal: false
         }
       ]
     }

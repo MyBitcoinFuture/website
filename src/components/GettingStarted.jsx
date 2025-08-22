@@ -34,7 +34,7 @@ const GettingStarted = () => {
                 <span className="text-white">Getting Started</span>
               </h1>
               <p className="text-gray mb-8" style={{ fontSize: '1.1rem', maxWidth: '48rem', margin: '0 auto 2rem' }}>
-                Set up your Bitcoin treasury management system in 4 simple steps. Get started in under 10 minutes.
+                Set up your Bitcoin treasury management system with enhanced setup wizard. Get started in under 5 minutes.
               </p>
             </div>
 
@@ -66,12 +66,12 @@ const GettingStarted = () => {
                     <div className="text-orange font-semibold mb-3 text-lg">Choose Your Setup</div>
                     <div className="space-y-4">
                       <div>
-                        <div className="text-white font-medium mb-2">Web Dashboard</div>
-                        <p className="text-gray text-sm">Deploy the web version for cross-platform access via browser.</p>
+                        <div className="text-white font-medium mb-2">Enhanced Setup Wizard</div>
+                        <p className="text-gray text-sm">6-step setup process with auto-discovery capabilities.</p>
                       </div>
                       <div>
-                        <div className="text-white font-medium mb-2">Docker Deployment</div>
-                        <p className="text-gray text-sm">Deploy with Docker for quick setup and easy management.</p>
+                        <div className="text-white font-medium mb-2">Theme System</div>
+                        <p className="text-gray text-sm">Professional UI with light/dark themes and customization.</p>
                       </div>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ const GettingStarted = () => {
                       <li>• Bitcoin wallet public keys (xpub)</li>
                       <li>• Bitcoin node connection (optional)</li>
                       <li>• Admin account credentials</li>
-                      <li>• 10 minutes of setup time</li>
+                      <li>• 5 minutes of setup time</li>
                     </ul>
                   </div>
                 </div>

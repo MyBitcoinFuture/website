@@ -357,75 +357,59 @@ print(metrics)`}
               </div>
             </div>
 
-            {/* WebSocket API */}
-            <div className="card mb-20" id="websocket">
-              <h2 className="text-3xl font-bold text-white mb-8">WebSocket API</h2>
+            {/* REST API Endpoints */}
+            <div className="card mb-20" id="endpoints">
+              <h2 className="text-3xl font-bold text-white mb-8">REST API Endpoints</h2>
               
               <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                <h3 className="text-xl font-bold text-white mb-4">Real-time Notifications</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Core Endpoints</h3>
                 <p className="text-gray-300 mb-4">
-                  The WebSocket API provides real-time notifications for portfolio updates, 
-                  transaction alerts, and system events.
+                  The REST API provides comprehensive Bitcoin treasury management capabilities 
+                  including wallet management, transaction tracking, and portfolio analytics.
                 </p>
                 
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-2">Connection</h4>
-                  <CodeBlock 
-                    language="javascript"
-                    code={`const ws = new WebSocket('ws://localhost:3100/ws');
-
-ws.onopen = function() {
-  console.log('Connected to WebSocket');
-  // Authenticate
-  ws.send(JSON.stringify({
-    type: 'auth',
-    token: 'your-jwt-token'
-  }));
-};
-
-ws.onmessage = function(event) {
-  const data = JSON.parse(event.data);
-  console.log('Received:', data);
-};`}
-                  />
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Event Types</h4>
-                  <div className="space-y-4">
-                    <div>
-                      <h5 className="text-md font-semibold text-white mb-2">Portfolio Update</h5>
-                      <CodeBlock 
-                        language="json"
-                        code={`{
-  "type": "portfolio_update",
-  "data": {
-    "total_balance": 2.5,
-    "total_value_usd": 107400,
-    "change_24h": 3.2
-  },
-  "timestamp": "2025-08-20T03:01:15.575Z"
-}`}
-                      />
-                    </div>
-                    
-                    <div>
-                      <h5 className="text-md font-semibold text-white mb-2">Transaction Alert</h5>
-                      <CodeBlock 
-                        language="json"
-                        code={`{
-  "type": "transaction_alert",
-  "alert": {
-    "type": "incoming_transaction",
-    "severity": "INFO",
-    "wallet_id": "wallet_123",
-    "amount": 0.5,
-    "txid": "abc123..."
-  },
-  "timestamp": "2025-08-20T03:01:15.575Z"
-}`}
-                      />
-                    </div>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Authentication</h4>
+                    <CodeBlock 
+                      language="http"
+                      code={`POST /auth/login
+POST /auth/register
+POST /2fa/setup
+POST /2fa/verify`}
+                    />
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Wallet Management</h4>
+                    <CodeBlock 
+                      language="http"
+                      code={`GET /wallets
+POST /wallets
+GET /wallets/:id
+PUT /wallets/:id
+DELETE /wallets/:id`}
+                    />
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Transactions</h4>
+                    <CodeBlock 
+                      language="http"
+                      code={`GET /transactions
+GET /transactions/:id
+GET /api/transactions-enhanced`}
+                    />
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Portfolio Analytics</h4>
+                    <CodeBlock 
+                      language="http"
+                      code={`GET /portfolio
+GET /analytics
+GET /api/brk-portfolio`}
+                    />
                   </div>
                 </div>
               </div>
@@ -440,7 +424,7 @@ ws.onmessage = function(event) {
                 <ul className="text-gray-300 space-y-2">
                   <li>• Initial release</li>
                   <li>• Advanced analytics endpoints</li>
-                  <li>• Real-time WebSocket notifications</li>
+                  <li>• REST API endpoints</li>
                   <li>• Comprehensive portfolio management</li>
                   <li>• Bitcoin Core integration</li>
                   <li>• BRK integration</li>
