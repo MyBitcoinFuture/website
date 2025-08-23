@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Features from './components/Features'
 import BitcoinTreasuryConcepts from './components/BitcoinTreasuryConcepts'
 import UseCases from './components/UseCases'
+import FAQ from './components/FAQ'
 import Deployment from './components/Deployment'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -55,6 +56,7 @@ function App() {
               <BitcoinTreasuryConcepts />
               <Features />
               <UseCases />
+              <FAQ />
               <Deployment />
               <Contact />
             </main>
