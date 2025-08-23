@@ -1,8 +1,8 @@
 const Features = () => {
   const features = [
     {
-      title: "Multi-Wallet Management",
-      description: "Track multiple xpub-based wallets with real-time balance monitoring and transaction history. Enterprise-grade security with no private key handling.",
+      title: "Multi-Wallet Architecture",
+      description: "Professional-grade wallet management supporting multiple xpub-based wallets with real-time balance monitoring and comprehensive transaction history.",
       icon: (
         <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -28,8 +28,8 @@ const Features = () => {
       )
     },
     {
-      title: "Advanced Analytics",
-      description: "Portfolio performance, risk analysis, and cost basis tracking powered by Bitcoin Research Kit with real-time market data integration.",
+      title: "Bitcoin Research & Analytics",
+      description: "Comprehensive Bitcoin analytics and research data for informed treasury management decisions with portfolio performance and risk analysis.",
       icon: (
         <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -55,8 +55,8 @@ const Features = () => {
       )
     },
     {
-      title: "Enterprise Security",
-      description: "Admin authentication, audit logging, and secure storage with role-based access control and comprehensive security features.",
+      title: "Professional Security Model",
+      description: "Enterprise-grade security architecture with role-based access control, comprehensive audit logging, and zero private key exposure.",
       icon: (
         <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -64,8 +64,8 @@ const Features = () => {
       )
     },
     {
-      title: "Plugin Marketplace",
-      description: "Extensible architecture with premium plugins for Lightning payments, governance, accounting, and custom integrations.",
+      title: "Extensible Plugin Architecture",
+      description: "Modular plugin ecosystem supporting premium features for Lightning payments, governance, accounting, and custom enterprise integrations.",
       icon: (
         <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -80,7 +80,7 @@ const Features = () => {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-white mb-4">
-            Enterprise Treasury Management Features
+            Professional Bitcoin Treasury Management
           </h2>
           <p className="text-gray" style={{ fontSize: '1.25rem', maxWidth: '48rem', margin: '0 auto' }}>
             Complete Bitcoin treasury management with core features and premium plugins for 

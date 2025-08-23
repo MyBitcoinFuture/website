@@ -2,6 +2,8 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Features from './components/Features'
+import BitcoinTreasuryConcepts from './components/BitcoinTreasuryConcepts'
+import UseCases from './components/UseCases'
 import Deployment from './components/Deployment'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -50,7 +52,9 @@ function App() {
             <Header />
             <main id="main-content">
               <Hero />
+              <BitcoinTreasuryConcepts />
               <Features />
+              <UseCases />
               <Deployment />
               <Contact />
             </main>

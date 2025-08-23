@@ -16,8 +16,8 @@ const Hero = () => {
 
         {/* Subtitle */}
         <p className="text-white-80 mb-12 animate-fade-in font-medium text-xl md:text-2xl" style={{ maxWidth: '64rem', margin: '0 auto 3rem', animationDelay: '0.2s' }}>
-          Complete data sovereignty with multi-wallet management, 
-          real-time monitoring, and instant access to 97,000+ Bitcoin datasets via Bitcoin Research Kit.
+          Professional Bitcoin treasury management with complete data sovereignty, 
+          multi-wallet architecture, and instant access to comprehensive Bitcoin analytics.
         </p>
 
         {/* Key Benefits */}
@@ -29,7 +29,7 @@ const Hero = () => {
               </svg>
             </div>
             <h3 className="text-white mb-3 font-bold text-xl">Complete Sovereignty</h3>
-            <p className="text-white-60 font-medium">Your data never leaves your deployment. Full control.</p>
+            <p className="text-white-60 font-medium">Your data never leaves your deployment. Full control over infrastructure and security.</p>
           </div>
 
           <div className="card">
@@ -38,8 +38,8 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             </div>
-            <h3 className="text-white mb-3 font-bold text-xl">Instant BRK Access</h3>
-            <p className="text-white-60 font-medium">No indexing delays - access 97,000+ Bitcoin datasets immediately.</p>
+            <h3 className="text-white mb-3 font-bold text-xl">Professional Analytics</h3>
+            <p className="text-white-60 font-medium">Comprehensive Bitcoin analytics and research data for informed treasury decisions.</p>
           </div>
 
           <div className="card">
@@ -49,8 +49,8 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <h3 className="text-white mb-3 font-bold text-xl">Extensible Platform</h3>
-            <p className="text-white-60 font-medium">Plugin ecosystem for custom functionality and integrations.</p>
+            <h3 className="text-white mb-3 font-bold text-xl">Extensible Architecture</h3>
+            <p className="text-white-60 font-medium">Modular plugin ecosystem for custom functionality and enterprise integrations.</p>
           </div>
         </div>
 
