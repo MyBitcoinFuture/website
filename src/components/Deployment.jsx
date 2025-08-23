@@ -15,8 +15,8 @@ const Deployment = () => {
     {
       title: "Start9",
       description: "One-click deployment through the Start9 marketplace. Perfect for Bitcoin sovereignty advocates.",
-      status: "In Progress",
-      statusColor: "#f59e0b",
+      status: "Available Now",
+      statusColor: "#10b981",
       icon: (
         <svg style={{ width: '2rem', height: '2rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -27,8 +27,8 @@ const Deployment = () => {
     {
       title: "Umbrel",
       description: "Deploy on Umbrel for integration with your Bitcoin node and broader self-hosting community.",
-      status: "In Progress",
-      statusColor: "#f59e0b",
+      status: "Available Now",
+      statusColor: "#10b981",
       icon: (
         <svg style={{ width: '2rem', height: '2rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
