@@ -4,15 +4,15 @@ const Footer = () => {
   return (
     <footer>
       <div className="container-max" style={{ padding: '3rem 0' }}>
-        <div className="grid" style={{ gap: '2rem' }}>
+        <div className="grid" style={{ gap: '2rem', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
           {/* Brand */}
-          <div style={{ gridColumn: 'span 2' }}>
+          <div>
             <div className="flex items-center gap-4 mb-4">
-                          <img 
-              src="/mybitcoinfuture_logo.png" 
-              alt="MyBitcoinFuture Logo" 
-              style={{ height: '32px', width: 'auto' }}
-            />
+              <img 
+                src="/mybitcoinfuture_logo.png" 
+                alt="MyBitcoinFuture Logo" 
+                style={{ height: '32px', width: 'auto' }}
+              />
               <span className="text-white" style={{ fontSize: '1.25rem', fontWeight: '700' }}>MyBitcoinFuture</span>
             </div>
             <p className="text-gray mb-4" style={{ maxWidth: '32rem' }}>
@@ -59,6 +59,28 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="text-white mb-4" style={{ fontSize: '1.125rem', fontWeight: '600' }}>Legal</h3>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <li>
+                <a href="/privacy" className="nav-link">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/terms" className="nav-link">
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href="/cookies" className="nav-link">
+                  Cookie Policy
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Bar */}
@@ -72,7 +94,7 @@ const Footer = () => {
           alignItems: 'center'
         }}>
           <div className="text-gray" style={{ fontSize: '0.875rem' }}>
-            © 2025 MyBitcoinFuture. All rights reserved.
+            © 2025 My Bitcoin Future LLC. All rights reserved.
           </div>
           <div className="text-gray" style={{ fontSize: '0.75rem', opacity: 0.7 }}>
             v{VERSION.version} • {VERSION.buildDate} • {VERSION.commitHash.substring(0, 8)} • {VERSION.environment}

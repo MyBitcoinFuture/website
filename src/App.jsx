@@ -20,6 +20,9 @@ import UserGuides from './components/UserGuides'
 import VersionIndicator from './components/VersionIndicator'
 import Releases from './components/Releases'
 import ReleaseAnnouncements from './components/ReleaseAnnouncements'
+import Privacy from './components/Privacy'
+import Terms from './components/Terms'
+import Cookies from './components/Cookies'
 
 function App() {
   return (
@@ -98,6 +101,39 @@ function App() {
             <Header />
             <main id="main-content">
               <Releases />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </>
+        } />
+        <Route path="/privacy" element={
+          <>
+            <Header />
+            <main id="main-content">
+              <Privacy />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </>
+        } />
+        <Route path="/terms" element={
+          <>
+            <Header />
+            <main id="main-content">
+              <Terms />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </>
+        } />
+        <Route path="/cookies" element={
+          <>
+            <Header />
+            <main id="main-content">
+              <Cookies />
             </main>
             <Footer />
             <BackToTop />
