@@ -3,6 +3,8 @@
 
 export const VERSION = {
   version: '1.0.0',
+  releaseName: 'Latest Release',
+  releaseDate: '2025-08-20',
   buildDate: '2025-08-20',
   commitHash: import.meta.env.VITE_COMMIT_HASH || '8977cbe',
   environment: import.meta.env.MODE || 'development',

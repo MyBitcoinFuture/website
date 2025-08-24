@@ -54,6 +54,7 @@ const Header = () => {
     { name: 'Features', href: '#features', isAnchor: true },
     { name: 'Deployment', href: '#deployment', isAnchor: true },
     { name: 'Docs', href: '/docs', isAnchor: false },
+    { name: 'Releases', href: '/releases', isAnchor: false },
     { name: 'Contact', href: '#contact', isAnchor: true },
   ]
 

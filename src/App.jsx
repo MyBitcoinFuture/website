@@ -18,6 +18,8 @@ import ApiReference from './components/ApiReference'
 import QuickStart from './components/QuickStart'
 import UserGuides from './components/UserGuides'
 import VersionIndicator from './components/VersionIndicator'
+import Releases from './components/Releases'
+import ReleaseAnnouncements from './components/ReleaseAnnouncements'
 
 function App() {
   return (
@@ -57,6 +59,7 @@ function App() {
               <BitcoinTreasuryConcepts />
               <Features />
               <PluginEcosystem />
+              <ReleaseAnnouncements />
               <UseCases />
               <FAQ />
               <Deployment />
@@ -84,6 +87,17 @@ function App() {
             <Header />
             <main id="main-content">
               <GettingStarted />
+            </main>
+            <Footer />
+            <BackToTop />
+            <VersionIndicator />
+          </>
+        } />
+        <Route path="/releases" element={
+          <>
+            <Header />
+            <main id="main-content">
+              <Releases />
             </main>
             <Footer />
             <BackToTop />
