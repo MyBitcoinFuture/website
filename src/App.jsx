@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Features from './components/Features'
+import PluginEcosystem from './components/PluginEcosystem'
 import BitcoinTreasuryConcepts from './components/BitcoinTreasuryConcepts'
 import UseCases from './components/UseCases'
 import FAQ from './components/FAQ'
@@ -55,6 +56,7 @@ function App() {
               <Hero />
               <BitcoinTreasuryConcepts />
               <Features />
+              <PluginEcosystem />
               <UseCases />
               <FAQ />
               <Deployment />

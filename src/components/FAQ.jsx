@@ -32,12 +32,12 @@ const FAQ = () => {
       answer: "Self-hosted deployment means you maintain complete control over your infrastructure, data, and network access. Your Bitcoin treasury data never leaves your environment, ensuring privacy, compliance with data regulations, and independence from third-party services. This is particularly important for organizations with strict security and compliance requirements."
     },
     {
-      question: "What analytics and research capabilities are available?",
-      answer: "The system provides comprehensive portfolio analytics including performance tracking, risk analysis, and cost basis accounting. It integrates with Bitcoin Research Kit for advanced network analytics, mining metrics, and market intelligence. This enables informed decision-making based on both portfolio-specific and broader Bitcoin market data."
+      question: "What enterprise capabilities are available?",
+      answer: "The system provides comprehensive enterprise features including Lightning Network integration for payments, governance automation for board oversight, accounting integration for financial reporting, multi-signature management for institutional security, workflow automation for operational efficiency, and custom branding for professional presentation."
     },
     {
       question: "How does the plugin architecture work?",
-      answer: "The plugin architecture allows for modular extension of functionality through a standardized interface. Core features are always available, while premium plugins provide additional capabilities like Lightning Network integration, governance automation, accounting integration, and custom branding. This ensures the system can grow with your organization's needs."
+      answer: "The plugin architecture provides modular extension of functionality through a standardized interface. Core features are always available, while enterprise plugins provide additional capabilities like Lightning Network integration, governance automation, accounting integration, and custom branding. This ensures the system can grow with your organization's needs."
     },
     {
       question: "What deployment options are available?",
@@ -45,82 +45,66 @@ const FAQ = () => {
     },
     {
       question: "How does the system handle compliance and reporting?",
-      answer: "The system provides comprehensive audit logging, role-based access control, and reporting capabilities designed for organizational compliance. It supports regulatory reporting requirements, stakeholder updates, and executive dashboards while maintaining complete transparency and audit trails for all operations."
+      answer: "The system provides comprehensive compliance and reporting capabilities including automated tax reporting, cost basis tracking, audit trails, governance compliance, and regulatory reporting. Enterprise plugins extend these capabilities with professional accounting integration and advanced analytics for institutional requirements."
+    },
+    {
+      question: "What automation capabilities are available?",
+      answer: "The system provides advanced automation capabilities including workflow automation, smart triggers, conditional actions, webhook integration, and process automation. This enables organizations to automate routine treasury operations, compliance processes, and governance workflows for operational efficiency."
+    },
+    {
+      question: "How does the system support institutional use cases?",
+      answer: "The system is designed specifically for institutional use cases with multi-signature management, governance automation, compliance reporting, enterprise security, and professional integration capabilities. It provides the tools and infrastructure needed for organizations to manage Bitcoin as a treasury asset with institutional-grade security and oversight."
     }
   ];
 
   return (
-    <section className="section-padding" style={{ background: 'var(--color-surface)' }}>
+    <section id="faq" className="section-padding">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-white mb-4">
+          <h2 className="text-white mb-4 animate-fade-in-up">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto' }}>
-            Common questions about Bitcoin treasury management concepts, security, and implementation.
+          <p className="text-gray animate-fade-in-up" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto', animationDelay: '0.2s' }}>
+            Common questions about enterprise Bitcoin treasury management, security architecture, 
+            and professional capabilities for institutional use cases.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           {faqs.map((faq, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-4 stagger-item" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full text-left bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors"
+                className="w-full text-left p-6 bg-gray-800 rounded-lg border border-gray-700 hover:border-gray-600 transition-all duration-300 focus-ring"
                 style={{ cursor: 'pointer' }}
+                aria-expanded={openItems.has(index)}
+                aria-controls={`faq-answer-${index}`}
               >
-                <div className="flex justify-between items-center">
-                  <h3 className="text-white font-semibold text-lg pr-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-white font-semibold" style={{ fontSize: '1.1rem' }}>
                     {faq.question}
                   </h3>
                   {openItems.has(index) ? (
-                    <ChevronUpIcon style={{ width: '1.5rem', height: '1.5rem', color: 'var(--color-orange)', flexShrink: 0 }} />
+                    <ChevronUpIcon className="h-5 w-5 text-gray-400 transition-transform duration-300" />
                   ) : (
-                    <ChevronDownIcon style={{ width: '1.5rem', height: '1.5rem', color: 'var(--color-orange)', flexShrink: 0 }} />
+                    <ChevronDownIcon className="h-5 w-5 text-gray-400 transition-transform duration-300" />
                   )}
                 </div>
               </button>
               
               {openItems.has(index) && (
-                <div className="bg-gray-900 p-6 rounded-b-lg border-l border-r border-b border-gray-700">
-                  <p className="text-gray-300 leading-relaxed">
+                <div 
+                  id={`faq-answer-${index}`}
+                  className="mt-2 p-6 bg-gray-900 rounded-lg border border-gray-700 animate-fade-in"
+                  style={{ animationDelay: '0.1s' }}
+                >
+                  <p className="text-gray-300" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
                     {faq.answer}
                   </p>
                 </div>
               )}
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-gray mb-6">
-            Have additional questions about Bitcoin treasury management?
-          </p>
-          <a
-            href="https://github.com/MyBitcoinFuture/dashboard"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-            style={{
-              background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
-              color: '#ffffff',
-              border: '1px solid #f97316',
-              padding: '0.75rem 1.5rem',
-              borderRadius: '0.375rem',
-              fontWeight: '600',
-              textDecoration: 'none',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: 'all 0.2s ease-in-out',
-              fontSize: '1rem',
-              minHeight: '48px',
-              cursor: 'pointer',
-              boxShadow: '0 4px 6px -1px rgba(249, 115, 22, 0.2)'
-            }}
-          >
-            View Documentation
-          </a>
         </div>
       </div>
     </section>
