@@ -172,10 +172,7 @@ const GettingStarted = () => {
                         <div className="text-white font-medium mb-2">Hardware Wallets</div>
                         <p className="text-gray text-sm">Cold storage for long-term holdings and security.</p>
                       </div>
-                      <div>
-                        <div className="text-white font-medium mb-2">Multi-Signature Wallets</div>
-                        <p className="text-gray text-sm">Shared control for organizational governance.</p>
-                      </div>
+
                     </div>
                   </div>
                   

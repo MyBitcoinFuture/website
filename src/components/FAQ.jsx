@@ -25,7 +25,7 @@ const FAQ = () => {
     },
     {
       question: "What are the benefits of multi-wallet architecture?",
-      answer: "Multi-wallet architecture provides operational separation, risk management, and compliance capabilities. Organizations can maintain separate wallets for different purposes (operational, reserve, compliance), implement multi-signature requirements, and achieve granular control over Bitcoin holdings while maintaining a unified view of the entire portfolio."
+      answer: "Multi-wallet architecture provides operational separation, risk management, and compliance capabilities. Organizations can maintain separate wallets for different purposes (operational, reserve, compliance), implement security policies, and achieve granular control over Bitcoin holdings while maintaining a unified view of the entire portfolio."
     },
     {
       question: "How does self-hosted deployment ensure data sovereignty?",
@@ -33,7 +33,7 @@ const FAQ = () => {
     },
     {
       question: "What enterprise capabilities are available?",
-      answer: "The system provides comprehensive enterprise features including Lightning Network integration for payments, governance automation for board oversight, accounting integration for financial reporting, multi-signature management for institutional security, workflow automation for operational efficiency, and custom branding for professional presentation."
+      answer: "The system provides comprehensive enterprise features including Lightning Network integration for payments, governance automation for board oversight, accounting integration for financial reporting, advanced security management for institutional requirements, workflow automation for operational efficiency, and custom branding for professional presentation."
     },
     {
       question: "How does the plugin architecture work?",
@@ -53,7 +53,7 @@ const FAQ = () => {
     },
     {
       question: "How does the system support institutional use cases?",
-      answer: "The system is designed specifically for institutional use cases with multi-signature management, governance automation, compliance reporting, enterprise security, and professional integration capabilities. It provides the tools and infrastructure needed for organizations to manage Bitcoin as a treasury asset with institutional-grade security and oversight."
+      answer: "The system is designed specifically for institutional use cases with advanced security management, governance automation, compliance reporting, enterprise security, and professional integration capabilities. It provides the tools and infrastructure needed for organizations to manage Bitcoin as a treasury asset with institutional-grade security and oversight."
     }
   ];
 

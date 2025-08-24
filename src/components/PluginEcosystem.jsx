@@ -22,11 +22,7 @@ const PluginEcosystem = () => {
           description: "Board meeting automation with voting systems and policy enforcement",
           features: ["Board voting", "Meeting automation", "Policy enforcement", "Stakeholder management"]
         },
-        {
-          name: "Multi-Signature Management",
-          description: "Comprehensive multi-signature wallet management with approval workflows",
-          features: ["Multi-sig wallets", "Approval workflows", "Security policies", "Coordination tools"]
-        }
+
       ]
     },
     {
