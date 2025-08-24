@@ -1,76 +1,132 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from './CodeBlock';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-json';
+import 'prismjs/components/prism-yaml';
+import 'prismjs/components/prism-markdown';
 
 const MarkdownRenderer = ({ content, className = '' }) => {
-  if (!content) {
-    return <div className="text-gray-400">No content available</div>;
-  }
+  const components = {
+    code: ({ inline, className, children, ...props }) => {
+      const match = /language-(\w+)/.exec(className || '');
+      const language = match ? match[1] : '';
+      
+      if (inline) {
+        return (
+          <code className="bg-gray-800 text-orange-400 px-1 py-0.5 rounded text-sm" {...props}>
+            {children}
+          </code>
+        );
+      }
+      
+      return (
+        <pre className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+          <code
+            className={`language-${language} text-sm`}
+            {...props}
+          >
+            {children}
+          </code>
+        </pre>
+      );
+    },
+    h1: ({ children, ...props }) => (
+      <h1 className="text-3xl font-bold text-white mb-6 mt-8 first:mt-0" {...props}>
+        {children}
+      </h1>
+    ),
+    h2: ({ children, ...props }) => (
+      <h2 className="text-2xl font-semibold text-white mb-4 mt-8 first:mt-0" {...props}>
+        {children}
+      </h2>
+    ),
+    h3: ({ children, ...props }) => (
+      <h3 className="text-xl font-semibold text-white mb-3 mt-6 first:mt-0" {...props}>
+        {children}
+      </h3>
+    ),
+    h4: ({ children, ...props }) => (
+      <h4 className="text-lg font-semibold text-white mb-2 mt-4 first:mt-0" {...props}>
+        {children}
+      </h4>
+    ),
+    p: ({ children, ...props }) => (
+      <p className="text-gray-300 mb-4 leading-relaxed" {...props}>
+        {children}
+      </p>
+    ),
+    ul: ({ children, ...props }) => (
+      <ul className="list-disc list-inside text-gray-300 mb-4 space-y-1" {...props}>
+        {children}
+      </ul>
+    ),
+    ol: ({ children, ...props }) => (
+      <ol className="list-decimal list-inside text-gray-300 mb-4 space-y-1" {...props}>
+        {children}
+      </ol>
+    ),
+    li: ({ children, ...props }) => (
+      <li className="text-gray-300" {...props}>
+        {children}
+      </li>
+    ),
+    blockquote: ({ children, ...props }) => (
+      <blockquote className="border-l-4 border-orange-500 pl-4 py-2 my-4 bg-gray-800 rounded-r" {...props}>
+        {children}
+      </blockquote>
+    ),
+    a: ({ href, children, ...props }) => (
+      <a 
+        href={href} 
+        className="text-orange-400 hover:text-orange-300 underline transition-colors" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        {...props}
+      >
+        {children}
+      </a>
+    ),
+    strong: ({ children, ...props }) => (
+      <strong className="font-semibold text-white" {...props}>
+        {children}
+      </strong>
+    ),
+    em: ({ children, ...props }) => (
+      <em className="italic text-gray-200" {...props}>
+        {children}
+      </em>
+    ),
+    table: ({ children, ...props }) => (
+      <div className="overflow-x-auto my-6">
+        <table className="min-w-full border-collapse border border-gray-700" {...props}>
+          {children}
+        </table>
+      </div>
+    ),
+    th: ({ children, ...props }) => (
+      <th className="border border-gray-700 px-4 py-2 bg-gray-800 text-white font-semibold" {...props}>
+        {children}
+      </th>
+    ),
+    td: ({ children, ...props }) => (
+      <td className="border border-gray-700 px-4 py-2 text-gray-300" {...props}>
+        {children}
+      </td>
+    ),
+    hr: ({ ...props }) => (
+      <hr className="border-gray-700 my-8" {...props} />
+    )
+  };
+
+  React.useEffect(() => {
+    Prism.highlightAll();
+  }, [content]);
 
   return (
     <div className={`markdown-content ${className}`}>
-      <ReactMarkdown
-        components={{
-          // Use existing CodeBlock component for code blocks
-          code({ node, inline, className, children, ...props }) {
-            const match = /language-(\w+)/.exec(className || '');
-            return !inline && match ? (
-              <CodeBlock
-                code={String(children).replace(/\n$/, '')}
-                language={match[1]}
-                {...props}
-              />
-            ) : (
-              <code className={`${className} bg-gray-800 px-1 py-0.5 rounded text-orange-400 font-mono text-sm`} {...props}>
-                {children}
-              </code>
-            );
-          },
-          // Customize headers
-          h1: ({ children }) => (
-            <h1 className="text-3xl font-bold text-white mb-6">{children}</h1>
-          ),
-          h2: ({ children }) => (
-            <h2 className="text-2xl font-bold text-white mb-4 mt-8">{children}</h2>
-          ),
-          h3: ({ children }) => (
-            <h3 className="text-xl font-bold text-white mb-3 mt-6">{children}</h3>
-          ),
-          h4: ({ children }) => (
-            <h4 className="text-lg font-semibold text-white mb-2 mt-4">{children}</h4>
-          ),
-          // Customize paragraphs
-          p: ({ children }) => (
-            <p className="text-gray-300 mb-4 leading-relaxed">{children}</p>
-          ),
-          // Customize lists
-          ul: ({ children }) => (
-            <ul className="list-disc list-inside text-gray-300 mb-4 space-y-1">{children}</ul>
-          ),
-          ol: ({ children }) => (
-            <ol className="list-decimal list-inside text-gray-300 mb-4 space-y-1">{children}</ol>
-          ),
-          // Customize links
-          a: ({ href, children }) => (
-            <a 
-              href={href} 
-              className="text-orange-400 hover:text-orange-300 underline"
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              {children}
-            </a>
-          ),
-          // Customize strong text
-          strong: ({ children }) => (
-            <strong className="text-white font-semibold">{children}</strong>
-          ),
-          // Customize emphasis
-          em: ({ children }) => (
-            <em className="text-gray-200 italic">{children}</em>
-          ),
-        }}
-      >
+      <ReactMarkdown components={components}>
         {content}
       </ReactMarkdown>
     </div>

@@ -1,44 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Header from './Header';
-import DocumentationLoader from './DocumentationLoader';
-import { ArrowLeftIcon, BookOpenIcon } from '@heroicons/react/24/outline';
+import { importDashboardContent, getDocumentationMetadata } from '../utils/documentationImporter';
+import MarkdownRenderer from './MarkdownRenderer';
+import Breadcrumbs from './ui/Breadcrumbs';
 
 const DocumentationViewer = () => {
   const { docSlug } = useParams();
-  const [docFile, setDocFile] = useState(null);
+  const [content, setContent] = useState('');
+  const [metadata, setMetadata] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Map URL slugs to documentation files
-  const docMapping = {
+  // Map URL slugs to actual documentation files
+  const docMapping = useMemo(() => ({
     'system-overview': 'SYSTEM_OVERVIEW.md',
     'api-documentation': 'API_DOCUMENTATION.md',
     'quickstart': 'QUICKSTART.md',
-    'onboarding': 'ONBOARDING_GUIDE.md',
+    'onboarding-guide': 'ONBOARDING_GUIDE.md',
     'cli-standards': 'CLI_CONSISTENCY_STANDARDS.md',
     'quick-reference': 'QUICK_REFERENCE.md'
-  };
+  }), []);
 
   useEffect(() => {
-    const file = docMapping[docSlug];
-    if (file) {
-      setDocFile(file);
-    }
-  }, [docSlug]);
+    const loadDocumentation = async () => {
+      setLoading(true);
+      setError(null);
+      
+      try {
+        const fileName = docMapping[docSlug];
+        
+        if (!fileName) {
+          throw new Error('Documentation not found');
+        }
+        
+        const [docContent, docMetadata] = await Promise.all([
+          importDashboardContent(fileName),
+          Promise.resolve(getDocumentationMetadata(fileName))
+        ]);
+        
+        setContent(docContent);
+        setMetadata(docMetadata);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  if (!docFile) {
+    loadDocumentation();
+  }, [docSlug, docMapping]);
+
+  if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-        <Header />
-        <div className="container mx-auto px-4 py-8">
+      <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
+        <div className="container-max py-16">
           <div className="text-center">
-            <BookOpenIcon className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-            <h1 className="text-3xl font-bold text-white mb-4">Documentation Not Found</h1>
-            <p className="text-gray-300 mb-6">The requested documentation could not be found.</p>
-            <Link
-              to="/docs"
-              className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition-colors"
-            >
-              <ArrowLeftIcon className="h-5 w-5" />
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
+            <p className="text-gray-300">Loading documentation...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
+        <div className="container-max py-16">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Documentation Not Found</h1>
+            <p className="text-gray-300 mb-8">{error}</p>
+            <Link to="/docs" className="btn-primary">
               Back to Documentation
             </Link>
           </div>
@@ -48,47 +80,29 @@ const DocumentationViewer = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <Header />
-      
-      {/* Breadcrumb Navigation */}
-      <div className="container mx-auto px-4 py-6">
-        <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-8">
-          <Link to="/" className="hover:text-white transition-colors flex items-center gap-1">
-            <span>Home</span>
-          </Link>
-          <span className="text-gray-600">/</span>
-          <Link to="/docs" className="hover:text-white transition-colors flex items-center gap-1">
-            <span>Documentation</span>
-          </Link>
-          <span className="text-gray-600">/</span>
-          <span className="text-white font-medium">{docFile.replace('.md', '').replace(/_/g, ' ')}</span>
-        </nav>
-      </div>
-
-      {/* Documentation Content */}
-      <div className="container mx-auto px-4 pb-12">
-        <div className="max-w-5xl mx-auto">
-          <DocumentationLoader 
-            docPath={docFile} 
-            className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 shadow-xl"
-          />
-        </div>
-      </div>
-
-      {/* Footer Navigation */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto flex justify-between items-center">
-          <Link
-            to="/docs"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-          >
-            <ArrowLeftIcon className="h-4 w-4" />
-            Back to Documentation
-          </Link>
+    <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
+      <div className="container-max py-8">
+        <Breadcrumbs 
+          items={[
+            { label: 'Documentation', href: '/docs' },
+            { label: metadata?.title || 'Document', href: '#' }
+          ]} 
+        />
+        
+        <div className="mt-8">
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold text-white mb-4">
+              {metadata?.title || 'Documentation'}
+            </h1>
+            {metadata?.description && (
+              <p className="text-xl text-gray-300">
+                {metadata.description}
+              </p>
+            )}
+          </div>
           
-          <div className="text-sm text-gray-500">
-            Last updated: {new Date().toLocaleDateString()}
+          <div className="bg-gray-900 rounded-lg p-8 shadow-lg">
+            <MarkdownRenderer content={content} />
           </div>
         </div>
       </div>
