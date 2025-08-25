@@ -37,15 +37,27 @@ jobs:
         ls -la
         echo "Package.json contents:"
         cat package.json | head -20
+        echo "Scripts available:"
+        npm run
     
     - name: Sync documentation from dashboard
       run: npm run sync-docs
+    
+    - name: Verify test script exists
+      run: |
+        echo "Checking if test script exists..."
+        if npm run | grep -q "test"; then
+          echo "✅ Test script found"
+        else
+          echo "❌ Test script not found"
+          exit 1
+        fi
     
     - name: Run linting
       run: npm run lint
     
     - name: Run tests
-      run: echo "✅ CI test passed - environment is ready"
+      run: npm test
     
     - name: Build website
       run: npm run build
