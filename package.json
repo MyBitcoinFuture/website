@@ -10,7 +10,7 @@
     "sync-docs": "node scripts/sync-docs.js",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "echo 'No tests configured for website' && exit 0"
+    "test": "echo 'No tests configured for website'"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
