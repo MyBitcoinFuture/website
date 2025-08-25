@@ -6,12 +6,8 @@
  * Tests the website build process and validates critical functionality
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const fs = require('fs');
+const path = require('path');
 
 // Test configuration
 const TESTS = {
@@ -181,11 +177,11 @@ async function runTests() {
 }
 
 // Run tests if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (require.main === module) {
   runTests().catch(error => {
     console.error('❌ Test runner failed:', error.message);
     process.exit(1);
   });
 }
 
-export { runTests };
+module.exports = { runTests };

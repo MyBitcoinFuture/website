@@ -10,7 +10,7 @@
     "sync-docs": "node scripts/sync-docs.js",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "node scripts/test-website.js"
+    "test": "node scripts/test-website.cjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
