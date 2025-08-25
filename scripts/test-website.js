@@ -142,7 +142,7 @@ async function runTests() {
     errors: []
   };
   
-  for (const [testName, testConfig] of Object.entries(TESTS)) {
+  for (const [_testName, testConfig] of Object.entries(TESTS)) {
     try {
       console.log(`🔍 Running: ${testConfig.name}`);
       await testConfig.test();
