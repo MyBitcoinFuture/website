@@ -56,8 +56,12 @@ jobs:
     - name: Run linting
       run: npm run lint
     
-    - name: Run tests
+    - name: Run simple CI test
+      run: npm run test:ci-simple
+    
+    - name: Run full tests (if simple test passes)
       run: npm test
+      if: success()
     
     - name: Build website
       run: npm run build
