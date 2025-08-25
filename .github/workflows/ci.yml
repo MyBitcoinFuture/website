@@ -45,7 +45,7 @@ jobs:
       run: npm run lint
     
     - name: Run tests
-      run: npm test
+      run: npm run test:ci
       working-directory: ${{ github.workspace }}
     
     - name: Build website
