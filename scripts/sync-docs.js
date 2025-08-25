@@ -146,11 +146,25 @@ function generateDocumentationImporter(docContents) {
  * Last Updated: ${timestamp.split('T')[0]}
  */
 
-import Fuse from 'fuse.js';
+// Local content store with actual dashboard documentation
+const LOCAL_DOCUMENTATION_CONTENT = {
+`;
 
-// Cache for documentation content
-const documentationCache = new Map();
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+  // Add documentation content
+  Object.entries(docContents).forEach(([fileName, content]) => {
+    if (content) {
+      // Escape backticks and quotes for JavaScript string
+      const escapedContent = content
+        .replace(/\\/g, '\\\\')
+        .replace(/`/g, '\\`')
+        .replace(/\$/g, '\\$');
+      
+      content += `  '${fileName}': \`${escapedContent}\`,
+`;
+    }
+  });
+
+  content += `};
 
 /**
  * Get documentation metadata
@@ -195,28 +209,8 @@ export const getDocumentationMetadata = (docPath) => {
 export const importDashboardContent = async (docPath) => {
   const fileName = docPath.split('/').pop();
   
-  // Local content store with actual dashboard documentation
-  const localDocumentationContent = {
-`;
-
-  // Add documentation content
-  Object.entries(docContents).forEach(([fileName, content]) => {
-    if (content) {
-      // Escape backticks and quotes for JavaScript string
-      const escapedContent = content
-        .replace(/\\/g, '\\\\')
-        .replace(/`/g, '\\`')
-        .replace(/\$/g, '\\$');
-      
-      content += `    '${fileName}': \`${escapedContent}\`,
-`;
-    }
-  });
-
-  content += `  };
-  
   // Return content from local store
-  const content = localDocumentationContent[fileName];
+  const content = LOCAL_DOCUMENTATION_CONTENT[fileName];
   
   if (!content) {
     throw new Error(\`Documentation not found: \${fileName}\`);
@@ -280,7 +274,7 @@ export const searchDocumentation = async (query, docPaths = []) => {
 export const getAllDocumentation = async () => {
   const docs = [];
   
-  for (const fileName of Object.keys(localDocumentationContent)) {
+  for (const fileName of Object.keys(LOCAL_DOCUMENTATION_CONTENT)) {
     const metadata = getDocumentationMetadata(fileName);
     docs.push({
       docPath: fileName,

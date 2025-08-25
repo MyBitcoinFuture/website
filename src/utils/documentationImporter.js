@@ -10,11 +10,9 @@
  * Last Updated: 2025-08-25
  */
 
-import Fuse from 'fuse.js';
-
-// Cache for documentation content
-const documentationCache = new Map();
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+// Local content store with actual dashboard documentation
+const LOCAL_DOCUMENTATION_CONTENT = {
+};
 
 /**
  * Get documentation metadata
@@ -43,12 +41,8 @@ export const getDocumentationMetadata = (docPath) => {
 export const importDashboardContent = async (docPath) => {
   const fileName = docPath.split('/').pop();
   
-  // Local content store with actual dashboard documentation
-  const localDocumentationContent = {
-  };
-  
   // Return content from local store
-  const content = localDocumentationContent[fileName];
+  const content = LOCAL_DOCUMENTATION_CONTENT[fileName];
   
   if (!content) {
     throw new Error(`Documentation not found: ${fileName}`);
@@ -112,7 +106,7 @@ export const searchDocumentation = async (query, docPaths = []) => {
 export const getAllDocumentation = async () => {
   const docs = [];
   
-  for (const fileName of Object.keys(localDocumentationContent)) {
+  for (const fileName of Object.keys(LOCAL_DOCUMENTATION_CONTENT)) {
     const metadata = getDocumentationMetadata(fileName);
     docs.push({
       docPath: fileName,
