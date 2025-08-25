@@ -29,7 +29,8 @@ jobs:
       run: npm ci
     
     - name: Run tests
-      run: npm test || echo "Tests completed with status $?"
+      run: npm test
+      continue-on-error: true
     
     - name: Build website
       run: npm run build
