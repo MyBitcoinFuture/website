@@ -9,7 +9,8 @@
     "build:no-sync": "vite build",
     "sync-docs": "node scripts/sync-docs.js",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo 'No tests configured for website' && exit 0"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
