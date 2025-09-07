@@ -41,11 +41,12 @@ jobs:
         cd website
         if [ -d "../dashboard" ]; then
           echo "Dashboard repository found, syncing documentation..."
-          node scripts/sync-docs.js
+          node scripts/sync-docs.js || echo "⚠️ Documentation sync failed, using existing documentation"
         else
           echo "Dashboard repository not available, using existing documentation..."
           echo "⚠️ Documentation sync skipped - dashboard repository not accessible"
         fi
+      continue-on-error: true
         
     - name: Build website
       run: |
