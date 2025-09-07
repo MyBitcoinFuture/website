@@ -38,7 +38,7 @@ const DOC_FILES = [
  * Pull latest changes from dashboard repo
  */
 function pullDashboardRepo() {
-  console.log('🔄 Pulling latest dashboard repository...');
+  console.log('🔄 Checking dashboard repository...');
   
   try {
     // Check if dashboard repo exists
@@ -46,19 +46,26 @@ function pullDashboardRepo() {
       throw new Error(`Dashboard repository not found at: ${DASHBOARD_REPO_PATH}`);
     }
     
-    // Change to dashboard directory and pull latest changes
-    const originalCwd = process.cwd();
-    process.chdir(DASHBOARD_REPO_PATH);
-    
-    // Git pull latest changes
-    execSync('git pull origin main', { stdio: 'inherit' });
-    
-    // Return to original directory
-    process.chdir(originalCwd);
-    
-    console.log('✅ Dashboard repository updated successfully');
+    // Check if this is a git repository (in CI, it might not be)
+    const gitDir = path.join(DASHBOARD_REPO_PATH, '.git');
+    if (fs.existsSync(gitDir)) {
+      console.log('🔄 Pulling latest dashboard repository...');
+      // Change to dashboard directory and pull latest changes
+      const originalCwd = process.cwd();
+      process.chdir(DASHBOARD_REPO_PATH);
+      
+      // Git pull latest changes
+      execSync('git pull origin main', { stdio: 'inherit' });
+      
+      // Return to original directory
+      process.chdir(originalCwd);
+      
+      console.log('✅ Dashboard repository updated successfully');
+    } else {
+      console.log('ℹ️ Dashboard repository is already at latest version (CI checkout)');
+    }
   } catch (error) {
-    console.error('❌ Failed to pull dashboard repository:', error.message);
+    console.error('❌ Failed to update dashboard repository:', error.message);
     throw error;
   }
 }
