@@ -22,6 +22,7 @@ jobs:
         repository: MyBitcoinFuture/dashboard
         path: dashboard
         token: ${{ secrets.GITHUB_TOKEN }}
+      continue-on-error: true
         
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -38,7 +39,13 @@ jobs:
     - name: Sync documentation
       run: |
         cd website
-        node scripts/sync-docs.js
+        if [ -d "../dashboard" ]; then
+          echo "Dashboard repository found, syncing documentation..."
+          node scripts/sync-docs.js
+        else
+          echo "Dashboard repository not available, using existing documentation..."
+          echo "⚠️ Documentation sync skipped - dashboard repository not accessible"
+        fi
         
     - name: Build website
       run: |
