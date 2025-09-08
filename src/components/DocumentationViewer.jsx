@@ -17,7 +17,6 @@ const DocumentationViewer = () => {
     'api-documentation': 'API_DOCUMENTATION.md',
     'quickstart': 'QUICKSTART.md',
     'onboarding-guide': 'ONBOARDING_GUIDE.md',
-    'cli-standards': 'CLI_CONSISTENCY_STANDARDS.md',
     'quick-reference': 'QUICK_REFERENCE.md'
   }), []);
 

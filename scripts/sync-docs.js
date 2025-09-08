@@ -24,14 +24,13 @@ const DASHBOARD_REPO_PATH = path.resolve(__dirname, '../../dashboard');
 const OUTPUT_FILE = path.resolve(__dirname, '../src/utils/documentationImporter.js');
 const DOCS_DIR = path.join(DASHBOARD_REPO_PATH, 'docs');
 
-// Documentation files to sync
+// Documentation files to sync with their actual paths
 const DOC_FILES = [
-  'SYSTEM_OVERVIEW.md',
-  'API_DOCUMENTATION.md',
-  'QUICKSTART.md',
-  'ONBOARDING_GUIDE.md',
-  'CLI_CONSISTENCY_STANDARDS.md',
-  'QUICK_REFERENCE.md'
+  { name: 'SYSTEM_OVERVIEW.md', path: 'archive/SYSTEM_OVERVIEW.md' },
+  { name: 'API_DOCUMENTATION.md', path: 'architecture/API_DOCUMENTATION.md' },
+  { name: 'QUICKSTART.md', path: 'getting-started/QUICKSTART.md' },
+  { name: 'ONBOARDING_GUIDE.md', path: 'getting-started/ONBOARDING_GUIDE.md' },
+  { name: 'QUICK_REFERENCE.md', path: 'archive/QUICK_REFERENCE.md' }
 ];
 
 /**
@@ -73,11 +72,14 @@ function pullDashboardRepo() {
 /**
  * Read documentation file content
  */
-function readDocFile(fileName) {
-  const filePath = path.join(DOCS_DIR, fileName);
+function readDocFile(docFile) {
+  const fileName = typeof docFile === 'string' ? docFile : docFile.name;
+  const filePath = typeof docFile === 'string' ? 
+    path.join(DOCS_DIR, docFile) : 
+    path.join(DOCS_DIR, docFile.path);
   
   if (!fs.existsSync(filePath)) {
-    console.warn(`⚠️  Documentation file not found: ${fileName}`);
+    console.warn(`⚠️  Documentation file not found: ${fileName} at ${filePath}`);
     return null;
   }
   
@@ -158,10 +160,10 @@ const LOCAL_DOCUMENTATION_CONTENT = {
 `;
 
   // Add documentation content
-  Object.entries(docContents).forEach(([fileName, content]) => {
-    if (content) {
+  Object.entries(docContents).forEach(([fileName, docContent]) => {
+    if (docContent) {
       // Escape backticks and quotes for JavaScript string
-      const escapedContent = content
+      const escapedContent = docContent
         .replace(/\\/g, '\\\\')
         .replace(/`/g, '\\`')
         .replace(/\$/g, '\\$');
@@ -318,8 +320,9 @@ function main() {
     console.log('📖 Reading documentation files...');
     const docContents = {};
     
-    for (const fileName of DOC_FILES) {
-      const content = readDocFile(fileName);
+    for (const docFile of DOC_FILES) {
+      const fileName = typeof docFile === 'string' ? docFile : docFile.name;
+      const content = readDocFile(docFile);
       if (content) {
         docContents[fileName] = content;
       }

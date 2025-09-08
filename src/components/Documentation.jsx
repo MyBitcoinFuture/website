@@ -15,8 +15,7 @@ const Documentation = () => {
       links: [
         { name: "System Overview", href: "/docs/system-overview", status: "Available" },
         { name: "Quick Start Guide", href: "/docs/quickstart", status: "Available" },
-        { name: "Onboarding Guide", href: "/docs/onboarding", status: "Available" },
-        { name: "CLI Standards", href: "/docs/cli-standards", status: "Available" }
+        { name: "Onboarding Guide", href: "/docs/onboarding-guide", status: "Available" }
       ]
     },
     {
@@ -35,7 +34,6 @@ const Documentation = () => {
       description: "Development guides and standards for contributors.",
       icon: <CogIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
-        { name: "CLI Consistency Standards", href: "/docs/cli-standards", status: "Available" },
         { name: "Plugin Development", href: "https://github.com/MyBitcoinFuture/dashboard/tree/main/plugins", status: "Available", external: true },
         { name: "Contributing Guidelines", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/CONTRIBUTING.md", status: "Available", external: true },
         { name: "Development Setup", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/README.md#development", status: "Available", external: true }
