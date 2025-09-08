@@ -9,7 +9,8 @@ const PluginEcosystem = () => {
         {
           name: "Lightning Integration Pro",
           description: "Multi-provider Lightning payments with invoice generation and channel management",
-          features: ["Invoice creation", "Payment routing", "Channel management", "Multi-provider support"]
+          features: ["Invoice creation", "Payment routing", "Channel management", "Multi-provider support"],
+          price: "$49/month"
         }
       ]
     },
@@ -20,7 +21,8 @@ const PluginEcosystem = () => {
         {
           name: "Treasury Governance",
           description: "Board meeting automation with voting systems and policy enforcement",
-          features: ["Board voting", "Meeting automation", "Policy enforcement", "Stakeholder management"]
+          features: ["Board voting", "Meeting automation", "Policy enforcement", "Stakeholder management"],
+          price: "$99/month"
         },
 
       ]
@@ -32,12 +34,14 @@ const PluginEcosystem = () => {
         {
           name: "Accounting Integration Pro",
           description: "Seamless integration with QuickBooks and other accounting systems",
-          features: ["QuickBooks integration", "Xero integration", "Transaction sync", "Tax reporting"]
+          features: ["QuickBooks integration", "Xero integration", "Transaction sync", "Tax reporting"],
+          price: "$79/month"
         },
         {
           name: "Advanced Analytics",
           description: "Comprehensive Bitcoin analytics with portfolio performance tracking",
-          features: ["Portfolio analytics", "Risk analysis", "Performance tracking", "Custom reporting"]
+          features: ["Portfolio analytics", "Risk analysis", "Performance tracking", "Custom reporting"],
+          price: "$69/month"
         }
       ]
     },
@@ -48,12 +52,14 @@ const PluginEcosystem = () => {
         {
           name: "Workflow Automation",
           description: "Advanced automation with smart triggers and conditional workflows",
-          features: ["Smart triggers", "Conditional workflows", "Webhook integration", "Process automation"]
+          features: ["Smart triggers", "Conditional workflows", "Webhook integration", "Process automation"],
+          price: "$59/month"
         },
         {
           name: "Custom Branding Pro",
           description: "White-label customization with custom themes and branding",
-          features: ["Custom themes", "Logo upload", "Branded reports", "White-label options"]
+          features: ["Custom themes", "Logo upload", "Branded reports", "White-label options"],
+          price: "$49/month"
         }
       ]
     }
@@ -91,9 +97,16 @@ const PluginEcosystem = () => {
                 {category.plugins.map((plugin, pluginIndex) => (
                   <div key={pluginIndex} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105">
                     <div className="mb-4">
-                      <h4 className="text-white mb-2" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
-                        {plugin.name}
-                      </h4>
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="text-white" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
+                          {plugin.name}
+                        </h4>
+                        {plugin.price && (
+                          <span className="text-orange font-bold" style={{ fontSize: '1rem' }}>
+                            {plugin.price}
+                          </span>
+                        )}
+                      </div>
                       <p className="text-gray-300 mb-4" style={{ fontSize: '1rem', lineHeight: '1.5' }}>
                         {plugin.description}
                       </p>
