@@ -33,11 +33,11 @@ const FAQ = () => {
     },
     {
       question: "What enterprise capabilities are available?",
-      answer: "The system provides comprehensive enterprise features including Lightning Network integration for payments, governance automation for board oversight, accounting integration for financial reporting, advanced security management for institutional requirements, workflow automation for operational efficiency, and custom branding for professional presentation."
+      answer: "The core system provides essential enterprise features including multi-wallet architecture, Bitcoin analytics, xpub-only security, and self-hosted deployment. Premium plugins extend these capabilities with advanced Lightning Network integration ($49/month), governance automation ($99/month), accounting integration ($79/month), workflow automation ($59/month), and custom branding ($49/month) for comprehensive enterprise functionality."
     },
     {
       question: "How does the plugin architecture work?",
-      answer: "The plugin architecture provides modular extension of functionality through a standardized interface. Core features are always available, while enterprise plugins provide additional capabilities like Lightning Network integration, governance automation, accounting integration, and custom branding. This ensures the system can grow with your organization's needs."
+      answer: "The plugin architecture provides modular extension of functionality through a standardized interface. Core features are always available, while premium plugins provide additional capabilities like advanced Lightning Network integration ($49/month), governance automation ($99/month), accounting integration ($79/month), and custom branding ($49/month). This ensures the system can grow with your organization's needs."
     },
     {
       question: "What deployment options are available?",
@@ -45,15 +45,19 @@ const FAQ = () => {
     },
     {
       question: "How does the system handle compliance and reporting?",
-      answer: "The system provides comprehensive compliance and reporting capabilities including automated tax reporting, cost basis tracking, audit trails, governance compliance, and regulatory reporting. Enterprise plugins extend these capabilities with professional accounting integration and advanced analytics for institutional requirements."
+      answer: "The core system provides essential compliance and reporting capabilities including cost basis tracking, audit trails, and basic reporting. Premium plugins extend these capabilities with professional accounting integration ($79/month) for QuickBooks/Xero sync, advanced analytics ($69/month), and governance compliance ($99/month) for institutional requirements."
     },
     {
       question: "What automation capabilities are available?",
-      answer: "The system provides advanced automation capabilities including workflow automation, smart triggers, conditional actions, webhook integration, and process automation. This enables organizations to automate routine treasury operations, compliance processes, and governance workflows for operational efficiency."
+      answer: "The core system provides basic automation capabilities including scheduled tasks and simple workflows. Premium plugins extend these capabilities with advanced workflow automation ($59/month) including smart triggers, conditional actions, webhook integration, and process automation for comprehensive operational efficiency."
+    },
+    {
+      question: "What Lightning Network features are included?",
+      answer: "The core system includes basic Lightning Network capabilities for plugin purchases and essential payment processing. Advanced Lightning features like payment routing, channel management, multi-provider support, and Lightning Address integration are available through the Lightning Integration Plugin ($49/month)."
     },
     {
       question: "How does the system support institutional use cases?",
-      answer: "The system is designed specifically for institutional use cases with advanced security management, governance automation, compliance reporting, enterprise security, and professional integration capabilities. It provides the tools and infrastructure needed for organizations to manage Bitcoin as a treasury asset with institutional-grade security and oversight."
+      answer: "The core system provides essential institutional capabilities including xpub-only security, multi-wallet architecture, and self-hosted deployment. Premium plugins extend these capabilities with governance automation ($99/month), accounting integration ($79/month), advanced analytics ($69/month), and custom branding ($49/month) for comprehensive institutional-grade functionality."
     }
   ];
 

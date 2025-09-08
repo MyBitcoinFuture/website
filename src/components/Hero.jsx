@@ -8,11 +8,11 @@ const Hero = () => {
           <div className="hero-text">
             <h1 className="hero-title animate-fade-in-up">
               Enterprise Bitcoin Treasury Management
-              <span className="text-orange"> with Premium Plugins</span>
+              <span className="text-orange"> Platform</span>
             </h1>
             <p className="hero-description animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Self-hosted Bitcoin treasury management with Lightning Network integration, 
-              governance automation, and accounting systems through our plugin ecosystem.
+              Self-hosted Bitcoin treasury management with extensible plugin architecture. 
+              Core system provides essential features with premium plugins for advanced capabilities.
             </p>
             <div className="hero-stats animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="stat">

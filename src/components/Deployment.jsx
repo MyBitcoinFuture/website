@@ -37,40 +37,16 @@ const Deployment = () => {
       features: ["Official app store", "Bitcoin node integration", "App ecosystem", "Self-hosting"]
     },
     {
-      title: "Synology NAS",
-      description: "Deploy on Synology NAS for home and business users with existing NAS infrastructure.",
-      status: "Planned",
-      statusColor: "#8b5cf6",
+      title: "Kubernetes",
+      description: "Enterprise deployment on Kubernetes clusters with auto-scaling and high availability.",
+      status: "Available Now",
+      statusColor: "#10b981",
       icon: (
         <svg style={{ width: '2rem', height: '2rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
         </svg>
       ),
-      features: ["NAS app store", "Home/business users", "Existing infrastructure", "Prosumer friendly"]
-    },
-    {
-      title: "Cloud VPS",
-      description: "Enterprise deployment on cloud infrastructure with Linode StackScript and DigitalOcean 1-Click.",
-      status: "Planned",
-      statusColor: "#8b5cf6",
-      icon: (
-        <svg style={{ width: '2rem', height: '2rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-        </svg>
-      ),
-      features: ["Enterprise ready", "Cloud infrastructure", "1-click deployment", "Scalable"]
-    },
-    {
-      title: "BTCPay Plugin",
-      description: "Merchant integration through BTCPay Server plugin for Bitcoin businesses and merchants.",
-      status: "Planned",
-      statusColor: "#ec4899",
-      icon: (
-        <svg style={{ width: '2rem', height: '2rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-      features: ["Merchant integration", "BTCPay Server", "Business focused", "Payment processing"]
+      features: ["Auto-scaling", "High availability", "Enterprise ready", "Container orchestration"]
     }
   ]
 
