@@ -1,3 +1,5 @@
+import { BRAND_MESSAGING } from '../constants/content';
+
 const Features = () => {
   const coreFeatures = [
     {
@@ -117,8 +119,7 @@ const Features = () => {
             Enterprise Bitcoin Treasury Features
           </h2>
           <p className="text-gray animate-fade-in-up" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto', animationDelay: '0.2s' }}>
-            Professional Bitcoin treasury management with comprehensive capabilities for institutional 
-            and enterprise use cases, built on proven security principles and extensible architecture.
+            {BRAND_MESSAGING.valueProposition}
           </p>
         </div>
 

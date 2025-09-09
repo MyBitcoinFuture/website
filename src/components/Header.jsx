@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { handleAnchorNavigation, NAVIGATION_ITEMS } from '../utils/navigation'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -30,33 +31,9 @@ const Header = () => {
 
   const handleAnchorClick = (anchor, e) => {
     e.preventDefault()
-    if (location.pathname !== '/') {
-      // If not on home page, navigate to home first, then scroll to anchor
-      navigate('/')
-      // Wait for navigation to complete, then scroll
-      setTimeout(() => {
-        const element = document.querySelector(anchor)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
-        }
-      }, 100)
-    } else {
-      // If already on home page, just scroll to anchor
-      const element = document.querySelector(anchor)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
+    handleAnchorNavigation(anchor, navigate, location)
     setIsMenuOpen(false)
   }
-
-  const navigation = [
-    { name: 'Features', href: '#features', isAnchor: true },
-    { name: 'Deployment', href: '#deployment', isAnchor: true },
-    { name: 'Docs', href: '/docs', isAnchor: false },
-    { name: 'Releases', href: '/releases', isAnchor: false },
-    { name: 'Contact', href: '#contact', isAnchor: true },
-  ]
 
   return (
     <header className={isScrolled ? 'scrolled' : ''}>
@@ -74,7 +51,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
-            {navigation.map((item) => (
+            {NAVIGATION_ITEMS.map((item) => (
               item.isAnchor ? (
                 <a
                   key={item.name}
@@ -187,7 +164,7 @@ const Header = () => {
           >
             <div className="container-max">
               <div className="flex flex-col gap-4">
-                {navigation.map((item) => (
+                {NAVIGATION_ITEMS.map((item) => (
                   item.isAnchor ? (
                     <a
                       key={item.name}

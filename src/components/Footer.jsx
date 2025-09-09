@@ -39,21 +39,21 @@ const Footer = () => {
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <li>
                 <a href="https://github.com/MyBitcoinFuture" className="nav-link">
-                  Source Code
+                  GitHub
                 </a>
               </li>
               <li>
-                <a href="https://github.com/MyBitcoinFuture" className="nav-link">
+                <a href="https://github.com/MyBitcoinFuture/dashboard/issues" className="nav-link">
                   Issues
                 </a>
               </li>
               <li>
-                <a href="https://github.com/MyBitcoinFuture" className="nav-link">
+                <a href="https://github.com/MyBitcoinFuture/dashboard/discussions" className="nav-link">
                   Discussions
                 </a>
               </li>
               <li>
-                <a href="https://github.com/MyBitcoinFuture" className="nav-link">
+                <a href="https://github.com/MyBitcoinFuture/dashboard/releases" className="nav-link">
                   Releases
                 </a>
               </li>

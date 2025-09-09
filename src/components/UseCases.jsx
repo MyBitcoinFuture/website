@@ -1,10 +1,10 @@
 import React from 'react';
+import { USE_CASES } from '../constants/content';
 
 const UseCases = () => {
   const useCases = [
     {
-      title: "Organizational Bitcoin Treasury",
-      description: "Professional Bitcoin treasury management for organizations requiring secure, auditable, and scalable Bitcoin operations.",
+      ...USE_CASES[0],
       characteristics: [
         "Multi-wallet management",
         "Role-based access control",
@@ -18,8 +18,7 @@ const UseCases = () => {
       )
     },
     {
-      title: "Bitcoin Research & Analytics",
-      description: "Advanced Bitcoin analytics and research capabilities for organizations requiring deep insights into Bitcoin network data.",
+      ...USE_CASES[1],
       characteristics: [
         "Bitcoin Research Kit integration",
         "Advanced UTXO analytics",
@@ -33,8 +32,7 @@ const UseCases = () => {
       )
     },
     {
-      title: "Sovereign Bitcoin Infrastructure",
-      description: "Complete Bitcoin infrastructure deployment for organizations requiring full control over their Bitcoin operations.",
+      ...USE_CASES[2],
       characteristics: [
         "Self-hosted deployment",
         "Complete data sovereignty",

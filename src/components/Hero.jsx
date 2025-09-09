@@ -1,4 +1,5 @@
 import React from 'react';
+import { BRAND_MESSAGING } from '../constants/content';
 
 const Hero = () => {
   return (
@@ -7,12 +8,10 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title animate-fade-in-up">
-              Enterprise Bitcoin Treasury Management
-              <span className="text-orange"> Platform</span>
+              {BRAND_MESSAGING.tagline}
             </h1>
             <p className="hero-description animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Self-hosted Bitcoin treasury management with extensible plugin architecture. 
-              Core system provides essential features with premium plugins for advanced capabilities.
+              {BRAND_MESSAGING.description}
             </p>
             <div className="hero-stats animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="stat">

@@ -24,40 +24,20 @@ const FAQ = () => {
       answer: "The system operates on an xpub-only architecture, meaning it only requires extended public keys (xpubs) and never handles private keys. This ensures complete security while providing full visibility into wallet balances and transactions. Private keys remain entirely under your control, typically stored in hardware wallets or secure environments."
     },
     {
-      question: "What are the benefits of multi-wallet architecture?",
-      answer: "Multi-wallet architecture provides operational separation, risk management, and compliance capabilities. Organizations can maintain separate wallets for different purposes (operational, reserve, compliance), implement security policies, and achieve granular control over Bitcoin holdings while maintaining a unified view of the entire portfolio."
-    },
-    {
-      question: "How does self-hosted deployment ensure data sovereignty?",
-      answer: "Self-hosted deployment means you maintain complete control over your infrastructure, data, and network access. Your Bitcoin treasury data never leaves your environment, ensuring privacy, compliance with data regulations, and independence from third-party services. This is particularly important for organizations with strict security and compliance requirements."
-    },
-    {
-      question: "What enterprise capabilities are available?",
-      answer: "The core system provides essential enterprise features including multi-wallet architecture, Bitcoin analytics, xpub-only security, and self-hosted deployment. Premium plugins extend these capabilities with advanced Lightning Network integration ($49/month), governance automation ($99/month), accounting integration ($79/month), workflow automation ($59/month), and custom branding ($49/month) for comprehensive enterprise functionality."
-    },
-    {
-      question: "How does the plugin architecture work?",
-      answer: "The plugin architecture provides modular extension of functionality through a standardized interface. Core features are always available, while premium plugins provide additional capabilities like advanced Lightning Network integration ($49/month), governance automation ($99/month), accounting integration ($79/month), and custom branding ($49/month). This ensures the system can grow with your organization's needs."
+      question: "What's included vs. what requires plugins?",
+      answer: "The core system includes multi-wallet architecture, Bitcoin analytics, xpub-only security, self-hosted deployment, and basic Lightning Network capabilities. Premium plugins extend functionality with advanced Lightning integration ($49/month), governance automation ($99/month), accounting integration ($79/month), workflow automation ($59/month), and custom branding ($49/month)."
     },
     {
       question: "What deployment options are available?",
       answer: "Multiple deployment options are available including Docker containers, platform marketplaces (Start9, Umbrel), Kubernetes clusters, and traditional server deployments. Each option maintains the same security and functionality while accommodating different infrastructure preferences and operational requirements."
     },
     {
-      question: "How does the system handle compliance and reporting?",
-      answer: "The core system provides essential compliance and reporting capabilities including cost basis tracking, audit trails, and basic reporting. Premium plugins extend these capabilities with professional accounting integration ($79/month) for QuickBooks/Xero sync, advanced analytics ($69/month), and governance compliance ($99/month) for institutional requirements."
+      question: "How does the plugin system work?",
+      answer: "The plugin architecture provides modular extension of functionality through a standardized interface. Core features are always available, while premium plugins provide additional capabilities. This ensures the system can grow with your organization's needs without requiring complex migrations or system changes."
     },
     {
-      question: "What automation capabilities are available?",
-      answer: "The core system provides basic automation capabilities including scheduled tasks and simple workflows. Premium plugins extend these capabilities with advanced workflow automation ($59/month) including smart triggers, conditional actions, webhook integration, and process automation for comprehensive operational efficiency."
-    },
-    {
-      question: "What Lightning Network features are included?",
-      answer: "The core system includes basic Lightning Network capabilities for plugin purchases and essential payment processing. Advanced Lightning features like payment routing, channel management, multi-provider support, and Lightning Address integration are available through the Lightning Integration Plugin ($49/month)."
-    },
-    {
-      question: "How does the system support institutional use cases?",
-      answer: "The core system provides essential institutional capabilities including xpub-only security, multi-wallet architecture, and self-hosted deployment. Premium plugins extend these capabilities with governance automation ($99/month), accounting integration ($79/month), advanced analytics ($69/month), and custom branding ($49/month) for comprehensive institutional-grade functionality."
+      question: "How does self-hosted deployment ensure data sovereignty?",
+      answer: "Self-hosted deployment means you maintain complete control over your infrastructure, data, and network access. Your Bitcoin treasury data never leaves your environment, ensuring privacy, compliance with data regulations, and independence from third-party services. This is particularly important for organizations with strict security and compliance requirements."
     }
   ];
 
