@@ -368,7 +368,7 @@ const Docs = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <Link 
-                    to="/getting-started" 
+                    to="/docs/quickstart" 
                     style={{
                       background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
                       color: '#ffffff',

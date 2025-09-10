@@ -11,7 +11,6 @@ import Deployment from './components/Deployment'
 import Contact from './components/Contact'
 import Docs from './components/Docs'
 import DocumentationViewer from './components/DocumentationViewer'
-import GettingStarted from './components/GettingStarted'
 import SystemOverview from './components/SystemOverview'
 import ApiReference from './components/ApiReference'
 import QuickStart from './components/QuickStart'
@@ -87,11 +86,6 @@ function App() {
           </Layout>
         } />
         <Route path="/docs/:docSlug" element={<DocumentationViewer />} />
-        <Route path="/getting-started" element={
-          <Layout>
-            <GettingStarted />
-          </Layout>
-        } />
         <Route path="/releases" element={
           <Layout>
             <Releases />

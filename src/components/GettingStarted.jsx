@@ -304,7 +304,7 @@ const GettingStarted = () => {
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">
                     <a
-                      href="#deployment"
+                      href="/#deployment"
                       className="btn-primary"
                       style={{
                         background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
