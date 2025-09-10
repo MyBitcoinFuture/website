@@ -110,17 +110,6 @@ const Features = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-green-400 text-xs font-medium">
-                      Always Available
-                    </span>
-                  </div>
-                  <span className="text-green-400 text-xs font-medium bg-green-400/10 px-3 py-1 rounded-full">
-                    ✓ Core
-                  </span>
-                </div>
               </div>
             ))}
           </div>

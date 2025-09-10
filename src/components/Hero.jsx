@@ -3,22 +3,10 @@ import { BRAND_MESSAGING } from '../constants/content';
 import Container from './Container';
 
 const Hero = () => {
-  const [currentMetric, setCurrentMetric] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
-  const metrics = [
-    { value: "Secure", label: "Key Management" },
-    { value: "Self-Hosted", label: "Deployment" },
-    { value: "Open Source", label: "Transparency" }
-  ];
-
 
   useEffect(() => {
     setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentMetric((prev) => (prev + 1) % metrics.length);
-    }, 3000);
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -45,22 +33,6 @@ const Hero = () => {
               {BRAND_MESSAGING.description}
             </p>
 
-            {/* Dynamic Metrics */}
-            <div className="flex gap-8 mb-8">
-              {metrics.map((metric, index) => (
-                <div 
-                  key={index} 
-                  className={`metric-card interactive-hover ${index === currentMetric ? 'pulse-glow' : ''}`}
-                >
-                  <div className="metric-value bitcoin-pulse">
-                    {metric.value}
-                  </div>
-                  <div className="metric-label">
-                    {metric.label}
-                  </div>
-                </div>
-              ))}
-            </div>
 
             {/* Enhanced CTAs */}
             <div className="flex gap-4 flex-wrap">
