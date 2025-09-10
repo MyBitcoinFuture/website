@@ -3,20 +3,9 @@ import { BRAND_MESSAGING } from '../constants/content';
 
 const Hero = () => {
   return (
-    <section className="section-padding" style={{ 
-      background: 'var(--bg-primary)',
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
+    <section className="section-padding min-h-screen flex items-center relative overflow-hidden">
       <div className="container-max">
-        <div className="grid hero-grid" style={{ 
-          gap: 'var(--space-3xl)',
-          alignItems: 'center',
-          minHeight: '80vh'
-        }}>
+        <div className="hero-grid min-h-[80vh]">
           <div className="animate-fade-in-up">
             <h1 className="text-white mb-6" style={{ 
               fontSize: 'clamp(2.5rem, 8vw, 4rem)',
