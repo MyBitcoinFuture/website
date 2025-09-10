@@ -7,9 +7,9 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const metrics = [
-    { value: "100%", label: "Self-Hosted" },
-    { value: "0", label: "Trust Required" },
-    { value: "∞", label: "Security Level" }
+    { value: "xpub-Only", label: "Architecture" },
+    { value: "Self-Hosted", label: "Deployment" },
+    { value: "Open Source", label: "Transparency" }
   ];
 
   const trustIndicators = [
@@ -89,12 +89,11 @@ const Hero = () => {
             {/* Social Proof */}
             <div className="flex items-center gap-6 pt-4">
               <div className="text-sm text-slate-400">
-                Trusted by organizations worldwide
+                Open source and community-driven
               </div>
               <div className="flex gap-2">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <span key={star} className="text-yellow-400 text-lg">★</span>
-                ))}
+                <span className="text-primary-400 text-lg">🔓</span>
+                <span className="text-slate-400 text-sm">No vendor lock-in</span>
               </div>
             </div>
           </div>

@@ -38,7 +38,7 @@ const BitcoinTreasuryConcepts = () => {
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-white mb-4">
+          <h2 className="text-white mb-4 text-3xl font-bold">
             Bitcoin Treasury Management Fundamentals
           </h2>
           <p className="text-gray" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto' }}>
@@ -47,7 +47,7 @@ const BitcoinTreasuryConcepts = () => {
           </p>
         </div>
 
-        <div className="grid" style={{ gap: '2rem' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {concepts.map((concept, index) => (
             <div key={index} className="card">
               <h3 className="text-white mb-4" style={{ fontSize: '1.5rem', fontWeight: '600' }}>

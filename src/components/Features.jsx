@@ -81,7 +81,7 @@ const Features = () => {
         <div className="mb-16">
           <div className="text-center mb-12">
             <h3 className="subsection-title">
-              Core Features <span className="text-green-400">(Included)</span>
+              Core Features
             </h3>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Everything you need to manage your Bitcoin treasury professionally, included at no extra cost.
@@ -116,7 +116,7 @@ const Features = () => {
                     </span>
                   </div>
                   <span className="text-green-400 text-xs font-medium bg-green-400/10 px-3 py-1 rounded-full">
-                    ✓ Included
+                    ✓ Core
                   </span>
                 </div>
               </div>
@@ -124,44 +124,6 @@ const Features = () => {
           </div>
         </div>
 
-        {/* Feature Comparison */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="subsection-title">
-              Why Choose MyBitcoinFuture?
-            </h3>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="metric-card mb-4">
-                <div className="metric-value text-primary-400">100%</div>
-                <div className="metric-label">Self-Hosted</div>
-              </div>
-              <p className="text-slate-300 text-sm">
-                Complete control over your Bitcoin infrastructure
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="metric-card mb-4">
-                <div className="metric-value text-green-400">0</div>
-                <div className="metric-label">Trust Required</div>
-              </div>
-              <p className="text-slate-300 text-sm">
-                xpub-only architecture eliminates counterparty risk
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="metric-card mb-4">
-                <div className="metric-value text-blue-400">∞</div>
-                <div className="metric-label">Extensibility</div>
-              </div>
-              <p className="text-slate-300 text-sm">
-                Plugin system for unlimited customization
-              </p>
-            </div>
-          </div>
-        </div>
 
         {/* Premium Features CTA */}
         <div className="text-center">
