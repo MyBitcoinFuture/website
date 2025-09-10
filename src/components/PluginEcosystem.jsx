@@ -148,7 +148,7 @@ const PluginEcosystem = () => {
               <a href="#deployment" className="btn-primary focus-ring">
                 Deploy Enterprise Solution
               </a>
-              <a href="#docs" className="btn-secondary focus-ring">
+              <a href="/docs" className="btn-secondary focus-ring">
                 View Documentation
               </a>
             </div>
