@@ -78,38 +78,38 @@ const PluginEcosystem = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 grid-cols-1 lg:grid-cols-2">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {pluginCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-gray-800/30 border border-gray-700 rounded-xl p-6">
-              <div className="mb-4">
-                <h3 className="text-white text-lg font-semibold mb-2">
+            <div key={categoryIndex} className="bg-gray-800/30 border border-gray-700 rounded-lg p-4">
+              <div className="mb-3">
+                <h3 className="text-white text-base font-semibold mb-1">
                   {category.title}
                 </h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-400 text-xs leading-relaxed">
                   {category.description}
                 </p>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {category.plugins.map((plugin, pluginIndex) => (
-                  <div key={pluginIndex} className="bg-primary-500/5 border border-primary-500/20 rounded-lg p-4">
-                    <div className="flex items-start justify-between mb-3">
+                  <div key={pluginIndex} className="bg-primary-500/5 border border-primary-500/20 rounded-md p-3">
+                    <div className="flex items-start justify-between mb-2">
                       <div className="flex-1">
-                        <h4 className="text-white font-semibold text-base mb-1">
+                        <h4 className="text-white font-semibold text-sm mb-1">
                           {plugin.name}
                         </h4>
-                        <p className="text-gray-400 text-sm leading-relaxed">
+                        <p className="text-gray-400 text-xs leading-relaxed">
                           {plugin.description}
                         </p>
                       </div>
                       {plugin.price && (
-                        <div className="text-right ml-4">
-                          <div className="text-primary-500 font-bold text-lg">{plugin.price}</div>
+                        <div className="text-right ml-3">
+                          <div className="text-primary-500 font-bold text-sm">{plugin.price}</div>
                           <div className="text-gray-400 text-xs">per month</div>
                         </div>
                       )}
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1">
                       {plugin.features.map((feature, featureIndex) => (
                         <span key={featureIndex} className="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded-full">
                           {feature}
