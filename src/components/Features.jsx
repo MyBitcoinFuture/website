@@ -134,14 +134,11 @@ const Features = () => {
             </p>
           </div>
           
-          <div className="grid" style={{ 
-            gap: '2rem',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'
-          }}>
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {coreFeatures.map((feature, index) => (
               <div key={index} className="card stagger-item" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
                 <div className="flex items-center mb-4">
-                  <div className="icon-container" style={{ marginRight: 'var(--space-3)' }}>
+                  <div className="mr-3 text-primary-500">
                     {feature.icon}
                   </div>
                   <h3 className="text-white" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
@@ -172,10 +169,7 @@ const Features = () => {
             </p>
           </div>
           
-          <div className="grid" style={{ 
-            gap: '2rem',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'
-          }}>
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {premiumFeatures.map((feature, index) => (
               <div key={index} className="card stagger-item" style={{ 
                 animationDelay: `${0.1 * (index + 1)}s`,

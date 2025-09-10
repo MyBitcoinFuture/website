@@ -60,11 +60,11 @@ const UseCases = () => {
           </p>
         </div>
 
-        <div className="grid" style={{ gap: '2rem' }}>
+        <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
           {useCases.map((useCase, index) => (
             <div key={index} className="card">
               <div className="flex items-center mb-4">
-                <div className="icon-container" style={{ margin: '0 1rem 0 0' }}>
+                <div className="mr-4 text-primary-500">
                   {useCase.icon}
                 </div>
                 <h3 className="text-white" style={{ fontSize: '1.5rem', fontWeight: '600' }}>

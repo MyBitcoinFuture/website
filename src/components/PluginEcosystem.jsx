@@ -90,10 +90,7 @@ const PluginEcosystem = () => {
                 </p>
               </div>
 
-              <div className="grid" style={{ 
-                gap: 'var(--space-xl)',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))'
-              }}>
+              <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {category.plugins.map((plugin, pluginIndex) => (
                   <div key={pluginIndex} className="card" style={{ 
                     border: '1px solid rgba(249, 115, 22, 0.2)',
