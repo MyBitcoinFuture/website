@@ -22,7 +22,6 @@ import {
   WrenchScrewdriverIcon
 } from '@heroicons/react/24/outline';
 import { searchDocumentation } from '../utils/documentationImporter';
-import DesignSystem from './DesignSystem';
 
 const Docs = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -367,8 +366,6 @@ const Docs = () => {
               })}
             </div>
 
-            {/* Design System Section */}
-            <DesignSystem />
 
             {/* Call to Action */}
             <div className="text-center">
