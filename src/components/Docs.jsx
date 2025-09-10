@@ -75,7 +75,7 @@ const Docs = () => {
         { 
           title: "Onboarding Guide", 
           description: "Enhanced setup and configuration",
-          link: "/docs/onboarding",
+          link: "/docs/onboarding-guide",
           internal: true,
           docFile: "ONBOARDING_GUIDE.md",
           icon: BookOpenIcon
@@ -134,14 +134,14 @@ const Docs = () => {
         { 
           title: "Development Guide", 
           description: "Technical development and contribution guide",
-          link: "/docs/development-guide",
+          link: "/docs/quickstart",
           internal: true,
           icon: WrenchScrewdriverIcon
         },
         { 
           title: "Deployment Guide", 
           description: "Deployment and operations guide",
-          link: "/docs/deployment-guide",
+          link: "/docs/quickstart",
           internal: true,
           icon: ServerIcon
         },
@@ -169,7 +169,7 @@ const Docs = () => {
         { 
           title: "Technical Documentation", 
           description: "Detailed technical references and architecture",
-          link: "/docs/technical-documentation",
+          link: "/docs/system-overview",
           internal: true,
           icon: DocumentTextIcon
         }
