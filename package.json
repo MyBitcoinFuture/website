@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/sync-docs.js && vite build",
-    "build:no-sync": "vite build",
+    "build": "node scripts/sync-docs.js && VITE_COMMIT_HASH=$(git rev-parse HEAD) vite build",
+    "build:no-sync": "VITE_COMMIT_HASH=$(git rev-parse HEAD) vite build",
     "sync-docs": "node scripts/sync-docs.js",
     "lint": "eslint .",
     "preview": "vite preview",
