@@ -11,7 +11,7 @@ const Breadcrumbs = ({ items = [] }) => {
 
   return (
     <nav className="mb-8" aria-label="Breadcrumb">
-      <ol className="flex items-center space-x-2 text-sm">
+      <ol className="breadcrumb">
         {breadcrumbItems.map((item, index) => {
           const isLast = index === breadcrumbItems.length - 1;
           const IconComponent = item.icon;
@@ -21,19 +21,19 @@ const Breadcrumbs = ({ items = [] }) => {
               {index > 0 && (
                 <ChevronRightIcon 
                   style={{ width: '16px', height: '16px' }} 
-                  className="text-gray-400 mx-2" 
+                  className="text-slate-400 mx-2" 
                 />
               )}
               
               {isLast ? (
-                <span className="text-gray-300 font-medium">
+                <span className="breadcrumb-current">
                   {IconComponent && <IconComponent style={{ width: '16px', height: '16px' }} className="inline mr-1" />}
                   {item.name}
                 </span>
               ) : (
                 <Link
                   to={item.href}
-                  className="text-orange-400 hover:text-orange-300 transition-colors flex items-center"
+                  className="breadcrumb-item"
                 >
                   {IconComponent && <IconComponent style={{ width: '16px', height: '16px' }} className="mr-1" />}
                   {item.name}

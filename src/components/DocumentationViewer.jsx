@@ -51,11 +51,11 @@ const DocumentationViewer = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
+      <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
-            <p className="text-gray-300">Loading documentation...</p>
+          <div className="error-container">
+            <div className="loading-spinner"></div>
+            <p className="loading-text">Loading documentation...</p>
           </div>
         </div>
       </div>
@@ -64,11 +64,11 @@ const DocumentationViewer = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
+      <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Documentation Not Found</h1>
-            <p className="text-gray-300 mb-8">{error}</p>
+          <div className="error-container">
+            <h1 className="error-title">Documentation Not Found</h1>
+            <p className="error-message">{error}</p>
             <Link to="/docs" className="btn-primary">
               Back to Documentation
             </Link>
@@ -79,7 +79,7 @@ const DocumentationViewer = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
+    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumbs 
           items={[
@@ -94,13 +94,13 @@ const DocumentationViewer = () => {
               {metadata?.title || 'Documentation'}
             </h1>
             {metadata?.description && (
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-slate-300">
                 {metadata.description}
               </p>
             )}
           </div>
           
-          <div className="bg-gray-900 rounded-lg p-8 shadow-lg">
+          <div className="card">
             <MarkdownRenderer content={content} />
           </div>
         </div>

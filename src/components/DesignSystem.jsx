@@ -205,32 +205,32 @@ const DesignSystem = () => {
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-white mb-4">
+          <h2 className="doc-section-title">
             Design System
           </h2>
-          <p className="text-gray" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto' }}>
+          <p className="doc-subtitle">
             Timeless design principles and consistent patterns for professional Bitcoin treasury management interfaces.
           </p>
         </div>
 
         {/* Design Principles */}
         <div className="mb-16">
-          <h3 className="text-white mb-8 text-center" style={{ fontSize: '2rem', fontWeight: '600' }}>
+          <h3 className="doc-section-title">
             Design Principles
           </h3>
-          <div className="grid" style={{ gap: '2rem' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {designPrinciples.map((principle, index) => (
               <div key={index} className="card">
-                <h4 className="text-white mb-4" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
+                <h4 className="text-xl font-semibold text-white mb-4">
                   {principle.title}
                 </h4>
-                <p className="text-gray mb-6" style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
+                <p className="text-slate-300 mb-6 leading-relaxed">
                   {principle.description}
                 </p>
                 <ul className="space-y-2">
                   {principle.principles.map((item, pIndex) => (
-                    <li key={pIndex} className="text-gray-300 flex items-center">
-                      <svg style={{ width: '1rem', height: '1rem', marginRight: '0.5rem', color: 'var(--color-orange)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <li key={pIndex} className="text-slate-300 flex items-center">
+                      <svg className="w-4 h-4 mr-2 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {item}
@@ -244,27 +244,21 @@ const DesignSystem = () => {
 
         {/* Color Palette */}
         <div className="mb-16">
-          <h3 className="text-white mb-8 text-center" style={{ fontSize: '2rem', fontWeight: '600' }}>
+          <h3 className="doc-section-title">
             Color Palette
           </h3>
-          <div className="grid" style={{ gap: '1rem' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {colorPalette.map((color, index) => (
               <div key={index} className="card">
                 <div className="flex items-center">
                   <div 
-                    style={{ 
-                      width: '3rem', 
-                      height: '3rem', 
-                      backgroundColor: color.hex, 
-                      borderRadius: '0.5rem',
-                      border: '1px solid var(--color-gray-dark)',
-                      marginRight: '1rem'
-                    }}
+                    className="w-12 h-12 rounded-lg border border-slate-600 mr-4"
+                    style={{ backgroundColor: color.hex }}
                   />
                   <div>
                     <h4 className="text-white font-semibold">{color.name}</h4>
-                    <p className="text-gray text-sm">{color.hex}</p>
-                    <p className="text-gray-300 text-sm">{color.usage}</p>
+                    <p className="text-slate-400 text-sm">{color.hex}</p>
+                    <p className="text-slate-300 text-sm">{color.usage}</p>
                   </div>
                 </div>
               </div>
@@ -274,26 +268,19 @@ const DesignSystem = () => {
 
         {/* Typography Scale */}
         <div className="mb-16">
-          <h3 className="text-white mb-8 text-center" style={{ fontSize: '2rem', fontWeight: '600' }}>
+          <h3 className="doc-section-title">
             Typography Scale
           </h3>
-          <div className="grid" style={{ gap: '1rem' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {typographyScale.map((type, index) => (
               <div key={index} className="card">
                 <div className="flex justify-between items-center">
                   <div>
                     <h4 className="text-white font-semibold">{type.size}</h4>
-                    <p className="text-gray text-sm">{type.value}</p>
-                    <p className="text-gray-300 text-sm">{type.usage}</p>
+                    <p className="text-slate-400 text-sm">{type.value}</p>
+                    <p className="text-slate-300 text-sm">{type.usage}</p>
                   </div>
-                  <div style={{ fontSize: type.size.replace('text-', '').includes('xs') ? '0.75rem' : 
-                    type.size.replace('text-', '').includes('sm') ? '0.875rem' :
-                    type.size.replace('text-', '').includes('base') ? '1rem' :
-                    type.size.replace('text-', '').includes('lg') ? '1.125rem' :
-                    type.size.replace('text-', '').includes('xl') ? '1.25rem' :
-                    type.size.replace('text-', '').includes('2xl') ? '1.5rem' :
-                    type.size.replace('text-', '').includes('3xl') ? '1.875rem' : '2.25rem'
-                  }}>
+                  <div className={type.size}>
                     <span className="text-white">Sample Text</span>
                   </div>
                 </div>
@@ -304,24 +291,22 @@ const DesignSystem = () => {
 
         {/* Spacing Scale */}
         <div className="mb-16">
-          <h3 className="text-white mb-8 text-center" style={{ fontSize: '2rem', fontWeight: '600' }}>
+          <h3 className="doc-section-title">
             Spacing Scale
           </h3>
-          <div className="grid" style={{ gap: '1rem' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {spacingScale.map((space, index) => (
               <div key={index} className="card">
                 <div className="flex justify-between items-center">
                   <div>
                     <h4 className="text-white font-semibold">{space.name}</h4>
-                    <p className="text-gray text-sm">{space.value}</p>
-                    <p className="text-gray-300 text-sm">{space.usage}</p>
+                    <p className="text-slate-400 text-sm">{space.value}</p>
+                    <p className="text-slate-300 text-sm">{space.usage}</p>
                   </div>
                   <div 
+                    className="h-4 bg-primary-500 rounded"
                     style={{ 
-                      width: space.value.split('(')[1].replace(')', '').replace('px', 'px'),
-                      height: '1rem',
-                      backgroundColor: 'var(--color-orange)',
-                      borderRadius: '0.25rem'
+                      width: space.value.split('(')[1].replace(')', '').replace('px', 'px')
                     }}
                   />
                 </div>
@@ -332,22 +317,22 @@ const DesignSystem = () => {
 
         {/* Component Patterns */}
         <div className="mb-16">
-          <h3 className="text-white mb-8 text-center" style={{ fontSize: '2rem', fontWeight: '600' }}>
+          <h3 className="doc-section-title">
             Component Patterns
           </h3>
-          <div className="grid" style={{ gap: '2rem' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {componentPatterns.map((pattern, index) => (
               <div key={index} className="card">
-                <h4 className="text-white mb-4" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
+                <h4 className="text-xl font-semibold text-white mb-4">
                   {pattern.name}
                 </h4>
-                <p className="text-gray mb-6" style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
+                <p className="text-slate-300 mb-6 leading-relaxed">
                   {pattern.description}
                 </p>
                 <ul className="space-y-2">
                   {pattern.characteristics.map((characteristic, cIndex) => (
-                    <li key={cIndex} className="text-gray-300 flex items-center">
-                      <svg style={{ width: '1rem', height: '1rem', marginRight: '0.5rem', color: 'var(--color-orange)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <li key={cIndex} className="text-slate-300 flex items-center">
+                      <svg className="w-4 h-4 mr-2 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {characteristic}
@@ -361,11 +346,11 @@ const DesignSystem = () => {
 
         {/* Implementation Guidelines */}
         <div className="text-center">
-          <h3 className="text-white mb-8" style={{ fontSize: '2rem', fontWeight: '600' }}>
+          <h3 className="doc-section-title">
             Implementation Guidelines
           </h3>
           <div className="card">
-            <p className="text-gray mb-6" style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
+            <p className="text-slate-300 mb-6 leading-relaxed">
               This design system ensures consistent, professional, and accessible interfaces across all 
               Bitcoin treasury management applications. All components follow these timeless principles 
               to maintain quality and usability over time.
@@ -376,23 +361,6 @@ const DesignSystem = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
-                style={{
-                  background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
-                  color: '#ffffff',
-                  border: '1px solid #f97316',
-                  padding: '0.75rem 1.5rem',
-                  borderRadius: '0.375rem',
-                  fontWeight: '600',
-                  textDecoration: 'none',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transition: 'all 0.2s ease-in-out',
-                  fontSize: '1rem',
-                  minHeight: '48px',
-                  cursor: 'pointer',
-                  boxShadow: '0 4px 6px -1px rgba(249, 115, 22, 0.2)'
-                }}
               >
                 View Implementation
               </a>

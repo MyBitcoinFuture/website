@@ -209,7 +209,7 @@ const Docs = () => {
                   backgroundClip: 'text'
                 }}>Documentation</span>
               </h1>
-              <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem', lineHeight: '1.6' }}>
+              <p className="doc-subtitle">
                 Complete technical reference for deployment, API integration, and advanced features.
               </p>
             </div>
@@ -304,16 +304,16 @@ const Docs = () => {
               {docCategories.map((category, index) => {
                 const IconComponent = category.icon;
                 return (
-                  <div key={index} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:shadow-xl hover:border-orange-400 transition-all duration-300 hover:scale-[1.02] group">
-                    <div className="flex items-center mb-8">
-                      <div className="p-3 bg-orange-500/10 rounded-lg border border-orange-500/20 mr-4 group-hover:bg-orange-500/20 transition-colors">
-                        <IconComponent className="w-6 h-6 text-orange-400" />
+                  <div key={index} className="doc-card">
+                    <div className="doc-category-header">
+                      <div className="doc-category-icon">
+                        <IconComponent className="w-6 h-6 text-primary-400" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">
+                        <h3 className="doc-category-title">
                           {category.title}
                         </h3>
-                        <p className="text-gray-400 text-sm leading-relaxed">{category.description}</p>
+                        <p className="doc-category-description">{category.description}</p>
                       </div>
                     </div>
                     
@@ -321,25 +321,25 @@ const Docs = () => {
                       {category.items.map((item, itemIndex) => {
                         const ItemIconComponent = item.icon;
                         return (
-                          <div key={itemIndex} className="border-l-2 border-gray-600 pl-4 py-3 hover:border-orange-400 transition-colors group/item">
+                          <div key={itemIndex} className="doc-item">
                             <div className="flex items-start justify-between">
                               <div className="flex-1">
                                 <div className="flex items-center mb-2">
                                   {ItemIconComponent && (
-                                    <div className="p-1.5 bg-orange-500/10 rounded-md border border-orange-500/20 mr-3 group-hover/item:bg-orange-500/20 transition-colors">
-                                      <ItemIconComponent className="w-4 h-4 text-orange-400" />
+                                    <div className="doc-item-icon">
+                                      <ItemIconComponent className="w-4 h-4 text-primary-400" />
                                     </div>
                                   )}
-                                  <h4 className="text-white font-medium text-base group-hover/item:text-orange-300 transition-colors">
+                                  <h4 className="doc-item-title">
                                     {item.title}
                                   </h4>
                                 </div>
-                                <p className="text-gray-400 text-sm mb-3 leading-relaxed ml-8">{item.description}</p>
+                                <p className="doc-item-description">{item.description}</p>
                                 {item.link && (
                                   item.internal ? (
                                     <Link 
                                       to={item.link}
-                                      className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors inline-flex items-center gap-2 group/link ml-8"
+                                      className="doc-item-link"
                                     >
                                       <span>View Documentation</span>
                                       <ArrowTopRightOnSquareIcon className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
@@ -349,7 +349,7 @@ const Docs = () => {
                                       href={item.link}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors inline-flex items-center gap-2 group/link ml-8"
+                                      className="doc-item-link"
                                     >
                                       <span>View Documentation</span>
                                       <ArrowTopRightOnSquareIcon className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
