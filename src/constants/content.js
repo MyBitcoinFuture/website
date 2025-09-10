@@ -60,5 +60,7 @@ export const USE_CASES = [
 
 export const CONTACT_INFO = {
   description: "Have questions about MyBitcoinFuture? Need support with deployment? Want to discuss plugin development? We're here to help.",
-  placeholder: "Tell us about your inquiry, deployment questions, plugin development, or any other questions about MyBitcoinFuture..."
+  placeholder: "Tell us about your inquiry, deployment questions, plugin development, or any other questions about MyBitcoinFuture...",
+  responseTime: "We typically respond within 24 hours during business days.",
+  alternativeContact: "For urgent matters, you can also reach us through our GitHub issues or community channels."
 };

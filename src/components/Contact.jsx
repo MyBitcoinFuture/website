@@ -75,6 +75,17 @@ const Contact = () => {
           <div className="card animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <ContactForm onSubmit={handleFormSubmit} isSubmitting={isSubmitting} />
           </div>
+          
+          <div className="mt-8 text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+            <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-6">
+              <p className="text-gray-400 text-sm mb-2">
+                {CONTACT_INFO.responseTime}
+              </p>
+              <p className="text-gray-500 text-xs">
+                {CONTACT_INFO.alternativeContact}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
