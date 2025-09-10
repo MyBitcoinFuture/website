@@ -153,9 +153,15 @@
 .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
 
+/* Hero Grid - Responsive layout for hero section */
+.hero-grid {
+  grid-template-columns: 1fr;
+}
+
 @media (min-width: 768px) {
   .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
   .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .hero-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width: 1024px) {

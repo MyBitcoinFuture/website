@@ -141,7 +141,7 @@ const Features = () => {
             {coreFeatures.map((feature, index) => (
               <div key={index} className="card stagger-item" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
                 <div className="flex items-center mb-4">
-                  <div className="text-orange mr-3 p-2 rounded-lg bg-orange-500/10">
+                  <div className="icon-container" style={{ marginRight: 'var(--space-3)' }}>
                     {feature.icon}
                   </div>
                   <h3 className="text-white" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
@@ -151,6 +151,11 @@ const Features = () => {
                 <p className="text-gray" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
                   {feature.description}
                 </p>
+                <div className="mt-4 flex items-center">
+                  <span className="text-green-400 text-sm font-medium bg-green-400/10 px-2 py-1 rounded-full">
+                    ✓ Included
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -172,23 +177,40 @@ const Features = () => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'
           }}>
             {premiumFeatures.map((feature, index) => (
-              <div key={index} className="card stagger-item border-orange-500/20" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
+              <div key={index} className="card stagger-item" style={{ 
+                animationDelay: `${0.1 * (index + 1)}s`,
+                border: '1px solid rgba(249, 115, 22, 0.3)',
+                background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(249, 115, 22, 0.02) 100%)'
+              }}>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
-                    <div className="text-orange mr-3 p-2 rounded-lg bg-orange-500/10">
+                    <div className="icon-container" style={{ 
+                      marginRight: 'var(--space-3)',
+                      background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(249, 115, 22, 0.1))',
+                      borderColor: 'rgba(249, 115, 22, 0.3)'
+                    }}>
                       {feature.icon}
                     </div>
                     <h3 className="text-white" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
                       {feature.title}
                     </h3>
                   </div>
-                  <span className="text-orange font-bold" style={{ fontSize: '1rem' }}>
-                    {feature.price}
-                  </span>
+                  <div className="text-right">
+                    <div className="text-orange font-bold text-lg">{feature.price}</div>
+                    <div className="text-gray text-xs">per month</div>
+                  </div>
                 </div>
-                <p className="text-gray" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+                <p className="text-gray mb-4" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
                   {feature.description}
                 </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-orange text-sm font-medium bg-orange-500/10 px-2 py-1 rounded-full">
+                    ⭐ Premium
+                  </span>
+                  <button className="btn-secondary text-sm" style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}>
+                    Learn More
+                  </button>
+                </div>
               </div>
             ))}
           </div>

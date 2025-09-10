@@ -53,34 +53,56 @@ const Documentation = () => {
   ]
 
   return (
-    <section id="documentation" className="section-padding bg-primary-900/50">
+    <section id="documentation" className="section-padding" style={{ 
+      background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%)'
+    }}>
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-white mb-4 animate-fade-in-up" style={{ 
+            fontSize: 'clamp(2rem, 6vw, 3rem)',
+            fontWeight: '700',
+            lineHeight: '1.2'
+          }}>
             Comprehensive Documentation
           </h2>
-          <p className="text-xl text-primary-200 max-w-3xl mx-auto">
+          <p className="text-gray animate-fade-in-up" style={{ 
+            animationDelay: '0.2s',
+            fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
+            maxWidth: '48rem',
+            margin: '0 auto',
+            lineHeight: '1.6'
+          }}>
             Everything you need to deploy, configure, and extend MyBitcoinFuture. 
             Complete guides, API references, and development resources.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid" style={{ 
+          gap: 'var(--space-xl)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'
+        }}>
           {docSections.map((section, index) => (
             <div
               key={index}
-              className="bg-primary-800/30 rounded-lg p-6 border border-primary-700"
+              className="card stagger-item"
+              style={{ animationDelay: `${0.1 * (index + 1)}s` }}
             >
               <div className="flex items-center mb-4">
-                <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center mr-4">
+                <div className="icon-container" style={{ marginRight: 'var(--space-4)' }}>
                   {section.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-white" style={{ 
+                  fontSize: '1.25rem',
+                  fontWeight: '600'
+                }}>
                   {section.title}
                 </h3>
               </div>
               
-              <p className="text-primary-300 mb-6">
+              <p className="text-gray mb-6" style={{ 
+                fontSize: '1rem',
+                lineHeight: '1.6'
+              }}>
                 {section.description}
               </p>
               
@@ -91,21 +113,34 @@ const Documentation = () => {
                       href={link.href}
                       target={link.external ? "_blank" : undefined}
                       rel={link.external ? "noopener noreferrer" : undefined}
-                      className="text-orange-400 hover:text-orange-300 transition-colors flex items-center"
+                      className="nav-link"
+                      style={{ 
+                        color: 'var(--color-orange)',
+                        fontSize: '0.875rem',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.25rem'
+                      }}
                     >
                       {link.name}
                       {link.external && (
-                        <svg style={{ width: '12px', height: '12px', marginLeft: '4px' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg style={{ width: '12px', height: '12px' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                       )}
                     </a>
                     <span 
-                      className={`px-2 py-1 text-xs rounded-full ${
-                        link.status === 'Available' 
-                          ? 'bg-green-500/20 text-green-400' 
-                          : 'bg-yellow-500/20 text-yellow-400'
-                      }`}
+                      style={{
+                        padding: '0.25rem 0.5rem',
+                        fontSize: '0.75rem',
+                        borderRadius: '9999px',
+                        backgroundColor: link.status === 'Available' 
+                          ? 'rgba(16, 185, 129, 0.2)' 
+                          : 'rgba(245, 158, 11, 0.2)',
+                        color: link.status === 'Available' 
+                          ? '#10b981' 
+                          : '#f59e0b'
+                      }}
                     >
                       {link.status}
                     </span>
@@ -119,23 +154,11 @@ const Documentation = () => {
         <div className="text-center mt-12">
           <a 
             href="/docs"
+            className="btn-primary"
             style={{
-              background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
-              color: '#ffffff',
-              border: '1px solid #f97316',
               padding: '12px 24px',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              fontWeight: '600',
-              transition: 'all 0.2s ease'
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.transform = 'translateY(-1px)';
-              e.target.style.boxShadow = '0 4px 12px rgba(249, 115, 22, 0.3)';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = 'none';
+              fontSize: '1rem',
+              minHeight: '48px'
             }}
           >
             View All Documentation
