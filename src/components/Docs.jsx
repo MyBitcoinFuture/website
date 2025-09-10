@@ -15,7 +15,11 @@ import {
   BookOpenIcon,
   ServerIcon,
   ArrowTopRightOnSquareIcon,
-  MagnifyingGlassIcon
+  MagnifyingGlassIcon,
+  DocumentTextIcon,
+  KeyIcon,
+  CodeBracketIcon,
+  WrenchScrewdriverIcon
 } from '@heroicons/react/24/outline';
 import { searchDocumentation } from '../utils/documentationImporter';
 import DesignSystem from './DesignSystem';
@@ -58,21 +62,24 @@ const Docs = () => {
           description: "Fast deployment and configuration",
           link: "/docs/quickstart",
           internal: true,
-          docFile: "QUICKSTART.md"
+          docFile: "QUICKSTART.md",
+          icon: RocketLaunchIcon
         },
         { 
           title: "System Overview", 
           description: "Architecture and component overview",
           link: "/docs/system-overview",
           internal: true,
-          docFile: "SYSTEM_OVERVIEW.md"
+          docFile: "SYSTEM_OVERVIEW.md",
+          icon: BuildingOfficeIcon
         },
         { 
           title: "Onboarding Guide", 
           description: "Enhanced setup and configuration",
           link: "/docs/onboarding",
           internal: true,
-          docFile: "ONBOARDING_GUIDE.md"
+          docFile: "ONBOARDING_GUIDE.md",
+          icon: BookOpenIcon
         }
       ]
     },
@@ -86,20 +93,23 @@ const Docs = () => {
           description: "Essential CLI commands and API endpoints",
           link: "/docs/quick-reference",
           internal: true,
-          docFile: "QUICK_REFERENCE.md"
+          docFile: "QUICK_REFERENCE.md",
+          icon: DocumentTextIcon
         },
         { 
           title: "CLI Standards", 
           description: "Command-line interface consistency standards",
           link: "/docs/cli-standards",
           internal: true,
-          docFile: "CLI_CONSISTENCY_STANDARDS.md"
+          docFile: "CLI_CONSISTENCY_STANDARDS.md",
+          icon: CommandLineIcon
         },
         { 
           title: "Feature Overview", 
           description: "Complete feature list and capabilities",
           link: "/#features",
-          internal: true
+          internal: true,
+          icon: ChartBarIcon
         }
       ]
     },
@@ -109,17 +119,19 @@ const Docs = () => {
       icon: CpuChipIcon,
       items: [
         { 
-          title: "API Documentation", 
+          title: "API Reference", 
           description: "Complete REST API endpoints and examples",
           link: "/docs/api-documentation",
           internal: true,
-          docFile: "API_DOCUMENTATION.md"
+          docFile: "API_DOCUMENTATION.md",
+          icon: CodeBracketIcon
         },
         { 
           title: "Authentication", 
           description: "JWT authentication and security",
           link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md#authentication",
-          internal: false
+          internal: false,
+          icon: KeyIcon
         }
       ]
     },
@@ -132,19 +144,22 @@ const Docs = () => {
           title: "Development Guide", 
           description: "Technical development and contribution guide",
           link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/development/guide.md",
-          internal: false
+          internal: false,
+          icon: WrenchScrewdriverIcon
         },
         { 
           title: "Deployment Guide", 
           description: "Deployment and operations guide",
           link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/deployment/guide.md",
-          internal: false
+          internal: false,
+          icon: ServerIcon
         },
         { 
           title: "Source Code", 
           description: "Browse all repositories and source",
           link: "https://github.com/MyBitcoinFuture",
-          internal: false
+          internal: false,
+          icon: CodeBracketIcon
         }
       ]
     },
@@ -157,13 +172,15 @@ const Docs = () => {
           title: "Contact & Support", 
           description: "Get help and community resources",
           link: "/#contact",
-          internal: true
+          internal: true,
+          icon: ShieldCheckIcon
         },
         { 
           title: "Technical Documentation", 
           description: "Detailed technical references and architecture",
           link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs",
-          internal: false
+          internal: false,
+          icon: DocumentTextIcon
         }
       ]
     }
@@ -301,39 +318,49 @@ const Docs = () => {
                     </div>
                     
                     <div className="space-y-4">
-                      {category.items.map((item, itemIndex) => (
-                        <div key={itemIndex} className="border-l-2 border-gray-600 pl-4 py-3 hover:border-orange-400 transition-colors group/item">
-                          <div className="flex items-start justify-between">
-                            <div className="flex-1">
-                              <h4 className="text-white font-medium mb-2 text-base group-hover/item:text-orange-300 transition-colors">
-                                {item.title}
-                              </h4>
-                              <p className="text-gray-400 text-sm mb-3 leading-relaxed">{item.description}</p>
-                              {item.link && (
-                                item.internal ? (
-                                  <Link 
-                                    to={item.link}
-                                    className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors inline-flex items-center gap-2 group/link"
-                                  >
-                                    <span>View Documentation</span>
-                                    <ArrowTopRightOnSquareIcon className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                                  </Link>
-                                ) : (
-                                  <a 
-                                    href={item.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors inline-flex items-center gap-2 group/link"
-                                  >
-                                    <span>View Documentation</span>
-                                    <ArrowTopRightOnSquareIcon className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                                  </a>
-                                )
-                              )}
+                      {category.items.map((item, itemIndex) => {
+                        const ItemIconComponent = item.icon;
+                        return (
+                          <div key={itemIndex} className="border-l-2 border-gray-600 pl-4 py-3 hover:border-orange-400 transition-colors group/item">
+                            <div className="flex items-start justify-between">
+                              <div className="flex-1">
+                                <div className="flex items-center mb-2">
+                                  {ItemIconComponent && (
+                                    <div className="p-1.5 bg-orange-500/10 rounded-md border border-orange-500/20 mr-3 group-hover/item:bg-orange-500/20 transition-colors">
+                                      <ItemIconComponent className="w-4 h-4 text-orange-400" />
+                                    </div>
+                                  )}
+                                  <h4 className="text-white font-medium text-base group-hover/item:text-orange-300 transition-colors">
+                                    {item.title}
+                                  </h4>
+                                </div>
+                                <p className="text-gray-400 text-sm mb-3 leading-relaxed ml-8">{item.description}</p>
+                                {item.link && (
+                                  item.internal ? (
+                                    <Link 
+                                      to={item.link}
+                                      className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors inline-flex items-center gap-2 group/link ml-8"
+                                    >
+                                      <span>View Documentation</span>
+                                      <ArrowTopRightOnSquareIcon className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                                    </Link>
+                                  ) : (
+                                    <a 
+                                      href={item.link}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors inline-flex items-center gap-2 group/link ml-8"
+                                    >
+                                      <span>View Documentation</span>
+                                      <ArrowTopRightOnSquareIcon className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                                    </a>
+                                  )
+                                )}
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 );
