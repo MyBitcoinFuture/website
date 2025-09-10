@@ -54,9 +54,9 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: 'grid', gap: 'var(--space-lg)' }}>
-      <div style={{ display: 'grid', gap: 'var(--space-sm)' }}>
-        <label htmlFor="name" className="text-white" style={{ fontWeight: '600', fontSize: '1rem' }}>
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="space-y-2">
+        <label htmlFor="name" className="text-white font-semibold text-base">
           Name *
         </label>
         <input
@@ -73,14 +73,14 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
           }}
         />
         {errors.name && (
-          <div className="text-red-500" style={{ fontSize: '0.875rem', marginTop: 'var(--space-xs)' }}>
+          <div className="text-red-500 text-sm mt-1">
             {errors.name}
           </div>
         )}
       </div>
 
-      <div style={{ display: 'grid', gap: 'var(--space-sm)' }}>
-        <label htmlFor="email" className="text-white" style={{ fontWeight: '600', fontSize: '1rem' }}>
+      <div className="space-y-2">
+        <label htmlFor="email" className="text-white font-semibold text-base">
           Email *
         </label>
         <input
@@ -97,14 +97,14 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
           }}
         />
         {errors.email && (
-          <div className="text-red-500" style={{ fontSize: '0.875rem', marginTop: 'var(--space-xs)' }}>
+          <div className="text-red-500 text-sm mt-1">
             {errors.email}
           </div>
         )}
       </div>
 
-      <div style={{ display: 'grid', gap: 'var(--space-sm)' }}>
-        <label htmlFor="company" className="text-white" style={{ fontWeight: '600', fontSize: '1rem' }}>
+      <div className="space-y-2">
+        <label htmlFor="company" className="text-white font-semibold text-base">
           Company
         </label>
         <input
@@ -117,8 +117,8 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
         />
       </div>
 
-      <div style={{ display: 'grid', gap: 'var(--space-sm)' }}>
-        <label htmlFor="message" className="text-white" style={{ fontWeight: '600', fontSize: '1rem' }}>
+      <div className="space-y-2">
+        <label htmlFor="message" className="text-white font-semibold text-base">
           Message *
         </label>
         <textarea
@@ -135,7 +135,7 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
           }}
         />
         {errors.message && (
-          <div className="text-red-500" style={{ fontSize: '0.875rem', marginTop: 'var(--space-xs)' }}>
+          <div className="text-red-500 text-sm mt-1">
             {errors.message}
           </div>
         )}
@@ -144,17 +144,9 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="btn-primary"
-        style={{ 
-          opacity: isSubmitting ? 0.7 : 1,
-          padding: '16px 32px',
-          fontSize: '1.125rem',
-          fontWeight: '600',
-          minHeight: '56px',
-          justifySelf: 'center',
-          width: '100%',
-          maxWidth: '300px'
-        }}
+        className={`btn-primary w-full max-w-xs mx-auto py-4 px-8 text-lg font-semibold min-h-[56px] ${
+          isSubmitting ? 'opacity-70' : 'opacity-100'
+        }`}
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
