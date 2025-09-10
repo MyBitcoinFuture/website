@@ -50,11 +50,11 @@ const UseCases = () => {
   return (
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-white mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-white mb-3 text-3xl font-bold">
             Use Cases
           </h2>
-          <p className="text-gray" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto' }}>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
             MyBitcoinFuture serves organizations across the spectrum of Bitcoin treasury management needs, 
             from basic portfolio tracking to advanced research and sovereign infrastructure.
           </p>
@@ -63,27 +63,27 @@ const UseCases = () => {
         <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
           {useCases.map((useCase, index) => (
             <div key={index} className="card">
-              <div className="flex items-center mb-4">
-                <div className="mr-4 text-primary-500">
+              <div className="flex items-start mb-3">
+                <div className="mr-3 text-primary-500 mt-1">
                   {useCase.icon}
                 </div>
-                <h3 className="text-white" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
-                  {useCase.title}
-                </h3>
+                <div className="flex-1">
+                  <h3 className="text-white text-lg font-semibold mb-2">
+                    {useCase.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                    {useCase.description}
+                  </p>
+                  <ul className="space-y-1">
+                    {useCase.characteristics.map((characteristic, cIndex) => (
+                      <li key={cIndex} className="text-gray-300 text-sm flex items-center">
+                        <span className="text-green-400 mr-2 text-xs">✓</span>
+                        {characteristic}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <p className="text-gray mb-6" style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
-                {useCase.description}
-              </p>
-              <ul className="space-y-2">
-                {useCase.characteristics.map((characteristic, cIndex) => (
-                  <li key={cIndex} className="text-gray-300 flex items-center">
-                    <svg style={{ width: '1rem', height: '1rem', marginRight: '0.5rem', color: 'var(--color-orange)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {characteristic}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
