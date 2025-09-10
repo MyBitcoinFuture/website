@@ -39,7 +39,6 @@ export const PLUGIN_PRICING = {
 export const DEPLOYMENT_OPTIONS = [
   "Docker containers",
   "Platform marketplaces (Start9, Umbrel)",
-  "Kubernetes clusters", 
   "Traditional server deployments"
 ];
 

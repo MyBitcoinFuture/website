@@ -29,7 +29,7 @@ const FAQ = () => {
     },
     {
       question: "What deployment options are available?",
-      answer: "Multiple deployment options are available including Docker containers, platform marketplaces (Start9, Umbrel), Kubernetes clusters, and traditional server deployments. Each option maintains the same security and functionality while accommodating different infrastructure preferences and operational requirements."
+      answer: "Multiple deployment options are available including Docker containers, platform marketplaces (Start9, Umbrel), and traditional server deployments. Each option maintains the same security and functionality while accommodating different infrastructure preferences and operational requirements."
     },
     {
       question: "How does the plugin system work?",
