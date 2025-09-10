@@ -169,7 +169,7 @@ const Header = () => {
             }}
           >
             <div className="container-max">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
                 {NAVIGATION_ITEMS.map((item) => (
                   item.isAnchor ? (
                     <a
@@ -178,11 +178,14 @@ const Header = () => {
                       onClick={(e) => handleAnchorClick(item.href, e)}
                       className="nav-link"
                       style={{
-                        padding: '12px 16px',
-                        fontSize: '16px',
-                        minHeight: '44px',
+                        padding: '16px 20px',
+                        fontSize: '18px',
+                        minHeight: '48px',
                         display: 'flex',
-                        alignItems: 'center'
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                        borderBottom: '1px solid rgba(71, 85, 105, 0.2)'
                       }}
                     >
                       {item.name}
@@ -194,11 +197,14 @@ const Header = () => {
                       className="nav-link"
                       onClick={() => setIsMenuOpen(false)}
                       style={{
-                        padding: '12px 16px',
-                        fontSize: '16px',
-                        minHeight: '44px',
+                        padding: '16px 20px',
+                        fontSize: '18px',
+                        minHeight: '48px',
                         display: 'flex',
-                        alignItems: 'center'
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                        borderBottom: '1px solid rgba(71, 85, 105, 0.2)'
                       }}
                     >
                       {item.name}
@@ -212,15 +218,17 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className="btn-primary"
                   style={{
-                    padding: '12px 16px',
-                    fontSize: '16px',
-                    minHeight: '44px',
-                    marginTop: '8px',
+                    padding: '16px 24px',
+                    fontSize: '18px',
+                    minHeight: '56px',
+                    marginTop: '16px',
                     textAlign: 'center',
-                    display: 'inline-flex',
+                    display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    gap: '0.5rem'
+                    gap: '0.75rem',
+                    width: '100%',
+                    borderRadius: '12px'
                   }}
                 >
                   <svg style={{ width: '1rem', height: '1rem' }} fill="currentColor" viewBox="0 0 24 24">
