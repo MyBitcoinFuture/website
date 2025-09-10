@@ -177,10 +177,20 @@ const Docs = () => {
           <div className="container-max">
             {/* Header */}
             <div className="text-center mb-16">
-              <h1 className="mb-8">
+              <h1 className="mb-8" style={{ 
+                fontSize: 'clamp(2.5rem, 8vw, 4rem)',
+                fontWeight: '800',
+                lineHeight: '1.1',
+                letterSpacing: '-0.02em'
+              }}>
                 <span className="text-white">MyBitcoinFuture</span>
                 <br />
-                <span className="text-orange">Documentation</span>
+                <span className="text-white" style={{ 
+                  background: 'linear-gradient(135deg, #ffffff 0%, #f97316 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}>Documentation</span>
               </h1>
               <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem', lineHeight: '1.6' }}>
                 Complete technical reference for deployment, API integration, and advanced features.

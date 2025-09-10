@@ -78,49 +78,58 @@ const PluginEcosystem = () => {
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-16">
           {pluginCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="card stagger-item" style={{ animationDelay: `${0.1 * (categoryIndex + 1)}s` }}>
-              <div className="mb-8">
-                <h3 className="text-white mb-2" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
+            <div key={categoryIndex} className="stagger-item" style={{ animationDelay: `${0.1 * (categoryIndex + 1)}s` }}>
+              <div className="text-center mb-12">
+                <h3 className="text-white mb-4" style={{ fontSize: '2rem', fontWeight: '700' }}>
                   {category.title}
                 </h3>
-                <p className="text-gray" style={{ fontSize: '1.1rem' }}>
+                <p className="text-gray" style={{ fontSize: '1.25rem', maxWidth: '48rem', margin: '0 auto', lineHeight: '1.6' }}>
                   {category.description}
                 </p>
               </div>
 
               <div className="grid" style={{ 
-                gap: '1.5rem',
+                gap: 'var(--space-xl)',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))'
               }}>
                 {category.plugins.map((plugin, pluginIndex) => (
-                  <div key={pluginIndex} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105">
-                    <div className="mb-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-white" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
-                          {plugin.name}
-                        </h4>
-                        {plugin.price && (
-                          <span className="text-orange font-bold" style={{ fontSize: '1rem' }}>
-                            {plugin.price}
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-gray-300 mb-4" style={{ fontSize: '1rem', lineHeight: '1.5' }}>
-                        {plugin.description}
-                      </p>
+                  <div key={pluginIndex} className="card" style={{ 
+                    border: '1px solid rgba(249, 115, 22, 0.2)',
+                    background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.03) 0%, rgba(249, 115, 22, 0.01) 100%)'
+                  }}>
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-white" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
+                        {plugin.name}
+                      </h4>
+                      {plugin.price && (
+                        <div className="text-right">
+                          <div className="text-orange font-bold text-lg">{plugin.price}</div>
+                          <div className="text-gray text-xs">per month</div>
+                        </div>
+                      )}
                     </div>
-
-                    <div className="space-y-2">
+                    <p className="text-gray mb-6" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+                      {plugin.description}
+                    </p>
+                    <div className="space-y-3">
                       {plugin.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-gray-300">
-                          <svg style={{ width: '1rem', height: '1rem', marginRight: '0.5rem', color: 'var(--color-orange)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div key={featureIndex} className="flex items-center text-gray">
+                          <svg style={{ width: '1rem', height: '1rem', marginRight: 'var(--space-2)', color: 'var(--color-orange)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           {feature}
                         </div>
                       ))}
+                    </div>
+                    <div className="mt-6 flex items-center justify-between">
+                      <span className="text-orange text-sm font-medium bg-orange-500/10 px-3 py-1 rounded-full">
+                        ⭐ Premium Plugin
+                      </span>
+                      <button className="btn-secondary text-sm" style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}>
+                        Learn More
+                      </button>
                     </div>
                   </div>
                 ))}
