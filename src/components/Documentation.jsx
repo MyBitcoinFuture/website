@@ -10,7 +10,11 @@ import {
   ChartBarIcon,
   KeyIcon,
   ServerIcon,
-  WrenchScrewdriverIcon
+  WrenchScrewdriverIcon,
+  PuzzlePieceIcon,
+  CloudArrowUpIcon,
+  CpuChipIcon,
+  ComputerDesktopIcon
 } from '@heroicons/react/24/outline'
 
 const Documentation = () => {
@@ -39,22 +43,22 @@ const Documentation = () => {
     {
       title: "Development",
       description: "Development guides and standards for contributors.",
-      icon: <CogIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
+      icon: <WrenchScrewdriverIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
-        { name: "Plugin Development", href: "https://github.com/MyBitcoinFuture/dashboard/tree/main/plugins", status: "Available", external: true },
-        { name: "Contributing Guidelines", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/CONTRIBUTING.md", status: "Available", external: true },
-        { name: "Development Setup", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/README.md#development", status: "Available", external: true }
+        { name: "Plugin Development", href: "https://github.com/MyBitcoinFuture/dashboard/tree/main/plugins", status: "Available", external: true, icon: PuzzlePieceIcon },
+        { name: "Contributing Guidelines", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/CONTRIBUTING.md", status: "Available", external: true, icon: DocumentTextIcon },
+        { name: "Development Setup", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/README.md#development", status: "Available", external: true, icon: CommandLineIcon }
       ]
     },
     {
       title: "Deployment",
       description: "Deployment guides for different platforms and environments.",
-      icon: <BoltIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
+      icon: <CloudArrowUpIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
-        { name: "Docker Deployment", href: "https://github.com/MyBitcoinFuture/dashboard#docker-deployment", status: "Available", external: true },
-        { name: "Start9 Installation", href: "https://github.com/MyBitcoinFuture/platform-manifests/tree/main/start9", status: "Available", external: true },
-        { name: "Umbrel App", href: "https://github.com/MyBitcoinFuture/platform-manifests/tree/main/umbrel", status: "Available", external: true },
-        { name: "Manual Installation", href: "https://github.com/MyBitcoinFuture/dashboard#installation", status: "Available", external: true }
+        { name: "Docker Deployment", href: "https://github.com/MyBitcoinFuture/dashboard#docker-deployment", status: "Available", external: true, icon: CpuChipIcon },
+        { name: "Start9 Installation", href: "https://github.com/MyBitcoinFuture/platform-manifests/tree/main/start9", status: "Available", external: true, icon: ComputerDesktopIcon },
+        { name: "Umbrel App", href: "https://github.com/MyBitcoinFuture/platform-manifests/tree/main/umbrel", status: "Available", external: true, icon: ComputerDesktopIcon },
+        { name: "Manual Installation", href: "https://github.com/MyBitcoinFuture/dashboard#installation", status: "Available", external: true, icon: CommandLineIcon }
       ]
     }
   ]
