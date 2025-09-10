@@ -1,4 +1,5 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import Layout from './components/Layout'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -24,6 +25,17 @@ import ScrollProgress from './components/ScrollProgress'
 import BackToTop from './components/BackToTop'
 
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Handle SPA routing redirect from 404.html
+    const redirectPath = sessionStorage.getItem('redirectPath');
+    if (redirectPath) {
+      sessionStorage.removeItem('redirectPath');
+      navigate(redirectPath, { replace: true });
+    }
+  }, [navigate]);
+
   return (
     <>
       {/* Scroll Progress Indicator */}
