@@ -20,10 +20,16 @@ import ReleaseAnnouncements from './components/ReleaseAnnouncements'
 import Privacy from './components/Privacy'
 import Terms from './components/Terms'
 import Cookies from './components/Cookies'
+import Testimonials from './components/Testimonials'
+import ScrollProgress from './components/ScrollProgress'
+import BackToTop from './components/BackToTop'
 
 function App() {
   return (
     <>
+      {/* Scroll Progress Indicator */}
+      <ScrollProgress />
+      
       {/* Skip link for accessibility */}
       <a 
         href="#main-content" 
@@ -56,6 +62,7 @@ function App() {
             <Hero />
             <BitcoinTreasuryConcepts />
             <Features />
+            <Testimonials />
             <PluginEcosystem />
             <ReleaseAnnouncements />
             <UseCases />
@@ -96,6 +103,9 @@ function App() {
           </Layout>
         } />
       </Routes>
+      
+      {/* Back to Top Button */}
+      <BackToTop />
     </>
   )
 }

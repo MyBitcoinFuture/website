@@ -138,4 +138,193 @@
   .error-message {
     @apply text-slate-300 mb-8;
   }
+
+  /* Advanced UX Components */
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      rgba(249, 115, 22, 0.1) 0%, 
+      rgba(234, 88, 12, 0.05) 25%, 
+      rgba(30, 41, 59, 0.8) 50%, 
+      rgba(15, 23, 42, 0.9) 100%);
+  }
+
+  .floating-card {
+    @apply transform transition-all duration-700 ease-out;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating-card:hover {
+    @apply scale-105 shadow-2xl;
+    animation-play-state: paused;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  .slide-in-up {
+    animation: slideInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  .fade-in-delay-1 { animation-delay: 0.2s; }
+  .fade-in-delay-2 { animation-delay: 0.4s; }
+  .fade-in-delay-3 { animation-delay: 0.6s; }
+  .fade-in-delay-4 { animation-delay: 0.8s; }
+
+  .interactive-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .interactive-hover:hover {
+    @apply transform scale-105 shadow-xl;
+  }
+
+  .trust-indicator {
+    @apply flex items-center gap-2 text-sm text-slate-400;
+  }
+
+  .trust-indicator::before {
+    content: "✓";
+    @apply text-green-400 font-bold;
+  }
+
+  .metric-card {
+    @apply bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center transition-all duration-300 hover:bg-slate-800/50 hover:border-primary-400/50;
+  }
+
+  .metric-value {
+    @apply text-3xl font-bold text-white mb-1;
+  }
+
+  .metric-label {
+    @apply text-sm text-slate-400;
+  }
+
+  .cta-enhanced {
+    @apply relative overflow-hidden;
+  }
+
+  .cta-enhanced::before {
+    content: "";
+    @apply absolute inset-0 bg-gradient-to-r from-primary-500/20 to-primary-600/20 opacity-0 transition-opacity duration-300;
+  }
+
+  .cta-enhanced:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Bitcoin-themed animations */
+  .bitcoin-pulse {
+    animation: bitcoin-pulse 3s ease-in-out infinite;
+  }
+
+  .security-shield {
+    @apply relative;
+  }
+
+  .security-shield::before {
+    content: "🛡️";
+    @apply absolute -top-2 -right-2 text-lg animate-bounce;
+  }
+
+  /* Advanced grid layouts */
+  .feature-grid {
+    @apply grid gap-6;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .testimonial-card {
+    @apply bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 relative;
+  }
+
+  .testimonial-card::before {
+    content: """;
+    @apply absolute -top-2 -left-2 text-4xl text-primary-400/30 font-serif;
+  }
+
+  /* Responsive typography */
+  .hero-title {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight;
+    background: linear-gradient(135deg, #ffffff 0%, #f97316 50%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6;
+  }
+
+  .subsection-title {
+    @apply text-xl sm:text-2xl font-semibold text-white mb-4;
+  }
+}
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
+  100% { box-shadow: 0 0 40px rgba(249, 115, 22, 0.6); }
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bitcoin-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% { 
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

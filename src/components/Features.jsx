@@ -60,43 +60,62 @@ const Features = () => {
 
 
   return (
-    <section id="features" className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-white mb-3 text-3xl font-bold">
+    <section id="features" className="py-16 relative">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-primary-400/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="section-title">
             Enterprise Bitcoin Treasury Features
           </h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+          <p className="text-slate-300 text-lg max-w-3xl mx-auto leading-relaxed">
             {BRAND_MESSAGING.valueProposition}
           </p>
         </div>
 
         {/* Core Features Section */}
-        <div className="mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-white mb-2 text-xl font-semibold">
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="subsection-title">
               Core Features <span className="text-green-400">(Included)</span>
             </h3>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Everything you need to manage your Bitcoin treasury professionally, included at no extra cost.
+            </p>
           </div>
           
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="feature-grid">
             {coreFeatures.map((feature, index) => (
-              <div key={index} className="card">
-                <div className="flex items-start mb-3">
-                  <div className="mr-3 text-primary-500 mt-1">
+              <div 
+                key={index} 
+                className="card interactive-hover animate-on-scroll"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start mb-4">
+                  <div className="mr-4 text-primary-500 mt-1 p-2 bg-primary-500/10 rounded-lg">
                     {feature.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-white text-lg font-semibold mb-2">
+                    <h3 className="text-white text-lg font-semibold mb-3">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">
+                    <p className="text-slate-300 text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
                 </div>
-                <div className="flex justify-end">
-                  <span className="text-green-400 text-xs font-medium bg-green-400/10 px-2 py-1 rounded-full">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-green-400 text-xs font-medium">
+                      Always Available
+                    </span>
+                  </div>
+                  <span className="text-green-400 text-xs font-medium bg-green-400/10 px-3 py-1 rounded-full">
                     ✓ Included
                   </span>
                 </div>
@@ -105,19 +124,66 @@ const Features = () => {
           </div>
         </div>
 
-        {/* Premium Features CTA */}
-        <div className="text-center mt-12">
-          <div className="bg-primary-500/10 border border-primary-500/30 rounded-2xl p-8">
-            <h3 className="text-white text-xl font-semibold mb-3">
-              Need Advanced Features?
+        {/* Feature Comparison */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="subsection-title">
+              Why Choose MyBitcoinFuture?
             </h3>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Explore our comprehensive plugin ecosystem with advanced Lightning integration, 
-              treasury governance, accounting systems, and enterprise automation.
-            </p>
-            <a href="#plugin-ecosystem" className="btn-primary">
-              View Plugin Ecosystem
-            </a>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="metric-card mb-4">
+                <div className="metric-value text-primary-400">100%</div>
+                <div className="metric-label">Self-Hosted</div>
+              </div>
+              <p className="text-slate-300 text-sm">
+                Complete control over your Bitcoin infrastructure
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="metric-card mb-4">
+                <div className="metric-value text-green-400">0</div>
+                <div className="metric-label">Trust Required</div>
+              </div>
+              <p className="text-slate-300 text-sm">
+                xpub-only architecture eliminates counterparty risk
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="metric-card mb-4">
+                <div className="metric-value text-blue-400">∞</div>
+                <div className="metric-label">Extensibility</div>
+              </div>
+              <p className="text-slate-300 text-sm">
+                Plugin system for unlimited customization
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Premium Features CTA */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-primary-500/10 to-primary-600/10 border border-primary-500/30 rounded-2xl p-8 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 to-transparent"></div>
+            <div className="relative z-10">
+              <h3 className="text-white text-2xl font-semibold mb-4">
+                Need Advanced Features?
+              </h3>
+              <p className="text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Explore our comprehensive plugin ecosystem with advanced Lightning integration, 
+                treasury governance, accounting systems, and enterprise automation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#plugin-ecosystem" className="btn-primary cta-enhanced">
+                  View Plugin Ecosystem
+                </a>
+                <a href="#deployment" className="btn-secondary cta-enhanced">
+                  Start Free Trial
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

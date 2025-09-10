@@ -1,73 +1,155 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BRAND_MESSAGING } from '../constants/content';
 import Container from './Container';
 
 const Hero = () => {
+  const [currentMetric, setCurrentMetric] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const metrics = [
+    { value: "100%", label: "Self-Hosted" },
+    { value: "0", label: "Trust Required" },
+    { value: "∞", label: "Security Level" }
+  ];
+
+  const trustIndicators = [
+    "Open Source & Auditable",
+    "No Private Key Access",
+    "Enterprise Grade Security",
+    "Community Verified"
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentMetric((prev) => (prev + 1) % metrics.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="py-16 min-h-screen flex items-center relative overflow-hidden">
+    <section className="py-16 min-h-screen flex items-center relative overflow-hidden hero-gradient">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-20 h-20 bg-primary-500/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-32 h-32 bg-primary-400/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-primary-600/10 rounded-full blur-lg animate-pulse delay-2000"></div>
+      </div>
+
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
-          <div className="animate-fade-in-up">
-            <h1 className="text-white mb-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh] relative z-10">
+          {/* Left Column - Content */}
+          <div className={`space-y-8 ${isVisible ? 'slide-in-left' : ''}`}>
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap gap-4 mb-6">
+              {trustIndicators.map((indicator, index) => (
+                <div key={index} className="trust-indicator fade-in-delay-1">
+                  {indicator}
+                </div>
+              ))}
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="hero-title mb-6">
               {BRAND_MESSAGING.tagline}
             </h1>
-            <p className="text-gray-400 mb-8 text-lg lg:text-xl leading-relaxed max-w-3xl">
+
+            {/* Description */}
+            <p className="text-slate-300 mb-8 text-lg lg:text-xl leading-relaxed max-w-3xl">
               {BRAND_MESSAGING.description}
             </p>
+
+            {/* Dynamic Metrics */}
             <div className="flex gap-8 mb-8">
-              <div className="text-center">
-                <div className="text-primary-500 font-bold text-2xl mb-1">xpub-Only</div>
-                <div className="text-gray-400 text-sm">Architecture</div>
-              </div>
-              <div className="text-center">
-                <div className="text-primary-500 font-bold text-2xl mb-1">Self-Hosted</div>
-                <div className="text-gray-400 text-sm">Deployment</div>
-              </div>
-              <div className="text-center">
-                <div className="text-primary-500 font-bold text-2xl mb-1">No Trust</div>
-                <div className="text-gray-400 text-sm">Required</div>
-              </div>
+              {metrics.map((metric, index) => (
+                <div 
+                  key={index} 
+                  className={`metric-card interactive-hover ${index === currentMetric ? 'pulse-glow' : ''}`}
+                >
+                  <div className="metric-value bitcoin-pulse">
+                    {metric.value}
+                  </div>
+                  <div className="metric-label">
+                    {metric.label}
+                  </div>
+                </div>
+              ))}
             </div>
+
+            {/* Enhanced CTAs */}
             <div className="flex gap-4 flex-wrap">
-              <a href="#deployment" className="btn-primary">
-                Deploy in 5 Minutes
+              <a href="#deployment" className="btn-primary cta-enhanced">
+                <span className="relative z-10">Deploy in 5 Minutes</span>
               </a>
-              <a href="#features" className="btn-secondary">
-                See How It Works
+              <a href="#features" className="btn-secondary cta-enhanced">
+                <span className="relative z-10">See How It Works</span>
               </a>
+            </div>
+
+            {/* Social Proof */}
+            <div className="flex items-center gap-6 pt-4">
+              <div className="text-sm text-slate-400">
+                Trusted by organizations worldwide
+              </div>
+              <div className="flex gap-2">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <span key={star} className="text-yellow-400 text-lg">★</span>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="flex justify-center items-center">
+
+          {/* Right Column - Interactive Demo */}
+          <div className={`flex justify-center items-center ${isVisible ? 'slide-in-right' : ''}`}>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-primary-600/20 rounded-2xl blur-3xl animate-pulse"></div>
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 shadow-2xl min-w-[400px] min-h-[300px]">
+              {/* Animated background glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-primary-600/20 rounded-2xl blur-3xl pulse-glow"></div>
+              
+              {/* Main demo card */}
+              <div className="floating-card bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 shadow-2xl min-w-[400px] min-h-[300px]">
                 <div className="text-center mb-6">
-                  <div className="text-primary-400 text-2xl font-bold mb-2">Why Choose MyBitcoinFuture?</div>
-                  <div className="text-gray-400 text-sm">The only platform that truly respects your sovereignty</div>
+                  <div className="text-primary-400 text-2xl font-bold mb-2 security-shield">
+                    Why Choose MyBitcoinFuture?
+                  </div>
+                  <div className="text-slate-400 text-sm">The only platform that truly respects your sovereignty</div>
                 </div>
+                
                 <div className="space-y-4">
-                  <div className="flex items-start p-3 bg-slate-700/50 rounded-lg">
+                  <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">
                     <span className="text-green-400 text-xl mr-3">✓</span>
                     <div>
                       <div className="text-white font-bold text-sm">Your Private Keys Never Leave Your Device</div>
-                      <div className="text-gray-400 text-xs">xpub-only architecture means we can't access your Bitcoin</div>
+                      <div className="text-slate-400 text-xs">xpub-only architecture means we can't access your Bitcoin</div>
                     </div>
                   </div>
-                  <div className="flex items-start p-3 bg-slate-700/50 rounded-lg">
+                  <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">
                     <span className="text-green-400 text-xl mr-3">✓</span>
                     <div>
                       <div className="text-white font-bold text-sm">Deploy on Your Own Infrastructure</div>
-                      <div className="text-gray-400 text-xs">No cloud dependencies, no third-party servers</div>
+                      <div className="text-slate-400 text-xs">No cloud dependencies, no third-party servers</div>
                     </div>
                   </div>
-                  <div className="flex items-start p-3 bg-slate-700/50 rounded-lg">
+                  <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">
                     <span className="text-green-400 text-xl mr-3">✓</span>
                     <div>
                       <div className="text-white font-bold text-sm">Enterprise Features Without the Risk</div>
-                      <div className="text-gray-400 text-xs">Multi-sig, analytics, and governance - all self-hosted</div>
+                      <div className="text-slate-400 text-xs">Multi-sig, analytics, and governance - all self-hosted</div>
                     </div>
                   </div>
                 </div>
+
+                {/* Live demo indicator */}
+                <div className="mt-6 text-center">
+                  <div className="inline-flex items-center gap-2 text-xs text-primary-400 bg-primary-400/10 px-3 py-1 rounded-full">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    Live Demo Available
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Bitcoin icon */}
+              <div className="absolute -top-4 -right-4 text-4xl bitcoin-pulse">
+                ₿
               </div>
             </div>
           </div>
