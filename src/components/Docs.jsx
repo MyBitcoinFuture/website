@@ -190,8 +190,8 @@ const Docs = () => {
     <div className="min-h-screen text-white" style={{ background: 'var(--bg-primary)' }}>
       <Header />
       <main>
-        <section className="section-padding" style={{ paddingTop: 'var(--space-24)', paddingBottom: 'var(--space-16)' }}>
-          <div className="container-max">
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center mb-16">
               <h1 className="mb-8" style={{ 
