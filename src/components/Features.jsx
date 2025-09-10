@@ -58,58 +58,6 @@ const Features = () => {
     }
   ];
 
-  const premiumFeatures = [
-    {
-      title: "Advanced Lightning Integration",
-      description: "Full Lightning Network capabilities with payment routing, channel management, and multi-provider support.",
-      price: "$49/month",
-      icon: (
-        <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      )
-    },
-    {
-      title: "Treasury Governance",
-      description: "Board meeting automation, governance voting systems, and policy enforcement with stakeholder management.",
-      price: "$99/month",
-      icon: (
-        <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      )
-    },
-    {
-      title: "Accounting Integration",
-      description: "Integration with QuickBooks, Xero, and other accounting systems for automated transaction synchronization.",
-      price: "$79/month",
-      icon: (
-        <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-      )
-    },
-    {
-      title: "Workflow Automation",
-      description: "Advanced automation with smart triggers, conditional workflows, and process management for operational efficiency.",
-      price: "$59/month",
-      icon: (
-        <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      )
-    },
-    {
-      title: "Custom Branding",
-      description: "White-label customization with custom themes, logos, and branding for enterprise clients.",
-      price: "$49/month",
-      icon: (
-        <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M15 7l3-3m0 0l-3-3m3 3H9" />
-        </svg>
-      )
-    }
-  ];
 
   return (
     <section id="features" className="py-16">
@@ -157,38 +105,19 @@ const Features = () => {
           </div>
         </div>
 
-        {/* Premium Features Section */}
-        <div>
-          <div className="text-center mb-8">
-            <h3 className="text-white mb-2 text-xl font-semibold">
-              Premium Plugins <span className="text-primary-500">(Subscription Required)</span>
+        {/* Premium Features CTA */}
+        <div className="text-center mt-12">
+          <div className="bg-primary-500/10 border border-primary-500/30 rounded-2xl p-8">
+            <h3 className="text-white text-xl font-semibold mb-3">
+              Need Advanced Features?
             </h3>
-          </div>
-          
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {premiumFeatures.map((feature, index) => (
-              <div key={index} className="card border-primary-500/30 bg-primary-500/5">
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex items-start flex-1">
-                    <div className="mr-3 text-primary-500 mt-1">
-                      {feature.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-white text-lg font-semibold mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="text-right ml-4">
-                    <div className="text-primary-500 font-bold text-lg">{feature.price}</div>
-                    <div className="text-gray-400 text-xs">per month</div>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+              Explore our comprehensive plugin ecosystem with advanced Lightning integration, 
+              treasury governance, accounting systems, and enterprise automation.
+            </p>
+            <a href="#plugin-ecosystem" className="btn-primary">
+              View Plugin Ecosystem
+            </a>
           </div>
         </div>
       </div>
