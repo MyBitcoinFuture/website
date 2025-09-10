@@ -215,21 +215,21 @@ const Docs = () => {
             </div>
 
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-12">
+            <div className="search-container">
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" />
+                  <MagnifyingGlassIcon className="h-5 w-5 text-slate-400" />
                 </div>
                 <input
                   type="text"
                   placeholder="Search documentation..."
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="search-input"
                 />
                 {isSearching && (
                   <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-orange-500"></div>
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-500"></div>
                   </div>
                 )}
               </div>
@@ -237,43 +237,43 @@ const Docs = () => {
 
             {/* Search Results */}
             {searchResults.length > 0 && (
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 mb-12 shadow-xl">
+              <div className="search-results">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold text-white">
                     Search Results ({searchResults.length})
                   </h2>
-                  <div className="text-sm text-gray-400">
+                  <div className="text-sm text-slate-400">
                     Found in {searchResults.length} document{searchResults.length !== 1 ? 's' : ''}
                   </div>
                 </div>
                 <div className="space-y-6">
                   {searchResults.map((result, index) => (
-                    <div key={index} className="bg-gray-900/50 border border-gray-600 rounded-lg p-6 hover:border-orange-400 hover:bg-gray-900/70 transition-all duration-200 group">
+                    <div key={index} className="search-result-item">
                       <div className="flex items-start justify-between mb-4">
-                        <h3 className="text-xl font-semibold text-white group-hover:text-orange-300 transition-colors">
+                        <h3 className="text-xl font-semibold text-white group-hover:text-primary-300 transition-colors">
                           {result.metadata.title}
                         </h3>
                         <div className="flex items-center gap-3">
-                          <span className="text-xs text-gray-400 bg-gray-800 px-3 py-1 rounded-full border border-gray-600">
+                          <span className="text-xs text-slate-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-600">
                             {result.metadata.category}
                           </span>
                           <div className="flex items-center gap-1">
-                            <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                            <span className="text-xs text-orange-400 font-medium">
+                            <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
+                            <span className="text-xs text-primary-400 font-medium">
                               {Math.round(result.relevance * 100)}% match
                             </span>
                           </div>
                         </div>
                       </div>
-                      <p className="text-gray-300 text-sm mb-4 leading-relaxed">{result.metadata.description}</p>
+                      <p className="text-slate-300 text-sm mb-4 leading-relaxed">{result.metadata.description}</p>
                       
                       {/* Show match highlights if available */}
                       {result.matches && result.matches.length > 0 && (
-                        <div className="mb-4 p-3 bg-gray-800/50 rounded-lg border border-gray-600">
-                          <p className="text-xs text-gray-400 mb-2 font-medium">Matches found in:</p>
+                        <div className="mb-4 p-3 bg-slate-800/50 rounded-lg border border-slate-600">
+                          <p className="text-xs text-slate-400 mb-2 font-medium">Matches found in:</p>
                           <div className="flex flex-wrap gap-2">
                             {result.matches.slice(0, 3).map((match, matchIndex) => (
-                              <span key={matchIndex} className="text-xs bg-orange-900/50 text-orange-300 px-3 py-1 rounded-full border border-orange-800">
+                              <span key={matchIndex} className="text-xs bg-primary-900/50 text-primary-300 px-3 py-1 rounded-full border border-primary-800">
                                 {match.key}
                               </span>
                             ))}
@@ -284,12 +284,12 @@ const Docs = () => {
                       <div className="flex items-center justify-between">
                         <Link
                           to={`/docs/${result.docPath.replace('.md', '').toLowerCase().replace(/_/g, '-')}`}
-                          className="text-orange-400 hover:text-orange-300 text-sm font-medium inline-flex items-center gap-2 transition-colors group/link"
+                          className="text-primary-400 hover:text-primary-300 text-sm font-medium inline-flex items-center gap-2 transition-colors group/link"
                         >
                           <span>View Documentation</span>
                           <ArrowTopRightOnSquareIcon className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                         </Link>
-                        <span className="text-xs text-gray-500">
+                        <span className="text-xs text-slate-500">
                           Last updated: {result.metadata.lastUpdated}
                         </span>
                       </div>

@@ -78,55 +78,43 @@ const PluginEcosystem = () => {
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="grid gap-6 grid-cols-1 lg:grid-cols-2">
           {pluginCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="stagger-item">
-              <div className="text-center mb-8">
-                <h3 className="text-white mb-2 text-xl font-semibold">
+            <div key={categoryIndex} className="bg-gray-800/30 border border-gray-700 rounded-xl p-6">
+              <div className="mb-4">
+                <h3 className="text-white text-lg font-semibold mb-2">
                   {category.title}
                 </h3>
-                <p className="text-gray-400 text-base max-w-2xl mx-auto">
+                <p className="text-gray-400 text-sm">
                   {category.description}
                 </p>
               </div>
 
-              <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              <div className="space-y-4">
                 {category.plugins.map((plugin, pluginIndex) => (
-                  <div key={pluginIndex} className="card" style={{ 
-                    border: '1px solid rgba(249, 115, 22, 0.2)',
-                    background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.03) 0%, rgba(249, 115, 22, 0.01) 100%)'
-                  }}>
-                    <div className="flex items-center justify-between mb-4">
-                      <h4 className="text-white text-lg font-semibold">
-                        {plugin.name}
-                      </h4>
+                  <div key={pluginIndex} className="bg-primary-500/5 border border-primary-500/20 rounded-lg p-4">
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex-1">
+                        <h4 className="text-white font-semibold text-base mb-1">
+                          {plugin.name}
+                        </h4>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                          {plugin.description}
+                        </p>
+                      </div>
                       {plugin.price && (
-                        <div className="text-right">
-                          <div className="text-orange font-bold text-lg">{plugin.price}</div>
-                          <div className="text-gray text-xs">per month</div>
+                        <div className="text-right ml-4">
+                          <div className="text-primary-500 font-bold text-lg">{plugin.price}</div>
+                          <div className="text-gray-400 text-xs">per month</div>
                         </div>
                       )}
                     </div>
-                    <p className="text-gray-400 mb-6 text-sm leading-relaxed">
-                      {plugin.description}
-                    </p>
-                    <div className="space-y-3">
+                    <div className="flex flex-wrap gap-2">
                       {plugin.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-gray">
-                          <svg className="w-4 h-4 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
+                        <span key={featureIndex} className="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded-full">
                           {feature}
-                        </div>
+                        </span>
                       ))}
-                    </div>
-                    <div className="mt-6 flex items-center justify-between">
-                      <span className="text-orange text-sm font-medium bg-orange-500/10 px-3 py-1 rounded-full">
-                        ⭐ Premium Plugin
-                      </span>
-                      <button className="btn-secondary text-sm" style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}>
-                        Learn More
-                      </button>
                     </div>
                   </div>
                 ))}
