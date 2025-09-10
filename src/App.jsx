@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Header from './components/Header'
+import Layout from './components/Layout'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import PluginEcosystem from './components/PluginEcosystem'
@@ -8,8 +8,6 @@ import UseCases from './components/UseCases'
 import FAQ from './components/FAQ'
 import Deployment from './components/Deployment'
 import Contact from './components/Contact'
-import Footer from './components/Footer'
-import BackToTop from './components/BackToTop'
 import Docs from './components/Docs'
 import DocumentationViewer from './components/DocumentationViewer'
 import GettingStarted from './components/GettingStarted'
@@ -17,7 +15,6 @@ import SystemOverview from './components/SystemOverview'
 import ApiReference from './components/ApiReference'
 import QuickStart from './components/QuickStart'
 import UserGuides from './components/UserGuides'
-import VersionIndicator from './components/VersionIndicator'
 import Releases from './components/Releases'
 import ReleaseAnnouncements from './components/ReleaseAnnouncements'
 import Privacy from './components/Privacy'
@@ -55,90 +52,48 @@ function App() {
       
       <Routes>
         <Route path="/" element={
-          <div className="min-h-screen text-white" style={{ background: 'var(--bg-primary)' }}>
-            <Header />
-            <main id="main-content">
-              <Hero />
-              <BitcoinTreasuryConcepts />
-              <Features />
-              <PluginEcosystem />
-              <ReleaseAnnouncements />
-              <UseCases />
-              <FAQ />
-              <Deployment />
-              <Contact />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </div>
+          <Layout>
+            <Hero />
+            <BitcoinTreasuryConcepts />
+            <Features />
+            <PluginEcosystem />
+            <ReleaseAnnouncements />
+            <UseCases />
+            <FAQ />
+            <Deployment />
+            <Contact />
+          </Layout>
         } />
         <Route path="/docs" element={
-          <>
-            <Header />
-            <main id="main-content">
-              <Docs />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </>
+          <Layout>
+            <Docs />
+          </Layout>
         } />
         <Route path="/docs/:docSlug" element={<DocumentationViewer />} />
         <Route path="/getting-started" element={
-          <>
-            <Header />
-            <main id="main-content">
-              <GettingStarted />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </>
+          <Layout>
+            <GettingStarted />
+          </Layout>
         } />
         <Route path="/releases" element={
-          <>
-            <Header />
-            <main id="main-content">
-              <Releases />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </>
+          <Layout>
+            <Releases />
+          </Layout>
         } />
         <Route path="/privacy" element={
-          <>
-            <Header />
-            <main id="main-content">
-              <Privacy />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </>
+          <Layout>
+            <Privacy />
+          </Layout>
         } />
         <Route path="/terms" element={
-          <>
-            <Header />
-            <main id="main-content">
-              <Terms />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </>
+          <Layout>
+            <Terms />
+          </Layout>
         } />
         <Route path="/cookies" element={
-          <>
-            <Header />
-            <main id="main-content">
-              <Cookies />
-            </main>
-            <Footer />
-            <BackToTop />
-            <VersionIndicator />
-          </>
+          <Layout>
+            <Cookies />
+          </Layout>
         } />
       </Routes>
     </>

@@ -1,4 +1,3 @@
-import Header from './Header'
 import CodeBlock from './CodeBlock'
 import Breadcrumbs from './ui/Breadcrumbs'
 import { 
@@ -20,11 +19,8 @@ import {
 
 const GettingStarted = () => {
   return (
-    <div className="min-h-screen text-white" style={{ background: 'var(--bg-primary)' }}>
-      <Header />
-      <main>
-        <section className="section-padding" style={{ paddingTop: '96px', paddingBottom: '64px' }}>
-          <div className="container-max max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16" style={{ paddingTop: '96px', paddingBottom: '64px' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumbs */}
             <Breadcrumbs items={[{ name: 'Getting Started' }]} />
             
@@ -344,8 +340,6 @@ const GettingStarted = () => {
             </section>
           </div>
         </section>
-      </main>
-    </div>
   )
 }
 

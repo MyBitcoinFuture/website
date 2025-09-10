@@ -1,10 +1,11 @@
 import React from 'react';
 import { BRAND_MESSAGING } from '../constants/content';
+import Container from './Container';
 
 const Hero = () => {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 min-h-screen flex items-center relative overflow-hidden">
+      <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           <div className="animate-fade-in-up">
             <h1 className="text-white mb-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
@@ -71,7 +72,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
