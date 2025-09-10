@@ -1,9 +1,16 @@
 import { 
-  BoltIcon,
+  RocketLaunchIcon,
   CodeBracketIcon,
   BookOpenIcon,
   CogIcon,
-  QuestionMarkCircleIcon
+  QuestionMarkCircleIcon,
+  BuildingOfficeIcon,
+  DocumentTextIcon,
+  CommandLineIcon,
+  ChartBarIcon,
+  KeyIcon,
+  ServerIcon,
+  WrenchScrewdriverIcon
 } from '@heroicons/react/24/outline'
 
 const Documentation = () => {
@@ -11,11 +18,11 @@ const Documentation = () => {
     {
       title: "Getting Started",
       description: "Quick setup and deployment guides for different platforms.",
-      icon: <BoltIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
+      icon: <RocketLaunchIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
-        { name: "System Overview", href: "/docs/system-overview", status: "Available" },
-        { name: "Quick Start Guide", href: "/docs/quickstart", status: "Available" },
-        { name: "Onboarding Guide", href: "/docs/onboarding-guide", status: "Available" }
+        { name: "System Overview", href: "/docs/system-overview", status: "Available", icon: BuildingOfficeIcon },
+        { name: "Quick Start Guide", href: "/docs/quickstart", status: "Available", icon: RocketLaunchIcon },
+        { name: "Onboarding Guide", href: "/docs/onboarding-guide", status: "Available", icon: BookOpenIcon }
       ]
     },
     {
@@ -23,10 +30,10 @@ const Documentation = () => {
       description: "Complete API documentation for developers and integrations.",
       icon: <CodeBracketIcon style={{ width: '24px', height: '24px', marginRight: '12px' }} />,
       links: [
-        { name: "API Documentation", href: "/docs/api-documentation", status: "Available" },
-        { name: "Quick Reference", href: "/docs/quick-reference", status: "Available" },
-        { name: "Authentication", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md#authentication", status: "Available", external: true },
-        { name: "REST Endpoints", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md#rest-api-endpoints", status: "Available", external: true }
+        { name: "API Documentation", href: "/docs/api-documentation", status: "Available", icon: CodeBracketIcon },
+        { name: "Quick Reference", href: "/docs/quick-reference", status: "Available", icon: DocumentTextIcon },
+        { name: "Authentication", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md#authentication", status: "Available", external: true, icon: KeyIcon },
+        { name: "REST Endpoints", href: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md#rest-api-endpoints", status: "Available", external: true, icon: ServerIcon }
       ]
     },
     {
@@ -107,45 +114,51 @@ const Documentation = () => {
               </p>
               
               <div className="space-y-3">
-                {section.links.map((link, linkIndex) => (
-                  <div key={linkIndex} className="flex items-center justify-between">
-                    <a 
-                      href={link.href}
-                      target={link.external ? "_blank" : undefined}
-                      rel={link.external ? "noopener noreferrer" : undefined}
-                      className="nav-link"
-                      style={{ 
-                        color: 'var(--color-orange)',
-                        fontSize: '0.875rem',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.25rem'
-                      }}
-                    >
-                      {link.name}
-                      {link.external && (
-                        <svg style={{ width: '12px', height: '12px' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      )}
-                    </a>
-                    <span 
-                      style={{
-                        padding: '0.25rem 0.5rem',
-                        fontSize: '0.75rem',
-                        borderRadius: '9999px',
-                        backgroundColor: link.status === 'Available' 
-                          ? 'rgba(16, 185, 129, 0.2)' 
-                          : 'rgba(245, 158, 11, 0.2)',
-                        color: link.status === 'Available' 
-                          ? '#10b981' 
-                          : '#f59e0b'
-                      }}
-                    >
-                      {link.status}
-                    </span>
-                  </div>
-                ))}
+                {section.links.map((link, linkIndex) => {
+                  const LinkIconComponent = link.icon;
+                  return (
+                    <div key={linkIndex} className="flex items-center justify-between">
+                      <a 
+                        href={link.href}
+                        target={link.external ? "_blank" : undefined}
+                        rel={link.external ? "noopener noreferrer" : undefined}
+                        className="nav-link"
+                        style={{ 
+                          color: 'var(--color-primary)',
+                          fontSize: '0.875rem',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '0.5rem'
+                        }}
+                      >
+                        {LinkIconComponent && (
+                          <LinkIconComponent style={{ width: '16px', height: '16px' }} />
+                        )}
+                        {link.name}
+                        {link.external && (
+                          <svg style={{ width: '12px', height: '12px' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        )}
+                      </a>
+                      <span 
+                        style={{
+                          padding: '0.25rem 0.5rem',
+                          fontSize: '0.75rem',
+                          borderRadius: '9999px',
+                          backgroundColor: link.status === 'Available' 
+                            ? 'rgba(16, 185, 129, 0.2)' 
+                            : 'rgba(245, 158, 11, 0.2)',
+                          color: link.status === 'Available' 
+                            ? '#10b981' 
+                            : '#f59e0b'
+                        }}
+                      >
+                        {link.status}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}
