@@ -50,39 +50,33 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" style={{
-      background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
-      padding: '4rem 0',
-      color: '#f8fafc'
+    <section id="contact" className="section-padding" style={{ 
+      background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%)'
     }}>
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 1.5rem'
-      }}>
-        <div style={{
-          maxWidth: '600px',
-          margin: '0 auto',
-          textAlign: 'center'
-        }}>
-          <h2 style={{
-            fontSize: '2.5rem',
+      <div className="container-max">
+        <div className="text-center mb-16">
+          <h2 className="text-white mb-4 animate-fade-in-up" style={{ 
+            fontSize: 'clamp(2rem, 6vw, 3rem)',
             fontWeight: '700',
-            marginBottom: '1rem',
-            color: '#f7931a'
+            lineHeight: '1.2'
           }}>
             Contact Us
           </h2>
-          <p style={{
-            fontSize: '1.2rem',
-            color: '#94a3b8',
-            marginBottom: '3rem',
+          <p className="text-gray animate-fade-in-up" style={{ 
+            animationDelay: '0.2s',
+            fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
+            maxWidth: '48rem',
+            margin: '0 auto',
             lineHeight: '1.6'
           }}>
             {CONTACT_INFO.description}
           </p>
-          
-          <ContactForm onSubmit={handleFormSubmit} isSubmitting={isSubmitting} />
+        </div>
+        
+        <div className="max-w-2xl mx-auto">
+          <div className="card animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <ContactForm onSubmit={handleFormSubmit} isSubmitting={isSubmitting} />
+          </div>
         </div>
       </div>
 

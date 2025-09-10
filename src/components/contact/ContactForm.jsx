@@ -54,9 +54,9 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-lg text-left">
-      <div className="grid gap-sm">
-        <label htmlFor="name" className="text-white font-medium">
+    <form onSubmit={handleSubmit} style={{ display: 'grid', gap: 'var(--space-lg)' }}>
+      <div style={{ display: 'grid', gap: 'var(--space-sm)' }}>
+        <label htmlFor="name" className="text-white" style={{ fontWeight: '600', fontSize: '1rem' }}>
           Name *
         </label>
         <input
@@ -67,16 +67,20 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
           onChange={handleInputChange}
           required
           className={`form-input ${errors.name ? 'border-red-500' : ''}`}
+          style={{ 
+            borderColor: errors.name ? '#ef4444' : undefined,
+            boxShadow: errors.name ? '0 0 0 3px rgba(239, 68, 68, 0.1)' : undefined
+          }}
         />
         {errors.name && (
-          <div className="text-red-500 text-sm mt-1">
+          <div className="text-red-500" style={{ fontSize: '0.875rem', marginTop: 'var(--space-xs)' }}>
             {errors.name}
           </div>
         )}
       </div>
 
-      <div className="grid gap-sm">
-        <label htmlFor="email" className="text-white font-medium">
+      <div style={{ display: 'grid', gap: 'var(--space-sm)' }}>
+        <label htmlFor="email" className="text-white" style={{ fontWeight: '600', fontSize: '1rem' }}>
           Email *
         </label>
         <input
@@ -87,16 +91,20 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
           onChange={handleInputChange}
           required
           className={`form-input ${errors.email ? 'border-red-500' : ''}`}
+          style={{ 
+            borderColor: errors.email ? '#ef4444' : undefined,
+            boxShadow: errors.email ? '0 0 0 3px rgba(239, 68, 68, 0.1)' : undefined
+          }}
         />
         {errors.email && (
-          <div className="text-red-500 text-sm mt-1">
+          <div className="text-red-500" style={{ fontSize: '0.875rem', marginTop: 'var(--space-xs)' }}>
             {errors.email}
           </div>
         )}
       </div>
 
-      <div className="grid gap-sm">
-        <label htmlFor="company" className="text-white font-medium">
+      <div style={{ display: 'grid', gap: 'var(--space-sm)' }}>
+        <label htmlFor="company" className="text-white" style={{ fontWeight: '600', fontSize: '1rem' }}>
           Company
         </label>
         <input
@@ -109,8 +117,8 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
         />
       </div>
 
-      <div className="grid gap-sm">
-        <label htmlFor="message" className="text-white font-medium">
+      <div style={{ display: 'grid', gap: 'var(--space-sm)' }}>
+        <label htmlFor="message" className="text-white" style={{ fontWeight: '600', fontSize: '1rem' }}>
           Message *
         </label>
         <textarea
@@ -121,9 +129,13 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
           placeholder={CONTACT_INFO.placeholder}
           required
           className="form-input form-textarea"
+          style={{ 
+            borderColor: errors.message ? '#ef4444' : undefined,
+            boxShadow: errors.message ? '0 0 0 3px rgba(239, 68, 68, 0.1)' : undefined
+          }}
         />
         {errors.message && (
-          <div className="text-red-500 text-sm mt-1">
+          <div className="text-red-500" style={{ fontSize: '0.875rem', marginTop: 'var(--space-xs)' }}>
             {errors.message}
           </div>
         )}
@@ -132,8 +144,17 @@ const ContactForm = ({ onSubmit, isSubmitting }) => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="btn btn-primary justify-self-center"
-        style={{ opacity: isSubmitting ? 0.7 : 1 }}
+        className="btn-primary"
+        style={{ 
+          opacity: isSubmitting ? 0.7 : 1,
+          padding: '16px 32px',
+          fontSize: '1.125rem',
+          fontWeight: '600',
+          minHeight: '56px',
+          justifySelf: 'center',
+          width: '100%',
+          maxWidth: '300px'
+        }}
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
