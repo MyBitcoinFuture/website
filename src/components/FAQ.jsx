@@ -59,15 +59,7 @@ const FAQ = () => {
             <div key={index} className="mb-4 stagger-item" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full text-left card hover:border-orange-500/40 transition-all duration-300 focus-ring"
-                style={{ 
-                  cursor: 'pointer',
-                  padding: 'var(--space-6)',
-                  borderRadius: 'var(--radius-xl)',
-                  background: 'var(--bg-card)',
-                  border: '1px solid var(--color-gray-700)',
-                  backdropFilter: 'blur(16px)'
-                }}
+                className="w-full text-left cursor-pointer p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-orange-500/40 transition-all duration-300 focus-ring"
                 aria-expanded={openItems.has(index)}
                 aria-controls={`faq-answer-${index}`}
               >
@@ -77,21 +69,11 @@ const FAQ = () => {
                   </h3>
                   {openItems.has(index) ? (
                     <ChevronUpIcon 
-                      className="transition-transform duration-300" 
-                      style={{ 
-                        width: '1.25rem', 
-                        height: '1.25rem', 
-                        color: 'var(--color-orange)' 
-                      }} 
+                      className="w-5 h-5 text-primary-500 transition-transform duration-300" 
                     />
                   ) : (
                     <ChevronDownIcon 
-                      className="transition-transform duration-300" 
-                      style={{ 
-                        width: '1.25rem', 
-                        height: '1.25rem', 
-                        color: 'var(--color-gray-400)' 
-                      }} 
+                      className="w-5 h-5 text-gray-400 transition-transform duration-300" 
                     />
                   )}
                 </div>
@@ -100,15 +82,7 @@ const FAQ = () => {
               {openItems.has(index) && (
                 <div 
                   id={`faq-answer-${index}`}
-                  className="mt-2 animate-fade-in"
-                  style={{ 
-                    animationDelay: '0.1s',
-                    padding: 'var(--space-6)',
-                    borderRadius: 'var(--radius-lg)',
-                    background: 'rgba(15, 23, 42, 0.8)',
-                    border: '1px solid var(--color-gray-600)',
-                    backdropFilter: 'blur(8px)'
-                  }}
+                  className="mt-2 animate-fade-in p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700"
                 >
                   <p className="text-gray" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
                     {faq.answer}
