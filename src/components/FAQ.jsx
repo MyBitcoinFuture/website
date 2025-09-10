@@ -44,11 +44,11 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-white mb-4 animate-fade-in-up">
+        <div className="text-center mb-12">
+          <h2 className="text-white mb-3 text-3xl font-bold">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray animate-fade-in-up" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto', animationDelay: '0.2s' }}>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
             Common questions about enterprise Bitcoin treasury management, security architecture, 
             and professional capabilities for institutional use cases.
           </p>
@@ -56,15 +56,15 @@ const FAQ = () => {
 
         <div className="max-w-4xl mx-auto">
           {faqs.map((faq, index) => (
-            <div key={index} className="mb-4 stagger-item" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
+            <div key={index} className="mb-3">
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full text-left cursor-pointer p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-orange-500/40 transition-all duration-300 focus-ring"
+                className="w-full text-left cursor-pointer p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-primary-500/40 transition-all duration-300 focus-ring"
                 aria-expanded={openItems.has(index)}
                 aria-controls={`faq-answer-${index}`}
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-white font-semibold" style={{ fontSize: '1.1rem' }}>
+                  <h3 className="text-white font-semibold text-base">
                     {faq.question}
                   </h3>
                   {openItems.has(index) ? (
@@ -82,9 +82,9 @@ const FAQ = () => {
               {openItems.has(index) && (
                 <div 
                   id={`faq-answer-${index}`}
-                  className="mt-2 animate-fade-in p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700"
+                  className="mt-2 animate-fade-in p-4 rounded-lg bg-gray-800/50 backdrop-blur-sm border border-gray-700"
                 >
-                  <p className="text-gray" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+                  <p className="text-gray-400 text-sm leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
