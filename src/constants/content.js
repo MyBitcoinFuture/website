@@ -6,8 +6,8 @@
  */
 
 export const BRAND_MESSAGING = {
-  tagline: "Manage Your Bitcoin Treasury Like a Pro",
-  description: "Self-hosted platform for organizations that need enterprise-grade Bitcoin management. Complete control, maximum security, zero compromises.",
+  tagline: "The Only Bitcoin Treasury Platform That Never Touches Your Private Keys",
+  description: "Stop trusting third parties with your Bitcoin. Deploy your own treasury management system in minutes. Your keys, your Bitcoin, your control.",
   valueProposition: "Professional Bitcoin treasury management with comprehensive capabilities for institutional and enterprise use cases, built on proven security principles and extensible architecture."
 };
 

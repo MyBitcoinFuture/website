@@ -36,24 +36,24 @@ const Hero = () => {
             </p>
             <div className="flex gap-8 mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="text-center">
-                <div className="text-orange font-bold text-2xl mb-1">Complete</div>
-                <div className="text-gray text-sm">Control</div>
+                <div className="text-orange font-bold text-2xl mb-1">xpub-Only</div>
+                <div className="text-gray text-sm">Architecture</div>
               </div>
               <div className="text-center">
-                <div className="text-orange font-bold text-2xl mb-1">Maximum</div>
-                <div className="text-gray text-sm">Security</div>
+                <div className="text-orange font-bold text-2xl mb-1">Self-Hosted</div>
+                <div className="text-gray text-sm">Deployment</div>
               </div>
               <div className="text-center">
-                <div className="text-orange font-bold text-2xl mb-1">Zero</div>
-                <div className="text-gray text-sm">Compromises</div>
+                <div className="text-orange font-bold text-2xl mb-1">No Trust</div>
+                <div className="text-gray text-sm">Required</div>
               </div>
             </div>
             <div className="btn-group animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <a href="#features" className="btn-primary focus-ring">
-                Get Started
+              <a href="#deployment" className="btn-primary focus-ring">
+                Deploy in 5 Minutes
               </a>
-              <a href="#deployment" className="btn-secondary focus-ring">
-                View Demo
+              <a href="#features" className="btn-secondary focus-ring">
+                See How It Works
               </a>
             </div>
           </div>
@@ -62,21 +62,30 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-2xl blur-3xl animate-pulse"></div>
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 shadow-2xl" style={{ minWidth: '400px', minHeight: '300px' }}>
                 <div className="text-center mb-6">
-                  <div className="text-orange-400 text-2xl font-bold mb-2">Dashboard Preview</div>
-                  <div className="text-gray-400 text-sm">Enterprise Bitcoin Treasury Management</div>
+                  <div className="text-orange-400 text-2xl font-bold mb-2">Why Choose MyBitcoinFuture?</div>
+                  <div className="text-gray-400 text-sm">The only platform that truly respects your sovereignty</div>
                 </div>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center p-3 bg-gray-700/50 rounded-lg">
-                    <span className="text-white text-sm">Total Balance</span>
-                    <span className="text-orange-400 font-bold">₿ 1,247.89</span>
+                  <div className="flex items-start p-3 bg-gray-700/50 rounded-lg">
+                    <span className="text-green-400 text-xl mr-3">✓</span>
+                    <div>
+                      <div className="text-white font-bold text-sm">Your Private Keys Never Leave Your Device</div>
+                      <div className="text-gray-400 text-xs">xpub-only architecture means we can't access your Bitcoin</div>
+                    </div>
                   </div>
-                  <div className="flex justify-between items-center p-3 bg-gray-700/50 rounded-lg">
-                    <span className="text-white text-sm">Active Wallets</span>
-                    <span className="text-green-400 font-bold">12</span>
+                  <div className="flex items-start p-3 bg-gray-700/50 rounded-lg">
+                    <span className="text-green-400 text-xl mr-3">✓</span>
+                    <div>
+                      <div className="text-white font-bold text-sm">Deploy on Your Own Infrastructure</div>
+                      <div className="text-gray-400 text-xs">No cloud dependencies, no third-party servers</div>
+                    </div>
                   </div>
-                  <div className="flex justify-between items-center p-3 bg-gray-700/50 rounded-lg">
-                    <span className="text-white text-sm">Security Status</span>
-                    <span className="text-green-400 font-bold">✓ Secure</span>
+                  <div className="flex items-start p-3 bg-gray-700/50 rounded-lg">
+                    <span className="text-green-400 text-xl mr-3">✓</span>
+                    <div>
+                      <div className="text-white font-bold text-sm">Enterprise Features Without the Risk</div>
+                      <div className="text-gray-400 text-xs">Multi-sig, analytics, and governance - all self-hosted</div>
+                    </div>
                   </div>
                 </div>
               </div>
