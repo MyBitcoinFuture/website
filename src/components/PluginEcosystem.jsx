@@ -80,7 +80,7 @@ const PluginEcosystem = () => {
 
         <div className="space-y-12">
           {pluginCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="stagger-item" style={{ animationDelay: `${0.1 * (categoryIndex + 1)}s` }}>
+            <div key={categoryIndex} className="stagger-item">
               <div className="text-center mb-8">
                 <h3 className="text-white mb-2 text-xl font-semibold">
                   {category.title}
@@ -97,7 +97,7 @@ const PluginEcosystem = () => {
                     background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.03) 0%, rgba(249, 115, 22, 0.01) 100%)'
                   }}>
                     <div className="flex items-center justify-between mb-4">
-                      <h4 className="text-white" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
+                      <h4 className="text-white text-lg font-semibold">
                         {plugin.name}
                       </h4>
                       {plugin.price && (
@@ -107,13 +107,13 @@ const PluginEcosystem = () => {
                         </div>
                       )}
                     </div>
-                    <p className="text-gray mb-6" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+                    <p className="text-gray-400 mb-6 text-sm leading-relaxed">
                       {plugin.description}
                     </p>
                     <div className="space-y-3">
                       {plugin.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-gray">
-                          <svg style={{ width: '1rem', height: '1rem', marginRight: 'var(--space-2)', color: 'var(--color-orange)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           {feature}
