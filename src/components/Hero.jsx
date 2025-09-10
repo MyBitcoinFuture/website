@@ -7,17 +7,11 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const metrics = [
-    { value: "xpub-Only", label: "Architecture" },
+    { value: "Secure", label: "Key Management" },
     { value: "Self-Hosted", label: "Deployment" },
     { value: "Open Source", label: "Transparency" }
   ];
 
-  const trustIndicators = [
-    "Open Source & Auditable",
-    "No Private Key Access",
-    "Enterprise Grade Security",
-    "Community Verified"
-  ];
 
   useEffect(() => {
     setIsVisible(true);
@@ -40,14 +34,6 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh] relative z-10">
           {/* Left Column - Content */}
           <div className={`space-y-8 ${isVisible ? 'slide-in-left' : ''}`}>
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap gap-4 mb-6">
-              {trustIndicators.map((indicator, index) => (
-                <div key={index} className="trust-indicator fade-in-delay-1">
-                  {indicator}
-                </div>
-              ))}
-            </div>
 
             {/* Main Headline */}
             <h1 className="hero-title mb-6">
@@ -86,16 +72,6 @@ const Hero = () => {
               </a>
             </div>
 
-            {/* Social Proof */}
-            <div className="flex items-center gap-6 pt-4">
-              <div className="text-sm text-slate-400">
-                Open source and community-driven
-              </div>
-              <div className="flex gap-2">
-                <span className="text-primary-400 text-lg">🔓</span>
-                <span className="text-slate-400 text-sm">No vendor lock-in</span>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Interactive Demo */}

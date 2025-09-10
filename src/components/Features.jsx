@@ -1,6 +1,8 @@
 import { BRAND_MESSAGING } from '../constants/content';
+import { useScrollAnimation } from '../utils/scrollAnimations';
 
 const Features = () => {
+  const [featuresRef, isFeaturesVisible] = useScrollAnimation();
   const coreFeatures = [
     {
       title: "Multi-Wallet Architecture",
@@ -88,11 +90,11 @@ const Features = () => {
             </p>
           </div>
           
-          <div className="feature-grid">
+          <div ref={featuresRef} className="feature-grid">
             {coreFeatures.map((feature, index) => (
               <div 
                 key={index} 
-                className="card interactive-hover animate-on-scroll"
+                className={`card interactive-hover animate-on-scroll ${isFeaturesVisible ? 'visible' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start mb-4">
