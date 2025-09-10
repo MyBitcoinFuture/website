@@ -65,8 +65,8 @@ const Hero = () => {
                   <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">
                     <span className="text-green-400 text-xl mr-3">✓</span>
                     <div>
-                      <div className="text-white font-bold text-sm">Your Private Keys Never Leave Your Device</div>
-                      <div className="text-slate-400 text-xs">xpub-only architecture means we can't access your Bitcoin</div>
+                      <div className="text-white font-bold text-sm">xpub-Only Architecture</div>
+                      <div className="text-slate-400 text-xs">We never have access to your private keys or Bitcoin</div>
                     </div>
                   </div>
                   <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">

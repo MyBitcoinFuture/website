@@ -62,7 +62,7 @@ const UserGuides = () => {
                   <h3 className="text-xl font-bold text-white mb-4">Adding Your First Wallet</h3>
                   <p className="text-gray-300 mb-4">
                     MyBitcoinFuture uses extended public keys (xpub) to track your Bitcoin wallets. 
-                    This approach ensures maximum security - your private keys never leave your control.
+                    This approach ensures maximum security - we use xpub-only architecture and never access your private keys.
                   </p>
                   
                   <div className="space-y-4">
