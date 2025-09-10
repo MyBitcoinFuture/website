@@ -83,18 +83,17 @@ const DocumentationViewer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumbs 
           items={[
-            { label: 'Documentation', href: '/docs' },
             { label: metadata?.title || 'Document', href: '#' }
           ]} 
         />
         
         <div className="mt-8">
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-white mb-4">
+          <div className="mb-6">
+            <h1 className="text-2xl font-semibold text-white mb-2">
               {metadata?.title || 'Documentation'}
             </h1>
             {metadata?.description && (
-              <p className="text-xl text-slate-300">
+              <p className="text-sm text-slate-400">
                 {metadata.description}
               </p>
             )}

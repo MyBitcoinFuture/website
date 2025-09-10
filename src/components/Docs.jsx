@@ -96,14 +96,6 @@ const Docs = () => {
           icon: DocumentTextIcon
         },
         { 
-          title: "CLI Standards", 
-          description: "Command-line interface consistency standards",
-          link: "/docs/cli-standards",
-          internal: true,
-          docFile: "CLI_CONSISTENCY_STANDARDS.md",
-          icon: CommandLineIcon
-        },
-        { 
           title: "Feature Overview", 
           description: "Complete feature list and capabilities",
           link: "/#features",

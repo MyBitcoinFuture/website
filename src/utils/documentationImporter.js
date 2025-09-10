@@ -2429,10 +2429,40 @@ export const getDocumentationMetadata = (docPath) => {
   const fileName = docPath.split('/').pop();
   
   const metadata = {
+    'SYSTEM_OVERVIEW.md': {
+      title: 'System Overview',
+      description: 'Architecture and component overview of the Bitcoin Treasury Management System',
+      category: 'Getting Started',
+      lastUpdated: '2025-09-10'
+    },
+    'API_DOCUMENTATION.md': {
+      title: 'API Reference',
+      description: 'Complete REST API endpoints and integration examples',
+      category: 'API Documentation',
+      lastUpdated: '2025-09-10'
+    },
+    'QUICKSTART.md': {
+      title: 'Quick Start Guide',
+      description: 'Fast deployment and configuration guide',
+      category: 'Getting Started',
+      lastUpdated: '2025-09-10'
+    },
+    'ONBOARDING_GUIDE.md': {
+      title: 'Onboarding Guide',
+      description: 'Enhanced setup and configuration for new users',
+      category: 'Getting Started',
+      lastUpdated: '2025-09-10'
+    },
+    'QUICK_REFERENCE.md': {
+      title: 'Quick Reference',
+      description: 'Essential CLI commands and API endpoints',
+      category: 'User Documentation',
+      lastUpdated: '2025-09-10'
+    }
   };
   
   return metadata[fileName] || {
-    title: fileName.replace('.md', ''),
+    title: fileName.replace('.md', '').replace(/_/g, ' '),
     description: 'Documentation',
     category: 'Other',
     lastUpdated: '2025-09-10'
