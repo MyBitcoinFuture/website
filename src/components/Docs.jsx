@@ -187,7 +187,7 @@ const Docs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className="min-h-screen text-white" style={{ background: 'var(--bg-primary)' }}>
       <Header />
       <main>
         <section className="section-padding" style={{ paddingTop: 'var(--space-24)', paddingBottom: 'var(--space-16)' }}>

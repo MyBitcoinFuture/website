@@ -55,7 +55,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={
-          <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 text-white">
+          <div className="min-h-screen text-white" style={{ background: 'var(--bg-primary)' }}>
             <Header />
             <main id="main-content">
               <Hero />

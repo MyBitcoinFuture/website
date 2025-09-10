@@ -12,48 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Professional 8px spacing scale */
-:root {
-  --space-1: 0.25rem;  /* 4px */
-  --space-2: 0.5rem;   /* 8px */
-  --space-3: 0.75rem;  /* 12px */
-  --space-4: 1rem;     /* 16px */
-  --space-5: 1.25rem;  /* 20px */
-  --space-6: 1.5rem;   /* 24px */
-  --space-8: 2rem;     /* 32px */
-  --space-10: 2.5rem;  /* 40px */
-  --space-12: 3rem;    /* 48px */
-  --space-16: 4rem;    /* 64px */
-  --space-20: 5rem;    /* 80px */
-  --space-24: 6rem;    /* 96px */
-  
-  /* Enhanced color palette */
-  --color-white: #ffffff;
-  --color-white-90: rgba(255, 255, 255, 0.9);
-  --color-white-80: rgba(255, 255, 255, 0.8);
-  --color-white-60: rgba(255, 255, 255, 0.6);
-  --color-orange: #f97316;
-  --color-orange-dark: #ea580c;
-  --color-orange-light: #fb923c;
-  --color-gray-light: #e2e8f0;
-  --color-gray: #94a3b8;
-  --color-gray-dark: #64748b;
-  --color-slate-light: #cbd5e1;
-  --color-slate: #94a3b8;
-  --color-slate-dark: #475569;
-  
-  /* Typography scale */
-  --text-xs: 0.75rem;    /* 12px */
-  --text-sm: 0.875rem;   /* 14px */
-  --text-base: 1rem;     /* 16px */
-  --text-lg: 1.125rem;   /* 18px */
-  --text-xl: 1.25rem;    /* 20px */
-  --text-2xl: 1.5rem;    /* 24px */
-  --text-3xl: 1.875rem;  /* 30px */
-  --text-4xl: 2.25rem;   /* 36px */
-  --text-5xl: 3rem;      /* 48px */
-  --text-6xl: 3.75rem;   /* 60px */
-}
+/* Design system variables are imported from design-system.css */
 
 /* Smooth animations */
 @keyframes fadeInUp {
@@ -102,22 +61,22 @@ html {
 
 /* Link styling - fix visited/active colors */
 a {
-  color: var(--color-orange);
+  color: var(--color-primary);
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover {
-  color: var(--color-orange-light);
+  color: var(--color-primary-light);
   text-decoration: underline;
 }
 
 a:visited {
-  color: var(--color-orange);
+  color: var(--color-primary);
 }
 
 a:active {
-  color: var(--color-orange-dark);
+  color: var(--color-primary-dark);
 }
 
 /* Navigation link styling */
@@ -133,7 +92,7 @@ nav a, .nav-link {
 }
 
 nav a:hover, .nav-link:hover {
-  color: var(--color-orange);
+  color: var(--color-primary);
   background: rgba(249, 115, 22, 0.1);
   text-decoration: none;
 }
@@ -143,7 +102,7 @@ nav a:visited, .nav-link:visited {
 }
 
 nav a:active, .nav-link:active {
-  color: var(--color-orange-dark);
+  color: var(--color-primary-dark);
 }
 
 .nav-link {
@@ -158,7 +117,7 @@ nav a:active, .nav-link:active {
 }
 
 .nav-link:hover {
-  color: var(--color-orange);
+  color: var(--color-primary);
   background: rgba(249, 115, 22, 0.1);
   text-decoration: none;
 }
@@ -168,7 +127,7 @@ nav a:active, .nav-link:active {
 }
 
 .nav-link:active {
-  color: var(--color-orange-dark);
+  color: var(--color-primary-dark);
 }
 
 .nav-link::after {
@@ -178,7 +137,7 @@ nav a:active, .nav-link:active {
   left: 50%;
   width: 0;
   height: 2px;
-  background: var(--color-orange);
+  background: var(--color-primary);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-50%);
 }
@@ -268,7 +227,7 @@ nav a:active, .nav-link:active {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--color-orange);
+  background: var(--color-primary);
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -344,20 +303,14 @@ body {
 
 /* Enhanced text colors */
 .text-white { color: var(--color-white); }
-.text-white-90 { color: var(--color-white-90); }
-.text-white-80 { color: var(--color-white-80); }
-.text-white-60 { color: var(--color-white-60); }
-.text-orange { color: var(--color-orange); }
-.text-orange-dark { color: var(--color-orange-dark); }
-.text-orange-light { color: var(--color-orange-light); }
-.text-gray { color: var(--color-gray); }
-.text-gray-dark { color: var(--color-gray-dark); }
-.text-slate { color: var(--color-slate); }
-.text-slate-dark { color: var(--color-slate-dark); }
+.text-gray { color: var(--color-gray-400); }
+.text-orange { color: var(--color-primary); }
+.text-orange-dark { color: var(--color-primary-dark); }
+.text-orange-light { color: var(--color-primary-light); }
 
 /* Button styles */
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-dark) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: var(--color-white);
   font-weight: 600;
   font-size: var(--text-base);
@@ -395,7 +348,7 @@ body {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--color-orange-dark) 0%, #dc2626 100%);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, #dc2626 100%);
   transform: translateY(-2px);
   box-shadow: 
     0 10px 15px -3px rgba(249, 115, 22, 0.3),
@@ -414,7 +367,7 @@ body {
 .btn-secondary {
   background: rgba(249, 115, 22, 0.1);
   border: 2px solid rgba(249, 115, 22, 0.3);
-  color: var(--color-orange);
+  color: var(--color-primary);
   font-weight: 600;
   font-size: var(--text-base);
   padding: var(--space-4) var(--space-6);
@@ -436,7 +389,7 @@ body {
 .btn-secondary:hover {
   background: rgba(249, 115, 22, 0.15);
   border-color: rgba(249, 115, 22, 0.5);
-  color: var(--color-orange-light);
+  color: var(--color-primary-light);
   transform: translateY(-2px);
   box-shadow: 
     0 10px 15px -3px rgba(0, 0, 0, 0.15),
@@ -1078,7 +1031,7 @@ code[class*="language-"] {
 .copy-button {
   background: rgba(249, 115, 22, 0.1);
   border: 1px solid rgba(249, 115, 22, 0.2);
-  color: var(--color-orange);
+  color: var(--color-primary);
   padding: var(--space-2) var(--space-4);
   border-radius: 8px;
   font-size: var(--text-xs);
@@ -1095,7 +1048,7 @@ code[class*="language-"] {
 .copy-button:hover {
   background: rgba(249, 115, 22, 0.2);
   border-color: rgba(249, 115, 22, 0.4);
-  color: var(--color-orange-light);
+  color: var(--color-primary-light);
   transform: translateY(-1px);
   box-shadow: 
     0 4px 6px -1px rgba(249, 115, 22, 0.2),
@@ -1304,7 +1257,7 @@ code[class*="language-"] {
 
 /* Focus indicators */
 .focus-visible {
-  outline: 2px solid var(--color-orange);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -1317,14 +1270,14 @@ code[class*="language-"] {
   }
   
   .btn-primary {
-    background: var(--color-orange);
-    border: 2px solid var(--color-orange);
+    background: var(--color-primary);
+    border: 2px solid var(--color-primary);
   }
   
   .btn-secondary {
     background: transparent;
-    border: 2px solid var(--color-orange);
-    color: var(--color-orange);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
   }
 }
 
@@ -1343,7 +1296,7 @@ code[class*="language-"] {
 
 /* Keyboard navigation support */
 .keyboard-nav :focus {
-  outline: 2px solid var(--color-orange);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -1352,7 +1305,7 @@ code[class*="language-"] {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: var(--color-orange);
+  background: var(--color-primary);
   color: var(--color-white);
   padding: var(--space-3) var(--space-4);
   text-decoration: none;
@@ -1377,14 +1330,14 @@ code[class*="language-"] {
 /* Enhanced button accessibility */
 .btn-primary:focus,
 .btn-secondary:focus {
-  outline: 2px solid var(--color-orange);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2);
 }
 
 /* Link accessibility */
 a:focus {
-  outline: 2px solid var(--color-orange);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -1393,9 +1346,9 @@ a:focus {
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid var(--color-orange);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
-  border-color: var(--color-orange);
+  border-color: var(--color-primary);
 }
 
 /* Reduced motion for vestibular disorders */
@@ -1496,7 +1449,7 @@ select:focus {
 
 /* Enhanced text utilities */
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-orange), var(--color-orange-light));
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1686,7 +1639,7 @@ svg[class*="heroicons"] {
 
 /* Enhanced button design */
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-dark) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: var(--color-white);
   font-weight: 600;
   font-size: clamp(0.875rem, 2vw, 1rem);
@@ -1710,7 +1663,7 @@ svg[class*="heroicons"] {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--color-orange-dark) 0%, #dc2626 100%);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, #dc2626 100%);
   transform: translateY(-3px);
   box-shadow: 
     0 16px 32px rgba(249, 115, 22, 0.35),
