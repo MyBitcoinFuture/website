@@ -129,8 +129,8 @@ const Docs = () => {
         { 
           title: "Authentication", 
           description: "JWT authentication and security",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/API_DOCUMENTATION.md#authentication",
-          internal: false,
+          link: "/docs/api-documentation",
+          internal: true,
           icon: KeyIcon
         }
       ]
@@ -143,15 +143,15 @@ const Docs = () => {
         { 
           title: "Development Guide", 
           description: "Technical development and contribution guide",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/development/guide.md",
-          internal: false,
+          link: "/docs/development-guide",
+          internal: true,
           icon: WrenchScrewdriverIcon
         },
         { 
           title: "Deployment Guide", 
           description: "Deployment and operations guide",
-          link: "https://github.com/MyBitcoinFuture/dashboard/blob/main/docs/deployment/guide.md",
-          internal: false,
+          link: "/docs/deployment-guide",
+          internal: true,
           icon: ServerIcon
         },
         { 
@@ -178,8 +178,8 @@ const Docs = () => {
         { 
           title: "Technical Documentation", 
           description: "Detailed technical references and architecture",
-          link: "https://github.com/MyBitcoinFuture/dashboard/tree/main/docs",
-          internal: false,
+          link: "/docs/technical-documentation",
+          internal: true,
           icon: DocumentTextIcon
         }
       ]
@@ -402,12 +402,12 @@ const Docs = () => {
                     Get Started
                   </Link>
                   <a 
-                    href="https://github.com/MyBitcoinFuture/dashboard" 
+                    href="https://github.com/MyBitcoinFuture" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="btn-secondary inline-flex items-center gap-2"
                   >
-                    View Repository
+                    View Organization
                     <ArrowTopRightOnSquareIcon style={{ width: '18px', height: '18px' }} />
                   </a>
                 </div>
