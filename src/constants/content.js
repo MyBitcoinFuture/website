@@ -6,8 +6,8 @@
  */
 
 export const BRAND_MESSAGING = {
-  tagline: "Enterprise Bitcoin Treasury Management Platform",
-  description: "Self-hosted Bitcoin treasury management with extensible plugin architecture. Core system provides essential features with premium plugins for advanced capabilities.",
+  tagline: "Manage Your Bitcoin Treasury Like a Pro",
+  description: "Self-hosted platform for organizations that need enterprise-grade Bitcoin management. Complete control, maximum security, zero compromises.",
   valueProposition: "Professional Bitcoin treasury management with comprehensive capabilities for institutional and enterprise use cases, built on proven security principles and extensible architecture."
 };
 

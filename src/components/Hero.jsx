@@ -36,40 +36,50 @@ const Hero = () => {
             </p>
             <div className="flex gap-8 mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="text-center">
-                <div className="text-orange font-bold text-2xl mb-1">100%</div>
-                <div className="text-gray text-sm">Self-Hosted</div>
+                <div className="text-orange font-bold text-2xl mb-1">Complete</div>
+                <div className="text-gray text-sm">Control</div>
               </div>
               <div className="text-center">
-                <div className="text-orange font-bold text-2xl mb-1">xpub</div>
-                <div className="text-gray text-sm">Only Architecture</div>
+                <div className="text-orange font-bold text-2xl mb-1">Maximum</div>
+                <div className="text-gray text-sm">Security</div>
               </div>
               <div className="text-center">
-                <div className="text-orange font-bold text-2xl mb-1">Enterprise</div>
-                <div className="text-gray text-sm">Grade Security</div>
+                <div className="text-orange font-bold text-2xl mb-1">Zero</div>
+                <div className="text-gray text-sm">Compromises</div>
               </div>
             </div>
             <div className="btn-group animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
               <a href="#features" className="btn-primary focus-ring">
-                View Features
+                Get Started
               </a>
               <a href="#deployment" className="btn-secondary focus-ring">
-                Deploy Now
+                View Demo
               </a>
             </div>
           </div>
           <div className="flex justify-center items-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-full blur-3xl animate-pulse"></div>
-              <img 
-                src="/mybitcoinfuture_logo.png" 
-                alt="MyBitcoinFuture Enterprise Treasury Management"
-                style={{ 
-                  maxWidth: '100%', 
-                  height: 'auto',
-                  maxHeight: '400px',
-                  filter: 'drop-shadow(0 20px 40px rgba(249, 115, 22, 0.3))'
-                }}
-              />
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-2xl blur-3xl animate-pulse"></div>
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 shadow-2xl" style={{ minWidth: '400px', minHeight: '300px' }}>
+                <div className="text-center mb-6">
+                  <div className="text-orange-400 text-2xl font-bold mb-2">Dashboard Preview</div>
+                  <div className="text-gray-400 text-sm">Enterprise Bitcoin Treasury Management</div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center p-3 bg-gray-700/50 rounded-lg">
+                    <span className="text-white text-sm">Total Balance</span>
+                    <span className="text-orange-400 font-bold">₿ 1,247.89</span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-700/50 rounded-lg">
+                    <span className="text-white text-sm">Active Wallets</span>
+                    <span className="text-green-400 font-bold">12</span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-700/50 rounded-lg">
+                    <span className="text-white text-sm">Security Status</span>
+                    <span className="text-green-400 font-bold">✓ Secure</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
