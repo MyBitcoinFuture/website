@@ -50,10 +50,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding" style={{ 
-      background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%)'
-    }}>
-      <div className="container-max">
+    <section id="contact" className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-white mb-4 animate-fade-in-up" style={{ 
             fontSize: 'clamp(2rem, 6vw, 3rem)',

@@ -42,8 +42,8 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="section-padding">
-      <div className="container-max">
+    <section id="faq" className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-white mb-4 animate-fade-in-up">
             Frequently Asked Questions

@@ -36,9 +36,9 @@ const Header = () => {
   }
 
   return (
-    <header className={isScrolled ? 'scrolled' : ''}>
-      <div className="container-max">
-        <div className="flex items-center justify-between" style={{ height: '64px' }}>
+    <header className="fixed top-0 w-full bg-slate-800/95 backdrop-blur-sm border-b border-slate-700 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity no-underline" aria-label="MyBitcoinFuture Home">
             <div className="relative">
@@ -168,7 +168,7 @@ const Header = () => {
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
             }}
           >
-            <div className="container-max">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col gap-2">
                 {NAVIGATION_ITEMS.map((item) => (
                   item.isAnchor ? (
