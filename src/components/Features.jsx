@@ -114,42 +114,41 @@ const Features = () => {
   return (
     <section id="features" className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-white mb-4 animate-fade-in-up">
+        <div className="text-center mb-12">
+          <h2 className="text-white mb-3 text-3xl font-bold">
             Enterprise Bitcoin Treasury Features
           </h2>
-          <p className="text-gray animate-fade-in-up" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto', animationDelay: '0.2s' }}>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
             {BRAND_MESSAGING.valueProposition}
           </p>
         </div>
 
         {/* Core Features Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-white mb-4 animate-fade-in-up" style={{ fontSize: '2rem', fontWeight: '700' }}>
+        <div className="mb-12">
+          <div className="text-center mb-8">
+            <h3 className="text-white mb-2 text-xl font-semibold">
               Core Features <span className="text-green-400">(Included)</span>
             </h3>
-            <p className="text-gray animate-fade-in-up" style={{ fontSize: '1.125rem', animationDelay: '0.1s' }}>
-              Essential Bitcoin treasury management capabilities included with every deployment
-            </p>
           </div>
           
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {coreFeatures.map((feature, index) => (
-              <div key={index} className="card stagger-item" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
-                <div className="flex items-center mb-4">
-                  <div className="mr-3 text-primary-500">
+              <div key={index} className="card">
+                <div className="flex items-start mb-3">
+                  <div className="mr-3 text-primary-500 mt-1">
                     {feature.icon}
                   </div>
-                  <h3 className="text-white" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
-                    {feature.title}
-                  </h3>
+                  <div className="flex-1">
+                    <h3 className="text-white text-lg font-semibold mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
-                <p className="text-gray" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
-                  {feature.description}
-                </p>
-                <div className="mt-4 flex items-center">
-                  <span className="text-green-400 text-sm font-medium bg-green-400/10 px-2 py-1 rounded-full">
+                <div className="flex justify-end">
+                  <span className="text-green-400 text-xs font-medium bg-green-400/10 px-2 py-1 rounded-full">
                     ✓ Included
                   </span>
                 </div>
@@ -160,50 +159,33 @@ const Features = () => {
 
         {/* Premium Features Section */}
         <div>
-          <div className="text-center mb-12">
-            <h3 className="text-white mb-4 animate-fade-in-up" style={{ fontSize: '2rem', fontWeight: '700' }}>
-              Premium Plugins <span className="text-orange">(Subscription Required)</span>
+          <div className="text-center mb-8">
+            <h3 className="text-white mb-2 text-xl font-semibold">
+              Premium Plugins <span className="text-primary-500">(Subscription Required)</span>
             </h3>
-            <p className="text-gray animate-fade-in-up" style={{ fontSize: '1.125rem', animationDelay: '0.1s' }}>
-              Advanced capabilities available through our premium plugin ecosystem
-            </p>
           </div>
           
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {premiumFeatures.map((feature, index) => (
-              <div key={index} className="card stagger-item" style={{ 
-                animationDelay: `${0.1 * (index + 1)}s`,
-                border: '1px solid rgba(249, 115, 22, 0.3)',
-                background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(249, 115, 22, 0.02) 100%)'
-              }}>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    <div className="icon-container" style={{ 
-                      marginRight: 'var(--space-3)',
-                      background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(249, 115, 22, 0.1))',
-                      borderColor: 'rgba(249, 115, 22, 0.3)'
-                    }}>
+              <div key={index} className="card border-primary-500/30 bg-primary-500/5">
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-start flex-1">
+                    <div className="mr-3 text-primary-500 mt-1">
                       {feature.icon}
                     </div>
-                    <h3 className="text-white" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
-                      {feature.title}
-                    </h3>
+                    <div className="flex-1">
+                      <h3 className="text-white text-lg font-semibold mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-orange font-bold text-lg">{feature.price}</div>
-                    <div className="text-gray text-xs">per month</div>
+                  <div className="text-right ml-4">
+                    <div className="text-primary-500 font-bold text-lg">{feature.price}</div>
+                    <div className="text-gray-400 text-xs">per month</div>
                   </div>
-                </div>
-                <p className="text-gray mb-4" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
-                  {feature.description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-orange text-sm font-medium bg-orange-500/10 px-2 py-1 rounded-full">
-                    ⭐ Premium
-                  </span>
-                  <button className="btn-secondary text-sm" style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}>
-                    Learn More
-                  </button>
                 </div>
               </div>
             ))}

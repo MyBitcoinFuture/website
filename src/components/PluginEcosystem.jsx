@@ -68,24 +68,24 @@ const PluginEcosystem = () => {
   return (
     <section id="plugin-ecosystem" className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-white mb-4 animate-fade-in-up">
+        <div className="text-center mb-12">
+          <h2 className="text-white mb-3 text-3xl font-bold">
             Enterprise Plugin Ecosystem
           </h2>
-          <p className="text-gray animate-fade-in-up" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto', animationDelay: '0.2s' }}>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
             Professional-grade plugins for enterprise Bitcoin treasury management, providing 
             comprehensive capabilities for institutional and business use cases.
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-12">
           {pluginCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="stagger-item" style={{ animationDelay: `${0.1 * (categoryIndex + 1)}s` }}>
-              <div className="text-center mb-12">
-                <h3 className="text-white mb-4" style={{ fontSize: '2rem', fontWeight: '700' }}>
+              <div className="text-center mb-8">
+                <h3 className="text-white mb-2 text-xl font-semibold">
                   {category.title}
                 </h3>
-                <p className="text-gray" style={{ fontSize: '1.25rem', maxWidth: '48rem', margin: '0 auto', lineHeight: '1.6' }}>
+                <p className="text-gray-400 text-base max-w-2xl mx-auto">
                   {category.description}
                 </p>
               </div>
