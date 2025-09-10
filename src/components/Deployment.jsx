@@ -63,22 +63,14 @@ const Deployment = () => {
           </p>
         </div>
 
-        <div className="grid" style={{ 
-          gap: '2rem',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'
-        }}>
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {deploymentOptions.map((option, index) => (
             <div
               key={index}
-              className="card"
-              style={{ 
-                display: 'flex', 
-                flexDirection: 'column',
-                height: '100%'
-              }}
+              className="card flex flex-col h-full"
             >
               <div className="flex items-center justify-between mb-4">
-                <div className="icon-container" style={{ margin: '0' }}>
+                <div className="text-primary-500">
                   {option.icon}
                 </div>
                 <span 
