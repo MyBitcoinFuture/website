@@ -3,7 +3,7 @@ import VERSION from '../version.js';
 const Footer = () => {
   return (
     <footer>
-      <div className="container-max" style={{ padding: '3rem 0' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid" style={{ gap: '2rem', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
           {/* Brand */}
           <div>

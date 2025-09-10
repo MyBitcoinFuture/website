@@ -52,7 +52,7 @@ const DocumentationViewer = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
-        <div className="container-max py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
             <p className="text-gray-300">Loading documentation...</p>
@@ -65,7 +65,7 @@ const DocumentationViewer = () => {
   if (error) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
-        <div className="container-max py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-white mb-4">Documentation Not Found</h1>
             <p className="text-gray-300 mb-8">{error}</p>
@@ -80,7 +80,7 @@ const DocumentationViewer = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
-      <div className="container-max py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumbs 
           items={[
             { label: 'Documentation', href: '/docs' },
