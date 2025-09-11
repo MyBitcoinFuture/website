@@ -22,8 +22,8 @@ const SystemOverview = () => {
                 <span className="text-white">System Overview</span>
               </h1>
               <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem', lineHeight: '1.6' }}>
-                MyBitcoinFuture is a comprehensive Bitcoin Treasury Management System that provides multi-wallet tracking, 
-                portfolio analytics, transaction monitoring, enhanced setup wizard, theme system, and reporting capabilities.
+                MyBitcoinFuture is a Bitcoin Treasury Management System that provides multi-wallet tracking, 
+                portfolio analytics, transaction monitoring, setup wizard, theme system, and reporting capabilities.
               </p>
             </div>
 

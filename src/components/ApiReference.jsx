@@ -48,8 +48,8 @@ const ApiReference = () => {
               <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
                 <h3 className="text-xl font-bold text-white mb-4">Quick Start</h3>
                 <p className="text-gray-300 mb-4">
-                  The MyBitcoinFuture Treasury API provides comprehensive Bitcoin treasury management capabilities 
-                  including wallet management, transaction tracking, advanced analytics, and real-time notifications.
+                  The MyBitcoinFuture Treasury API provides Bitcoin treasury management capabilities 
+                  including wallet management, transaction tracking, analytics, and real-time notifications.
                 </p>
                 <div className="bg-gray-800 p-4 rounded border border-gray-600">
                   <p className="text-sm text-gray-400 mb-2">Example: Get system health</p>

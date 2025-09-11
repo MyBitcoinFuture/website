@@ -95,7 +95,7 @@ src/
 - **Hero**: Main value proposition and call-to-action
 - **Features**: Key platform capabilities
 - **Deployment**: Docker, Start9, Umbrel options
-- **Documentation**: Placeholders for comprehensive docs
+- **Documentation**: Placeholders for docs
 - **GitHub**: Community engagement and contribution
 
 ### Content Updates
@@ -152,7 +152,3 @@ MIT License - see LICENSE file for details
 - **Main Project**: https://github.com/MyBitcoinFuture/treasury-platform
 
 ---
-
-Built with ❤️ for the Bitcoin community
-
-# Force cache refresh

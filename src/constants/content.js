@@ -8,7 +8,7 @@
 export const BRAND_MESSAGING = {
   tagline: "Bitcoin Treasury Management Platform",
   description: "Stop trusting third parties with your Bitcoin. Deploy your own treasury management system in minutes. Your keys, your Bitcoin, your control.",
-  valueProposition: "Professional Bitcoin treasury management with comprehensive capabilities for institutional and enterprise use cases, built on proven security principles and extensible architecture."
+  valueProposition: "Professional Bitcoin treasury management with capabilities for institutional and enterprise use cases, built on proven security principles and extensible architecture."
 };
 
 export const SECURITY_FEATURES = {

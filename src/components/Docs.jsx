@@ -201,7 +201,7 @@ const Docs = () => {
                 }}>Documentation</span>
               </h1>
               <p className="doc-subtitle">
-                Complete technical reference for deployment, API integration, and advanced features.
+                Technical reference for deployment, API integration, and features.
               </p>
             </div>
 
