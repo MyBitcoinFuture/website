@@ -31,6 +31,16 @@ const BitcoinTreasuryConcepts = () => {
         "Cost basis accounting",
         "Market intelligence"
       ]
+    },
+    {
+      title: "Enterprise Security & Compliance",
+      description: "Built-in security features and compliance tools designed for institutional Bitcoin treasury management and regulatory requirements.",
+      principles: [
+        "Multi-signature wallet support",
+        "Audit trail logging",
+        "Role-based access control",
+        "Regulatory reporting tools"
+      ]
     }
   ];
 

@@ -9,6 +9,7 @@ import UseCases from './components/UseCases'
 import FAQ from './components/FAQ'
 import Deployment from './components/Deployment'
 import Contact from './components/Contact'
+import ContactPage from './components/ContactPage'
 import Docs from './components/Docs'
 import DocumentationViewer from './components/DocumentationViewer'
 import SystemOverview from './components/SystemOverview'
@@ -106,6 +107,7 @@ function App() {
             <Cookies />
           </Layout>
         } />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       
       {/* Back to Top Button */}

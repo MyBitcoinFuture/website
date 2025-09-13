@@ -1,25 +1,66 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { CONTACT_INFO } from '../constants/content';
+import ContactForm from './contact/ContactForm';
+import ContactNotification from './contact/ContactNotification';
 
-const Contact = () => {
+const ContactPage = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [notification, setNotification] = useState(null);
+
+  useEffect(() => {
+    // Initialize EmailJS
+    if (window.emailjs) {
+      window.emailjs.init({
+        publicKey: "eThZpkLgAIZr4sEQL"
+      });
+      console.log('EmailJS initialized with latest version');
+    }
+  }, []);
+
+  const showNotification = (message, type = 'info') => {
+    setNotification({ message, type });
+    setTimeout(() => setNotification(null), 5000);
+  };
+
+  const handleFormSubmit = async (formData) => {
+    if (typeof window.emailjs === 'undefined') {
+      console.error('EmailJS not loaded');
+      showNotification('Email service is not available. Please try again later or contact us directly.', 'error');
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const result = await window.emailjs.send(
+        'service_mybitcoinfuture',
+        'template_contact_form',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: CONTACT_INFO.email
+        }
+      );
+      
+      console.log('Email sent successfully:', result);
+      showNotification('Thank you! Your message has been sent successfully.', 'success');
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      showNotification('Failed to send message. Please try again or contact us directly.', 'error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
-    <section id="contact" className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 text-white py-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-white mb-4 animate-fade-in-up" style={{ 
-            fontSize: 'clamp(2rem, 6vw, 3rem)',
-            fontWeight: '700',
-            lineHeight: '1.2'
-          }}>
-            Get Support & Connect
-          </h2>
-          <p className="text-gray animate-fade-in-up" style={{ 
-            animationDelay: '0.2s',
-            fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
-            maxWidth: '48rem',
-            margin: '0 auto',
-            lineHeight: '1.6'
-          }}>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Contact Us
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             {CONTACT_INFO.description}
           </p>
         </div>
@@ -34,8 +75,8 @@ const Contact = () => {
             </div>
             <h3 className="text-white font-semibold mb-2">General Questions</h3>
             <p className="text-gray-400 text-sm mb-4">Deployment help, plugin development, business inquiries</p>
-            <a href="/contact" className="text-primary-500 hover:text-primary-400 text-sm font-medium">
-              Use contact form →
+            <a href="#contact-form" className="text-primary-500 hover:text-primary-400 text-sm font-medium">
+              Use contact form below →
             </a>
           </div>
 
@@ -65,26 +106,36 @@ const Contact = () => {
               </svg>
             </div>
             <h3 className="text-white font-semibold mb-2">Security Issues</h3>
-            <p className="text-gray-400 text-sm mb-4">Security vulnerabilities, sensitive matters</p>
-            <a href="mailto:security@mybitcoinfuture.org" className="text-primary-500 hover:text-primary-400 text-sm font-medium">
+            <p className="text-gray-400 text-sm mb-4">Security vulnerabilities, sensitive security concerns</p>
+            <a 
+              href={`mailto:${CONTACT_INFO.securityEmail}`}
+              className="text-primary-500 hover:text-primary-400 text-sm font-medium"
+            >
               security@mybitcoinfuture.org →
             </a>
           </div>
         </div>
-        
-        <div className="text-center mt-12">
-          <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-6 max-w-2xl mx-auto">
-            <p className="text-gray-400 text-sm mb-2">
-              {CONTACT_INFO.responseTime}
-            </p>
-            <p className="text-gray-500 text-xs">
-              {CONTACT_INFO.alternativeContact}
-            </p>
-          </div>
+
+        {/* Contact Form */}
+        <div id="contact-form" className="bg-gray-800/30 border border-gray-700 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">Send us a Message</h2>
+          <ContactForm 
+            onSubmit={handleFormSubmit} 
+            isSubmitting={isSubmitting}
+          />
         </div>
+
+        {/* Notification */}
+        {notification && (
+          <ContactNotification 
+            message={notification.message} 
+            type={notification.type} 
+            onClose={() => setNotification(null)}
+          />
+        )}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Contact;
+export default ContactPage;
