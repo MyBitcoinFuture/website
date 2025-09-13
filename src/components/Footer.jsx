@@ -48,11 +48,6 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/MyBitcoinFuture/dashboard/discussions" className="nav-link">
-                  Discussions
-                </a>
-              </li>
-              <li>
                 <a href="https://github.com/MyBitcoinFuture/dashboard/releases" className="nav-link">
                   Releases
                 </a>
