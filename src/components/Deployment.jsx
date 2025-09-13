@@ -124,39 +124,97 @@ const Deployment = () => {
           ))}
         </div>
 
-        {/* Quick Start */}
-        <div className="card" style={{ marginTop: '4rem', padding: '2rem' }}>
-          <div className="text-center">
-            <h3 className="text-white mb-4" style={{ fontSize: '2rem', fontWeight: '700' }}>
-              Quick Start with Docker
-            </h3>
-            <p className="text-gray mb-6">
-              Get up and running with our multi-container Docker setup.
-            </p>
-            <div 
-              style={{ 
-                background: 'rgba(15, 23, 42, 0.5)', 
-                borderRadius: '8px', 
-                padding: '1rem',
-                textAlign: 'left',
-                maxWidth: '32rem',
-                margin: '0 auto'
-              }}
-            >
-              <pre style={{ fontSize: '0.875rem', color: '#bfdbfe', overflowX: 'auto', margin: '0' }}>
-                <code>
+        {/* Quick Start and Downloads */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" style={{ marginTop: '4rem' }}>
+          {/* Docker Quick Start */}
+          <div className="card" style={{ padding: '2rem' }}>
+            <div className="text-center">
+              <h3 className="text-white mb-4" style={{ fontSize: '2rem', fontWeight: '700' }}>
+                Quick Start with Docker
+              </h3>
+              <p className="text-gray mb-6">
+                Get up and running with our multi-container Docker setup in minutes.
+              </p>
+              
+              <div 
+                style={{ 
+                  background: 'rgba(15, 23, 42, 0.5)', 
+                  borderRadius: '8px', 
+                  padding: '1rem',
+                  textAlign: 'left',
+                  marginBottom: '1rem'
+                }}
+              >
+                <pre style={{ fontSize: '0.875rem', color: '#bfdbfe', overflowX: 'auto', margin: '0' }}>
+                  <code>
 {`# Clone and start
 git clone https://github.com/MyBitcoinFuture/dashboard.git
 cd dashboard && docker-compose up -d
 
 # Access dashboard at http://localhost:3003`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+              </div>
+
+              <div className="text-left">
+                <p className="text-gray-300 text-sm">
+                  <strong>Requirements:</strong> Docker, 4GB RAM, 10GB disk space
+                </p>
+              </div>
             </div>
-            <div className="mt-4">
-              <p className="text-gray-300 text-sm">
-                <strong>Requirements:</strong> Docker, 4GB RAM, 10GB disk space
+          </div>
+
+          {/* Official Downloads */}
+          <div className="card" style={{ padding: '2rem' }}>
+            <div className="text-center">
+              <h3 className="text-white mb-4" style={{ fontSize: '2rem', fontWeight: '700' }}>
+                Official Downloads
+              </h3>
+              <p className="text-gray mb-6">
+                Download native desktop applications for your platform.
               </p>
+              
+              <div className="space-y-4">
+                {/* Linux Downloads */}
+                <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-4">
+                  <h4 className="text-white font-semibold mb-3 flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12.504 0C5.643 0 0 5.643 0 12.504s5.643 12.504 12.504 12.504S25.008 19.365 25.008 12.504 19.365 0 12.504 0zm0 23.04c-5.815 0-10.536-4.721-10.536-10.536S6.689 1.968 12.504 1.968s10.536 4.721 10.536 10.536-4.721 10.536-10.536 10.536z"/>
+                    </svg>
+                    Linux
+                  </h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
+                      📦 DEB Package (Ubuntu/Debian) - Coming Soon
+                    </div>
+                    <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
+                      📦 RPM Package (Fedora/RHEL) - Coming Soon
+                    </div>
+                    <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
+                      📦 AppImage (Universal) - Coming Soon
+                    </div>
+                  </div>
+                </div>
+
+                {/* Windows Download */}
+                <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-4">
+                  <h4 className="text-white font-semibold mb-3 flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M3 12V6.75l6-1.32v6.48L3 12zm17-9v8.75l-10 .15V5.21L20 3zM3 13l6 .09v6.81l-6-1.15V13zm17 .25V22l-10-1.91v-6.84l10 .15z"/>
+                    </svg>
+                    Windows
+                  </h4>
+                  <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
+                    💻 Windows EXE Installer - Coming Soon
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4 text-center">
+                <p className="text-gray-400 text-xs">
+                  Downloads will be available from the latest dashboard release
+                </p>
+              </div>
             </div>
           </div>
         </div>
