@@ -58,38 +58,30 @@ const Hero = () => {
                   <div className="text-primary-400 text-2xl font-bold mb-2 security-shield">
                     Why Choose MyBitcoinFuture?
                   </div>
-                  <div className="text-slate-400 text-sm">The only platform that truly respects your sovereignty</div>
+                  <div className="text-slate-400 text-sm">The only Bitcoin treasury platform with institutional-grade analytics</div>
                 </div>
                 
                 <div className="space-y-4">
                   <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">
                     <span className="text-green-400 text-xl mr-3">✓</span>
                     <div>
-                      <div className="text-white font-bold text-sm">xpub-Only Architecture</div>
-                      <div className="text-slate-400 text-xs">We never have access to your private keys or Bitcoin</div>
+                      <div className="text-white font-bold text-sm">Bitcoin Research Kit Integration</div>
+                      <div className="text-slate-400 text-xs">Access comprehensive Bitcoin analytics directly from your node</div>
                     </div>
                   </div>
                   <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">
                     <span className="text-green-400 text-xl mr-3">✓</span>
                     <div>
-                      <div className="text-white font-bold text-sm">Deploy on Your Own Infrastructure</div>
-                      <div className="text-slate-400 text-xs">No cloud dependencies, no third-party servers</div>
+                      <div className="text-white font-bold text-sm">One-Click Marketplace Deployment</div>
+                      <div className="text-slate-400 text-xs">Deploy on Start9, Umbrel, or Docker in under 5 minutes</div>
                     </div>
                   </div>
                   <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">
                     <span className="text-green-400 text-xl mr-3">✓</span>
                     <div>
-                      <div className="text-white font-bold text-sm">Enterprise Features Without the Risk</div>
-                      <div className="text-slate-400 text-xs">Multi-sig, analytics, and governance - all self-hosted</div>
+                      <div className="text-white font-bold text-sm">Professional Bitcoin Treasury Management</div>
+                      <div className="text-slate-400 text-xs">Multi-sig, cost basis accounting, and portfolio analytics built-in</div>
                     </div>
-                  </div>
-                </div>
-
-                {/* Live demo indicator */}
-                <div className="mt-6 text-center">
-                  <div className="inline-flex items-center gap-2 text-xs text-primary-400 bg-primary-400/10 px-3 py-1 rounded-full">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    Live Demo Available
                   </div>
                 </div>
               </div>
