@@ -71,17 +71,6 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        
-        <div className="text-center mt-12">
-          <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-6 max-w-2xl mx-auto">
-            <p className="text-gray-400 text-sm mb-2">
-              {CONTACT_INFO.responseTime}
-            </p>
-            <p className="text-gray-500 text-xs">
-              {CONTACT_INFO.alternativeContact}
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
