@@ -4,48 +4,48 @@ const PluginEcosystem = () => {
   const pluginCategories = [
     {
       title: "Business Operations",
-      description: "Lightning payments, governance, and workflow automation for enterprise Bitcoin operations",
+      description: "Streamline your Bitcoin operations with Lightning payments, governance automation, and workflow optimization",
       plugins: [
         {
           name: "Lightning Integration Pro",
-          description: "Multi-provider Lightning payments with invoice generation and channel management",
-          features: ["Invoice creation", "Payment routing", "Channel management", "Multi-provider support"],
+          description: "Accept Lightning payments instantly with multi-provider support and automated invoice management",
+          features: ["Instant payments", "Multi-provider routing", "Automated invoices", "Channel optimization"],
           price: "$49/month"
         },
         {
           name: "Treasury Governance",
-          description: "Board meeting automation with voting systems and policy enforcement",
-          features: ["Board voting", "Meeting automation", "Policy enforcement", "Stakeholder management"],
+          description: "Automate board decisions and policy enforcement for professional Bitcoin treasury management",
+          features: ["Automated voting", "Policy enforcement", "Stakeholder management", "Compliance tracking"],
           price: "$99/month"
         },
         {
           name: "Workflow Automation",
-          description: "Advanced automation with smart triggers and conditional workflows",
-          features: ["Smart triggers", "Conditional workflows", "Webhook integration", "Process automation"],
+          description: "Eliminate manual processes with smart triggers and conditional workflows for Bitcoin operations",
+          features: ["Smart triggers", "Conditional workflows", "API integrations", "Process automation"],
           price: "$59/month"
         }
       ]
     },
     {
       title: "Analytics & Integration",
-      description: "Advanced analytics, accounting integration, and customization for professional Bitcoin management",
+      description: "Connect your Bitcoin treasury with existing business systems and get deeper insights",
       plugins: [
         {
           name: "Accounting Integration Pro",
-          description: "Seamless integration with QuickBooks and other accounting systems",
-          features: ["QuickBooks integration", "Xero integration", "Transaction sync", "Tax reporting"],
+          description: "Seamlessly sync Bitcoin transactions with QuickBooks, Xero, and other accounting systems",
+          features: ["QuickBooks sync", "Xero integration", "Tax reporting", "Audit trails"],
           price: "$79/month"
         },
         {
           name: "Advanced Analytics",
-          description: "Comprehensive Bitcoin analytics with portfolio performance tracking",
-          features: ["Portfolio analytics", "Risk analysis", "Performance tracking", "Custom reporting"],
+          description: "Get institutional-grade insights with comprehensive portfolio analytics and risk assessment",
+          features: ["Portfolio analytics", "Risk assessment", "Performance tracking", "Custom dashboards"],
           price: "$69/month"
         },
         {
           name: "Custom Branding Pro",
-          description: "White-label customization with custom themes and branding",
-          features: ["Custom themes", "Logo upload", "Branded reports", "White-label options"],
+          description: "White-label your Bitcoin treasury platform with custom themes and branded reporting",
+          features: ["Custom themes", "Branded reports", "White-label options", "Custom domains"],
           price: "$49/month"
         }
       ]
@@ -57,11 +57,11 @@ const PluginEcosystem = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-white mb-3 text-3xl font-bold">
-            Enterprise Plugin Ecosystem
+            Extend Your Bitcoin Treasury with Premium Plugins
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Professional-grade plugins for enterprise Bitcoin treasury management, providing 
-            comprehensive capabilities for institutional and business use cases.
+            Unlock advanced features with our professional plugin ecosystem. From Lightning payments 
+            to accounting integration - everything you need for enterprise Bitcoin treasury management.
           </p>
         </div>
 

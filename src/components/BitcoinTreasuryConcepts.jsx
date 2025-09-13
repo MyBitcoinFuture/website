@@ -3,8 +3,8 @@ import React from 'react';
 const BitcoinTreasuryConcepts = () => {
   const concepts = [
     {
-      title: "Self-Custody Sovereignty",
-      description: "Complete control over your Bitcoin holdings without relying on third-party custodians. Your keys, your Bitcoin.",
+      title: "Complete Bitcoin Sovereignty",
+      description: "Full control over your Bitcoin holdings without relying on third-party custodians. Your keys, your Bitcoin, your rules.",
       principles: [
         "Zero custody risk",
         "Full transaction control", 
@@ -13,8 +13,8 @@ const BitcoinTreasuryConcepts = () => {
       ]
     },
     {
-      title: "Multi-Wallet Architecture",
-      description: "Professional-grade wallet management supporting multiple xpub-based wallets for organizational needs.",
+      title: "Professional Multi-Wallet Management",
+      description: "Enterprise-grade wallet management supporting multiple Bitcoin wallets for complex organizational needs and treasury operations.",
       principles: [
         "Separation of concerns",
         "Operational security",
@@ -23,8 +23,8 @@ const BitcoinTreasuryConcepts = () => {
       ]
     },
     {
-      title: "Bitcoin Analytics & Research",
-      description: "Comprehensive Bitcoin analytics and research data for informed treasury management decisions.",
+      title: "Institutional-Grade Analytics",
+      description: "Comprehensive Bitcoin analytics and research data powered by Bitcoin Research Kit for informed treasury management decisions.",
       principles: [
         "Portfolio performance tracking",
         "Risk analysis and management",
@@ -39,11 +39,11 @@ const BitcoinTreasuryConcepts = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-white mb-4 text-3xl font-bold">
-            Bitcoin Treasury Management Fundamentals
+            Why Organizations Choose MyBitcoinFuture
           </h2>
           <p className="text-gray" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto' }}>
-            Professional Bitcoin treasury management is built on fundamental principles of sovereignty, 
-            security, and comprehensive analytics for informed decision-making.
+            The only Bitcoin treasury platform that combines institutional-grade analytics, complete sovereignty, 
+            and enterprise features in a single self-hosted solution.
           </p>
         </div>
 

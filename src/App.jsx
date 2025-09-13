@@ -71,12 +71,12 @@ function App() {
           <Layout>
             <Hero />
             <BitcoinTreasuryConcepts />
+            <UseCases />
             <Features />
             <PluginEcosystem />
-            <ReleaseAnnouncements />
-            <UseCases />
-            <FAQ />
             <Deployment />
+            <ReleaseAnnouncements />
+            <FAQ />
             <Contact />
           </Layout>
         } />

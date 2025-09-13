@@ -1,8 +1,20 @@
 const Deployment = () => {
   const deploymentOptions = [
     {
-      title: "Docker",
-      description: "Deploy with Docker containers. Frontend on port 3003, backend on 3100, BRK on 3110.",
+      title: "Desktop Applications",
+      description: "Native desktop apps for Linux (DEB, RPM, AppImage), Windows (EXE), and macOS with full offline capabilities.",
+      status: "Available Now",
+      statusColor: "#10b981",
+      icon: (
+        <svg style={{ width: '2rem', height: '2rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+      features: ["Cross-platform support", "Offline operation", "Native performance", "Easy installation"]
+    },
+    {
+      title: "Docker Containers",
+      description: "Deploy with Docker containers for server environments. Frontend on port 3003, backend on 3100, BRK on 3110.",
       status: "Available Now",
       statusColor: "#10b981",
       icon: (
@@ -13,9 +25,9 @@ const Deployment = () => {
       features: ["Multi-container setup", "Production ready", "Easy scaling", "Complete isolation"]
     },
     {
-      title: "Start9",
-      description: "One-click deployment through the Start9 marketplace. Perfect for Bitcoin sovereignty advocates.",
-      status: "Planned",
+      title: "Marketplace Deployment",
+      description: "One-click deployment through Start9 and Umbrel marketplaces. Perfect for Bitcoin sovereignty advocates.",
+      status: "Coming Soon",
       statusColor: "#f59e0b",
       icon: (
         <svg style={{ width: '2rem', height: '2rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -23,18 +35,6 @@ const Deployment = () => {
         </svg>
       ),
       features: ["One-click install", "Community marketplace", "Automatic updates", "Bitcoin sovereignty"]
-    },
-    {
-      title: "Umbrel",
-      description: "Deploy on Umbrel for integration with your Bitcoin node and broader self-hosting community.",
-      status: "Planned",
-      statusColor: "#f59e0b",
-      icon: (
-        <svg style={{ width: '2rem', height: '2rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
-        </svg>
-      ),
-      features: ["Official app store", "Bitcoin node integration", "App ecosystem", "Self-hosting"]
     }
   ]
 
@@ -43,11 +43,11 @@ const Deployment = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-white mb-4">
-            Multi-Platform Deployment Strategy
+            Multi-Platform Deployment Options
           </h2>
           <p className="text-gray" style={{ fontSize: '1.25rem', maxWidth: '48rem', margin: '0 auto' }}>
-            Comprehensive deployment options for sovereignty advocates, businesses, and enterprises. 
-            From self-hosted Bitcoin infrastructure to cloud VPS and merchant integrations.
+            Deploy MyBitcoinFuture on any platform - from desktop applications to server environments. 
+            Choose the deployment method that fits your infrastructure and security requirements.
           </p>
         </div>
 

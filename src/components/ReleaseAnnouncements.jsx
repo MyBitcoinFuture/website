@@ -13,12 +13,41 @@ const ReleaseAnnouncements = () => {
   const fetchReleases = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://api.github.com/repos/MyBitcoinFuture/dashboard/releases?per_page=5');
-      if (!response.ok) {
-        throw new Error('Failed to fetch releases');
+      
+      // Fetch releases from all MyBitcoinFuture repositories
+      const repositories = [
+        'MyBitcoinFuture/dashboard',
+        'MyBitcoinFuture/website', 
+        'MyBitcoinFuture/plugins',
+        'MyBitcoinFuture/private-plugins',
+        'MyBitcoinFuture/platform-manifests'
+      ];
+      
+      const allReleases = [];
+      
+      // Fetch releases from each repository
+      for (const repo of repositories) {
+        try {
+          const response = await fetch(`https://api.github.com/repos/${repo}/releases?per_page=3`);
+          if (response.ok) {
+            const data = await response.json();
+            // Add repository info to each release
+            const releasesWithRepo = data.map(release => ({
+              ...release,
+              repository: repo.split('/')[1],
+              repositoryFull: repo
+            }));
+            allReleases.push(...releasesWithRepo);
+          }
+        } catch (repoError) {
+          console.warn(`Failed to fetch releases from ${repo}:`, repoError);
+        }
       }
-      const data = await response.json();
-      setReleases(data);
+      
+      // Sort by published date (newest first) and take top 8
+      allReleases.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+      setReleases(allReleases.slice(0, 8));
+      
     } catch (err) {
       setError(err.message);
     } finally {
@@ -144,6 +173,11 @@ const ReleaseAnnouncements = () => {
                       )}
                       <h3 className="text-xl font-bold">{release.name}</h3>
                       <span className="text-gray-400 text-sm">{release.tag_name}</span>
+                      {release.repository && (
+                        <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">
+                          {release.repository}
+                        </span>
+                      )}
                     </div>
                     <p className="text-gray-300 text-sm">
                       Released {new Date(release.published_at).toLocaleDateString()}

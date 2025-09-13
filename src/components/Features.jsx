@@ -5,17 +5,8 @@ const Features = () => {
   const [featuresRef, isFeaturesVisible] = useScrollAnimation();
   const coreFeatures = [
     {
-      title: "Multi-Wallet Architecture",
-      description: "Manage multiple xpub-based wallets with real-time balance monitoring and transaction history.",
-      icon: (
-        <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-        </svg>
-      )
-    },
-    {
-      title: "Bitcoin Research & Analytics",
-      description: "Bitcoin analytics and research data for informed treasury decisions with portfolio performance tracking.",
+      title: "Bitcoin Research Kit Integration",
+      description: "Access institutional-grade Bitcoin analytics with comprehensive network data, UTXO metrics, and mining insights directly from your node.",
       icon: (
         <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -23,17 +14,17 @@ const Features = () => {
       )
     },
     {
-      title: "xpub-Only Security",
-      description: "Maximum security with xpub-only architecture. No private keys stored, ensuring complete data sovereignty.",
+      title: "Cost Basis & Tax Reporting",
+      description: "Automated cost basis tracking with FIFO, LIFO, and Specific ID methods plus comprehensive tax reporting for institutional compliance and accounting.",
       icon: (
         <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
         </svg>
       )
     },
     {
-      title: "Self-Hosted Deployment",
-      description: "Complete data sovereignty with self-hosted deployment options including Docker, with planned support for Start9 and Umbrel.",
+      title: "Marketplace Deployment",
+      description: "One-click deployment on Start9, Umbrel, and Docker with automatic Bitcoin service integration and zero-configuration setup.",
       icon: (
         <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
@@ -41,8 +32,17 @@ const Features = () => {
       )
     },
     {
-      title: "Plugin System Infrastructure",
-      description: "Extensible architecture with plugin marketplace for custom functionality and enterprise integrations.",
+      title: "Enterprise Bitcoin Infrastructure",
+      description: "Complete Bitcoin infrastructure integration with Bitcoin Core, Mempool, and Electrum servers for comprehensive network connectivity and data access.",
+      icon: (
+        <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      )
+    },
+    {
+      title: "Plugin Marketplace with Lightning Payments",
+      description: "Extensible architecture with encrypted plugin distribution, Lightning Network payments, and enterprise integrations for advanced functionality.",
       icon: (
         <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -50,8 +50,8 @@ const Features = () => {
       )
     },
     {
-      title: "Basic Lightning Integration",
-      description: "Essential Lightning Network capabilities for plugin purchases and basic payment processing.",
+      title: "Real-Time Bitcoin Network Monitoring",
+      description: "Live monitoring of Bitcoin network metrics, mempool activity, and transaction flows with automated alerts and network health insights.",
       icon: (
         <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -86,7 +86,7 @@ const Features = () => {
               Core Features
             </h3>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Everything you need to manage your Bitcoin treasury professionally, included at no extra cost.
+              Professional Bitcoin treasury management with institutional-grade analytics and enterprise features.
             </p>
           </div>
           
