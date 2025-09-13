@@ -142,18 +142,48 @@ const Deployment = () => {
                   borderRadius: '8px', 
                   padding: '1rem',
                   textAlign: 'left',
-                  marginBottom: '1rem'
+                  marginBottom: '1rem',
+                  position: 'relative',
+                  cursor: 'pointer'
                 }}
+                onClick={() => {
+                  const commands = `git clone https://github.com/MyBitcoinFuture/dashboard.git
+cd dashboard
+docker-compose up -d`;
+                  navigator.clipboard.writeText(commands).then(() => {
+                    // Optional: Show a brief success message
+                    console.log('Commands copied to clipboard');
+                  });
+                }}
+                title="Click to copy commands"
               >
                 <pre style={{ fontSize: '0.875rem', color: '#bfdbfe', overflowX: 'auto', margin: '0' }}>
                   <code>
-{`# Clone and start
+{`# Clone the repository
 git clone https://github.com/MyBitcoinFuture/dashboard.git
-cd dashboard && docker-compose up -d
+
+# Navigate to directory
+cd dashboard
+
+# Start all services
+docker-compose up -d
 
 # Access dashboard at http://localhost:3003`}
                   </code>
                 </pre>
+                <div style={{
+                  position: 'absolute',
+                  top: '0.5rem',
+                  right: '0.5rem',
+                  background: 'rgba(0, 0, 0, 0.7)',
+                  color: '#bfdbfe',
+                  padding: '0.25rem 0.5rem',
+                  borderRadius: '4px',
+                  fontSize: '0.75rem',
+                  opacity: '0.8'
+                }}>
+                  Click to copy
+                </div>
               </div>
 
               <div className="text-left">
