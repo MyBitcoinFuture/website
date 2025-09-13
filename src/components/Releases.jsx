@@ -119,7 +119,7 @@ const Releases = () => {
               <div className="text-sm text-gray-400">Stable Releases</div>
             </div>
             <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-4">
-              <div className="text-2xl font-bold text-blue-500">4</div>
+              <div className="text-2xl font-bold text-blue-500">3</div>
               <div className="text-sm text-gray-400">Supported Platforms</div>
             </div>
             <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-4">
@@ -277,7 +277,7 @@ const Releases = () => {
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-center mb-8">Platform Support & Installation</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Linux */}
             <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-6">
               <div className="text-center mb-4">
@@ -322,24 +322,6 @@ const Releases = () => {
               </div>
             </div>
 
-            {/* macOS */}
-            <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-6">
-              <div className="text-center mb-4">
-                <FaApple className="text-gray-500 text-4xl mx-auto mb-3" />
-                <h3 className="text-xl font-semibold">macOS</h3>
-              </div>
-              <div className="space-y-3">
-                <div className="bg-gray-700/50 rounded-lg p-3">
-                  <h4 className="font-semibold text-sm mb-1">DMG Package</h4>
-                  <p className="text-xs text-gray-400">macOS 10.15+</p>
-                  <p className="text-xs text-gray-400">Drag to Applications</p>
-                </div>
-                <div className="bg-gray-700/50 rounded-lg p-3">
-                  <h4 className="font-semibold text-sm mb-1">System Requirements</h4>
-                  <p className="text-xs text-gray-400">4GB RAM, 2GB storage</p>
-                </div>
-              </div>
-            </div>
 
             {/* Docker */}
             <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-6">

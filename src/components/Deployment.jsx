@@ -2,7 +2,7 @@ const Deployment = () => {
   const deploymentOptions = [
     {
       title: "Desktop Applications",
-      description: "Native desktop apps for Linux (DEB, RPM, AppImage), Windows (EXE), and macOS with full offline capabilities.",
+      description: "Native desktop apps for Linux (DEB, RPM, AppImage) and Windows (EXE) with full offline capabilities.",
       status: "Available Now",
       statusColor: "#10b981",
       icon: (
@@ -124,131 +124,39 @@ const Deployment = () => {
           ))}
         </div>
 
-        {/* Quick Start and Downloads */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" style={{ marginTop: '4rem' }}>
-          {/* Docker Quick Start */}
-          <div className="card" style={{ padding: '2rem' }}>
-            <div className="text-center">
-              <h3 className="text-white mb-4" style={{ fontSize: '2rem', fontWeight: '700' }}>
-                Quick Start with Docker
-              </h3>
-              <p className="text-gray mb-6">
-                Get up and running with our multi-container Docker setup in minutes.
-              </p>
-              
-              {/* Prerequisites */}
-              <div className="text-left mb-6">
-                <h4 className="text-white font-semibold mb-3">Prerequisites:</h4>
-                <ul className="text-gray-300 text-sm space-y-1">
-                  <li>• Docker and Docker Compose installed</li>
-                  <li>• 4GB+ RAM available</li>
-                  <li>• 10GB+ free disk space</li>
-                  <li>• Ports 3003, 3100, 3110 available</li>
-                </ul>
-              </div>
-
-              <div 
-                style={{ 
-                  background: 'rgba(15, 23, 42, 0.5)', 
-                  borderRadius: '8px', 
-                  padding: '1rem',
-                  textAlign: 'left',
-                  marginBottom: '1rem'
-                }}
-              >
-                <pre style={{ fontSize: '0.875rem', color: '#bfdbfe', overflowX: 'auto', margin: '0' }}>
-                  <code>
-{`# Clone the repository
+        {/* Quick Start */}
+        <div className="card" style={{ marginTop: '4rem', padding: '2rem' }}>
+          <div className="text-center">
+            <h3 className="text-white mb-4" style={{ fontSize: '2rem', fontWeight: '700' }}>
+              Quick Start with Docker
+            </h3>
+            <p className="text-gray mb-6">
+              Get up and running with our multi-container Docker setup.
+            </p>
+            <div 
+              style={{ 
+                background: 'rgba(15, 23, 42, 0.5)', 
+                borderRadius: '8px', 
+                padding: '1rem',
+                textAlign: 'left',
+                maxWidth: '32rem',
+                margin: '0 auto'
+              }}
+            >
+              <pre style={{ fontSize: '0.875rem', color: '#bfdbfe', overflowX: 'auto', margin: '0' }}>
+                <code>
+{`# Clone and start
 git clone https://github.com/MyBitcoinFuture/dashboard.git
-cd dashboard
+cd dashboard && docker-compose up -d
 
-# Start all services
-docker-compose up -d
-
-# Check status
-docker-compose ps
-
-# View logs
-docker-compose logs -f`}
-                  </code>
-                </pre>
-              </div>
-
-              <div className="text-left">
-                <h4 className="text-white font-semibold mb-2">Access Points:</h4>
-                <ul className="text-gray-300 text-sm space-y-1">
-                  <li>• <strong>Dashboard:</strong> http://localhost:3003</li>
-                  <li>• <strong>API:</strong> http://localhost:3100</li>
-                  <li>• <strong>BRK Analytics:</strong> http://localhost:3110</li>
-                </ul>
-              </div>
+# Access dashboard at http://localhost:3003`}
+                </code>
+              </pre>
             </div>
-          </div>
-
-          {/* Official Downloads */}
-          <div className="card" style={{ padding: '2rem' }}>
-            <div className="text-center">
-              <h3 className="text-white mb-4" style={{ fontSize: '2rem', fontWeight: '700' }}>
-                Official Downloads
-              </h3>
-              <p className="text-gray mb-6">
-                Download native desktop applications for your platform.
+            <div className="mt-4">
+              <p className="text-gray-300 text-sm">
+                <strong>Requirements:</strong> Docker, 4GB RAM, 10GB disk space
               </p>
-              
-              <div className="space-y-4">
-                {/* Linux Downloads */}
-                <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-4">
-                  <h4 className="text-white font-semibold mb-3 flex items-center">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12.504 0C5.643 0 0 5.643 0 12.504s5.643 12.504 12.504 12.504S25.008 19.365 25.008 12.504 19.365 0 12.504 0zm0 23.04c-5.815 0-10.536-4.721-10.536-10.536S6.689 1.968 12.504 1.968s10.536 4.721 10.536 10.536-4.721 10.536-10.536 10.536z"/>
-                    </svg>
-                    Linux
-                  </h4>
-                  <div className="grid grid-cols-1 gap-2">
-                    <a href="#" className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm transition-colors">
-                      📦 DEB Package (Ubuntu/Debian)
-                    </a>
-                    <a href="#" className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm transition-colors">
-                      📦 RPM Package (Fedora/RHEL)
-                    </a>
-                    <a href="#" className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm transition-colors">
-                      📦 AppImage (Universal)
-                    </a>
-                  </div>
-                </div>
-
-                {/* Windows Download */}
-                <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-4">
-                  <h4 className="text-white font-semibold mb-3 flex items-center">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M3 12V6.75l6-1.32v6.48L3 12zm17-9v8.75l-10 .15V5.21L20 3zM3 13l6 .09v6.81l-6-1.15V13zm17 .25V22l-10-1.91v-6.84l10 .15z"/>
-                    </svg>
-                    Windows
-                  </h4>
-                  <a href="#" className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm transition-colors block">
-                    💻 Windows EXE Installer
-                  </a>
-                </div>
-
-                {/* macOS Download */}
-                <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-4">
-                  <h4 className="text-white font-semibold mb-3 flex items-center">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                    </svg>
-                    macOS
-                  </h4>
-                  <a href="#" className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm transition-colors block">
-                    🍎 macOS Application
-                  </a>
-                </div>
-              </div>
-
-              <div className="mt-4 text-center">
-                <p className="text-gray-400 text-xs">
-                  Downloads are automatically updated from the latest dashboard release
-                </p>
-              </div>
             </div>
           </div>
         </div>
