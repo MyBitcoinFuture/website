@@ -76,7 +76,6 @@ function App() {
             <Features />
             <PluginEcosystem />
             <Deployment />
-            <ReleaseAnnouncements />
             <FAQ />
             <Contact />
           </Layout>
