@@ -72,7 +72,6 @@ function App() {
           <Layout>
             <Hero />
             <BitcoinTreasuryConcepts />
-            <UseCases />
             <Features />
             <PluginEcosystem />
             <Deployment />

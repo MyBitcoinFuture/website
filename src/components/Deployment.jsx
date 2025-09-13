@@ -1,4 +1,18 @@
+import React, { useState, useEffect } from 'react';
+import { fetchLatestReleaseDownloads, formatFileSize } from '../utils/releaseDownloads';
+
 const Deployment = () => {
+  const [downloads, setDownloads] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadDownloads = async () => {
+      const data = await fetchLatestReleaseDownloads();
+      setDownloads(data);
+      setLoading(false);
+    };
+    loadDownloads();
+  }, []);
   const deploymentOptions = [
     {
       title: "Desktop Applications",
@@ -214,15 +228,42 @@ docker-compose up -d
                     Linux
                   </h4>
                   <div className="grid grid-cols-1 gap-2">
-                    <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
-                      📦 DEB Package (Ubuntu/Debian) - Coming Soon
-                    </div>
-                    <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
-                      📦 RPM Package (Fedora/RHEL) - Coming Soon
-                    </div>
-                    <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
-                      📦 AppImage (Universal) - Coming Soon
-                    </div>
+                    {downloads?.downloads.linux.deb ? (
+                      <a 
+                        href={downloads.downloads.linux.deb.url} 
+                        className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm transition-colors"
+                      >
+                        📦 DEB Package (Ubuntu/Debian) - {formatFileSize(downloads.downloads.linux.deb.size)}
+                      </a>
+                    ) : (
+                      <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
+                        📦 DEB Package (Ubuntu/Debian) - Coming Soon
+                      </div>
+                    )}
+                    {downloads?.downloads.linux.rpm ? (
+                      <a 
+                        href={downloads.downloads.linux.rpm.url} 
+                        className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm transition-colors"
+                      >
+                        📦 RPM Package (Fedora/RHEL) - {formatFileSize(downloads.downloads.linux.rpm.size)}
+                      </a>
+                    ) : (
+                      <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
+                        📦 RPM Package (Fedora/RHEL) - Coming Soon
+                      </div>
+                    )}
+                    {downloads?.downloads.linux.appimage ? (
+                      <a 
+                        href={downloads.downloads.linux.appimage.url} 
+                        className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm transition-colors"
+                      >
+                        📦 AppImage (Universal) - {formatFileSize(downloads.downloads.linux.appimage.size)}
+                      </a>
+                    ) : (
+                      <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
+                        📦 AppImage (Universal) - Coming Soon
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -234,15 +275,27 @@ docker-compose up -d
                     </svg>
                     Windows
                   </h4>
-                  <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
-                    💻 Windows EXE Installer - Coming Soon
-                  </div>
+                  {downloads?.downloads.windows.exe ? (
+                    <a 
+                      href={downloads.downloads.windows.exe.url} 
+                      className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm transition-colors block"
+                    >
+                      💻 Windows EXE Installer - {formatFileSize(downloads.downloads.windows.exe.size)}
+                    </a>
+                  ) : (
+                    <div className="bg-gray-700/50 text-gray-400 px-3 py-2 rounded text-sm">
+                      💻 Windows EXE Installer - Coming Soon
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div className="mt-4 text-center">
                 <p className="text-gray-400 text-xs">
-                  Downloads will be available from the latest dashboard release
+                  {downloads ? 
+                    `Downloads from ${downloads.release.name} (${downloads.release.tag_name})` : 
+                    'Downloads will be available from the latest dashboard release'
+                  }
                 </p>
               </div>
             </div>
