@@ -222,8 +222,8 @@ docker-compose up -d
                 {/* Linux Downloads */}
                 <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-4">
                   <h4 className="text-white font-semibold mb-3 flex items-center">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12.504 0C5.643 0 0 5.643 0 12.504s5.643 12.504 12.504 12.504S25.008 19.365 25.008 12.504 19.365 0 12.504 0zm0 23.04c-5.815 0-10.536-4.721-10.536-10.536S6.689 1.968 12.504 1.968s10.536 4.721 10.536 10.536-4.721 10.536-10.536 10.536z"/>
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     Linux
                   </h4>
