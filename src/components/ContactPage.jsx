@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { CONTACT_INFO } from '../constants/content';
 import ContactForm from './contact/ContactForm';
 import ContactNotification from './contact/ContactNotification';
@@ -54,8 +55,36 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 text-white py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 text-white">
+      {/* Navigation Header */}
+      <div className="bg-gray-900/50 border-b border-gray-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <Link 
+                to="/" 
+                className="flex items-center text-gray-300 hover:text-white transition-colors"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Home
+              </Link>
+              <div className="text-gray-500">|</div>
+              <nav className="flex items-center space-x-2 text-sm">
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
+                <span className="text-gray-500">/</span>
+                <span className="text-white">Contact</span>
+              </nav>
+            </div>
+            <div className="text-sm text-gray-400">
+              MyBitcoinFuture
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Contact Us
