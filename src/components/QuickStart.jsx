@@ -18,10 +18,10 @@ const QuickStart = () => {
             
             {/* Header */}
             <div className="text-center mb-16">
-              <h1 className="mb-8">
-                <span className="text-white">Quick Start Guide</span>
+              <h1 className="text-white mb-8 text-3xl font-bold">
+                Quick Start Guide
               </h1>
-              <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem', lineHeight: '1.6' }}>
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
                 Essential commands and endpoints to get you up and running with MyBitcoinFuture in minutes.
               </p>
             </div>

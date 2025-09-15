@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BRAND_MESSAGING, VALUE_PROPOSITIONS } from '../constants/content';
+import { BRAND_MESSAGING } from '../constants/content';
 import Container from './Container';
 import GitHub from './GitHub';
 
@@ -34,17 +34,20 @@ const Hero = () => {
               {BRAND_MESSAGING.description}
             </p>
 
-            {/* Value Propositions */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-              {VALUE_PROPOSITIONS.map((prop, index) => (
-                <div key={index} className="flex items-start space-x-3 p-4 bg-slate-800/30 rounded-lg border border-slate-700/50">
-                  <span className="text-2xl">{prop.icon}</span>
-                  <div>
-                    <h3 className="text-white font-semibold text-sm mb-1">{prop.title}</h3>
-                    <p className="text-slate-400 text-xs leading-relaxed">{prop.description}</p>
-                  </div>
-                </div>
-              ))}
+            {/* Key Benefits */}
+            <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex items-center space-x-2 px-4 py-2 bg-slate-800/30 rounded-lg border border-slate-700/50">
+                <span className="text-green-400">✓</span>
+                <span className="text-slate-300 text-sm">Self-hosted & secure</span>
+              </div>
+              <div className="flex items-center space-x-2 px-4 py-2 bg-slate-800/30 rounded-lg border border-slate-700/50">
+                <span className="text-green-400">✓</span>
+                <span className="text-slate-300 text-sm">Deploy in 5 minutes</span>
+              </div>
+              <div className="flex items-center space-x-2 px-4 py-2 bg-slate-800/30 rounded-lg border border-slate-700/50">
+                <span className="text-green-400">✓</span>
+                <span className="text-slate-300 text-sm">Scales to enterprise</span>
+              </div>
             </div>
 
             {/* Enhanced CTAs */}

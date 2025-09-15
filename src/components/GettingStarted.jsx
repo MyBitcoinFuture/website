@@ -26,10 +26,10 @@ const GettingStarted = () => {
             
             {/* Header */}
             <div className="text-center mb-12">
-              <h1 className="mb-6">
-                <span className="text-white">Getting Started</span>
+              <h1 className="text-white mb-6 text-3xl font-bold">
+                Getting Started
               </h1>
-              <p className="text-gray mb-8" style={{ fontSize: '1.1rem', maxWidth: '48rem', margin: '0 auto 2rem' }}>
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
                 Understand the fundamental concepts and principles of professional Bitcoin treasury management.
               </p>
             </div>

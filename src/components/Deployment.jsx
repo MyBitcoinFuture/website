@@ -56,7 +56,7 @@ const Deployment = () => {
     <section id="deployment" className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-white mb-4">
+          <h2 className="text-white mb-4 text-3xl font-bold">
             Multi-Platform Deployment Options
           </h2>
           <p className="text-gray" style={{ fontSize: '1.25rem', maxWidth: '48rem', margin: '0 auto' }}>

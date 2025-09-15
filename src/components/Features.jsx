@@ -71,7 +71,7 @@ const Features = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="section-title">
+          <h2 className="text-white mb-4 text-3xl font-bold">
             Enterprise Bitcoin Treasury Features
           </h2>
           <p className="text-slate-300 text-lg max-w-3xl mx-auto leading-relaxed">

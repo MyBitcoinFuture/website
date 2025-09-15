@@ -18,10 +18,10 @@ const UserGuides = () => {
             
             {/* Header */}
             <div className="text-center mb-16">
-              <h1 className="mb-8">
-                <span className="text-white">User Guides</span>
+              <h1 className="text-white mb-8 text-3xl font-bold">
+                User Guides
               </h1>
-              <p className="text-gray mb-8" style={{ fontSize: '1.25rem', maxWidth: '64rem', margin: '0 auto 2rem', lineHeight: '1.6' }}>
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
                 Comprehensive guides for managing your Bitcoin treasury, from initial setup to advanced analytics.
               </p>
             </div>
