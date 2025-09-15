@@ -17,15 +17,15 @@ const FAQ = () => {
   const faqs = [
     {
       question: "What is Bitcoin treasury management?",
-      answer: "Bitcoin treasury management is the systematic oversight of Bitcoin holdings for organizations, involving portfolio monitoring, risk management, compliance reporting, and strategic decision-making. It provides professional-grade tools for managing Bitcoin as a treasury asset with the same rigor applied to traditional financial instruments."
+      answer: "Bitcoin treasury management is the systematic oversight of Bitcoin holdings for organizations, involving portfolio monitoring, risk management, compliance reporting, and strategic decision-making. Think of it like managing a company's cash reserves, but for Bitcoin - providing professional-grade tools for managing Bitcoin as a treasury asset with the same rigor applied to traditional financial instruments."
     },
     {
       question: "How does the security model work?",
-      answer: "The system operates on an xpub-only architecture, meaning it only requires extended public keys (xpubs) and never handles private keys. This ensures complete security while providing full visibility into wallet balances and transactions. Private keys remain entirely under your control, typically stored in hardware wallets or secure environments."
+      answer: "The system operates on a read-only architecture, meaning it can view your Bitcoin balances and transactions but cannot access your private keys or spend your Bitcoin. This ensures complete security while providing full visibility into your holdings. Your private keys remain entirely under your control, typically stored in hardware wallets or secure environments."
     },
     {
       question: "What's included vs. what requires plugins?",
-      answer: "The core system includes multi-wallet architecture, Bitcoin analytics, xpub-only security, self-hosted deployment, and basic Lightning Network capabilities. Premium plugins extend functionality with advanced Lightning integration ($49/month), governance automation ($99/month), accounting integration ($79/month), workflow automation ($59/month), and custom branding ($49/month)."
+      answer: "The core system includes multiple wallet support, Bitcoin analytics, secure read-only access, self-hosted deployment, and basic Lightning Network capabilities. Premium plugins extend functionality with advanced Lightning integration ($49/month), governance automation ($99/month), accounting integration ($79/month), workflow automation ($59/month), and custom branding ($49/month)."
     },
     {
       question: "What deployment options are available?",

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BRAND_MESSAGING } from '../constants/content';
+import { BRAND_MESSAGING, VALUE_PROPOSITIONS } from '../constants/content';
 import Container from './Container';
+import GitHub from './GitHub';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,15 +34,32 @@ const Hero = () => {
               {BRAND_MESSAGING.description}
             </p>
 
+            {/* Value Propositions */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              {VALUE_PROPOSITIONS.map((prop, index) => (
+                <div key={index} className="flex items-start space-x-3 p-4 bg-slate-800/30 rounded-lg border border-slate-700/50">
+                  <span className="text-2xl">{prop.icon}</span>
+                  <div>
+                    <h3 className="text-white font-semibold text-sm mb-1">{prop.title}</h3>
+                    <p className="text-slate-400 text-xs leading-relaxed">{prop.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
             {/* Enhanced CTAs */}
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap mb-6">
               <a href="#deployment" className="btn-primary cta-enhanced">
                 <span className="relative z-10">Deploy in 5 Minutes</span>
               </a>
               <a href="#features" className="btn-secondary cta-enhanced">
                 <span className="relative z-10">See How It Works</span>
               </a>
+            </div>
+
+            {/* GitHub Stats */}
+            <div className="flex items-center justify-start">
+              <GitHub />
             </div>
 
           </div>
@@ -58,29 +76,29 @@ const Hero = () => {
                   <div className="text-primary-400 text-2xl font-bold mb-2 security-shield">
                     Why Choose MyBitcoinFuture?
                   </div>
-                  <div className="text-slate-400 text-sm">The only Bitcoin treasury platform with institutional-grade analytics</div>
+                  <div className="text-slate-400 text-sm">The only self-hosted Bitcoin treasury platform that scales from personal to enterprise</div>
                 </div>
                 
                 <div className="space-y-4">
                   <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">
                     <span className="text-green-400 text-xl mr-3">✓</span>
                     <div>
-                      <div className="text-white font-bold text-sm">Bitcoin Research Kit Integration</div>
-                      <div className="text-slate-400 text-xs">Access comprehensive Bitcoin analytics directly from your node</div>
+                      <div className="text-white font-bold text-sm">Bitcoin Research & Analytics</div>
+                      <div className="text-slate-400 text-xs">Access comprehensive Bitcoin analytics and research tools</div>
                     </div>
                   </div>
                   <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">
                     <span className="text-green-400 text-xl mr-3">✓</span>
                     <div>
-                      <div className="text-white font-bold text-sm">One-Click Marketplace Deployment</div>
+                      <div className="text-white font-bold text-sm">Easy Marketplace Deployment</div>
                       <div className="text-slate-400 text-xs">Deploy on Start9, Umbrel, or Docker in under 5 minutes</div>
                     </div>
                   </div>
                   <div className="flex items-start p-3 bg-slate-700/50 rounded-lg interactive-hover">
                     <span className="text-green-400 text-xl mr-3">✓</span>
                     <div>
-                      <div className="text-white font-bold text-sm">Professional Bitcoin Treasury Management</div>
-                      <div className="text-slate-400 text-xs">Multi-sig, cost basis accounting, and portfolio analytics built-in</div>
+                      <div className="text-white font-bold text-sm">Complete Bitcoin Treasury Management</div>
+                      <div className="text-slate-400 text-xs">Multi-signature wallets, tax tracking, and portfolio analytics</div>
                     </div>
                   </div>
                 </div>
